@@ -70,7 +70,10 @@ class RelationshipEvaluator:
         vb = self.embeddings.get(b.id)
         if va is None or vb is None:
             return 0.0
-        return clip01(cosine(va, vb))
+        raw = cosine(va, vb)
+        # Hashing embeddings compress cosines; scale so topical matches approach 1.0.
+        scale = max(1e-6, self.config.semantic_scale)
+        return clip01(raw / scale)
 
     def _visual_containment(self, a: TextBlock, b: TextBlock) -> float:
         if a.bounding_box.contains(b.bounding_box) or b.bounding_box.contains(a.bounding_box):

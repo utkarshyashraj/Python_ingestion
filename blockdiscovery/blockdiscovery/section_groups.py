@@ -57,7 +57,7 @@ def _is_section_heading(block: LogicalBlock, prom_threshold: float) -> bool:
         and (text.count("/") >= 2 or text.count("\n") >= 2)
         and f.get("block_count", blocks) <= 2
     )
-    # Navigational crumbs ("Back to top") — very short, no version digits.
+    # Navigational crumbs: very short, unemphasised and carrying no identifiers.
     looks_like_nav = (
         chars <= 20
         and len(text.split()) <= 4

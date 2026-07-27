@@ -188,15 +188,40 @@ class BoundaryDetector:
             density_transition = max(density_transition, 0.55)
         signals["density_transition"] = density_transition
 
+        # --- repeated-row / table-like boundary ---------------------------
+        # Packed short blocks with similar alignment but weak semantics often
+        # indicate adjacent table/list records that must not merge.
+        table_boundary = 0.0
+        both_short = (
+            prev.features.get("is_short", 0.0) >= 1.0
+            and cur.features.get("is_short", 0.0) >= 1.0
+        )
+        similar_left = alignment >= 0.7
+        if (
+            has_semantic
+            and both_short
+            and similar_left
+            and semantic < thr.semantic_boundary_gate
+            and spatial >= 0.7
+        ):
+            table_boundary = 0.82
+            reasons.append("table_or_list_row_boundary")
+        elif body_prev and title_here and spatial >= 0.85 and has_semantic and semantic < 0.35:
+            table_boundary = max(table_boundary, 0.75)
+            if "table_or_list_row_boundary" not in reasons:
+                reasons.append("table_or_list_row_boundary")
+        signals["table_boundary"] = table_boundary
+
         # --- fused boundary score -----------------------------------------
         weights = {
-            "formatting_transition": 0.18,
-            "spacing_boundary": 0.16,
-            "semantic_transition": 0.28,
-            "structural_transition": 0.22,
-            "alignment_pattern_change": 0.08,
+            "formatting_transition": 0.15,
+            "spacing_boundary": 0.14,
+            "semantic_transition": 0.26,
+            "structural_transition": 0.18,
+            "alignment_pattern_change": 0.07,
             "reading_order_discontinuity": 0.05,
             "density_transition": 0.03,
+            "table_boundary": 0.12,
         }
         score = sum(signals[k] * weights[k] for k in weights)
         score = clip01(score)
@@ -205,6 +230,14 @@ class BoundaryDetector:
         container = relationship_signals.get("visual_containment", 0.0)
         strong_container = container >= thr.container_override
 
+        over_group_case = (
+            has_semantic
+            and not strong_container
+            and spatial >= thr.over_grouping_spatial
+            and formatting >= thr.over_grouping_formatting
+            and semantic < thr.semantic_boundary_gate
+        )
+
         should_split = False
         if score >= thr.boundary_score_threshold:
             should_split = True
@@ -212,32 +245,29 @@ class BoundaryDetector:
             should_split = True
             if "cohesion_below_threshold" not in reasons:
                 reasons.append("cohesion_below_threshold")
-        # Over-grouping gate: strong spatial + weak semantic without container.
-        if (
-            has_semantic
-            and not strong_container
-            and spatial >= 0.8
-            and formatting >= 0.85
-            and semantic < thr.semantic_boundary_gate
-            and (structural_transition >= 0.5 or alignment < 0.35 or body_prev and title_here)
-        ):
+        # Classic over-grouping: high spatial + formatting, weak semantics.
+        # Do NOT require a structural cue — proximity alone must not win.
+        if over_group_case:
             should_split = True
             if "over_grouping_semantic_gate" not in reasons:
                 reasons.append("over_grouping_semantic_gate")
         if strong_container and has_semantic and semantic < thr.semantic_boundary_gate:
             # Container explains co-location; do not force split on semantics alone.
             should_split = should_split and (
-                formatting_transition >= 0.7 or structural_transition >= 0.85 or gap_ratio >= 2.2
+                formatting_transition >= 0.7
+                or structural_transition >= 0.85
+                or table_boundary >= 0.7
+                or gap_ratio >= 2.2
             )
 
         decision = "split" if should_split else "group"
         if decision == "split":
             reason_text = (
-                "Strong boundary evidence outweighs spatial proximity"
+                "Strong semantic and structural transition outweighs spatial proximity."
                 if score >= thr.boundary_score_threshold and relationship_score >= thr.content_unit_cohesion
                 else (
-                    "Strong spatial relationship but weak semantic coherence and strong boundary evidence."
-                    if semantic < thr.semantic_boundary_gate and spatial >= 0.75
+                    "Spatial and formatting similarity are high, but semantic coherence is weak."
+                    if over_group_case
                     else "Boundary signals exceeded grouping threshold."
                 )
             )

@@ -407,6 +407,9 @@ class LogicalBlock:
     section_group_id: Optional[str] = None
     doc_position: float = 0.0  # 0..1 relative position within document
     page_end: Optional[int] = None
+    block_type: str = "content"  # "content" | "structured_record" | "heading"
+    structured_fields: Optional[List[Dict[str, str]]] = None
+    source_table_id: Optional[str] = None
 
     def to_dict(self, include_vector: bool = False) -> Dict[str, Any]:
         d = {
@@ -418,6 +421,7 @@ class LogicalBlock:
             "page_end": self.page_end if self.page_end is not None else self.source_page,
             "source_block_ids": list(self.source_block_ids),
             "text": self.text,
+            "block_type": self.block_type,
             "structural_features": {k: round(v, 4) for k, v in self.structural_features.items()},
             "structural_fingerprint": {
                 k: round(v, 4) for k, v in self.structural_fingerprint.items()
@@ -431,6 +435,10 @@ class LogicalBlock:
             "section_group_id": self.section_group_id,
             "doc_position": round(self.doc_position, 4),
         }
+        if self.structured_fields is not None:
+            d["structured_fields"] = self.structured_fields
+        if self.source_table_id is not None:
+            d["source_table_id"] = self.source_table_id
         if include_vector and self.semantic_vector is not None:
             d["semantic_vector"] = self.semantic_vector
         return d

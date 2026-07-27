@@ -6,50 +6,81 @@ rules.
 
 > Structure is discovered from evidence, not assumed.
 
-For Siebel-style release notes (`data/samples/26.*_UPDATE.pdf`), use the
-**structured** backend (`pymupdf4llm`): table rows become content units directly.
+Extraction backends supply evidence only. They never decide what a logical block
+is — a table row is a strong *candidate*, and a heading is *evidence*, but both
+must earn their status from geometry, typography, repetition and semantics.
 
 ---
 
 ## How the code works
 
+The `structured` backend runs the generic evidence-first engine:
+
 ```text
 PDF
-  │
-  ├─ --backend structured (recommended for release notes)
-  │     pymupdf4llm → markdown (headings + tables)
-  │     → each table row / heading / paragraph = ContentUnit
-  │     → section groups from headings
-  │
-  └─ --backend native (optional / research)
-        PyMuPDF raw blocks → features → relationship + boundary scores
-        → ContentUnits by clustering consecutive blocks
-        │
-        ▼
-  Pattern discovery (recurring shapes → pattern_001, …)
-        ▼
-  Logical blocks (explainable units of meaning)
-        ▼
-  Cross-document groups + searchable KnowledgeBase
+  ▼
+Extraction backend (evidence only)          extraction_units.py
+  pymupdf4llm layout boxes → geometry, layout class, grid cells
+  ▼
+Raw extraction units → Candidate units      generic_discovery.py
+  ▼
+Structural feature extraction
+  geometry · typography · spacing · alignment · reading order
+  grid evidence · container evidence · repetition · semantics
+  ▼
+Relationship graph (weighted edges)
+  ▼
+Boundary detection  →  START_NEW_LOGICAL_BLOCK | CONTINUE_LOGICAL_BLOCK
+  ▼
+Candidate group discovery (component partition at an adaptive cut)
+  ▼
+Content unit refinement   MERGE · SPLIT · PRESERVE · REJECT
+  ▼
+Logical blocks → structural fingerprints → pattern discovery
+  ▼
+Cross-document similarity → KnowledgeBase
 ```
+
+`--backend native` keeps the older PyMuPDF block-clustering path
+(`extraction.py` → `relationships.py` → `boundaries.py` → `content_units.py`).
 
 | Layer | Module | Role |
 |---|---|---|
-| Structured ingest | `structured_ingest.py` | pymupdf4llm markdown → units + sections |
+| Extraction (evidence only) | `extraction_units.py` | Layout boxes → raw units with geometry and grid cells |
+| Generic discovery | `generic_discovery.py` | Features, relationship graph, boundaries, refinement, blocks, contexts |
 | Native extract | `extraction.py` | PyMuPDF raw blocks, fonts, bboxes |
 | Features | `features.py` | Document-relative geometry / typography |
 | Semantics | `semantics.py` | Embeddings (hashing default) |
-| Relationships / boundaries | `relationships.py`, `boundaries.py` | Native: belong-together vs split-here |
-| Patterns | `patterns.py` | Unsupervised structural/semantic clusters |
-| Logical blocks | `logical_blocks.py` | Primary output |
-| Sections | `section_groups.py` | Within-doc heading → items |
-| Cross-document | `cross_document.py` | Topic groups across PDFs |
+| Relationships / boundaries | `relationships.py`, `boundaries.py` | Native path: belong-together vs split-here |
+| Patterns | `patterns.py`, `fingerprints.py` | Structure-led clustering of recurring shapes |
+| Logical blocks | `logical_blocks.py` | Native-path block builder |
+| Sections | `section_groups.py` | Native path: heading → items |
+| Cross-document | `cross_document.py` | Recurring structures across PDFs |
+| Genericity audit | `genericity_audit.py` | Scans the engine for document-specific logic |
+| Reporting | `generic_log.py`, `validation_log.py` | Human-readable discovery narratives |
 | Knowledge | `knowledge.py` | Search + provenance |
 | Orchestration | `pipeline.py`, `cli.py`, `config.py`, `logging_utils.py` | Run, configure, log |
 
-**PyMuPDF vs pymupdf4llm:** they are alternate ingest paths, not a sequence.
-`--backend structured` uses pymupdf4llm (built on PyMuPDF). `--backend native`
-uses PyMuPDF block clustering only. For 26.1–26.6 update guides, use **structured only**.
+### Three ideas that keep discovery generic
+
+**Form similarity is only evidence while it is surprising.** Matching geometry
+and typography are discounted when a recurring template already predicts them,
+or when the two units sit in different containers. This is what stops a table's
+visual regularity from fusing its rows into one block, and it leaves semantic
+coherence as the deciding signal.
+
+**Signals earn weight from how much they vary here.** A signal that reads the
+same on every edge cannot separate anything, so its share of the weight budget
+is handed to signals that move. In a uniformly left-aligned document, alignment
+automatically stops voting.
+
+**Cut points come from the data.** Where a boundary falls is decided by
+maximum-variance separation over the document's own edge-score distribution,
+winsorized so a few page breaks cannot drag the threshold.
+
+**PyMuPDF vs pymupdf4llm:** alternate ingest paths, not a sequence.
+`--backend structured` uses pymupdf4llm (built on PyMuPDF) purely as an evidence
+source. `--backend native` uses PyMuPDF block clustering only.
 
 ---
 
@@ -91,7 +122,8 @@ python -m blockdiscovery.cli ingest <pdfs...> [options]
 | File | Purpose |
 |---|---|
 | `discovery.log` | Human-readable pipeline narrative |
-| `human_readable_<doc_id>.log` | Sections → items (easiest to read) |
+| `validation_discovery_<doc_id>.log` | Validation log (extraction → units → boundaries → LBs → patterns) |
+| `human_readable_<doc_id>.log` | Sections → items (easiest section view) |
 | `events.jsonl` | Machine-readable decision events |
 | `logical_blocks.json` | Discovered logical blocks |
 | `section_groups.json` | Within-document sections |
@@ -100,17 +132,43 @@ python -m blockdiscovery.cli ingest <pdfs...> [options]
 | `collection_tree.json` | Tree view of sections + groups |
 | `documents.json` | Document metadata |
 
-### 26.3 Update — first 15 pages (human-readable logs)
+### 26.3 Update — first 15 pages (human-readable discovery log)
 
 ```bash
+rm -rf output_26_3_structured_p1_15
+
 python -m blockdiscovery.cli ingest data/samples/26.3_UPDATE.pdf \
   --backend structured --max-pages 15 --out output_26_3_structured_p1_15
 ```
 
-Then open:
+Primary human-readable file:
 
-- `output_26_3_structured_p1_15/human_readable_26_3_update.log` — section/item view  
-- `output_26_3_structured_p1_15/discovery.log` — full discovery narrative  
+- `output_26_3_structured_p1_15/generic_discovery_26_3_update.log`
+
+It narrates extraction, discovered structures, the relationship graph, every
+boundary decision with its evidence, content-unit refinement, logical blocks,
+over-grouping analysis, contexts, patterns, cross-document structure and the
+genericity audit.
+
+Also written: `events.jsonl` (machine-readable decisions), `genericity_audit.json`,
+`pattern_consolidation.json`, `discovery.log` and the JSON artefacts.
+
+Native block-clustering path, for comparison:
+
+```bash
+python -m blockdiscovery.cli ingest data/samples/26.3_UPDATE.pdf \
+  --backend native --max-pages 15 --out output_26_3_native_p1_15
+```
+
+### Genericity validation
+
+Builds PDFs whose every label is invented, then runs the unmodified engine and
+asserts structural expectations plus a zero-violation source audit:
+
+```bash
+python tools/make_synthetic_pdfs.py data/synthetic
+python tools/validate_genericity.py
+```
 
 ### Other useful ingest examples
 
@@ -119,13 +177,10 @@ Then open:
 python -m blockdiscovery.cli ingest "data/samples/*.pdf" \
   --backend structured --out output_all_updates
 
-# Native path (research / non-table PDFs)
-python -m blockdiscovery.cli ingest data/samples/26.3_UPDATE.pdf \
-  --backend native --max-pages 15 --out output_26_3_native_p1_15
-
-# Synthetic demo PDFs
-python scripts/generate_sample_pdfs.py
-python -m blockdiscovery.cli ingest "data/synthetic/*.pdf" --backend native --out output
+# Unknown-terminology synthetic PDFs through the same code path
+python tools/make_synthetic_pdfs.py data/synthetic
+python -m blockdiscovery.cli ingest "data/synthetic/*.pdf" \
+  --backend structured --out output_synthetic
 ```
 
 ### Search

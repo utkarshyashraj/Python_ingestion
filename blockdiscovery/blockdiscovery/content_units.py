@@ -60,10 +60,20 @@ class ContentUnitDiscovery:
         self.backend = backend
         self.logger = logger
         self.boundary_detector = BoundaryDetector(config)
+        # Collected for validation / human-readable discovery logs.
+        self.transitions: List[Dict] = []
+        self.stats: Dict[str, int] = {
+            "boundaries_evaluated": 0,
+            "boundaries_detected": 0,
+            "blocks_merged": 0,
+            "low_confidence_decisions": 0,
+            "over_grouping_warnings": 0,
+        }
 
     def discover(self, document: Document) -> List[ContentUnit]:
         log = self.logger
         stats = document.stats
+        thr = self.config.thresholds
         if log:
             log.section("CONTENT UNIT DISCOVERY")
             log.line("Evaluating block relationships and boundaries...")
@@ -95,6 +105,70 @@ class ContentUnitDiscovery:
                     prev, cur, evidence.signals, relationship_score
                 )
 
+                spatial = evidence.signals.get("spatial_proximity", 0.0)
+                formatting = evidence.signals.get("formatting_relationship", 0.0)
+                semantic = evidence.signals.get("semantic_coherence", 0.0)
+                container = evidence.signals.get("visual_containment", 0.0)
+                over_group = (
+                    spatial >= thr.over_grouping_spatial
+                    and formatting >= thr.over_grouping_formatting
+                    and semantic < thr.semantic_boundary_gate
+                    and container < thr.container_override
+                )
+
+                # Soft size cap: growing multi-block units with weak semantics
+                # must not keep absorbing neighbours.
+                mean_sem_so_far = (
+                    float(np.mean([r.get("semantic_coherence", 0.0) for r in current_signal_rows]))
+                    if current_signal_rows
+                    else semantic
+                )
+                size_cap_hit = (
+                    len(current) >= thr.max_content_unit_blocks
+                    and mean_sem_so_far < thr.semantic_confidence_floor
+                    and container < thr.container_override
+                )
+                if size_cap_hit and not boundary.should_split:
+                    boundary.should_split = True
+                    boundary.decision = "split"
+                    boundary.reasons = list(boundary.reasons) + ["max_unit_size_weak_semantics"]
+                    boundary.reason_text = (
+                        "Unit size cap reached while semantic coherence remains weak."
+                    )
+                    if "max_unit_size_weak_semantics" not in boundary.reasons:
+                        pass
+
+                self.stats["boundaries_evaluated"] += 1
+                if boundary.should_split:
+                    self.stats["boundaries_detected"] += 1
+                else:
+                    self.stats["blocks_merged"] += 1
+                if boundary.confidence < thr.low_confidence_flag:
+                    self.stats["low_confidence_decisions"] += 1
+
+                transition = {
+                    "document_id": document.id,
+                    "page_number": page_number,
+                    "block_a": prev.id,
+                    "block_b": cur.id,
+                    "decision": boundary.decision,
+                    "relationship_score": round(relationship_score, 4),
+                    "boundary_score": round(boundary.score, 4),
+                    "relationship_evidence": {
+                        k: round(v, 3) for k, v in evidence.signals.items()
+                    },
+                    "boundary_evidence": {
+                        k: round(v, 3) for k, v in boundary.signals.items()
+                    },
+                    "confidence": round(boundary.confidence, 4),
+                    "reason": boundary.reason_text,
+                    "reasons": list(boundary.reasons),
+                    "over_grouping": over_group,
+                }
+                self.transitions.append(transition)
+
+                if over_group:
+                    self.stats["over_grouping_warnings"] += 1
                 if log:
                     log.event(
                         "candidate_relationship_evaluated",
@@ -119,9 +193,29 @@ class ContentUnitDiscovery:
                         signals={k: round(v, 3) for k, v in boundary.signals.items()},
                         confidence=round(boundary.confidence, 4),
                     )
-                    # Human-readable CONTENT UNIT EVALUATION (always for splits;
-                    # also for groups when verbose_relationships is on).
-                    if boundary.should_split or self.config.verbose_relationships:
+                    if over_group:
+                        log.event(
+                            "over_grouping_warning",
+                            document_id=document.id,
+                            page_number=page_number,
+                            block_a=prev.id,
+                            block_b=cur.id,
+                            spatial_proximity=round(spatial, 4),
+                            formatting_relationship=round(formatting, 4),
+                            semantic_coherence=round(semantic, 4),
+                            decision="SPLIT_OR_REVIEW" if boundary.should_split else "REVIEW",
+                            reason=(
+                                "Spatial and formatting similarity are high, "
+                                "but semantic coherence is weak."
+                            ),
+                            confidence=round(boundary.confidence, 4),
+                        )
+                    # Always narrate splits + over-grouping; groups when verbose.
+                    if (
+                        boundary.should_split
+                        or over_group
+                        or self.config.verbose_relationships
+                    ):
                         self._log_evaluation(
                             document_id=document.id,
                             page_number=page_number,
@@ -130,6 +224,7 @@ class ContentUnitDiscovery:
                             relationship_score=relationship_score,
                             relationship_signals=evidence.signals,
                             boundary=boundary,
+                            over_grouping=over_group,
                         )
 
                 if not boundary.should_split:
@@ -200,31 +295,60 @@ class ContentUnitDiscovery:
         relationship_score: float,
         relationship_signals: Dict[str, float],
         boundary,
+        over_grouping: bool = False,
     ) -> None:
         log = self.logger
         if not log:
             return
-        log.section("CONTENT UNIT EVALUATION")
-        log.line("Candidate:")
-        log.push()
-        log.line(f"{prev.id} → {cur.id}")
-        log.kv("Page", page_number)
-        log.pop()
-        log.line("")
-        _fmt_signal_block(log, "Relationship evidence:", relationship_signals)
-        log.line("")
-        _fmt_signal_block(log, "Boundary evidence:", boundary.signals)
-        log.line("")
-        log.line("Decision:")
-        log.push()
-        log.line(boundary.decision.upper())
-        if boundary.reasons:
-            log.kv("Reasons", ", ".join(boundary.reasons))
-        log.kv("Reason", boundary.reason_text)
-        log.kv("Relationship score", f"{relationship_score:.2f}")
-        log.kv("Boundary score", f"{boundary.score:.2f}")
-        log.kv("Confidence", f"{boundary.confidence:.2f}")
-        log.pop()
+        if over_grouping:
+            log.section("OVER-GROUPING WARNING")
+            log.line("Candidate:")
+            log.push()
+            log.line(f"{prev.id} → {cur.id}")
+            log.kv("Page", page_number)
+            log.pop()
+            log.line("")
+            _fmt_signal_block(log, "Evidence:", relationship_signals)
+            log.line("")
+            log.line("Decision:")
+            log.push()
+            log.line("SPLIT_OR_REVIEW" if boundary.should_split else "REVIEW")
+            log.kv(
+                "Reason",
+                "Spatial and formatting similarity are high, but semantic coherence is weak.",
+            )
+            log.kv("Confidence", f"{boundary.confidence:.2f}")
+            log.pop()
+        else:
+            log.section("BOUNDARY EVALUATION")
+            log.line("Previous Block:")
+            log.push()
+            log.line(prev.id)
+            log.pop()
+            log.line("Next Block:")
+            log.push()
+            log.line(cur.id)
+            log.pop()
+            log.line("")
+            _fmt_signal_block(log, "Relationship Evidence:", relationship_signals)
+            log.line("")
+            _fmt_signal_block(log, "Boundary Evidence:", boundary.signals)
+            log.line("")
+            log.line("Decision:")
+            log.push()
+            decision_label = (
+                "START_NEW_LOGICAL_BLOCK"
+                if boundary.should_split
+                else "GROUP_INTO_CONTENT_UNIT"
+            )
+            log.line(decision_label)
+            if boundary.reasons:
+                log.kv("Reasons", ", ".join(boundary.reasons))
+            log.kv("Reason", boundary.reason_text)
+            log.kv("Relationship score", f"{relationship_score:.2f}")
+            log.kv("Boundary score", f"{boundary.score:.2f}")
+            log.kv("Confidence", f"{boundary.confidence:.2f}")
+            log.pop()
 
         log.event(
             "content_unit_decision",
@@ -238,6 +362,7 @@ class ContentUnitDiscovery:
             boundary_score=round(boundary.score, 4),
             confidence=round(boundary.confidence, 4),
             reason=boundary.reason_text,
+            over_grouping=over_grouping,
         )
         # Reset indent so subsequent ContentUnit creation logs are not nested
         # under this evaluation block.

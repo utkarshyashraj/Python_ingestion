@@ -1,623 +1,104 @@
 
-[STRUCTURED INGESTION]
-  Backend: pymupdf4llm
+[EXTRACTION]
+  Backend: structured
   Document: 26.3_UPDATE.pdf
-    ContentUnit 26_3_update_unit_0001 [heading] p1: Siebel CRM Update Guide and Known Issues
-    ContentUnit 26_3_update_unit_0002 [paragraph] p1: Siebel CRM 26.3 Update March 2026
-    ContentUnit 26_3_update_unit_0003 [heading] p1: Required Patches
-    ContentUnit 26_3_update_unit_0004 [paragraph] p1: NOTE: Immediately after installing the 26.3 Monthly Update, one or more patches must be installed as
-    ContentUnit 26_3_update_unit_0005 [heading] p1: You are not in a supported configuration if any required patch is not installed.
-    ContentUnit 26_3_update_unit_0006 [table_row] p1: Platforms: Windows (serversandMobile Web Clients) | Required Patches: 39111271
-    ContentUnit 26_3_update_unit_0007 [table_row] p1: Platforms: Linux(servers) | Required Patches: 39186423
-    ContentUnit 26_3_update_unit_0008 [heading] p1: Effect of Encryption Upgrade in 25.10 and Later
-    ContentUnit 26_3_update_unit_0009 [paragraph] p1: The 25.10 Monthly Update includes an upgrade to the encryption used by Siebel CRM. This will require
-    ContentUnit 26_3_update_unit_0010 [paragraph] p1: Information about this Siebel CRM Monthly Update:
-    ContentUnit 26_3_update_unit_0011 [paragraph] p1: - Required Downloads
-    ContentUnit 26_3_update_unit_0012 [paragraph] p1: - Update Basics
-    ContentUnit 26_3_update_unit_0013 [paragraph] p1: - Repository Updates
-    ContentUnit 26_3_update_unit_0014 [paragraph] p1: - Features and Bug Fixes by Release
-    ContentUnit 26_3_update_unit_0015 [paragraph] p1: - Known Issues
-    ContentUnit 26_3_update_unit_0016 [paragraph] p1: NOTE: For an HTML version of this document, please download the first ZIP file in the corresponding 
-    ContentUnit 26_3_update_unit_0017 [paragraph] p1: NOTE: If you need an earlier or later version of this document, you can find all of them on My Oracl
-    ContentUnit 26_3_update_unit_0018 [heading] p1: Required Downloads
-    ContentUnit 26_3_update_unit_0019 [paragraph] p1: Each Monthly Update patch available on My Oracle Support is divided into a series of archive (ZIP) f
-    ContentUnit 26_3_update_unit_0020 [paragraph] p1: The ZIP files provided in the Monthly Update will all have a name of the form p___.zip, where:
-    ContentUnit 26_3_update_unit_0021 [paragraph] p1: - refers to the MOS patch number for the Monthly Update. It will be an eight-digit number, such as 3
-    ContentUnit 26_3_update_unit_0022 [paragraph] p2: - refers to the Monthly Update’s release in the form YYM, without a separator, such as “263” for 26.
-    ContentUnit 26_3_update_unit_0023 [paragraph] p2: - refers to one of the supported platforms:
-    ContentUnit 26_3_update_unit_0024 [table_row] p2: field_1: MSWIN-x86-64 | Description: Microsoft Windows x64
-    ContentUnit 26_3_update_unit_0025 [table_row] p2: field_1: Linux x86-64 | Description: Linux x86-64
-    ContentUnit 26_3_update_unit_0026 [table_row] p2: field_1: AIX64-5L | Description: IBM AIX on POWER Systems
-    ContentUnit 26_3_update_unit_0027 [paragraph] p2: NOTE: As of the 25.5 release, Solaris and HPUX are no longer available for download. For more inform
-    ContentUnit 26_3_update_unit_0028 [paragraph] p2: - makes identifies the specific ZIP file within the series, such as “5of14”.
-    ContentUnit 26_3_update_unit_0029 [paragraph] p2: An example representing ZIP file 5 of 14 for Windows, Siebel Monthly Update 24.12 would be:
-    ContentUnit 26_3_update_unit_0030 [paragraph] p2: ``` p37386170_2412_MSWIN-x86-64_5of14.zip ```
-    ContentUnit 26_3_update_unit_0031 [paragraph] p2: The ZIP files for Windows versus the other supported platforms are different, as some components (su
-    ContentUnit 26_3_update_unit_0032 [paragraph] p2: NOTE: You do not need to download everything—for example, if you are not using DISA, there is no req
-    ContentUnit 26_3_update_unit_0033 [paragraph] p2: Windows Archive Files
-    ContentUnit 26_3_update_unit_0034 [table_row] p2: Archive Number: 1 | Content Description: ReadMe File | Required?: Optional
-    ContentUnit 26_3_update_unit_0035 [table_row] p2: Archive Number: 2 | Content Description: • Installer • Siebel Binaries and Shared Files • Enterprise
-    ContentUnit 26_3_update_unit_0036 [table_row] p2: Archive Number: 3 | Content Description: Siebel Non-English (US) Safeboot | Required?: Required for 
-    ContentUnit 26_3_update_unit_0037 [table_row] p2: Archive Number: 4 | Content Description: Siebel Standard Repository | Required?: Required for new de
-    ContentUnit 26_3_update_unit_0038 [table_row] p2: Archive Number: 5 | Content Description: Siebel Approval Manager | Required?: Optional
-    ContentUnit 26_3_update_unit_0039 [table_row] p2: Archive Number: 6 | Content Description: Siebel Desktop Integration (DISA) | Required?: Optional
-    ContentUnit 26_3_update_unit_0040 [table_row] p2: Archive Number: 7 | Content Description: Siebel IAA XML Connector | Required?: Optional
-    ContentUnit 26_3_update_unit_0041 [table_row] p2: Archive Number: 8 | Content Description: Siebel Email Marketing Server | Required?: Optional
-    ContentUnit 26_3_update_unit_0042 [table_row] p2: Archive Number: 9 | Content Description: Siebel Open Integration | Required?: Optional
-    ContentUnit 26_3_update_unit_0043 [table_row] p2: Archive Number: 10 | Content Description: Siebel Smart Answer | Required?: Optional
-    ContentUnit 26_3_update_unit_0044 [table_row] p2: Archive Number: 11 | Content Description: Oracle Database SE2 | Required?: Required for new installa
-    ContentUnit 26_3_update_unit_0045 [table_row] p2: Archive Number: 12 | Content Description: Siebel Ancestor Repositories | Required?: Required for Upg
-    ContentUnit 26_3_update_unit_0046 [paragraph] p2: Linux/Unix Archive Files
-    ContentUnit 26_3_update_unit_0047 [table_row] p2: Archive: Number | field_2: Content Description | field_4: Required?
-    ContentUnit 26_3_update_unit_0048 [table_row] p2: Archive: 1 | field_2: ReadMe File | field_3: Optional
-    ContentUnit 26_3_update_unit_0049 [table_row] p3: Archive: 3 | field_2: Siebel Non-English (US) Safeboot | field_3: Required for non-English (US) depl
-    ContentUnit 26_3_update_unit_0050 [table_row] p3: Archive: 4 | field_2: Siebel Standard Repository | field_3: Required for new deployments
-    ContentUnit 26_3_update_unit_0051 [table_row] p3: Archive: 5 | field_2: Siebel Approval Manager | field_3: Optional
-    ContentUnit 26_3_update_unit_0052 [table_row] p3: Archive: 6 | field_2: Siebel Email Marketing Server | field_3: Optional
-    ContentUnit 26_3_update_unit_0053 [table_row] p3: Archive: 7 | field_2: Siebel Open Integration | field_3: Optional
-    ContentUnit 26_3_update_unit_0054 [table_row] p3: Archive: 8 | field_2: Siebel Ancestor Repositories | field_3: Required for Upgrades from pre-IP2017
-    ContentUnit 26_3_update_unit_0055 [heading] p3: Update Basics
-    ContentUnit 26_3_update_unit_0056 [paragraph] p3: A Monthly Update provides new product features and available fixes. Beyond this document, please rev
-    ContentUnit 26_3_update_unit_0057 [paragraph] p3: - Installation instructions: For more about this Siebel CRM Update, including instructions for prepa
-    ContentUnit 26_3_update_unit_0058 [paragraph] p3: - Third-Party Certifications: For a list of Third-Party Certifications, please visit My Oracle Suppo
-    ContentUnit 26_3_update_unit_0059 [paragraph] p3: - FAQ: The Siebel CRM Continuous Release Model (Doc ID 2378034.1).
-    ContentUnit 26_3_update_unit_0060 [paragraph] p3: NOTE: This document contains two years (24 months) of rolling content. For bug fixes and known issue
-    ContentUnit 26_3_update_unit_0061 [heading] p3: Back to top
-    ContentUnit 26_3_update_unit_0062 [heading] p3: Repository Updates
-    ContentUnit 26_3_update_unit_0063 [paragraph] p3: Some features require Repository, Seed, or Manifest changes in order to take advantage of the featur
-    ContentUnit 26_3_update_unit_0064 [paragraph] p3: NOTE: Not all features require Repository changes. Examine the “Repository Update Required” column i
-    ContentUnit 26_3_update_unit_0065 [heading] p3: Back to top
-    ContentUnit 26_3_update_unit_0066 [heading] p3: Features and Bug Fixes by Release
-    ContentUnit 26_3_update_unit_0067 [paragraph] p3: In addition to the documentation provided in the listed guides from Siebel Bookshelf, please visit t
-    ContentUnit 26_3_update_unit_0068 [paragraph] p4: New Features and Bug Fixes in Siebel CRM Monthly Update 26.3
-    ContentUnit 26_3_update_unit_0069 [paragraph] p4: New Features in Siebel CRM 26.3
-    ContentUnit 26_3_update_unit_0070 [table_row] p4: Feature Name: Developer Experience: | Description: This enhancement provides the following operation
-    ContentUnit 26_3_update_unit_0071 [table_row] p4: Feature Name: Enterprise Cache Operational Enhancements | Description: • When deploying the Enterpri
-    ContentUnit 26_3_update_unit_0072 [table_row] p4: Description: Training on this feature is available onOracle University.
-    ContentUnit 26_3_update_unit_0073 [table_row] p4: Feature Name: Customer Order Management – Improved Promotions UX | Description: In Siebel Customer O
-    ContentUnit 26_3_update_unit_0074 [table_row] p4: Feature Name: Siebel UCM: Publish in Hybrid Mode | Description: Siebel Universal Customer Master (UC
-    ContentUnit 26_3_update_unit_0075 [table_row] p5: Description: This feature removes the current single- middleware restriction and allows enterprises 
-    ContentUnit 26_3_update_unit_0076 [table_row] p5: Feature Name: Schema Changes without Downtime for Updates and Migration | Description: This feature 
-    ContentUnit 26_3_update_unit_0077 [table_row] p5: Description: Examples include: • During the application of a Siebel Monthly Update's "PostInstallDBS
-    ContentUnit 26_3_update_unit_0078 [table_row] p5: Description: NOTE: Full Runtime Repository Migration will leverage this feature to avoid changes req
-    ContentUnit 26_3_update_unit_0079 [paragraph] p6: various Siebel CRM utilities have used could introduce "table locks" or other conditions that would 
-    ContentUnit 26_3_update_unit_0080 [heading] p6: Basic Technical Information
-    ContentUnit 26_3_update_unit_0081 [paragraph] p6: By modifying our existing utilities to leverage built-in capabilities of modern versions of the Orac
-    ContentUnit 26_3_update_unit_0082 [paragraph] p6: - For Oracle platforms, we leverage the DBMS_REDEFINITION package to make changes to objects without
-    ContentUnit 26_3_update_unit_0083 [paragraph] p6: - For Microsoft SQL Server platforms, we leverage the "ONLINE" keyword to modify objects without bri
-    ContentUnit 26_3_update_unit_0084 [paragraph] p6: For more information on the technical details of these database-level capabilities, please refer to 
-    ContentUnit 26_3_update_unit_0085 [paragraph] p6: NOTE: This change is not applicable to either DB2 database platform.
-    ContentUnit 26_3_update_unit_0086 [table_row] p6: field_1: Replacement of Obsolete Data Types from Oracle and MSSQL Databases | Training on this featu
-    ContentUnit 26_3_update_unit_0087 [table_row] p7: field_1: Developer Experience: Web Tools Applet Method Menu Wizard | Training on this feature is ava
-    ContentUnit 26_3_update_unit_0088 [table_row] p7: field_1: Developer Experience: REST APIs for Workspaces | Training on this feature is available onOr
-    ContentUnit 26_3_update_unit_0089 [table_row] p7: Training on this feature is available onOracle University.: • Create Workspace • Checkpoint Workspac
-    ContentUnit 26_3_update_unit_0090 [table_row] p7: field_1: Siebel Cloud Manager - Smarter Ingress Routing | Training on this feature is available onOr
-    ContentUnit 26_3_update_unit_0091 [paragraph] p8: reliable, and aligned with CNCF guiding principles.
-    ContentUnit 26_3_update_unit_0092 [heading] p8: Fixes in Siebel CRM 26.3
-    ContentUnit 26_3_update_unit_0093 [table_row] p8: Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38357102 | Category: Cont
-    ContentUnit 26_3_update_unit_0094 [table_row] p8: Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38091478 | Category: Site
-    ContentUnit 26_3_update_unit_0095 [table_row] p8: Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38104111 | Category: Site
-    ContentUnit 26_3_update_unit_0096 [table_row] p8: Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38721778 | Category: Site
-    ContentUnit 26_3_update_unit_0097 [table_row] p8: Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38376840 | Category: Site
-    ContentUnit 26_3_update_unit_0098 [table_row] p8: Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38472842 | Category: Site
-    ContentUnit 26_3_update_unit_0099 [table_row] p8: Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38907876 | Category: Site
-    ContentUnit 26_3_update_unit_0100 [table_row] p8: Product Name: Siebel Apps - Clinical Trials | Reference: 38105978 | Category: Site Management | Desc
-    ContentUnit 26_3_update_unit_0101 [table_row] p9: Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38472853 | Category: Site
-    ContentUnit 26_3_update_unit_0102 [table_row] p9: Product Name: Siebel Apps - Clinical Trials Management System | Reference: 37919326 | Category: Site
-    ContentUnit 26_3_update_unit_0103 [table_row] p9: Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38088625 | Category: Site
-    ContentUnit 26_3_update_unit_0104 [table_row] p9: Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38104008 | Category: Site
-    ContentUnit 26_3_update_unit_0105 [table_row] p9: Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38375441 | Category: Site
-    ContentUnit 26_3_update_unit_0106 [table_row] p9: Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38141228 | Category: Site
-    ContentUnit 26_3_update_unit_0107 [table_row] p9: Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38907819 | Category: Site
-    ContentUnit 26_3_update_unit_0108 [table_row] p9: Product Name: Siebel Apps - Clinical Trials Management System | Reference: 35982623 | Category: Site
-    ContentUnit 26_3_update_unit_0109 [table_row] p9: Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38152283 | Category: Site
-    ContentUnit 26_3_update_unit_0110 [table_row] p10: Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38208060 | Category: Site
-    ContentUnit 26_3_update_unit_0111 [table_row] p10: Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38419875 | Category: Site
-    ContentUnit 26_3_update_unit_0112 [table_row] p10: Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38390240 | Category: Site
-    ContentUnit 26_3_update_unit_0113 [table_row] p10: Product Name: Siebel Apps - Customer Order Management | Reference: 38612771 | Category: Product Admi
-    ContentUnit 26_3_update_unit_0114 [table_row] p10: Product Name: Siebel CRM Deployment | Reference: 38089901 | Category: Application Interface | Descri
-    ContentUnit 26_3_update_unit_0115 [table_row] p10: Product Name: Siebel CRM Deployment | Reference: 37167823 | Category: Database Upgrade | Description
-    ContentUnit 26_3_update_unit_0116 [table_row] p10: Product Name: Siebel CRM Deployment | Reference: 31589382 | Category: Database Upgrade | Description
-    ContentUnit 26_3_update_unit_0117 [table_row] p10: Product Name: Siebel CRM Deployment | Reference: 38772851 | Category: Installation | Description: Ad
-    ContentUnit 26_3_update_unit_0118 [table_row] p10: Product Name: Siebel CRM Deployment | Reference: 38729891 | Category: Installation | Description: Ad
-    ContentUnit 26_3_update_unit_0119 [table_row] p11: Product Name: Siebel CRM Deployment | Reference: 38571707 | Category: Installation | Description: Ad
-    ContentUnit 26_3_update_unit_0120 [table_row] p11: Product Name: Siebel CRM Deployment | Reference: 38721251 | Category: Installation | Description: Im
-    ContentUnit 26_3_update_unit_0121 [table_row] p11: Product Name: Siebel CRM Deployment | Reference: 38883351 | Category: Installation | Description: Co
-    ContentUnit 26_3_update_unit_0122 [table_row] p11: Product Name: Siebel CRM Deployment | Reference: 38876681 | Category: Migration | Description: Resto
-    ContentUnit 26_3_update_unit_0123 [table_row] p11: Product Name: Siebel CRM Deployment | Reference: 30501821 | Category: Repository Utilities | Descrip
-    ContentUnit 26_3_update_unit_0124 [table_row] p11: Product Name: Siebel CRM Development | Reference: 38698788 | Category: Workflow | Description: When 
-    ContentUnit 26_3_update_unit_0125 [table_row] p11: Product Name: Siebel CRM Development | Reference: 38663266 | Category: Workflow | Description: When 
-    ContentUnit 26_3_update_unit_0126 [table_row] p11: Product Name: Siebel CRM Development | Reference: 38142176 | Category: Workflow | Description: The P
-    ContentUnit 26_3_update_unit_0127 [table_row] p11: Product Name: Siebel CRM Development | Reference: 38755215 | Category: Workspaces | Description: The
-    ContentUnit 26_3_update_unit_0128 [table_row] p12: Product Name: Siebel CRM Documentation | Reference: 38584584 | Category: Object Interfaces Reference
-    ContentUnit 26_3_update_unit_0129 [table_row] p12: Product Name: Siebel CRM Documentation | Reference: 38944807 | Category: System Admin Gd | Descripti
-    ContentUnit 26_3_update_unit_0130 [table_row] p12: Product Name: Siebel CRM Documentation | Reference: 38301898 | Category: Transp/Interface: EAI | Des
-    ContentUnit 26_3_update_unit_0131 [table_row] p12: Product Name: Siebel CRM End User | Reference: 38444710 | Category: User Interface | Description: Ti
-    ContentUnit 26_3_update_unit_0132 [table_row] p12: Product Name: Siebel CRM End User | Reference: 38556974 | Category: User Interface | Description: Fi
-    ContentUnit 26_3_update_unit_0133 [table_row] p12: Product Name: Siebel CRM End User | Reference: 38588428 | Category: User Interface | Description: LE
-    ContentUnit 26_3_update_unit_0134 [table_row] p12: Product Name: Siebel CRM Integration | Reference: 38684263 | Category: EAI | Description: Outbound R
-    ContentUnit 26_3_update_unit_0135 [paragraph] p12: New Features and Bug Fixes in Siebel CRM Monthly Update 26.2
-    ContentUnit 26_3_update_unit_0136 [paragraph] p12: New Features in Siebel CRM 26.2
-    ContentUnit 26_3_update_unit_0137 [paragraph] p12: There are no new features in 26.2.
-    ContentUnit 26_3_update_unit_0138 [paragraph] p12: Fixes in Siebel CRM 26.2
-    ContentUnit 26_3_update_unit_0139 [table_row] p12: Product Name: Siebel Apps - | Reference: 38679336 | Category: Promotions | Description: Previously, 
-    ContentUnit 26_3_update_unit_0140 [table_row] p12: Product Name: Customer Order | Description: upgrade promotion and then tried to | Configuration Inst
-    ContentUnit 26_3_update_unit_0141 [table_row] p12: Product Name: Management | Description: start a new upgrade with a different
-    ContentUnit 26_3_update_unit_0142 [table_row] p13: Product Name: Siebel CRM Deployment | Reference: 31264888 | Category: Database Upgrade | Description
-    ContentUnit 26_3_update_unit_0143 [table_row] p13: Product Name: Siebel CRM Deployment | Reference: 38792489 | Category: Server Infrastructure | Descri
-    ContentUnit 26_3_update_unit_0144 [table_row] p13: Product Name: Siebel CRM Deployment | Reference: 38685764 | Category: Server Infrastructure | Descri
-    ContentUnit 26_3_update_unit_0145 [table_row] p13: Product Name: Siebel CRM Deployment | Reference: 38603047 | Category: Server Infrastructure | Descri
-    ContentUnit 26_3_update_unit_0146 [table_row] p13: Product Name: Siebel CRM Development | Reference: 38250077 | Category: Configuration Tools | Descrip
-    ContentUnit 26_3_update_unit_0147 [table_row] p13: Product Name: Siebel CRM Documentation | Reference: 29468742 | Category: Task UI Guide | Description
-    ContentUnit 26_3_update_unit_0148 [table_row] p13: Product Name: Siebel CRM End User | Reference: 12599692 | Category: Reports | Description: Enabled E
-    ContentUnit 26_3_update_unit_0149 [table_row] p13: Product Name: Siebel CRM Integration | Reference: 38681800 | Category: EAI | Description: When the E
-    ContentUnit 26_3_update_unit_0150 [table_row] p13: Product Name: Siebel CRM Integration | Reference: 38779291 | Category: Open Integration | Descriptio
-    ContentUnit 26_3_update_unit_0151 [table_row] p13: Product Name: Siebel CRM Integration | Reference: 38176388 | Category: SSSE | Description: Improves 
-    ContentUnit 26_3_update_unit_0152 [paragraph] p13: Special Configuration Instructions for Release 26.2
-    ContentUnit 26_3_update_unit_0153 [paragraph] p13: Instructions for 38679336--Previously, when you cancelled an upgrade promotion and then tried to sta
-    ContentUnit 26_3_update_unit_0154 [heading] p14: _Background_
-    ContentUnit 26_3_update_unit_0155 [paragraph] p14: To resolve the issue causing an incorrect Promotion Name to appear in the Promotion Upgrade Staging 
-    ContentUnit 26_3_update_unit_0156 [paragraph] p14: _Steps_
-    ContentUnit 26_3_update_unit_0157 [heading] p14: _Repository Changes_
-    ContentUnit 26_3_update_unit_0158 [paragraph] p14: 1. Edit the Workflow Process _ISS Promotion Finish Upgrade Sub Process_ as follows:
-    ContentUnit 26_3_update_unit_0159 [paragraph] p14: - i. Add a Business Service WF Step _Empty Header BC_ between _Done?_ and _Empty Source BC_ WF Steps
-    ContentUnit 26_3_update_unit_0160 [paragraph] p14: - ii. For the WF Step _Empty Header BC_ , set the following properties.
-    ContentUnit 26_3_update_unit_0161 [table_row] p14: Name: EmptyHeader BC | Business Service Name Business Service Method: InMemoryUpgrade Data Service I
-    ContentUnit 26_3_update_unit_0162 [table_row] p14: Name: For the WF Step _Em_ Input Argument | Business Service Name Business Service Method: _pty Head
-    ContentUnit 26_3_update_unit_0163 [table_row] p14: Name: BC Name | Business Service Name Business Service Method: Literal ISS Promotion Upgrade Header 
-    ContentUnit 26_3_update_unit_0164 [table_row] p14: Name: Method Name | Business Service Name Business Service Method: Literal EmptyRecord
-    ContentUnit 26_3_update_unit_0165 [paragraph] p14: - iii. For the WF Step _Empty Header BC_ , add the following Input Arguments.
-    ContentUnit 26_3_update_unit_0166 [paragraph] p14: - iv. Modify the existing WF Branch Connector between WF Step _Done?_ and WF Step _Empty Source BC_ 
-    ContentUnit 26_3_update_unit_0167 [paragraph] p14: - v. Add a WF Branch Connector between WF Step _Empty Header BC_ and WF Step _Empty Source BC_ .
-    ContentUnit 26_3_update_unit_0168 [paragraph] p14: Instructions for 38779291--Fixed an issue to publish Operation field in Integration component.
-    ContentUnit 26_3_update_unit_0169 [paragraph] p15: _Background_
-    ContentUnit 26_3_update_unit_0170 [paragraph] p15: User creation via the _User_ Integration Component of the _Users_ Integration Object fails as the Op
-    ContentUnit 26_3_update_unit_0171 [heading] p15: _Steps_
-    ContentUnit 26_3_update_unit_0172 [heading] p15: Repository Changes
-    ContentUnit 26_3_update_unit_0173 [paragraph] p15: Perform the following changes to convert the _operation_ field from “system” to “data”:
-    ContentUnit 26_3_update_unit_0174 [paragraph] p15: 1. Select the _Users_ Integration Object.
-    ContentUnit 26_3_update_unit_0175 [paragraph] p15: 2. Select the child Integration Component _User_ .
-    ContentUnit 26_3_update_unit_0176 [paragraph] p15: 3. Select the child Integration Component Field _operation_ .
-    ContentUnit 26_3_update_unit_0177 [paragraph] p15: 4. Modify the Type attribute to “Data”.
-    ContentUnit 26_3_update_unit_0178 [paragraph] p15: New Features and Bug Fixes in Siebel CRM Monthly Update 26.1
-    ContentUnit 26_3_update_unit_0179 [paragraph] p15: New Features in Siebel CRM 26.1
-    ContentUnit 26_3_update_unit_0180 [table_row] p15: Feature Name: Preserve Customer Configuration Changes During Monthly Updates | Description: This fea
   Pages: 15
-  Content units: 180
-  Table-row units: 99
-  Section groups: 16
+  Raw extraction units: 199
+  Grids found by extractor geometry: 18
 
 [PATTERN DISCOVERY]
-    ContentUnit: 26_3_update_unit_0093
+    ContentUnit: 26_3_update_unit_0046
     
     Structural signature:
       - Prominent text
-      - Supporting paragraph
-    Discovered pattern: pattern_001 (32 unit(s), signature P1B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0115
-    
-    Structural signature:
-      - Prominent text
-      - Supporting paragraph
-    Discovered pattern: pattern_002 (19 unit(s), signature P1B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0034
-    
-    Structural signature:
-      - Prominent text
-      - Supporting paragraph
-    Discovered pattern: pattern_003 (13 unit(s), signature P1B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0013
-    
-    Structural signature:
-      - Prominent text
-    Discovered pattern: pattern_004 (10 unit(s), signature P1B0M0)
+    Discovered pattern: pattern_001 (67 unit(s), signature P1B0M0)
     Semantic representation generated.
     ContentUnit: 26_3_update_unit_0002
     
     Structural signature:
-      - Prominent text
-    Discovered pattern: pattern_005 (7 unit(s), signature P1B0M0)
+      - Metadata-like content
+    Discovered pattern: pattern_002 (38 unit(s), signature P0B0M1)
     Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0086
+    ContentUnit: 26_3_update_unit_0006
     
     Structural signature:
-      - Prominent text
+      - Metadata-like content
+      - Metadata-like content
+      - Metadata-like content
+      - Metadata-like content
       - Supporting paragraph
-    Discovered pattern: pattern_006 (6 unit(s), signature P1B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0014
-    
-    Structural signature:
-      - Prominent text
-    Discovered pattern: pattern_007 (5 unit(s), signature P1B0M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0159
-    
-    Structural signature:
       - Supporting paragraph
-    Discovered pattern: pattern_008 (5 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0003
-    
-    Structural signature:
-      - Prominent text
-    Discovered pattern: pattern_009 (4 unit(s), signature P1B0M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0048
-    
-    Structural signature:
-      - Prominent text
-      - Supporting paragraph
-    Discovered pattern: pattern_010 (4 unit(s), signature P1B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0073
-    
-    Structural signature:
-      - Prominent text
-      - Supporting paragraph
-    Discovered pattern: pattern_011 (4 unit(s), signature P1B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0124
-    
-    Structural signature:
-      - Prominent text
-      - Supporting paragraph
-    Discovered pattern: pattern_012 (4 unit(s), signature P1B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0161
-    
-    Structural signature:
-      - Prominent text
-      - Supporting paragraph
-    Discovered pattern: pattern_013 (4 unit(s), signature P1B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0049
-    
-    Structural signature:
-      - Prominent text
-      - Supporting paragraph
-    Discovered pattern: pattern_014 (3 unit(s), signature P1B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0078
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_015 (3 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0174
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_016 (3 unit(s), signature P0B1M0)
+    Discovered pattern: pattern_003 (9 unit(s), signature P0B1M0)
     Semantic representation generated.
     ContentUnit: 26_3_update_unit_0001
     
     Structural signature:
+      - Metadata-like content
+      - Metadata-like content
       - Prominent text
-    Discovered pattern: pattern_017 (2 unit(s), signature P1B0M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0011
-    
-    Structural signature:
+      - Supporting paragraph
       - Prominent text
-    Discovered pattern: pattern_018 (2 unit(s), signature P1B0M0)
+    Discovered pattern: pattern_004 (8 unit(s), signature P1B2M1)
     Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0012
+    ContentUnit: 26_3_update_unit_0039
     
     Structural signature:
       - Prominent text
-    Discovered pattern: pattern_019 (2 unit(s), signature P1B0M0)
+    Discovered pattern: pattern_005 (3 unit(s), signature P1B0M0)
     Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0024
+    ContentUnit: 26_3_update_unit_0117
+    
+    Structural signature:
+      - Supporting paragraph
+      - Prominent text
+    Discovered pattern: pattern_006 (3 unit(s), signature P1B1M0)
+    Semantic representation generated.
+    ContentUnit: 26_3_update_unit_0044
     
     Structural signature:
       - Prominent text
-      - Supporting paragraph
-    Discovered pattern: pattern_020 (2 unit(s), signature P1B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0033
-    
-    Structural signature:
       - Prominent text
-    Discovered pattern: pattern_021 (2 unit(s), signature P1B0M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0061
-    
-    Structural signature:
-      - Prominent text
-    Discovered pattern: pattern_022 (2 unit(s), signature P1B0M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0154
-    
-    Structural signature:
-      - Prominent text
-    Discovered pattern: pattern_023 (2 unit(s), signature P1B0M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0156
-    
-    Structural signature:
-      - Prominent text
-    Discovered pattern: pattern_024 (2 unit(s), signature P1B0M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0168
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_025 (2 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0004
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_026 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0008
-    
-    Structural signature:
-      - Prominent text
-    Discovered pattern: pattern_027 (1 unit(s), signature P1B0M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0009
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_028 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0010
-    
-    Structural signature:
-      - Prominent text
-    Discovered pattern: pattern_029 (1 unit(s), signature P1B0M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0016
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_030 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0017
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_031 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0019
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_032 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0020
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_033 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0021
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_034 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0022
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_035 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0023
-    
-    Structural signature:
-      - Prominent text
-    Discovered pattern: pattern_036 (1 unit(s), signature P1B0M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0026
-    
-    Structural signature:
       - Prominent text
       - Supporting paragraph
-    Discovered pattern: pattern_037 (1 unit(s), signature P1B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0027
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_038 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0028
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_039 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0029
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_040 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0030
-    
-    Structural signature:
-      - Prominent text
-    Discovered pattern: pattern_041 (1 unit(s), signature P1B0M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0031
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_042 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0032
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_043 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0056
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_044 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0057
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_045 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0058
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_046 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0059
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_047 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0060
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_048 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0067
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_049 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0071
-    
-    Structural signature:
       - Prominent text
       - Supporting paragraph
-    Discovered pattern: pattern_050 (1 unit(s), signature P1B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0074
-    
-    Structural signature:
-      - Prominent text
-      - Supporting paragraph
-    Discovered pattern: pattern_051 (1 unit(s), signature P1B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0075
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_052 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0079
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_053 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0080
-    
-    Structural signature:
-      - Prominent text
-    Discovered pattern: pattern_054 (1 unit(s), signature P1B0M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0081
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_055 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0084
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_056 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0085
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_057 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0091
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_058 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0152
-    
-    Structural signature:
-      - Prominent text
-    Discovered pattern: pattern_059 (1 unit(s), signature P1B0M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0173
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_060 (1 unit(s), signature P0B1M0)
-    Semantic representation generated.
-    ContentUnit: 26_3_update_unit_0177
-    
-    Structural signature:
-      - Supporting paragraph
-    Discovered pattern: pattern_061 (1 unit(s), signature P0B1M0)
+    Discovered pattern: pattern_007 (1 unit(s), signature P4B2M0)
     Semantic representation generated.
 
 [CROSS-DOCUMENT GROUPING]
-    logical_group_001: 44 block(s) across 1 document(s)
-    logical_group_002: 44 block(s) across 1 document(s)
-    logical_group_003: 44 block(s) across 1 document(s)
-    logical_group_004: 44 block(s) across 1 document(s)
-    logical_group_005: 44 block(s) across 1 document(s)
-    logical_group_006: 44 block(s) across 1 document(s)
-    logical_group_007: 44 block(s) across 1 document(s)
-    logical_group_008: 44 block(s) across 1 document(s)
-    logical_group_009: 44 block(s) across 1 document(s)
-    logical_group_010: 44 block(s) across 1 document(s)
-    logical_group_011: 44 block(s) across 1 document(s)
-    logical_group_012: 44 block(s) across 1 document(s)
-    logical_group_013: 44 block(s) across 1 document(s)
-    logical_group_014: 44 block(s) across 1 document(s)
-    logical_group_015: 44 block(s) across 1 document(s)
-    logical_group_016: 44 block(s) across 1 document(s)
-    logical_group_017: 44 block(s) across 1 document(s)
-    logical_group_018: 44 block(s) across 1 document(s)
-    logical_group_019: 44 block(s) across 1 document(s)
-    logical_group_020: 44 block(s) across 1 document(s)
-    logical_group_021: 44 block(s) across 1 document(s)
-    logical_group_022: 44 block(s) across 1 document(s)
-    logical_group_023: 44 block(s) across 1 document(s)
-    logical_group_024: 44 block(s) across 1 document(s)
-    logical_group_025: 44 block(s) across 1 document(s)
-    logical_group_026: 44 block(s) across 1 document(s)
-    logical_group_027: 44 block(s) across 1 document(s)
-    logical_group_028: 44 block(s) across 1 document(s)
-    logical_group_029: 44 block(s) across 1 document(s)
-    logical_group_030: 44 block(s) across 1 document(s)
-    logical_group_031: 44 block(s) across 1 document(s)
-    logical_group_032: 44 block(s) across 1 document(s)
-    logical_group_033: 44 block(s) across 1 document(s)
-    logical_group_034: 44 block(s) across 1 document(s)
-    logical_group_035: 44 block(s) across 1 document(s)
-    logical_group_036: 44 block(s) across 1 document(s)
-    logical_group_037: 44 block(s) across 1 document(s)
-    logical_group_038: 44 block(s) across 1 document(s)
-    logical_group_039: 44 block(s) across 1 document(s)
-    logical_group_040: 44 block(s) across 1 document(s)
-    logical_group_041: 44 block(s) across 1 document(s)
-    logical_group_042: 44 block(s) across 1 document(s)
-    logical_group_043: 44 block(s) across 1 document(s)
-    logical_group_044: 44 block(s) across 1 document(s)
+    logical_group_001: 28 block(s) across 1 document(s)
+    logical_group_002: 28 block(s) across 1 document(s)
+    logical_group_003: 28 block(s) across 1 document(s)
+    logical_group_004: 28 block(s) across 1 document(s)
+    logical_group_005: 28 block(s) across 1 document(s)
+    logical_group_006: 28 block(s) across 1 document(s)
+    logical_group_007: 28 block(s) across 1 document(s)
+    logical_group_008: 28 block(s) across 1 document(s)
+    logical_group_009: 28 block(s) across 1 document(s)
+    logical_group_010: 28 block(s) across 1 document(s)
+    logical_group_011: 28 block(s) across 1 document(s)
+    logical_group_012: 28 block(s) across 1 document(s)
+    logical_group_013: 28 block(s) across 1 document(s)
+    logical_group_014: 28 block(s) across 1 document(s)
+    logical_group_015: 28 block(s) across 1 document(s)
+    logical_group_016: 28 block(s) across 1 document(s)
+    logical_group_017: 28 block(s) across 1 document(s)
+    logical_group_018: 28 block(s) across 1 document(s)
+    logical_group_019: 28 block(s) across 1 document(s)
+    logical_group_020: 28 block(s) across 1 document(s)
+    logical_group_021: 28 block(s) across 1 document(s)
+    logical_group_022: 28 block(s) across 1 document(s)
+    logical_group_023: 28 block(s) across 1 document(s)
+    logical_group_024: 28 block(s) across 1 document(s)
+    logical_group_025: 28 block(s) across 1 document(s)
+    logical_group_026: 28 block(s) across 1 document(s)
+    logical_group_027: 28 block(s) across 1 document(s)
+    logical_group_028: 28 block(s) across 1 document(s)
 
 [SUMMARY]
   Ingestion backend: structured
   Documents: 1
-  Logical blocks: 180
-  Section groups: 16
-  Discovered patterns: 61
-  Logical groups: 44
+  Logical blocks: 129
+  Section groups: 6
+  Discovered patterns: 7
+  Logical groups: 28

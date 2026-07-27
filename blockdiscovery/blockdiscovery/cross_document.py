@@ -19,6 +19,7 @@ from typing import List, Optional
 import numpy as np
 
 from .config import EngineConfig
+from .fingerprints import fingerprint_vector
 from .logging_utils import DiscoveryLogger
 from .models import Evidence, LogicalBlock, LogicalGroup
 from .semantics import EmbeddingBackend, cosine
@@ -55,8 +56,10 @@ class CrossDocumentGrouping:
         """
         n = len(logical_blocks)
         dim = len(logical_blocks[0].semantic_vector) if logical_blocks and logical_blocks[0].semantic_vector else 1
+        fp_dim = len(fingerprint_vector({}))
         sem_vecs = np.zeros((n, dim), dtype=np.float32)
         sig_vecs = np.zeros((n, 3), dtype=np.float32)
+        fp_vecs = np.zeros((n, fp_dim), dtype=np.float32)
         pos = np.zeros(n, dtype=np.float32)
         pat = np.empty(n, dtype=object)
         for i, b in enumerate(logical_blocks):
@@ -65,6 +68,7 @@ class CrossDocumentGrouping:
                 nv = np.linalg.norm(v)
                 sem_vecs[i] = v / nv if nv > 0 else v
             sig_vecs[i] = _sig_vector(b.structural_signature)
+            fp_vecs[i] = fingerprint_vector(b.structural_fingerprint or {})
             pos[i] = b.doc_position
             pat[i] = b.discovered_pattern
 
@@ -73,6 +77,11 @@ class CrossDocumentGrouping:
 
         struct = sig_vecs @ sig_vecs.T
         np.clip(struct, 0.0, 1.0, out=struct)
+        # The full structural fingerprint carries relative layout, so it is the
+        # signal that lets an unfamiliar document match a familiar shape.
+        fp_sim = fp_vecs @ fp_vecs.T
+        np.clip(fp_sim, 0.0, 1.0, out=fp_sim)
+        struct = np.maximum(struct, fp_sim)
         # Same discovered pattern -> full structural agreement.
         pat_codes = {p: k for k, p in enumerate(set(pat))}
         codes = np.array([pat_codes[p] for p in pat])
@@ -91,8 +100,12 @@ class CrossDocumentGrouping:
             + w["contextual_similarity"] * ctx
         ).astype(np.float32)
 
-        # Semantic gate + no self-similarity.
-        fused[sem < self.config.thresholds.cross_document_semantic_gate] = 0.0
+        # Eligibility needs either semantic agreement or near-identical
+        # structure; requiring both would make shared layout undiscoverable
+        # between documents that use different words for the same thing.
+        weak_semantics = sem < self.config.thresholds.cross_document_semantic_gate
+        weak_structure = struct < self.config.thresholds.cross_document_structural_gate
+        fused[weak_semantics & weak_structure] = 0.0
         np.fill_diagonal(fused, 0.0)
         return fused
 

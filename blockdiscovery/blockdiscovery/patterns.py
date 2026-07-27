@@ -23,9 +23,11 @@ from .models import ContentUnit, DiscoveredPattern, Evidence
 from .semantics import cosine
 
 
-# Relative weighting of structural vs semantic evidence within pattern discovery.
-_STRUCT_WEIGHT = 0.45
-_SEM_WEIGHT = 0.55
+# Patterns describe recurring *shape*, so structural evidence leads and semantic
+# evidence only modulates. Two records with different wording but the same layout
+# must therefore land in one pattern.
+_STRUCT_WEIGHT = 0.72
+_SEM_WEIGHT = 0.28
 
 
 def _struct_vector(unit: ContentUnit) -> np.ndarray:
@@ -138,6 +140,7 @@ class PatternDiscovery:
                 unit_to_pattern[m] = pid
 
             if log:
+                fp = rep_unit.structural_fingerprint or {}
                 log.event(
                     "pattern_discovered",
                     pattern_id=pid,
@@ -145,7 +148,14 @@ class PatternDiscovery:
                     representative_signature=representative_signature,
                     role_template=rep_unit.role_sequence,
                     structural_fingerprint={
-                        k: round(v, 4) for k, v in (rep_unit.structural_fingerprint or {}).items()
+                        k: round(v, 4) for k, v in fp.items()
+                    },
+                    common_characteristics={
+                        "field_count": fp.get("field_slot_count", 0),
+                        "column_count": fp.get("column_count", 0),
+                        "from_table_row": fp.get("from_table_row", 0),
+                        "from_heading": fp.get("from_heading", 0),
+                        "from_paragraph": fp.get("from_paragraph", 0),
                     },
                     confidence=round(evidence.confidence, 4),
                 )

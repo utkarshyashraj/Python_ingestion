@@ -24,7 +24,14 @@ from .config import DEFAULT_CONFIG, EngineConfig
 from .content_units import ContentUnitDiscovery
 from .cross_document import CrossDocumentGrouping
 from .extraction import PDFExtractor
+from .extraction_units import extract_raw_units
 from .features import FeatureGenerator
+from .generic_discovery import (
+    GenericDiscoveryEngine,
+    detect_pattern_consolidation,
+)
+from .generic_log import write_generic_discovery_log
+from .genericity_audit import audit_package
 from .knowledge import KnowledgeBase
 from .logging_utils import DiscoveryLogger
 from .logical_blocks import LogicalBlockBuilder
@@ -34,11 +41,7 @@ from .patterns import PatternDiscovery
 from .relationships import RelationshipEvaluator
 from .section_groups import SectionGroupDiscovery, write_human_section_log
 from .semantics import build_backend
-from .structured_ingest import (
-    ingest_pdf,
-    remap_section_members,
-    units_to_logical_blocks,
-)
+from .validation_log import write_kb_validation_logs
 
 
 class DiscoveryEngine:
@@ -58,6 +61,15 @@ class DiscoveryEngine:
             self.config.embedding_dim,
             self.config.sentence_transformer_model,
         )
+        # Per-document discovery traces for validation logs.
+        self._transitions_by_doc: Dict[str, List] = {}
+        self._stats_by_doc: Dict[str, Dict] = {}
+        self._units_by_doc: Dict[str, List[ContentUnit]] = {}
+        self._page_stats_by_doc: Dict[str, Dict[int, Dict[str, int]]] = {}
+        self._traces_by_doc: Dict[str, object] = {}
+        self._raw_units_by_doc: Dict[str, List] = {}
+        self._pattern_consolidation: List[Dict] = []
+
 
     # ------------------------------------------------------------------ #
     def extract_and_feature(self, path: str, document_id: Optional[str] = None) -> Document:
@@ -77,7 +89,11 @@ class DiscoveryEngine:
         else:
             block_embeddings = {}
         evaluator = RelationshipEvaluator(self.config, block_embeddings)
-        units = ContentUnitDiscovery(self.config, evaluator, self.backend, self.logger).discover(document)
+        discoverer = ContentUnitDiscovery(self.config, evaluator, self.backend, self.logger)
+        units = discoverer.discover(document)
+        self._transitions_by_doc[document.id] = list(discoverer.transitions)
+        self._stats_by_doc[document.id] = dict(discoverer.stats)
+        self._units_by_doc[document.id] = list(units)
         return units, evaluator
 
     def run(self, paths: List[str]) -> KnowledgeBase:
@@ -86,33 +102,54 @@ class DiscoveryEngine:
         return self._run_native(paths)
 
     def _run_structured(self, paths: List[str]) -> KnowledgeBase:
-        """Structure-aware path: table rows / headings → units → patterns → groups."""
+        """Extraction-only backend feeding the generic evidence-first engine.
+
+        The backend contributes geometry and layout evidence; every grouping,
+        boundary and context decision is made by :class:`GenericDiscoveryEngine`
+        from that evidence alone.
+        """
         log = self.logger
         all_documents: Dict[str, Document] = {}
         all_units: List[ContentUnit] = []
         all_logical_blocks: List[LogicalBlock] = []
         all_section_groups: List[SectionGroup] = []
-        per_doc_units: Dict[str, List[ContentUnit]] = {}
-        per_doc_sections: Dict[str, List[SectionGroup]] = {}
+        extraction: Dict[str, object] = {}
 
         for path in paths:
-            result = ingest_pdf(
+            result = extract_raw_units(
                 path,
-                backend=self.config.ingestion_backend,
                 max_pages=self.config.max_pages,
                 logger=log,
+                backend=self.config.ingestion_backend,
             )
+            extraction[result.document.id] = result
             all_documents[result.document.id] = result.document
-            per_doc_units[result.document.id] = result.content_units
-            per_doc_sections[result.document.id] = result.section_groups
-            all_units.extend(result.content_units)
+            self._page_stats_by_doc[result.document.id] = dict(result.page_stats)
 
-        corpus = [u.text for u in all_units if u.text]
+        # Fit the embedding space on raw evidence before any grouping happens.
+        corpus = [ru.text for r in extraction.values() for ru in r.raw_units if ru.text]
         self.backend.fit(corpus)
+
+        engine = GenericDiscoveryEngine(self.backend, log)
+        for doc_id, result in extraction.items():
+            document = result.document
+            units, blocks, sections, trace = engine.run(document, result.raw_units)
+            self._units_by_doc[doc_id] = list(units)
+            self._traces_by_doc[doc_id] = trace
+            self._raw_units_by_doc[doc_id] = list(result.raw_units)
+            self._stats_by_doc[doc_id] = dict(trace.stats)
+            all_units.extend(units)
+            all_logical_blocks.extend(blocks)
+            all_section_groups.extend(sections)
+
         if all_units:
             vectors = self.backend.embed([u.text for u in all_units])
+            lb_by_unit = {b.content_unit_id: b for b in all_logical_blocks}
             for u, v in zip(all_units, vectors):
                 u.semantic_vector = v.astype(float).tolist()
+                lb = lb_by_unit.get(u.id)
+                if lb is not None:
+                    lb.semantic_vector = u.semantic_vector
                 if log:
                     log.event(
                         "semantic_representation_created",
@@ -123,20 +160,13 @@ class DiscoveryEngine:
                     )
 
         patterns, unit_to_pattern = PatternDiscovery(self.config, log).discover(all_units)
+        for lb in all_logical_blocks:
+            lb.discovered_pattern = unit_to_pattern.get(lb.content_unit_id)
 
-        for doc_id, units in per_doc_units.items():
-            document = all_documents[doc_id]
-            blocks = units_to_logical_blocks(document, units, unit_to_pattern, log)
-            sections = per_doc_sections.get(doc_id, [])
-            remap_section_members(sections, blocks)
-            for lb in blocks:
-                # Attach section id when membership matches.
-                for s in sections:
-                    if lb.id in s.member_logical_block_ids:
-                        lb.section_group_id = s.id
-                        break
-            all_logical_blocks.extend(blocks)
-            all_section_groups.extend(sections)
+        self._pattern_consolidation = detect_pattern_consolidation(patterns)
+        if log:
+            for finding in self._pattern_consolidation:
+                log.event("possible_pattern_consolidation", **finding)
 
         groups = CrossDocumentGrouping(self.config, self.backend, log).group(all_logical_blocks)
 
@@ -265,6 +295,47 @@ class DiscoveryEngine:
                 page_limit=self.config.max_pages,
             )
             paths[human_name] = human_path
+
+        # Section-12 style validation discovery log (native path has full
+        # boundary transitions; structured still gets extraction + LB summary).
+        if self._traces_by_doc:
+            audit = audit_package()
+            for doc in kb.documents.values():
+                trace = self._traces_by_doc.get(doc.id)
+                if trace is None:
+                    continue
+                name = f"generic_discovery_{doc.id}.log"
+                generic_path = os.path.join(out_dir, name)
+                write_generic_discovery_log(
+                    generic_path,
+                    document=doc,
+                    logical_blocks=[b for b in kb.logical_blocks if b.document_id == doc.id],
+                    trace=trace,
+                    patterns=kb.patterns,
+                    groups=kb.groups,
+                    sections=[s for s in kb.section_groups if s.document_id == doc.id],
+                    raw_units=self._raw_units_by_doc.get(doc.id, []),
+                    page_stats=self._page_stats_by_doc.get(doc.id, {}),
+                    pattern_consolidation=self._pattern_consolidation,
+                    audit=audit,
+                    backend=self.config.ingestion_backend,
+                    page_limit=self.config.max_pages,
+                )
+                paths[name] = generic_path
+            _dump("genericity_audit.json", audit.to_dict())
+            _dump("pattern_consolidation.json", self._pattern_consolidation)
+        else:
+            val_paths = write_kb_validation_logs(
+                kb,
+                out_dir,
+                transitions_by_doc=self._transitions_by_doc,
+                stats_by_doc=self._stats_by_doc,
+                units_by_doc=self._units_by_doc,
+                page_stats_by_doc=self._page_stats_by_doc,
+                processing_mode=self.config.ingestion_backend,
+                page_limit=self.config.max_pages,
+            )
+            paths.update(val_paths)
         return paths
 
     def _collection_tree(self, kb: KnowledgeBase) -> Dict:

@@ -64,20 +64,30 @@ class Thresholds:
     boundary_score_threshold: float = 0.48
     # Pairwise semantic coherence below this is treated as a topic transition
     # (especially when spatial/formatting would otherwise keep blocks together).
-    semantic_boundary_gate: float = 0.18
+    semantic_boundary_gate: float = 0.22
     # Visual containment above this can explain co-location despite weak semantics
     # (e.g. cells inside a clearly detected container / table region).
     container_override: float = 0.55
     # When mean unit semantic coherence is below this, grouping confidence is
     # penalised unless strong container evidence is present.
-    semantic_confidence_floor: float = 0.22
+    semantic_confidence_floor: float = 0.25
+    # Spatial / formatting floors for the over-grouping warning + split gate.
+    over_grouping_spatial: float = 0.80
+    over_grouping_formatting: float = 0.85
+    # Soft cap: force a new unit when a growing group exceeds this many blocks
+    # *and* running mean semantic coherence is below the confidence floor.
+    max_content_unit_blocks: int = 6
     # Similarity threshold for grouping content units into a discovered pattern.
     pattern_similarity: float = 0.62
     # Similarity threshold for grouping logical blocks across documents.
     cross_document_similarity: float = 0.6
-    # Minimum semantic similarity for two blocks to be *eligible* to group at
-    # all -- prevents same-layout blocks from grouping on structure alone.
+    # Minimum semantic similarity for two blocks to be eligible to group. Weak
+    # semantics alone does not disqualify a pair: near-identical structure is
+    # independent evidence, which is how a recurring layout is still matched
+    # across documents that share no vocabulary.
     cross_document_semantic_gate: float = 0.16
+    # Structural agreement that substitutes for the semantic gate.
+    cross_document_structural_gate: float = 0.9
     # Confidence below which any decision is additionally logged as low_confidence.
     low_confidence_flag: float = 0.5
     # A logical block is split when an internal cohesion valley is this far

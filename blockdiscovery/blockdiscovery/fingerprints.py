@@ -106,26 +106,44 @@ def build_structural_fingerprint(
     return fp
 
 
+# Union of the keys emitted by the native builder and the generic engine. A
+# fingerprint supplies whatever it measured; absent dimensions stay at zero, so
+# one vectorizer serves both without either knowing about the other.
+_VECTOR_KEYS = (
+    "role_prominent",
+    "role_body",
+    "role_meta",
+    "block_count",
+    "alignment_signature",
+    "spacing_signature",
+    "typography_signature",
+    "content_density",
+    "column_diversity",
+    "head_size_ratio",
+    "mean_semantic",
+    "boundary_mean",
+    "char_count_log",
+    "local_position",
+    # Generic-engine dimensions.
+    "cell_count",
+    "mean_rel_x0",
+    "mean_rel_width",
+    "mean_line_height_ratio",
+    "mean_digit_ratio",
+    "mean_upper_ratio",
+    "marker_depth",
+    "in_grid",
+    "repetition",
+)
+_BLOCK_COUNT_INDEX = _VECTOR_KEYS.index("block_count")
+_REPETITION_INDEX = _VECTOR_KEYS.index("repetition")
+
+
 def fingerprint_vector(fp: Dict[str, float]) -> np.ndarray:
     """Numeric vector used by pattern discovery (subset of fingerprint keys)."""
-    keys = [
-        "role_prominent",
-        "role_body",
-        "role_meta",
-        "block_count",
-        "alignment_signature",
-        "spacing_signature",
-        "typography_signature",
-        "content_density",
-        "column_diversity",
-        "head_size_ratio",
-        "mean_semantic",
-        "boundary_mean",
-        "char_count_log",
-        "local_position",
-    ]
-    v = np.array([fp.get(k, 0.0) for k in keys], dtype=np.float32)
-    # Soft-scale block_count / density so they don't dominate cosine.
-    v[3] = np.log1p(v[3])
+    v = np.array([fp.get(k, 0.0) for k in _VECTOR_KEYS], dtype=np.float32)
+    # Soft-scale counts so magnitude does not dominate cosine direction.
+    v[_BLOCK_COUNT_INDEX] = np.log1p(v[_BLOCK_COUNT_INDEX])
+    v[_REPETITION_INDEX] = np.log1p(v[_REPETITION_INDEX])
     n = np.linalg.norm(v)
     return v / n if n > 0 else v
