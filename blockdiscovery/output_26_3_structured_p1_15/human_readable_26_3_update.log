@@ -1,0 +1,2185 @@
+==============================================================================
+HUMAN-READABLE DISCOVERY LOG — 26.3_UPDATE.pdf (pages 1-15)
+Groups are discovered from layout evidence (generic). No hardcoded
+category names (Feature / Fix / Bug / …) are used.
+==============================================================================
+
+[DOCUMENT]
+  File: /Users/shubhangisingh/pdf-block-discovery/data/samples/26.3_UPDATE.pdf
+  Document id: 26_3_update
+  Pages processed: 15
+  Raw text blocks: 180
+  Logical blocks: 180
+  Discovered section groups: 16
+
+[DISCOVERED SECTION SUMMARY]
+  • DiscoveredSection_001           1 items  pages 1-1  | heading: Siebel CRM Update Guide and Known Issues
+  • DiscoveredSection_002           1 items  pages 1-1  | heading: Required Patches
+  • DiscoveredSection_003           2 items  pages 1-1  | heading: You are not in a supported configuration if any required pat
+  • DiscoveredSection_004           9 items  pages 1-1  | heading: Effect of Encryption Upgrade in 25.10 and Later
+  • DiscoveredSection_005          36 items  pages 1-3  | heading: Required Downloads
+  • DiscoveredSection_006           5 items  pages 3-3  | heading: Update Basics
+  • DiscoveredSection_007           0 items  pages 3-3  | heading: Back to top
+  • DiscoveredSection_008           2 items  pages 3-3  | heading: Repository Updates
+  • DiscoveredSection_009           0 items  pages 3-3  | heading: Back to top
+  • DiscoveredSection_010          13 items  pages 3-6  | heading: Features and Bug Fixes by Release
+  • DiscoveredSection_011          11 items  pages 6-8  | heading: Basic Technical Information
+  • DiscoveredSection_012          61 items  pages 8-13  | heading: Fixes in Siebel CRM 26.3
+  • DiscoveredSection_013           2 items  pages 14-14  | heading: _Background_
+  • DiscoveredSection_014          13 items  pages 14-15  | heading: _Repository Changes_
+  • DiscoveredSection_015           0 items  pages 15-15  | heading: _Steps_
+  • DiscoveredSection_016           8 items  pages 15-15  | heading: Repository Changes
+
+------------------------------------------------------------------------------
+[SECTION GROUP] DiscoveredSection_001
+  section_id : 26_3_update_section_001
+  heading    : Siebel CRM Update Guide and Known Issues
+  pages      : 1-1
+  items      : 1
+  source blocks in group: 1
+  discovery evidence:
+    - heading_level: 1.00
+    - structured_heading: 1.00
+
+  [ITEM 1] 26_3_update_logical_block_002
+    page            : 1
+    confidence      : 0.55
+    pattern         : pattern_005
+    role sequence   : PROMINENT
+    source blocks   : 26_3_update_block_0002
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : Siebel CRM 26.3 Update March 2026
+
+------------------------------------------------------------------------------
+[SECTION GROUP] DiscoveredSection_002
+  section_id : 26_3_update_section_002
+  heading    : Required Patches
+  pages      : 1-1
+  items      : 1
+  source blocks in group: 1
+  discovery evidence:
+    - heading_level: 3.00
+    - structured_heading: 1.00
+
+  [ITEM 1] 26_3_update_logical_block_004
+    page            : 1
+    confidence      : 0.55
+    pattern         : pattern_026
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0004
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : NOTE: Immediately after installing the 26.3 Monthly Update, one or more patches must be installed as listed below.
+
+------------------------------------------------------------------------------
+[SECTION GROUP] DiscoveredSection_003
+  section_id : 26_3_update_section_003
+  heading    : You are not in a supported configuration if any required patch is not installed.
+  pages      : 1-1
+  items      : 2
+  source blocks in group: 2
+  discovery evidence:
+    - heading_level: 3.00
+    - structured_heading: 1.00
+
+  [ITEM 1] 26_3_update_logical_block_006
+    page            : 1
+    confidence      : 0.90
+    pattern         : pattern_009
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0006
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Platforms: Windows (serversandMobile Web Clients) | Required Patches: 39111271
+
+  [ITEM 2] 26_3_update_logical_block_007
+    page            : 1
+    confidence      : 0.90
+    pattern         : pattern_009
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0007
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Platforms: Linux(servers) | Required Patches: 39186423
+
+------------------------------------------------------------------------------
+[SECTION GROUP] DiscoveredSection_004
+  section_id : 26_3_update_section_004
+  heading    : Effect of Encryption Upgrade in 25.10 and Later
+  pages      : 1-1
+  items      : 9
+  source blocks in group: 9
+  discovery evidence:
+    - heading_level: 3.00
+    - structured_heading: 1.00
+
+  [ITEM 1] 26_3_update_logical_block_009
+    page            : 1
+    confidence      : 0.55
+    pattern         : pattern_028
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0009
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : The 25.10 Monthly Update includes an upgrade to the encryption used by Siebel CRM. This will require brief downtime—that is, Rolling Updates will not work when 
+
+  [ITEM 2] 26_3_update_logical_block_010
+    page            : 1
+    confidence      : 0.55
+    pattern         : pattern_029
+    role sequence   : PROMINENT
+    source blocks   : 26_3_update_block_0010
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : Information about this Siebel CRM Monthly Update:
+
+  [ITEM 3] 26_3_update_logical_block_011
+    page            : 1
+    confidence      : 0.55
+    pattern         : pattern_018
+    role sequence   : PROMINENT
+    source blocks   : 26_3_update_block_0011
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : - Required Downloads
+
+  [ITEM 4] 26_3_update_logical_block_012
+    page            : 1
+    confidence      : 0.55
+    pattern         : pattern_019
+    role sequence   : PROMINENT
+    source blocks   : 26_3_update_block_0012
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : - Update Basics
+
+  [ITEM 5] 26_3_update_logical_block_013
+    page            : 1
+    confidence      : 0.55
+    pattern         : pattern_004
+    role sequence   : PROMINENT
+    source blocks   : 26_3_update_block_0013
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : - Repository Updates
+
+  [ITEM 6] 26_3_update_logical_block_014
+    page            : 1
+    confidence      : 0.55
+    pattern         : pattern_007
+    role sequence   : PROMINENT
+    source blocks   : 26_3_update_block_0014
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : - Features and Bug Fixes by Release
+
+  [ITEM 7] 26_3_update_logical_block_015
+    page            : 1
+    confidence      : 0.55
+    pattern         : pattern_017
+    role sequence   : PROMINENT
+    source blocks   : 26_3_update_block_0015
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : - Known Issues
+
+  [ITEM 8] 26_3_update_logical_block_016
+    page            : 1
+    confidence      : 0.55
+    pattern         : pattern_030
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0016
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : NOTE: For an HTML version of this document, please download the first ZIP file in the corresponding patch. The HTML version provides responsive tables and the a
+
+  [ITEM 9] 26_3_update_logical_block_017
+    page            : 1
+    confidence      : 0.55
+    pattern         : pattern_031
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0017
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : NOTE: If you need an earlier or later version of this document, you can find all of them on My Oracle Support at https://support.oracle.com/support/?kmExternalI
+
+------------------------------------------------------------------------------
+[SECTION GROUP] DiscoveredSection_005
+  section_id : 26_3_update_section_005
+  heading    : Required Downloads
+  pages      : 1-3
+  items      : 36
+  source blocks in group: 36
+  discovery evidence:
+    - heading_level: 2.00
+    - structured_heading: 1.00
+
+  [ITEM 1] 26_3_update_logical_block_019
+    page            : 1
+    confidence      : 0.55
+    pattern         : pattern_032
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0019
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : Each Monthly Update patch available on My Oracle Support is divided into a series of archive (ZIP) files. Depending on the Siebel Application Server operating s
+
+  [ITEM 2] 26_3_update_logical_block_020
+    page            : 1
+    confidence      : 0.55
+    pattern         : pattern_033
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0020
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : The ZIP files provided in the Monthly Update will all have a name of the form p___.zip, where:
+
+  [ITEM 3] 26_3_update_logical_block_021
+    page            : 1
+    confidence      : 0.55
+    pattern         : pattern_034
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0021
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : - refers to the MOS patch number for the Monthly Update. It will be an eight-digit number, such as 37386170.
+
+  [ITEM 4] 26_3_update_logical_block_022
+    page            : 2
+    confidence      : 0.55
+    pattern         : pattern_035
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0022
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : - refers to the Monthly Update’s release in the form YYM, without a separator, such as “263” for 26.3.
+
+  [ITEM 5] 26_3_update_logical_block_023
+    page            : 2
+    confidence      : 0.55
+    pattern         : pattern_036
+    role sequence   : PROMINENT
+    source blocks   : 26_3_update_block_0023
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : - refers to one of the supported platforms:
+
+  [ITEM 6] 26_3_update_logical_block_024
+    page            : 2
+    confidence      : 0.90
+    pattern         : pattern_020
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0024
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : field_1: MSWIN-x86-64 | Description: Microsoft Windows x64
+
+  [ITEM 7] 26_3_update_logical_block_025
+    page            : 2
+    confidence      : 0.90
+    pattern         : pattern_020
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0025
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : field_1: Linux x86-64 | Description: Linux x86-64
+
+  [ITEM 8] 26_3_update_logical_block_026
+    page            : 2
+    confidence      : 0.90
+    pattern         : pattern_037
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0026
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : field_1: AIX64-5L | Description: IBM AIX on POWER Systems
+
+  [ITEM 9] 26_3_update_logical_block_027
+    page            : 2
+    confidence      : 0.55
+    pattern         : pattern_038
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0027
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : NOTE: As of the 25.5 release, Solaris and HPUX are no longer available for download. For more information, please review MOS article 3081239.1.
+
+  [ITEM 10] 26_3_update_logical_block_028
+    page            : 2
+    confidence      : 0.55
+    pattern         : pattern_039
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0028
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : - makes identifies the specific ZIP file within the series, such as “5of14”.
+
+  [ITEM 11] 26_3_update_logical_block_029
+    page            : 2
+    confidence      : 0.55
+    pattern         : pattern_040
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0029
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : An example representing ZIP file 5 of 14 for Windows, Siebel Monthly Update 24.12 would be:
+
+  [ITEM 12] 26_3_update_logical_block_030
+    page            : 2
+    confidence      : 0.55
+    pattern         : pattern_041
+    role sequence   : PROMINENT
+    source blocks   : 26_3_update_block_0030
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : ``` p37386170_2412_MSWIN-x86-64_5of14.zip ```
+
+  [ITEM 13] 26_3_update_logical_block_031
+    page            : 2
+    confidence      : 0.55
+    pattern         : pattern_042
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0031
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : The ZIP files for Windows versus the other supported platforms are different, as some components (such as DISA) only run on Windows platforms. Expand the link b
+
+  [ITEM 14] 26_3_update_logical_block_032
+    page            : 2
+    confidence      : 0.55
+    pattern         : pattern_043
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0032
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : NOTE: You do not need to download everything—for example, if you are not using DISA, there is no requirement to download that ZIP file.
+
+  [ITEM 15] 26_3_update_logical_block_033
+    page            : 2
+    confidence      : 0.55
+    pattern         : pattern_021
+    role sequence   : PROMINENT
+    source blocks   : 26_3_update_block_0033
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : Windows Archive Files
+
+  [ITEM 16] 26_3_update_logical_block_034
+    page            : 2
+    confidence      : 0.90
+    pattern         : pattern_003
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0034
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Archive Number: 1 | Content Description: ReadMe File | Required?: Optional
+
+  [ITEM 17] 26_3_update_logical_block_035
+    page            : 2
+    confidence      : 0.90
+    pattern         : pattern_003
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0035
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Archive Number: 2 | Content Description: • Installer • Siebel Binaries and Shared Files • Enterprise Components • Application Interface • Mobile Web Client • Si
+
+  [ITEM 18] 26_3_update_logical_block_036
+    page            : 2
+    confidence      : 0.90
+    pattern         : pattern_003
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0036
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Archive Number: 3 | Content Description: Siebel Non-English (US) Safeboot | Required?: Required for non-English (US) deployments only
+
+  [ITEM 19] 26_3_update_logical_block_037
+    page            : 2
+    confidence      : 0.90
+    pattern         : pattern_003
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0037
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Archive Number: 4 | Content Description: Siebel Standard Repository | Required?: Required for new deployments
+
+  [ITEM 20] 26_3_update_logical_block_038
+    page            : 2
+    confidence      : 0.90
+    pattern         : pattern_003
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0038
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Archive Number: 5 | Content Description: Siebel Approval Manager | Required?: Optional
+
+  [ITEM 21] 26_3_update_logical_block_039
+    page            : 2
+    confidence      : 0.90
+    pattern         : pattern_003
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0039
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Archive Number: 6 | Content Description: Siebel Desktop Integration (DISA) | Required?: Optional
+
+  [ITEM 22] 26_3_update_logical_block_040
+    page            : 2
+    confidence      : 0.90
+    pattern         : pattern_003
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0040
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Archive Number: 7 | Content Description: Siebel IAA XML Connector | Required?: Optional
+
+  [ITEM 23] 26_3_update_logical_block_041
+    page            : 2
+    confidence      : 0.90
+    pattern         : pattern_003
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0041
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Archive Number: 8 | Content Description: Siebel Email Marketing Server | Required?: Optional
+
+  [ITEM 24] 26_3_update_logical_block_042
+    page            : 2
+    confidence      : 0.90
+    pattern         : pattern_003
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0042
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Archive Number: 9 | Content Description: Siebel Open Integration | Required?: Optional
+
+  [ITEM 25] 26_3_update_logical_block_043
+    page            : 2
+    confidence      : 0.90
+    pattern         : pattern_003
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0043
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Archive Number: 10 | Content Description: Siebel Smart Answer | Required?: Optional
+
+  [ITEM 26] 26_3_update_logical_block_044
+    page            : 2
+    confidence      : 0.90
+    pattern         : pattern_003
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0044
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Archive Number: 11 | Content Description: Oracle Database SE2 | Required?: Required for new installations of the Siebel Mobile Web Client
+
+  [ITEM 27] 26_3_update_logical_block_045
+    page            : 2
+    confidence      : 0.90
+    pattern         : pattern_003
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0045
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Archive Number: 12 | Content Description: Siebel Ancestor Repositories | Required?: Required for Upgrades from pre-IP2017
+
+  [ITEM 28] 26_3_update_logical_block_046
+    page            : 2
+    confidence      : 0.55
+    pattern         : pattern_021
+    role sequence   : PROMINENT
+    source blocks   : 26_3_update_block_0046
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : Linux/Unix Archive Files
+
+  [ITEM 29] 26_3_update_logical_block_047
+    page            : 2
+    confidence      : 0.90
+    pattern         : pattern_003
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0047
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Archive: Number | field_2: Content Description | field_4: Required?
+
+  [ITEM 30] 26_3_update_logical_block_048
+    page            : 2
+    confidence      : 0.90
+    pattern         : pattern_010
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0048
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Archive: 1 | field_2: ReadMe File | field_3: Optional
+
+  [ITEM 31] 26_3_update_logical_block_049
+    page            : 3
+    confidence      : 0.90
+    pattern         : pattern_014
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0049
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Archive: 3 | field_2: Siebel Non-English (US) Safeboot | field_3: Required for non-English (US) deployments only
+
+  [ITEM 32] 26_3_update_logical_block_050
+    page            : 3
+    confidence      : 0.90
+    pattern         : pattern_014
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0050
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Archive: 4 | field_2: Siebel Standard Repository | field_3: Required for new deployments
+
+  [ITEM 33] 26_3_update_logical_block_051
+    page            : 3
+    confidence      : 0.90
+    pattern         : pattern_010
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0051
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Archive: 5 | field_2: Siebel Approval Manager | field_3: Optional
+
+  [ITEM 34] 26_3_update_logical_block_052
+    page            : 3
+    confidence      : 0.90
+    pattern         : pattern_010
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0052
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Archive: 6 | field_2: Siebel Email Marketing Server | field_3: Optional
+
+  [ITEM 35] 26_3_update_logical_block_053
+    page            : 3
+    confidence      : 0.90
+    pattern         : pattern_010
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0053
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Archive: 7 | field_2: Siebel Open Integration | field_3: Optional
+
+  [ITEM 36] 26_3_update_logical_block_054
+    page            : 3
+    confidence      : 0.90
+    pattern         : pattern_014
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0054
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Archive: 8 | field_2: Siebel Ancestor Repositories | field_3: Required for Upgrades from pre-IP2017
+
+------------------------------------------------------------------------------
+[SECTION GROUP] DiscoveredSection_006
+  section_id : 26_3_update_section_006
+  heading    : Update Basics
+  pages      : 3-3
+  items      : 5
+  source blocks in group: 5
+  discovery evidence:
+    - heading_level: 2.00
+    - structured_heading: 1.00
+
+  [ITEM 1] 26_3_update_logical_block_056
+    page            : 3
+    confidence      : 0.55
+    pattern         : pattern_044
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0056
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : A Monthly Update provides new product features and available fixes. Beyond this document, please review these related items:
+
+  [ITEM 2] 26_3_update_logical_block_057
+    page            : 3
+    confidence      : 0.55
+    pattern         : pattern_045
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0057
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : - Installation instructions: For more about this Siebel CRM Update, including instructions for preparing the product media and for installing Siebel CRM, see th
+
+  [ITEM 3] 26_3_update_logical_block_058
+    page            : 3
+    confidence      : 0.55
+    pattern         : pattern_046
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0058
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : - Third-Party Certifications: For a list of Third-Party Certifications, please visit My Oracle Support and search for “Siebel Industry Applications” on the _Cer
+
+  [ITEM 4] 26_3_update_logical_block_059
+    page            : 3
+    confidence      : 0.55
+    pattern         : pattern_047
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0059
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : - FAQ: The Siebel CRM Continuous Release Model (Doc ID 2378034.1).
+
+  [ITEM 5] 26_3_update_logical_block_060
+    page            : 3
+    confidence      : 0.55
+    pattern         : pattern_048
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0060
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : NOTE: This document contains two years (24 months) of rolling content. For bug fixes and known issues in versions released before the scope of this document, pl
+
+------------------------------------------------------------------------------
+[SECTION GROUP] DiscoveredSection_007
+  section_id : 26_3_update_section_007
+  heading    : Back to top
+  pages      : 3-3
+  items      : 0
+  source blocks in group: 0
+  discovery evidence:
+    - heading_level: 5.00
+    - structured_heading: 1.00
+
+  (no member items — heading only)
+
+------------------------------------------------------------------------------
+[SECTION GROUP] DiscoveredSection_008
+  section_id : 26_3_update_section_008
+  heading    : Repository Updates
+  pages      : 3-3
+  items      : 2
+  source blocks in group: 2
+  discovery evidence:
+    - heading_level: 2.00
+    - structured_heading: 1.00
+
+  [ITEM 1] 26_3_update_logical_block_063
+    page            : 3
+    confidence      : 0.55
+    pattern         : pattern_004
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0063
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : Some features require Repository, Seed, or Manifest changes in order to take advantage of the feature. These changes must be imported through execution of the _
+
+  [ITEM 2] 26_3_update_logical_block_064
+    page            : 3
+    confidence      : 0.55
+    pattern         : pattern_004
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0064
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : NOTE: Not all features require Repository changes. Examine the “Repository Update Required” column in the New Features tables below to see if such changes are r
+
+------------------------------------------------------------------------------
+[SECTION GROUP] DiscoveredSection_009
+  section_id : 26_3_update_section_009
+  heading    : Back to top
+  pages      : 3-3
+  items      : 0
+  source blocks in group: 0
+  discovery evidence:
+    - heading_level: 5.00
+    - structured_heading: 1.00
+
+  (no member items — heading only)
+
+------------------------------------------------------------------------------
+[SECTION GROUP] DiscoveredSection_010
+  section_id : 26_3_update_section_010
+  heading    : Features and Bug Fixes by Release
+  pages      : 3-6
+  items      : 13
+  source blocks in group: 13
+  discovery evidence:
+    - heading_level: 2.00
+    - structured_heading: 1.00
+
+  [ITEM 1] 26_3_update_logical_block_067
+    page            : 3
+    confidence      : 0.55
+    pattern         : pattern_049
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0067
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : In addition to the documentation provided in the listed guides from Siebel Bookshelf, please visit the Siebel CRM Learning Subscription site where authorized pa
+
+  [ITEM 2] 26_3_update_logical_block_068
+    page            : 4
+    confidence      : 0.55
+    pattern         : pattern_007
+    role sequence   : PROMINENT
+    source blocks   : 26_3_update_block_0068
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : New Features and Bug Fixes in Siebel CRM Monthly Update 26.3
+
+  [ITEM 3] 26_3_update_logical_block_069
+    page            : 4
+    confidence      : 0.55
+    pattern         : pattern_005
+    role sequence   : PROMINENT
+    source blocks   : 26_3_update_block_0069
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : New Features in Siebel CRM 26.3
+
+  [ITEM 4] 26_3_update_logical_block_070
+    page            : 4
+    confidence      : 0.90
+    pattern         : pattern_004
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0070
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Feature Name: Developer Experience: | Description: This enhancement provides the following operational benefits: | Documentation: • System Administration | Repo
+
+  [ITEM 5] 26_3_update_logical_block_071
+    page            : 4
+    confidence      : 0.90
+    pattern         : pattern_050
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0071
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Feature Name: Enterprise Cache Operational Enhancements | Description: • When deploying the Enterprise Cache Client Profile for your deployed Siebel servers, yo
+
+  [ITEM 6] 26_3_update_logical_block_072
+    page            : 4
+    confidence      : 0.90
+    pattern         : pattern_006
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0072
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Description: Training on this feature is available onOracle University.
+
+  [ITEM 7] 26_3_update_logical_block_073
+    page            : 4
+    confidence      : 0.90
+    pattern         : pattern_011
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0073
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Feature Name: Customer Order Management – Improved Promotions UX | Description: In Siebel Customer Order Management, a Bundle Promotion definition can have hund
+
+  [ITEM 8] 26_3_update_logical_block_074
+    page            : 4
+    confidence      : 0.90
+    pattern         : pattern_051
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0074
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Feature Name: Siebel UCM: Publish in Hybrid Mode | Description: Siebel Universal Customer Master (UCM) is enhanced to enable publishing to multiple middleware s
+
+  [ITEM 9] 26_3_update_logical_block_075
+    page            : 5
+    confidence      : 0.90
+    pattern         : pattern_052
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0075
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Description: This feature removes the current single- middleware restriction and allows enterprises to achieve unified, multi-protocol integration across divers
+
+  [ITEM 10] 26_3_update_logical_block_076
+    page            : 5
+    confidence      : 0.90
+    pattern         : pattern_004
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0076
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Feature Name: Schema Changes without Downtime for Updates and Migration | Description: This feature leverages capabilities available in the Oracle and Microsoft
+
+  [ITEM 11] 26_3_update_logical_block_077
+    page            : 5
+    confidence      : 0.90
+    pattern         : pattern_004
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0077
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Description: Examples include: • During the application of a Siebel Monthly Update's "PostInstallDBSetup" or "RepositoryUpdate" processes, which can make change
+
+  [ITEM 12] 26_3_update_logical_block_078
+    page            : 5
+    confidence      : 0.90
+    pattern         : pattern_015
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0078
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Description: NOTE: Full Runtime Repository Migration will leverage this feature to avoid changes required to modify schema objects, but there will still be down
+
+  [ITEM 13] 26_3_update_logical_block_079
+    page            : 6
+    confidence      : 0.55
+    pattern         : pattern_053
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0079
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : various Siebel CRM utilities have used could introduce "table locks" or other conditions that would block end users from being able to use the application while
+
+------------------------------------------------------------------------------
+[SECTION GROUP] DiscoveredSection_011
+  section_id : 26_3_update_section_011
+  heading    : Basic Technical Information
+  pages      : 6-8
+  items      : 11
+  source blocks in group: 11
+  discovery evidence:
+    - heading_level: 5.00
+    - structured_heading: 1.00
+
+  [ITEM 1] 26_3_update_logical_block_081
+    page            : 6
+    confidence      : 0.55
+    pattern         : pattern_055
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0081
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : By modifying our existing utilities to leverage built-in capabilities of modern versions of the Oracle and Microsoft SQL Server database platforms, we can execu
+
+  [ITEM 2] 26_3_update_logical_block_082
+    page            : 6
+    confidence      : 0.55
+    pattern         : pattern_015
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0082
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : - For Oracle platforms, we leverage the DBMS_REDEFINITION package to make changes to objects without making any schema objects offline.
+
+  [ITEM 3] 26_3_update_logical_block_083
+    page            : 6
+    confidence      : 0.55
+    pattern         : pattern_015
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0083
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : - For Microsoft SQL Server platforms, we leverage the "ONLINE" keyword to modify objects without bringing any schema objects offline.
+
+  [ITEM 4] 26_3_update_logical_block_084
+    page            : 6
+    confidence      : 0.55
+    pattern         : pattern_056
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0084
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : For more information on the technical details of these database-level capabilities, please refer to the Oracle or Microsoft documentation as appropriate.
+
+  [ITEM 5] 26_3_update_logical_block_085
+    page            : 6
+    confidence      : 0.55
+    pattern         : pattern_057
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0085
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : NOTE: This change is not applicable to either DB2 database platform.
+
+  [ITEM 6] 26_3_update_logical_block_086
+    page            : 6
+    confidence      : 0.90
+    pattern         : pattern_006
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0086
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : field_1: Replacement of Obsolete Data Types from Oracle and MSSQL Databases | Training on this feature is available onOracle University.: This feature provides 
+
+  [ITEM 7] 26_3_update_logical_block_087
+    page            : 7
+    confidence      : 0.90
+    pattern         : pattern_006
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0087
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : field_1: Developer Experience: Web Tools Applet Method Menu Wizard | Training on this feature is available onOracle University.: The Siebel Tools Applet Method 
+
+  [ITEM 8] 26_3_update_logical_block_088
+    page            : 7
+    confidence      : 0.90
+    pattern         : pattern_006
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0088
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : field_1: Developer Experience: REST APIs for Workspaces | Training on this feature is available onOracle University.: REST APIs allow Workspaces to be called in
+
+  [ITEM 9] 26_3_update_logical_block_089
+    page            : 7
+    confidence      : 0.90
+    pattern         : pattern_006
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0089
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Training on this feature is available onOracle University.: • Create Workspace • Checkpoint Workspace • Revert Version • Delete Workspace • Submit for Delivery 
+
+  [ITEM 10] 26_3_update_logical_block_090
+    page            : 7
+    confidence      : 0.90
+    pattern         : pattern_006
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0090
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : field_1: Siebel Cloud Manager - Smarter Ingress Routing | Training on this feature is available onOracle University.: Siebel Cloud Manager introduces support fo
+
+  [ITEM 11] 26_3_update_logical_block_091
+    page            : 8
+    confidence      : 0.55
+    pattern         : pattern_058
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0091
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : reliable, and aligned with CNCF guiding principles.
+
+------------------------------------------------------------------------------
+[SECTION GROUP] DiscoveredSection_012
+  section_id : 26_3_update_section_012
+  heading    : Fixes in Siebel CRM 26.3
+  pages      : 8-13
+  items      : 61
+  source blocks in group: 61
+  discovery evidence:
+    - heading_level: 5.00
+    - structured_heading: 1.00
+
+  [ITEM 1] 26_3_update_logical_block_093
+    page            : 8
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0093
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38357102 | Category: Contact | Description: Enhances usability by splitting “Apply SV
+
+  [ITEM 2] 26_3_update_logical_block_094
+    page            : 8
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0094
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38091478 | Category: Site Management | Description: Enhances Clinical One-CTMS integr
+
+  [ITEM 3] 26_3_update_logical_block_095
+    page            : 8
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0095
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38104111 | Category: Site Management | Description: Enhances usability of the Clinica
+
+  [ITEM 4] 26_3_update_logical_block_096
+    page            : 8
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0096
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38721778 | Category: Site Management | Description: Addresses an issue where the CRA 
+
+  [ITEM 5] 26_3_update_logical_block_097
+    page            : 8
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0097
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38376840 | Category: Site Management | Description: Addresses issue where the SDV API
+
+  [ITEM 6] 26_3_update_logical_block_098
+    page            : 8
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0098
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38472842 | Category: Site Management | Description: Addresses an issue where a Comple
+
+  [ITEM 7] 26_3_update_logical_block_099
+    page            : 8
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0099
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38907876 | Category: Site Management | Description: Addresses an issue where dynamic 
+
+  [ITEM 8] 26_3_update_logical_block_100
+    page            : 8
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0100
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel Apps - Clinical Trials | Reference: 38105978 | Category: Site Management | Description: Enhances security and governance by restricting “Ch
+
+  [ITEM 9] 26_3_update_logical_block_101
+    page            : 9
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0101
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38472853 | Category: Site Management | Description: Addresses an issue in Mobile app 
+
+  [ITEM 10] 26_3_update_logical_block_102
+    page            : 9
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0102
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel Apps - Clinical Trials Management System | Reference: 37919326 | Category: Site Management | Description: Addresses an issue where Responsi
+
+  [ITEM 11] 26_3_update_logical_block_103
+    page            : 9
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0103
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38088625 | Category: Site Management | Description: Addresses an issue where changes 
+
+  [ITEM 12] 26_3_update_logical_block_104
+    page            : 9
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0104
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38104008 | Category: Site Management | Description: HANDLE ORPHANED SUBJECTS W.R.T. C
+
+  [ITEM 13] 26_3_update_logical_block_105
+    page            : 9
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0105
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38375441 | Category: Site Management | Description: Addresses issue where the LS Clin
+
+  [ITEM 14] 26_3_update_logical_block_106
+    page            : 9
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0106
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38141228 | Category: Site Management | Description: Addresses an issue with Mobile Sm
+
+  [ITEM 15] 26_3_update_logical_block_107
+    page            : 9
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0107
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38907819 | Category: Site Management | Description: Addresses an issue where the subj
+
+  [ITEM 16] 26_3_update_logical_block_108
+    page            : 9
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0108
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel Apps - Clinical Trials Management System | Reference: 35982623 | Category: Site Management | Description: Addresses an issue where users no
+
+  [ITEM 17] 26_3_update_logical_block_109
+    page            : 9
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0109
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38152283 | Category: Site Management | Description: Addresses issue where fields on t
+
+  [ITEM 18] 26_3_update_logical_block_110
+    page            : 10
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0110
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38208060 | Category: Site Management | Description: Enhances notification capabilitie
+
+  [ITEM 19] 26_3_update_logical_block_111
+    page            : 10
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0111
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38419875 | Category: Site Management | Description: Addresses an enhancement to ensur
+
+  [ITEM 20] 26_3_update_logical_block_112
+    page            : 10
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0112
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel Apps - Clinical Trials Management System | Reference: 38390240 | Category: Site Management | Description: Addresses scenario where the SDV 
+
+  [ITEM 21] 26_3_update_logical_block_113
+    page            : 10
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0113
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel Apps - Customer Order Management | Reference: 38612771 | Category: Product Administration | Description: After deleting old versions of cus
+
+  [ITEM 22] 26_3_update_logical_block_114
+    page            : 10
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0114
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Deployment | Reference: 38089901 | Category: Application Interface | Description: Siebel uses only serverAuth EKU for SSL connections
+
+  [ITEM 23] 26_3_update_logical_block_115
+    page            : 10
+    confidence      : 0.90
+    pattern         : pattern_002
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0115
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Deployment | Reference: 37167823 | Category: Database Upgrade | Description: This bug fix ensures that the obsolete column types LONG (
+
+  [ITEM 24] 26_3_update_logical_block_116
+    page            : 10
+    confidence      : 0.90
+    pattern         : pattern_002
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0116
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Deployment | Reference: 31589382 | Category: Database Upgrade | Description: This fix changes the way that schema modifications are app
+
+  [ITEM 25] 26_3_update_logical_block_117
+    page            : 10
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0117
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Deployment | Reference: 38772851 | Category: Installation | Description: Addressed IBMJCE Migration Issue related to decryption Error. 
+
+  [ITEM 26] 26_3_update_logical_block_118
+    page            : 10
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0118
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Deployment | Reference: 38729891 | Category: Installation | Description: Add Support erverAuth using EKU In Siebel Certificates
+
+  [ITEM 27] 26_3_update_logical_block_119
+    page            : 11
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0119
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Deployment | Reference: 38571707 | Category: Installation | Description: Addressed IBMJCE Migration Issue related to decryption Error.
+
+  [ITEM 28] 26_3_update_logical_block_120
+    page            : 11
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0120
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Deployment | Reference: 38721251 | Category: Installation | Description: Improved ODBCSQL Connection Support for AIX 7.3
+
+  [ITEM 29] 26_3_update_logical_block_121
+    page            : 11
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0121
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Deployment | Reference: 38883351 | Category: Installation | Description: Consolidated Outlook_addin Installation to be delivered as par
+
+  [ITEM 30] 26_3_update_logical_block_122
+    page            : 11
+    confidence      : 0.90
+    pattern         : pattern_002
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0122
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Deployment | Reference: 38876681 | Category: Migration | Description: Restores the Application Data Migration service for Migration. No
+
+  [ITEM 31] 26_3_update_logical_block_123
+    page            : 11
+    confidence      : 0.90
+    pattern         : pattern_002
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0123
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Deployment | Reference: 30501821 | Category: Repository Utilities | Description: Eliminates a problem where tables are not regranted pe
+
+  [ITEM 32] 26_3_update_logical_block_124
+    page            : 11
+    confidence      : 0.90
+    pattern         : pattern_012
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0124
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Development | Reference: 38698788 | Category: Workflow | Description: When purging Workflow Process instance records, those with no End
+
+  [ITEM 33] 26_3_update_logical_block_125
+    page            : 11
+    confidence      : 0.90
+    pattern         : pattern_002
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0125
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Development | Reference: 38663266 | Category: Workflow | Description: When creating or updating database triggers, the Generate Trigger
+
+  [ITEM 34] 26_3_update_logical_block_126
+    page            : 11
+    confidence      : 0.90
+    pattern         : pattern_012
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0126
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Development | Reference: 38142176 | Category: Workflow | Description: The Purge button on the Workflow Process Instance Admin View will
+
+  [ITEM 35] 26_3_update_logical_block_127
+    page            : 11
+    confidence      : 0.90
+    pattern         : pattern_012
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0127
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Development | Reference: 38755215 | Category: Workspaces | Description: There was a missing parameter in Siebel Bookshelf for the comma
+
+  [ITEM 36] 26_3_update_logical_block_128
+    page            : 12
+    confidence      : 0.90
+    pattern         : pattern_002
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0128
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Documentation | Reference: 38584584 | Category: Object Interfaces Reference | Description: This documentation update gives the correct 
+
+  [ITEM 37] 26_3_update_logical_block_129
+    page            : 12
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0129
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Documentation | Reference: 38944807 | Category: System Admin Gd | Description: The System Administration Guide, which covers the Siebel
+
+  [ITEM 38] 26_3_update_logical_block_130
+    page            : 12
+    confidence      : 0.90
+    pattern         : pattern_002
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0130
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Documentation | Reference: 38301898 | Category: Transp/Interface: EAI | Description: Documentation on TLS mutual authentication has bee
+
+  [ITEM 39] 26_3_update_logical_block_131
+    page            : 12
+    confidence      : 0.90
+    pattern         : pattern_002
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0131
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM End User | Reference: 38444710 | Category: User Interface | Description: TinyMCE improvement to support Style Tag in the Head Tag of an
+
+  [ITEM 40] 26_3_update_logical_block_132
+    page            : 12
+    confidence      : 0.90
+    pattern         : pattern_002
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0132
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM End User | Reference: 38556974 | Category: User Interface | Description: Fixed Toggle applets to display data corectly
+
+  [ITEM 41] 26_3_update_logical_block_133
+    page            : 12
+    confidence      : 0.90
+    pattern         : pattern_002
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0133
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM End User | Reference: 38588428 | Category: User Interface | Description: LEFT AND RIGHT Arrows are added in screenbars for Synergy Them
+
+  [ITEM 42] 26_3_update_logical_block_134
+    page            : 12
+    confidence      : 0.90
+    pattern         : pattern_002
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0134
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Integration | Reference: 38684263 | Category: EAI | Description: Outbound REST requests that send negative numbers using Integration Co
+
+  [ITEM 43] 26_3_update_logical_block_135
+    page            : 12
+    confidence      : 0.55
+    pattern         : pattern_007
+    role sequence   : PROMINENT
+    source blocks   : 26_3_update_block_0135
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : New Features and Bug Fixes in Siebel CRM Monthly Update 26.2
+
+  [ITEM 44] 26_3_update_logical_block_136
+    page            : 12
+    confidence      : 0.55
+    pattern         : pattern_005
+    role sequence   : PROMINENT
+    source blocks   : 26_3_update_block_0136
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : New Features in Siebel CRM 26.2
+
+  [ITEM 45] 26_3_update_logical_block_137
+    page            : 12
+    confidence      : 0.55
+    pattern         : pattern_005
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0137
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : There are no new features in 26.2.
+
+  [ITEM 46] 26_3_update_logical_block_138
+    page            : 12
+    confidence      : 0.55
+    pattern         : pattern_005
+    role sequence   : PROMINENT
+    source blocks   : 26_3_update_block_0138
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : Fixes in Siebel CRM 26.2
+
+  [ITEM 47] 26_3_update_logical_block_139
+    page            : 12
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0139
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel Apps - | Reference: 38679336 | Category: Promotions | Description: Previously, when you cancelled an | Configuration Instructions: Instruct
+
+  [ITEM 48] 26_3_update_logical_block_140
+    page            : 12
+    confidence      : 0.90
+    pattern         : pattern_011
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0140
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Customer Order | Description: upgrade promotion and then tried to | Configuration Instructions: 38679336
+
+  [ITEM 49] 26_3_update_logical_block_141
+    page            : 12
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0141
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Management | Description: start a new upgrade with a different
+
+  [ITEM 50] 26_3_update_logical_block_142
+    page            : 13
+    confidence      : 0.90
+    pattern         : pattern_002
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0142
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Deployment | Reference: 31264888 | Category: Database Upgrade | Description: Addresses an issue during Upgrades that the license key fo
+
+  [ITEM 51] 26_3_update_logical_block_143
+    page            : 13
+    confidence      : 0.90
+    pattern         : pattern_002
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0143
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Deployment | Reference: 38792489 | Category: Server Infrastructure | Description: Improved DNS Lookup Performance
+
+  [ITEM 52] 26_3_update_logical_block_144
+    page            : 13
+    confidence      : 0.90
+    pattern         : pattern_002
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0144
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Deployment | Reference: 38685764 | Category: Server Infrastructure | Description: Resolution for the inability to save Siebel tab layou
+
+  [ITEM 53] 26_3_update_logical_block_145
+    page            : 13
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0145
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Deployment | Reference: 38603047 | Category: Server Infrastructure | Description: Addressed "ACCESS TO USER PREFERENCE FILE ON LINUX RE
+
+  [ITEM 54] 26_3_update_logical_block_146
+    page            : 13
+    confidence      : 0.90
+    pattern         : pattern_002
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0146
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Development | Reference: 38250077 | Category: Configuration Tools | Description: Web Tools now correctly respects the session timeout s
+
+  [ITEM 55] 26_3_update_logical_block_147
+    page            : 13
+    confidence      : 0.90
+    pattern         : pattern_002
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0147
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Documentation | Reference: 29468742 | Category: Task UI Guide | Description: Documents the ProcessArgAsc parameter that will enforce th
+
+  [ITEM 56] 26_3_update_logical_block_148
+    page            : 13
+    confidence      : 0.90
+    pattern         : pattern_002
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0148
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM End User | Reference: 12599692 | Category: Reports | Description: Enabled Excel template support functionality in Siebel Reports
+
+  [ITEM 57] 26_3_update_logical_block_149
+    page            : 13
+    confidence      : 0.90
+    pattern         : pattern_002
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0149
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Integration | Reference: 38681800 | Category: EAI | Description: When the EAI HTTP Transport Business Service receives a blank set- coo
+
+  [ITEM 58] 26_3_update_logical_block_150
+    page            : 13
+    confidence      : 0.90
+    pattern         : pattern_001
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0150
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Integration | Reference: 38779291 | Category: Open Integration | Description: Fixed an issue to publish Operation field in Integration 
+
+  [ITEM 59] 26_3_update_logical_block_151
+    page            : 13
+    confidence      : 0.90
+    pattern         : pattern_002
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0151
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Product Name: Siebel CRM Integration | Reference: 38176388 | Category: SSSE | Description: Improves the PIMSI Dispatcher’s ability to recover from a failed stat
+
+  [ITEM 60] 26_3_update_logical_block_152
+    page            : 13
+    confidence      : 0.55
+    pattern         : pattern_059
+    role sequence   : PROMINENT
+    source blocks   : 26_3_update_block_0152
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : Special Configuration Instructions for Release 26.2
+
+  [ITEM 61] 26_3_update_logical_block_153
+    page            : 13
+    confidence      : 0.55
+    pattern         : pattern_011
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0153
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : Instructions for 38679336--Previously, when you cancelled an upgrade promotion and then tried to start a new upgrade with a different promotion, the system woul
+
+------------------------------------------------------------------------------
+[SECTION GROUP] DiscoveredSection_013
+  section_id : 26_3_update_section_013
+  heading    : _Background_
+  pages      : 14-14
+  items      : 2
+  source blocks in group: 2
+  discovery evidence:
+    - heading_level: 4.00
+    - structured_heading: 1.00
+
+  [ITEM 1] 26_3_update_logical_block_155
+    page            : 14
+    confidence      : 0.55
+    pattern         : pattern_011
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0155
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : To resolve the issue causing an incorrect Promotion Name to appear in the Promotion Upgrade Staging View.
+
+  [ITEM 2] 26_3_update_logical_block_156
+    page            : 14
+    confidence      : 0.55
+    pattern         : pattern_024
+    role sequence   : PROMINENT
+    source blocks   : 26_3_update_block_0156
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : _Steps_
+
+------------------------------------------------------------------------------
+[SECTION GROUP] DiscoveredSection_014
+  section_id : 26_3_update_section_014
+  heading    : _Repository Changes_
+  pages      : 14-15
+  items      : 13
+  source blocks in group: 13
+  discovery evidence:
+    - heading_level: 5.00
+    - structured_heading: 1.00
+
+  [ITEM 1] 26_3_update_logical_block_158
+    page            : 14
+    confidence      : 0.55
+    pattern         : pattern_012
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0158
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : 1. Edit the Workflow Process _ISS Promotion Finish Upgrade Sub Process_ as follows:
+
+  [ITEM 2] 26_3_update_logical_block_159
+    page            : 14
+    confidence      : 0.55
+    pattern         : pattern_008
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0159
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : - i. Add a Business Service WF Step _Empty Header BC_ between _Done?_ and _Empty Source BC_ WF Steps.
+
+  [ITEM 3] 26_3_update_logical_block_160
+    page            : 14
+    confidence      : 0.55
+    pattern         : pattern_008
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0160
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : - ii. For the WF Step _Empty Header BC_ , set the following properties.
+
+  [ITEM 4] 26_3_update_logical_block_161
+    page            : 14
+    confidence      : 0.90
+    pattern         : pattern_013
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0161
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Name: EmptyHeader BC | Business Service Name Business Service Method: InMemoryUpgrade Data Service Invoke BC Method
+
+  [ITEM 5] 26_3_update_logical_block_162
+    page            : 14
+    confidence      : 0.90
+    pattern         : pattern_013
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0162
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Name: For the WF Step _Em_ Input Argument | Business Service Name Business Service Method: _pty Header BC_,add the followingInput Arguments. Type Value
+
+  [ITEM 6] 26_3_update_logical_block_163
+    page            : 14
+    confidence      : 0.90
+    pattern         : pattern_013
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0163
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Name: BC Name | Business Service Name Business Service Method: Literal ISS Promotion Upgrade Header VBC
+
+  [ITEM 7] 26_3_update_logical_block_164
+    page            : 14
+    confidence      : 0.90
+    pattern         : pattern_013
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0164
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Name: Method Name | Business Service Name Business Service Method: Literal EmptyRecord
+
+  [ITEM 8] 26_3_update_logical_block_165
+    page            : 14
+    confidence      : 0.55
+    pattern         : pattern_008
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0165
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : - iii. For the WF Step _Empty Header BC_ , add the following Input Arguments.
+
+  [ITEM 9] 26_3_update_logical_block_166
+    page            : 14
+    confidence      : 0.55
+    pattern         : pattern_008
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0166
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : - iv. Modify the existing WF Branch Connector between WF Step _Done?_ and WF Step _Empty Source BC_ to connect WF Step _Done?_ with the new WF Step _Empty Heade
+
+  [ITEM 10] 26_3_update_logical_block_167
+    page            : 14
+    confidence      : 0.55
+    pattern         : pattern_008
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0167
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : - v. Add a WF Branch Connector between WF Step _Empty Header BC_ and WF Step _Empty Source BC_ .
+
+  [ITEM 11] 26_3_update_logical_block_168
+    page            : 14
+    confidence      : 0.55
+    pattern         : pattern_025
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0168
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : Instructions for 38779291--Fixed an issue to publish Operation field in Integration component.
+
+  [ITEM 12] 26_3_update_logical_block_169
+    page            : 15
+    confidence      : 0.55
+    pattern         : pattern_023
+    role sequence   : PROMINENT
+    source blocks   : 26_3_update_block_0169
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : _Background_
+
+  [ITEM 13] 26_3_update_logical_block_170
+    page            : 15
+    confidence      : 0.55
+    pattern         : pattern_025
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0170
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : User creation via the _User_ Integration Component of the _Users_ Integration Object fails as the Open API specification for the Integration Object does not hav
+
+------------------------------------------------------------------------------
+[SECTION GROUP] DiscoveredSection_015
+  section_id : 26_3_update_section_015
+  heading    : _Steps_
+  pages      : 15-15
+  items      : 0
+  source blocks in group: 0
+  discovery evidence:
+    - heading_level: 5.00
+    - structured_heading: 1.00
+
+  (no member items — heading only)
+
+------------------------------------------------------------------------------
+[SECTION GROUP] DiscoveredSection_016
+  section_id : 26_3_update_section_016
+  heading    : Repository Changes
+  pages      : 15-15
+  items      : 8
+  source blocks in group: 8
+  discovery evidence:
+    - heading_level: 5.00
+    - structured_heading: 1.00
+
+  [ITEM 1] 26_3_update_logical_block_173
+    page            : 15
+    confidence      : 0.55
+    pattern         : pattern_060
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0173
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : Perform the following changes to convert the _operation_ field from “system” to “data”:
+
+  [ITEM 2] 26_3_update_logical_block_174
+    page            : 15
+    confidence      : 0.55
+    pattern         : pattern_016
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0174
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : 1. Select the _Users_ Integration Object.
+
+  [ITEM 3] 26_3_update_logical_block_175
+    page            : 15
+    confidence      : 0.55
+    pattern         : pattern_016
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0175
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : 2. Select the child Integration Component _User_ .
+
+  [ITEM 4] 26_3_update_logical_block_176
+    page            : 15
+    confidence      : 0.55
+    pattern         : pattern_016
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0176
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : 3. Select the child Integration Component Field _operation_ .
+
+  [ITEM 5] 26_3_update_logical_block_177
+    page            : 15
+    confidence      : 0.55
+    pattern         : pattern_061
+    role sequence   : BODY
+    source blocks   : 26_3_update_block_0177
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : 4. Modify the Type attribute to “Data”.
+
+  [ITEM 6] 26_3_update_logical_block_178
+    page            : 15
+    confidence      : 0.55
+    pattern         : pattern_007
+    role sequence   : PROMINENT
+    source blocks   : 26_3_update_block_0178
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : New Features and Bug Fixes in Siebel CRM Monthly Update 26.1
+
+  [ITEM 7] 26_3_update_logical_block_179
+    page            : 15
+    confidence      : 0.55
+    pattern         : pattern_005
+    role sequence   : PROMINENT
+    source blocks   : 26_3_update_block_0179
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 0.00
+      - heading_evidence: 0.00
+    text            : New Features in Siebel CRM 26.1
+
+  [ITEM 8] 26_3_update_logical_block_180
+    page            : 15
+    confidence      : 0.90
+    pattern         : pattern_004
+    role sequence   : PROMINENT, BODY
+    source blocks   : 26_3_update_block_0180
+    item evidence   :
+      - structure_source: 1.00
+      - table_row_evidence: 1.00
+      - heading_evidence: 0.00
+    text            : Feature Name: Preserve Customer Configuration Changes During Monthly Updates | Description: This feature decreases the time and effort to uptake new features re
+
+==============================================================================
+[END OF LOG]
+==============================================================================

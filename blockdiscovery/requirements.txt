@@ -1,0 +1,20 @@
+# Core runtime dependencies.
+PyMuPDF>=1.24            # generic PDF extraction (fitz)
+numpy>=1.24             # vectorised feature/semantic maths
+
+# Structure-aware ingestion (recommended for table-heavy PDFs such as release notes).
+pymupdf4llm>=0.0.17      # layout-aware markdown + table rows
+
+# Optional: IBM Docling for layout/table AI. Prefer wheels; may fail to build
+# from source on some platforms (docling-parse). When unavailable the engine
+# falls back to pymupdf4llm if ingestion_backend="docling".
+# docling>=2.0
+
+# Optional: higher-quality semantic embeddings. The engine runs fully without
+# these using the built-in dependency-free hashing backend; install them and set
+# EngineConfig.embedding_backend = "sentence-transformers" for better synonym
+# awareness and cross-document recall.
+# sentence-transformers>=2.2
+
+# Optional: test runner (tests also run via `python tests/test_engine.py`).
+# pytest>=7.0

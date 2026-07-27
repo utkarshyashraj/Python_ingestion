@@ -1,0 +1,24 @@
+{
+  "26_3_update": {
+    "id": "26_3_update",
+    "source_path": "/Users/shubhangisingh/pdf-block-discovery/data/samples/26.3_UPDATE.pdf",
+    "metadata": {
+      "title": "",
+      "page_count_total": 180,
+      "page_count_processed": 15,
+      "ingestion_backend": "structured"
+    },
+    "page_count": 15,
+    "block_count": 180,
+    "stats": {
+      "size_median": 11.0,
+      "size_mean": 11.0,
+      "size_std": 1.0,
+      "gap_median": 6.0,
+      "gap_std": 4.0,
+      "page_width": 612.0,
+      "page_height": 792.0,
+      "ingestion_backend": 1.0
+    }
+  }
+}
