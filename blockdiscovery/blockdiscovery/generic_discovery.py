@@ -498,6 +498,7 @@ class GenericDiscoveryEngine:
                 "page_fraction": c.page_number / max(1, document.page_count),
                 "terminal_punctuation": 1.0 if c.text.rstrip().endswith((".", "?", "!")) else 0.0,
                 "layout_section_header": 1.0 if c.layout_class == "section-header" else 0.0,
+                "layout_page_header": 1.0 if c.layout_class == "page-header" else 0.0,
                 "layout_list_item": 1.0 if c.layout_class == "list-item" else 0.0,
                 **prof,
             }
@@ -1063,6 +1064,8 @@ class GenericDiscoveryEngine:
                 or b.layout_class == "list-item"
                 or a.layout_class == "section-header"
                 or b.layout_class == "section-header"
+                or a.layout_class == "page-header"
+                or b.layout_class == "page-header"
             ) and a.layout_class != b.layout_class:
                 forced_split = True
                 force_reason = "Atomic layout role change (list/heading)."
@@ -1369,7 +1372,7 @@ class GenericDiscoveryEngine:
                 id=f"{document.id}_logical_block_{gi:04d}",
                 content_unit_id=unit.id,
                 document_id=document.id,
-                source_document=document.source_path.split("/")[-1],
+                source_document=document.id,
                 source_page=unit.page_number,
                 page_end=unit.page_end,
                 source_block_ids=list(block_ids),

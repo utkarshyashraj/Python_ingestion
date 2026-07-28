@@ -269,7 +269,6 @@ class Document:
     def to_dict(self) -> Dict[str, Any]:
         return {
             "id": self.id,
-            "source_path": self.source_path,
             "metadata": self.metadata,
             "page_count": self.page_count,
             "block_count": len(self.blocks),

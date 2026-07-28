@@ -288,6 +288,61 @@ def _leading_opener_class(text: str) -> str:
     return ""
 
 
+def _field_text_at(block: LogicalBlock, position: int = 0) -> str:
+    fields = block.structured_fields or []
+    for f in fields:
+        if int(f.get("field_position", -1)) == position:
+            return str(f.get("field_text") or "")
+    if fields and position == 0:
+        return str(fields[0].get("field_text") or "")
+    return ""
+
+
+def _structured_field_count(block: LogicalBlock) -> int:
+    fields = block.structured_fields or []
+    if not fields:
+        return 0
+    return 1 + max(int(f.get("field_position", 0)) for f in fields)
+
+
+def _leading_field_empty(block: LogicalBlock) -> bool:
+    if block.block_type != "structured_record":
+        return False
+    fields = block.structured_fields or []
+    if not fields:
+        return False
+    return not _field_text_at(block, 0).strip()
+
+
+def _merge_structured_fields(chain: Sequence[LogicalBlock]) -> Optional[List[Dict[str, Any]]]:
+    """Merge cell texts by column position across wrapped table-row fragments."""
+    if not any(b.structured_fields for b in chain):
+        return None
+    by_pos: Dict[int, Dict[str, Any]] = {}
+    for block in chain:
+        for field in block.structured_fields or []:
+            pos = int(field.get("field_position", 0))
+            text = str(field.get("field_text") or "").strip()
+            if pos not in by_pos:
+                entry = dict(field)
+                entry["field_text"] = text
+                entry.pop("field_part", None)
+                by_pos[pos] = entry
+                continue
+            prev = str(by_pos[pos].get("field_text") or "").strip()
+            if not text:
+                continue
+            if not prev:
+                by_pos[pos]["field_text"] = text
+            elif text == prev or prev.endswith(text):
+                continue
+            elif text.startswith(prev):
+                by_pos[pos]["field_text"] = text
+            else:
+                by_pos[pos]["field_text"] = f"{prev} {text}".strip()
+    return [by_pos[p] for p in sorted(by_pos)]
+
+
 def _full_text(text: str) -> str:
     return " ".join((text or "").split())
 
@@ -546,16 +601,32 @@ class LogicalBlockConsolidator:
                 first_token in {"this", "these", "that", "those", "such", "it"}
                 and len(cur_text) >= 40
                 and _dominant_role(current) != "PROMINENT"
-                and continuation.total_score >= self.min_continuation
+                and continuation.sentence_continuation_score >= 0.60
                 and margin >= self.merge_margin
             )
             # Structured records that already cleared the hard veto for wrap /
             # anaphoric continuation across cells or page splits.
+            empty_lead = _leading_field_empty(current)
+            prev_lead = _field_text_at(previous, 0).strip()
+            label_wrap = (
+                previous.block_type == "structured_record"
+                and current.block_type == "structured_record"
+                and prev_lead.endswith(":")
+                and bool(_field_text_at(current, 0).strip())
+            )
             structured_continue = (
                 previous.block_type == "structured_record"
                 and current.block_type == "structured_record"
-                and continuation.sentence_continuation_score >= 0.30
-                and margin >= self.merge_margin
+                and (
+                    empty_lead
+                    or label_wrap
+                    or continuation.sentence_continuation_score >= 0.30
+                )
+                and (
+                    empty_lead
+                    or label_wrap
+                    or margin >= self.merge_margin
+                )
             )
             if wrap_like or anaphoric_continue or structured_continue:
                 decision = "MERGE"
@@ -618,9 +689,19 @@ class LogicalBlockConsolidator:
             tokens = _tokens(cur_text)
             first_token = tokens[0].casefold() if tokens else ""
             incomplete = not _ends_with_terminal(prev_text) or _ends_open(prev_text)
-            wrap_continuation = incomplete and (
-                (bool(first) and first.islower())
-                or first_token in _WEAK_CONTINUATION_STARTERS
+            empty_lead = _leading_field_empty(current)
+            prev_lead = _field_text_at(previous, 0).strip()
+            label_wrap = prev_lead.endswith(":") and bool(_field_text_at(current, 0).strip())
+            wrap_continuation = (
+                empty_lead
+                or label_wrap
+                or (
+                    incomplete
+                    and (
+                        (bool(first) and first.islower())
+                        or first_token in _WEAK_CONTINUATION_STARTERS
+                    )
+                )
             )
             # Same logical record often continues with a new sentence that
             # anaphorically refers to the previous description ("This feature…").
@@ -636,7 +717,12 @@ class LogicalBlockConsolidator:
                 and current.structural_features.get("marker_depth", 0.0) <= 0
                 and cur_prom <= prev_prom + 0.25
             )
-            if not (wrap_continuation or anaphoric_continuation):
+            # Split header label rows: later row mostly empty leading cells.
+            same_width = _structured_field_count(previous) == _structured_field_count(
+                current
+            ) and _structured_field_count(previous) >= 2
+            header_fragment = same_width and empty_lead
+            if not (wrap_continuation or anaphoric_continuation or header_fragment):
                 return "Both blocks are structured records; table rows stay independent."
 
         prev_role = _dominant_role(previous)
@@ -653,6 +739,34 @@ class LogicalBlockConsolidator:
             and len((current.text or "").split()) <= 24
         ):
             return "Parallel enumerated items share an opener class; keep separate."
+
+        # Extractor section/page headers are atomic openers — never absorb the
+        # following body unless the next fragment is a true lowercase wrap.
+        prev_is_layout_head = (
+            previous.block_type != "structured_record"
+            and (
+                previous.structural_features.get("layout_section_header", 0.0) >= 1.0
+                or previous.structural_features.get("layout_page_header", 0.0) >= 1.0
+            )
+        )
+        if prev_is_layout_head:
+            first = _first_alpha(current.text or "")
+            if not (first and first.islower()):
+                return "Layout heading unit stays separate from following content."
+
+        # Compact title-like PROMINENT units are group openers, not wrap stems.
+        # Structured table rows are excluded — their "prominence" is geometric.
+        prev_text = previous.text or ""
+        prev_words = len(prev_text.split())
+        if (
+            previous.block_type != "structured_record"
+            and prev_role == "PROMINENT"
+            and prev_words <= 14
+            and len(prev_text) <= 120
+            and not _ends_open(prev_text)
+            and not (bool(_first_alpha(current.text or "")) and _first_alpha(current.text).islower())
+        ):
+            return "Short prominent heading stays separate from following content."
 
         # A new prominent head after body content is a classic new-block cue,
         # unless the previous text is clearly unfinished (handled without veto).
@@ -680,7 +794,20 @@ class LogicalBlockConsolidator:
         first_alpha = _first_alpha(cur_text)
         incomplete = (not _ends_with_terminal(prev_text)) or _ends_open(prev_text)
         lowercase_start = bool(first_alpha) and first_alpha.islower()
-        starter_hit = first_token in _WEAK_CONTINUATION_STARTERS
+        # Closed-class starters only count as wrap when the next unit begins in
+        # lowercase. Capitalised "In/To/For…" opens a new sentence, not a wrap —
+        # otherwise short headings merge into the following paragraph.
+        starter_hit = (
+            first_token in _WEAK_CONTINUATION_STARTERS and lowercase_start
+        )
+        anaphoric_start = first_token in {
+            "this",
+            "these",
+            "that",
+            "those",
+            "such",
+            "it",
+        }
         ending_hit = last_token in _WEAK_INCOMPLETE_ENDINGS
 
         complete_to_complete = (
@@ -688,6 +815,7 @@ class LogicalBlockConsolidator:
             and bool(first_alpha)
             and first_alpha.isupper()
             and not starter_hit
+            and not anaphoric_start
         )
 
         sentence = 0.0
@@ -695,6 +823,9 @@ class LogicalBlockConsolidator:
             sentence = 0.92
         elif incomplete and starter_hit:
             sentence = 0.78
+        elif anaphoric_start and len(cur_text) >= 40:
+            # Referring sentence that continues the same logical unit.
+            sentence = 0.72
         elif incomplete:
             sentence = 0.55
         elif lowercase_start:
@@ -855,7 +986,15 @@ class LogicalBlockConsolidator:
             first_token = tokens[0].casefold() if tokens else ""
             lowercase = bool(first) and first.islower()
             anaphoric = first_token in {"this", "these", "that", "those", "such", "it"}
-            table_boundary = 0.15 if ((incomplete and lowercase) or anaphoric) else 1.0
+            empty_lead = _leading_field_empty(current)
+            label_wrap = _field_text_at(previous, 0).strip().endswith(":") and bool(
+                _field_text_at(current, 0).strip()
+            )
+            table_boundary = (
+                0.15
+                if (empty_lead or label_wrap or (incomplete and lowercase) or anaphoric)
+                else 1.0
+            )
         elif previous.block_type == "structured_record" or current.block_type == "structured_record":
             table_boundary = 1.0
         elif previous.source_table_id or current.source_table_id:
@@ -1108,7 +1247,7 @@ class LogicalBlockConsolidator:
             section_group_id=None,
             doc_position=head.doc_position,
             block_type=head.block_type if head.block_type != "heading" else "content",
-            structured_fields=head.structured_fields,
+            structured_fields=_merge_structured_fields(chain) or head.structured_fields,
             source_table_id=head.source_table_id,
             source_logical_block_ids=[b.id for b in chain],
             source_content_unit_ids=[b.content_unit_id for b in chain],

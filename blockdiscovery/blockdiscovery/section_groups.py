@@ -43,7 +43,13 @@ def _is_section_heading(block: LogicalBlock, prom_threshold: float) -> bool:
     text = (block.text or "").strip()
     words = len(text.split())
     marker_depth = f.get("marker_depth", 0.0)
-    layout_header = f.get("layout_section_header", 0.0) >= 1.0
+    layout_header = (
+        f.get("layout_section_header", 0.0) >= 1.0
+        or f.get("layout_page_header", 0.0) >= 1.0
+    )
+    # Running page titles are items under the open section, never new groups.
+    if f.get("layout_page_header", 0.0) >= 1.0:
+        return False
 
     # Structured table rows / list items are never section openers.
     if block.block_type == "structured_record":
@@ -183,6 +189,104 @@ class SectionGroupDiscovery:
             if later_layout < 1.0:
                 heading_flags[i] = False
 
+        # Hierarchy from extractor layout roles (generic, not vocabulary):
+        #   section-header → can open a group
+        #   page-header    → continuation / running title → item under open group
+        # Nested title-like units and headings embedded in a structured-record
+        # stream stay as items so one topical section keeps its table together.
+        def _field_width(block: LogicalBlock) -> int:
+            fields = block.structured_fields or []
+            if not fields:
+                return 0
+            return 1 + max(int(f.get("field_position", 0)) for f in fields)
+
+        def _nearby_structured(
+            idx: int, direction: int, limit: int = 8
+        ) -> Optional[LogicalBlock]:
+            step = 1 if direction > 0 else -1
+            j = idx + step
+            seen = 0
+            while 0 <= j < len(ordered) and seen < limit:
+                b = ordered[j]
+                if heading_flags[j]:
+                    break
+                if b.block_type == "structured_record" and _field_width(b) >= 2:
+                    return b
+                j += step
+                seen += 1
+            return None
+
+        for i, (block, flag) in enumerate(zip(ordered, heading_flags)):
+            if not flag:
+                continue
+            f = block.structural_features
+            if f.get("layout_page_header", 0.0) >= 1.0:
+                heading_flags[i] = False
+                continue
+            # Table caption / nested title: not a section-header, next unit is a
+            # structured grid row, and a parent section-header is still the most
+            # recent opener — keep as an item under that parent group.
+            if (
+                f.get("layout_section_header", 0.0) < 1.0
+                and i + 1 < len(ordered)
+                and ordered[i + 1].block_type == "structured_record"
+            ):
+                for k in range(i - 1, -1, -1):
+                    if not heading_flags[k]:
+                        continue
+                    if (
+                        ordered[k].structural_features.get("layout_section_header", 0.0)
+                        >= 1.0
+                    ):
+                        heading_flags[i] = False
+                    break
+                if not heading_flags[i]:
+                    continue
+            # Heading sitting inside a continuing multi-column record stream
+            # (same column width before and after). Extractors often assign a
+            # new grid id across pages/fragments — width continuity alone is
+            # enough; table-id match is not required.
+            prev_s = _nearby_structured(i, -1)
+            next_s = _nearby_structured(i, 1)
+            if (
+                prev_s is not None
+                and next_s is not None
+                and _field_width(prev_s) == _field_width(next_s)
+                and _field_width(prev_s) >= 3
+            ):
+                heading_flags[i] = False
+                continue
+            # Nested table subsection under an open parent section-header:
+            # parent already owns structured records, and this heading is
+            # *immediately* followed by another structured stream → keep as
+            # an item so Features + Fixes stay one topical group. Peer
+            # sections that open with prose/lists (table not adjacent) still
+            # start a new group — do not look far ahead or later tables
+            # incorrectly nest under an earlier umbrella.
+            next_immediate = _nearby_structured(i, 1, limit=2)
+            if (
+                f.get("layout_section_header", 0.0) >= 1.0
+                and next_immediate is not None
+            ):
+                parent_idx = None
+                for k in range(i - 1, -1, -1):
+                    if heading_flags[k]:
+                        parent_idx = k
+                        break
+                if parent_idx is not None and (
+                    ordered[parent_idx].structural_features.get(
+                        "layout_section_header", 0.0
+                    )
+                    >= 1.0
+                ):
+                    parent_has_structured = any(
+                        ordered[j].block_type == "structured_record"
+                        and _field_width(ordered[j]) >= 2
+                        for j in range(parent_idx + 1, i)
+                    )
+                    if parent_has_structured:
+                        heading_flags[i] = False
+
         # Every validated heading opens its own group. Sibling subheads and
         # body items stay as members until the next heading — that is how
         # "Required Downloads" becomes a separate group with items inside.
@@ -251,7 +355,7 @@ class SectionGroupDiscovery:
                         id=f"{document.id}_preamble_heading",
                         content_unit_id="",
                         document_id=document.id,
-                        source_document=document.source_path.split("/")[-1],
+                        source_document=document.id,
                         source_page=preamble[0].source_page,
                         source_block_ids=[],
                         text="(document preamble — no section heading yet)",
@@ -280,7 +384,7 @@ class SectionGroupDiscovery:
                 id=f"{document.id}_preamble_heading",
                 content_unit_id="",
                 document_id=document.id,
-                source_document=document.source_path.split("/")[-1],
+                source_document=document.id,
                 source_page=preamble[0].source_page,
                 source_block_ids=[],
                 text="(document content — no section heading detected)",
@@ -412,7 +516,7 @@ def write_human_section_log(
         display = f"DiscoveredSection_{generic}"
         A(
             f"  • {display:28}  {sg.item_count:3d} items  "
-            f"pages {sg.page_start}-{sg.page_end}  | heading: {sg.heading_text[:60]}"
+            f"pages {sg.page_start}-{sg.page_end}  | heading: {_full_text(sg.heading_text)}"
         )
     A("")
 

@@ -43,7 +43,7 @@ def logical_block_from_unit(
         id=f"{document.id}_logical_block_{index:03d}",
         content_unit_id=unit.id,
         document_id=document.id,
-        source_document=document.source_path.split("/")[-1],
+        source_document=document.id,
         source_page=unit.page_number,
         page_end=page_end,
         source_block_ids=list(unit.block_ids),
@@ -131,7 +131,7 @@ class LogicalBlockBuilder:
         self.logger.push()
         self.logger.line("Source:")
         self.logger.push()
-        self.logger.kv("Document", lb.source_document)
+        self.logger.kv("Document id", lb.document_id)
         self.logger.kv("Page", lb.source_page)
         self.logger.kv("Blocks", ", ".join(lb.source_block_ids))
         self.logger.pop()
