@@ -389,13 +389,12 @@ def write_human_section_log(
     A = lines.append
     page_note = f" (pages 1-{page_limit})" if page_limit else ""
     A("=" * 78)
-    A(f"HUMAN-READABLE DISCOVERY LOG — {document.source_path.split('/')[-1]}{page_note}")
+    A(f"HUMAN-READABLE DISCOVERY LOG{page_note}")
     A("Groups are discovered from layout evidence (generic). No hardcoded")
     A("category names (Feature / Fix / Bug / …) are used.")
     A("=" * 78)
     A("")
     A("[DOCUMENT]")
-    A(f"  File: {document.source_path}")
     A(f"  Document id: {document.id}")
     A(f"  Pages processed: {document.page_count}")
     A(f"  Raw text blocks: {len(document.blocks)}")

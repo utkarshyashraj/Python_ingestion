@@ -78,7 +78,7 @@ class PDFExtractor:
         doc_id = document_id or document_slug(path)
         if log:
             page_note = f" (first {max_pages} pages)" if max_pages else ""
-            log.section("DOCUMENT", f"Processing document: {os.path.basename(path)}{page_note}")
+            log.section("DOCUMENT", f"Processing document id: {doc_id}{page_note}")
             log.event(
                 "document_started",
                 document_id=doc_id,

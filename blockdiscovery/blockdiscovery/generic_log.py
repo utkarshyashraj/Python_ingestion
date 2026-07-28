@@ -78,7 +78,7 @@ def write_generic_discovery_log(
     A("No document-specific section rules used.")
     A("No regex-based document structure discovery used.")
     A("")
-    A(f"Document: {document.source_path}")
+    A(f"Document id: {document.id}")
     A(f"Extraction backend (evidence only): {backend}")
     A(f"Pages processed: {pages}")
     A("")

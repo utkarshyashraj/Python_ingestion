@@ -65,7 +65,7 @@ def write_validation_discovery_log(
     add("DOCUMENT INGESTION START")
     add(sep)
     add("")
-    add(f"Document: {document.source_path}")
+    add(f"Document id: {document.id}")
     add(f"Backend: {processing_mode}")
     add(f"Pages Processed: {pages}")
     add("")

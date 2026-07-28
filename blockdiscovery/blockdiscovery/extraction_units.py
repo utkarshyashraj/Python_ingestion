@@ -313,7 +313,7 @@ def extract_raw_units(
     if logger:
         logger.section("EXTRACTION")
         logger.kv("Backend", backend)
-        logger.kv("Document", os.path.basename(path))
+        logger.kv("Document id", doc_id)
         logger.kv("Pages", page_limit)
 
     chunks = pymupdf4llm.to_markdown(
