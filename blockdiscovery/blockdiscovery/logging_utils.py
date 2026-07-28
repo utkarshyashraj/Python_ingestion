@@ -51,6 +51,7 @@ REQUIRED_EVENTS = [
     "logical_block_created",
     "logical_block_merged",
     "logical_block_split",
+    "logical_block_continuation_evaluated",
     "cross_document_similarity_calculated",
     "logical_group_created",
     "logical_group_updated",

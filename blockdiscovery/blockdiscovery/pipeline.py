@@ -34,6 +34,11 @@ from .generic_log import write_generic_discovery_log
 from .genericity_audit import audit_package
 from .knowledge import KnowledgeBase
 from .logging_utils import DiscoveryLogger
+from .logical_block_consolidator import (
+    ConsolidationResult,
+    LogicalBlockConsolidator,
+    write_consolidation_log,
+)
 from .logical_blocks import LogicalBlockBuilder
 from .models import ContentUnit, Document, LogicalBlock, SectionGroup
 from .normalization import normalize_document
@@ -69,6 +74,7 @@ class DiscoveryEngine:
         self._traces_by_doc: Dict[str, object] = {}
         self._raw_units_by_doc: Dict[str, List] = {}
         self._pattern_consolidation: List[Dict] = []
+        self._consolidation_by_doc: Dict[str, ConsolidationResult] = {}
 
 
     # ------------------------------------------------------------------ #
@@ -131,25 +137,34 @@ class DiscoveryEngine:
         self.backend.fit(corpus)
 
         engine = GenericDiscoveryEngine(self.backend, log)
+        consolidator = LogicalBlockConsolidator(log)
+        section_discoverer = SectionGroupDiscovery(self.config, self.backend, log)
+        per_doc_blocks: Dict[str, List[LogicalBlock]] = {}
+
         for doc_id, result in extraction.items():
             document = result.document
-            units, blocks, sections, trace = engine.run(document, result.raw_units)
+            # Section discovery from the engine is discarded and re-run after
+            # consolidation so section membership reflects merged blocks.
+            units, blocks, _sections, trace = engine.run(document, result.raw_units)
+            consolidation = consolidator.consolidate(document, blocks)
+            blocks = consolidation.blocks
+            self._consolidation_by_doc[doc_id] = consolidation
             self._units_by_doc[doc_id] = list(units)
             self._traces_by_doc[doc_id] = trace
             self._raw_units_by_doc[doc_id] = list(result.raw_units)
-            self._stats_by_doc[doc_id] = dict(trace.stats)
+            self._stats_by_doc[doc_id] = {
+                **dict(trace.stats),
+                **{f"consolidation_{k}": v for k, v in consolidation.stats.items()},
+            }
+            per_doc_blocks[doc_id] = blocks
             all_units.extend(units)
             all_logical_blocks.extend(blocks)
-            all_section_groups.extend(sections)
 
         if all_units:
             vectors = self.backend.embed([u.text for u in all_units])
-            lb_by_unit = {b.content_unit_id: b for b in all_logical_blocks}
+            unit_vectors = {u.id: v.astype(float).tolist() for u, v in zip(all_units, vectors)}
             for u, v in zip(all_units, vectors):
                 u.semantic_vector = v.astype(float).tolist()
-                lb = lb_by_unit.get(u.id)
-                if lb is not None:
-                    lb.semantic_vector = u.semantic_vector
                 if log:
                     log.event(
                         "semantic_representation_created",
@@ -158,10 +173,19 @@ class DiscoveryEngine:
                         dim=int(v.shape[0]),
                         backend=self.config.embedding_backend,
                     )
+            for lb in all_logical_blocks:
+                if lb.semantic_vector is None:
+                    lb.semantic_vector = unit_vectors.get(lb.content_unit_id)
 
         patterns, unit_to_pattern = PatternDiscovery(self.config, log).discover(all_units)
         for lb in all_logical_blocks:
-            lb.discovered_pattern = unit_to_pattern.get(lb.content_unit_id)
+            lb.discovered_pattern = self._pattern_for_block(lb, unit_to_pattern)
+
+        # Re-discover sections on consolidated blocks.
+        all_section_groups = []
+        for doc_id, blocks in per_doc_blocks.items():
+            sections = section_discoverer.discover(all_documents[doc_id], blocks)
+            all_section_groups.extend(sections)
 
         self._pattern_consolidation = detect_pattern_consolidation(patterns)
         if log:
@@ -212,14 +236,24 @@ class DiscoveryEngine:
             all_units.extend(units)
 
         patterns, unit_to_pattern = PatternDiscovery(self.config, log).discover(all_units)
+        consolidator = LogicalBlockConsolidator(log)
 
         for doc_id, units in per_doc_units.items():
             document = all_documents[doc_id]
             builder = LogicalBlockBuilder(self.config, per_doc_evaluator[doc_id], log)
             blocks = builder.build(document, units, unit_to_pattern)
-            per_doc_logical[doc_id] = blocks
-            all_logical_blocks.extend(blocks)
+            consolidation = consolidator.consolidate(document, blocks)
+            self._consolidation_by_doc[doc_id] = consolidation
+            self._stats_by_doc[doc_id] = {
+                **self._stats_by_doc.get(doc_id, {}),
+                **{f"consolidation_{k}": v for k, v in consolidation.stats.items()},
+            }
+            for lb in consolidation.blocks:
+                lb.discovered_pattern = self._pattern_for_block(lb, unit_to_pattern)
+            per_doc_logical[doc_id] = consolidation.blocks
+            all_logical_blocks.extend(consolidation.blocks)
 
+        # Section discovery runs after consolidation so membership stays coherent.
         section_discoverer = SectionGroupDiscovery(self.config, self.backend, log)
         for doc_id, blocks in per_doc_logical.items():
             sections = section_discoverer.discover(all_documents[doc_id], blocks)
@@ -262,6 +296,21 @@ class DiscoveryEngine:
         )
 
     # ------------------------------------------------------------------ #
+    @staticmethod
+    def _pattern_for_block(
+        block: LogicalBlock, unit_to_pattern: Dict[str, str]
+    ) -> Optional[str]:
+        """Prefer the dominant pattern among consolidated source units."""
+        unit_ids = block.source_content_unit_ids or [block.content_unit_id]
+        counts: Dict[str, int] = {}
+        for uid in unit_ids:
+            pid = unit_to_pattern.get(uid)
+            if pid:
+                counts[pid] = counts.get(pid, 0) + 1
+        if not counts:
+            return unit_to_pattern.get(block.content_unit_id)
+        return max(counts.items(), key=lambda kv: kv[1])[0]
+
     def export(self, kb: KnowledgeBase, out_dir: str) -> Dict[str, str]:
         os.makedirs(out_dir, exist_ok=True)
         paths: Dict[str, str] = {}
@@ -295,6 +344,24 @@ class DiscoveryEngine:
                 page_limit=self.config.max_pages,
             )
             paths[human_name] = human_path
+
+        # Post-discovery consolidation reports (one per document when available).
+        consolidation_export: Dict[str, object] = {}
+        for doc in kb.documents.values():
+            result = self._consolidation_by_doc.get(doc.id)
+            if result is None:
+                continue
+            cons_name = f"block_consolidation_{doc.id}.log"
+            cons_path = os.path.join(out_dir, cons_name)
+            write_consolidation_log(cons_path, result, doc.id)
+            paths[cons_name] = cons_path
+            consolidation_export[doc.id] = {
+                "stats": result.stats,
+                "merge_chains": result.merge_chains,
+                "decisions": [d.to_dict() for d in result.decisions],
+            }
+        if consolidation_export:
+            _dump("block_consolidation.json", consolidation_export)
 
         # Section-12 style validation discovery log (native path has full
         # boundary transitions; structured still gets extraction + LB summary).

@@ -16,6 +16,7 @@ default and is not part of discovery.
 
 from __future__ import annotations
 
+from collections import Counter
 from typing import List, Optional
 
 import numpy as np
@@ -26,51 +27,99 @@ from .models import Document, Evidence, LogicalBlock, SectionGroup
 from .semantics import EmbeddingBackend, cosine
 
 
-def _preview(text: str, n: int = 90) -> str:
-    return " ".join(text.split())[:n]
+def _full_text(text: str) -> str:
+    """Preserve every word for human-readable logs (collapse runs of whitespace only)."""
+    return " ".join((text or "").split())
 
 
 def _is_section_heading(block: LogicalBlock, prom_threshold: float) -> bool:
     """Relative heading test -- never absolute font size or fixed keywords."""
     f = block.structural_features
-    prom = f.get("head_prominence", f.get("mean_prominence", 0.0))
+    prom = f.get("head_prominence", f.get("mean_prominence", f.get("prominence", 0.0)))
     size_ratio = f.get("head_size_ratio", 1.0)
     chars = f.get("char_count", float(len(block.text)))
     blocks = f.get("block_count", float(len(block.source_block_ids)))
     roles = block.role_sequence or []
     text = (block.text or "").strip()
+    words = len(text.split())
+    marker_depth = f.get("marker_depth", 0.0)
+    layout_header = f.get("layout_section_header", 0.0) >= 1.0
 
-    shortish = chars <= 120
+    # Structured table rows / list items are never section openers.
+    if block.block_type == "structured_record":
+        return False
+    if f.get("layout_list_item", 0.0) >= 1.0:
+        return False
+    # Enumerated / bullet lines are items, never section openers.
+    lead = ""
+    for ch in text:
+        if not ch.isspace():
+            lead = ch
+            break
+    if lead and not lead.isalnum() and lead not in {'"', "'", "(", "[", "{"}:
+        return False
+    # Lowercase-start fragments are body continuations, not headings.
+    if lead and lead.islower():
+        return False
+    # Numbered list openers (digits then '.' or ')') are items, not headings.
+    i = 0
+    while i < len(text) and text[i].isdigit():
+        i += 1
+    if (
+        i > 0
+        and i < len(text)
+        and text[i] in ".)"
+        and (i + 1 >= len(text) or text[i + 1].isspace())
+    ):
+        return False
+
+    shortish = chars <= 120 and words <= 14
     mostly_head = blocks <= 2 or (roles.count("PROMINENT") >= 1 and roles.count("BODY") <= 1)
-    prominent = prom >= prom_threshold or size_ratio >= 1.15
+    prominent = (
+        prom >= prom_threshold
+        or size_ratio >= 1.15
+        or marker_depth >= 1.0
+        or layout_header
+    )
     # Title-like: short, few source blocks, does not read as a full sentence.
     title_like = (
         shortish
         and blocks <= 2
-        and not text.endswith((".", "?", ";"))
-        and len(text.split()) <= 16
+        and not text.endswith((".", "?", ";", "!"))
+        and words <= 14
     )
     looks_like_column_header = (
         chars <= 200
         and size_ratio < 1.12
         and prom < prom_threshold + 0.15
+        and not layout_header
         and (text.count("/") >= 2 or text.count("\n") >= 2)
         and f.get("block_count", blocks) <= 2
     )
-    # Navigational crumbs: very short, unemphasised and carrying no identifiers.
+    # Navigational crumbs: very short labels without identifiers. Real section
+    # titles that are short still pass when unique (handled below via layout /
+    # title_like); repeated chrome is demoted later in discover().
     looks_like_nav = (
-        chars <= 20
-        and len(text.split()) <= 4
+        chars <= 12
+        and words <= 2
         and size_ratio < 1.1
         and prom < prom_threshold
+        and not layout_header
         and not any(ch.isdigit() for ch in text)
     )
-    # Body sentence leftover (ends with '.') should not open a section.
-    looks_like_sentence = text.endswith(".") and size_ratio < 1.12 and prom <= prom_threshold + 0.05
-    if looks_like_column_header or looks_like_nav or looks_like_sentence:
+    # Prose / warning sentences (even if bold / section-header styled) must not
+    # open a section — they remain items under the previous heading.
+    looks_like_sentence = text.endswith((".", "?", "!")) and words >= 8
+    # Intro / instruction lines that end with ':' introduce following items;
+    # they are not section openers themselves.
+    looks_like_intro = text.endswith(":") and words >= 4
+    if looks_like_column_header or looks_like_nav or looks_like_sentence or looks_like_intro:
         return False
+    # Extractor section-header layout + compact title shape is strong evidence.
+    if layout_header and title_like:
+        return True
     # Accept either elevated prominence OR a compact title-like unit (common
-    # when section titles share the body font size).
+    # when section titles share the body font size, e.g. archive-file headings).
     return bool((prominent and shortish and mostly_head) or title_like)
 
 
@@ -108,9 +157,35 @@ class SectionGroupDiscovery:
         ordered = sorted(logical_blocks, key=lambda b: (b.source_page, b.doc_position, b.id))
         heading_flags = [_is_section_heading(b, prom_threshold) for b in ordered]
 
-        # Prefer the stronger of consecutive heading candidates (umbrella title
-        # followed by a more specific section title): keep both if both pass,
-        # membership of intervening empty sections is fine.
+        # Identical micro-labels that recur (e.g. page chrome) are not section
+        # openers — demote by repetition evidence only.
+        micro = [
+            (b.text or "").strip()
+            for b, flag in zip(ordered, heading_flags)
+            if flag and len((b.text or "").split()) <= 4 and len((b.text or "").strip()) <= 24
+        ]
+        micro_counts = Counter(micro)
+        for i, (block, flag) in enumerate(zip(ordered, heading_flags)):
+            if not flag:
+                continue
+            key = (block.text or "").strip()
+            if micro_counts.get(key, 0) >= 2 and len(key.split()) <= 4:
+                heading_flags[i] = False
+
+        # Stacked titles: a non-layout heading immediately after another heading
+        # on the same page is metadata/subtitle — keep it as an item.
+        for i in range(1, len(ordered)):
+            if not (heading_flags[i] and heading_flags[i - 1]):
+                continue
+            if ordered[i].source_page != ordered[i - 1].source_page:
+                continue
+            later_layout = ordered[i].structural_features.get("layout_section_header", 0.0)
+            if later_layout < 1.0:
+                heading_flags[i] = False
+
+        # Every validated heading opens its own group. Sibling subheads and
+        # body items stay as members until the next heading — that is how
+        # "Required Downloads" becomes a separate group with items inside.
         sections: List[SectionGroup] = []
         open_heading: Optional[LogicalBlock] = None
         open_members: List[LogicalBlock] = []
@@ -153,7 +228,7 @@ class SectionGroupDiscovery:
                 id=f"{document.id}_section_{section_idx:03d}",
                 document_id=document.id,
                 heading_block_id=open_heading.id,
-                heading_text=_preview(open_heading.text, 200),
+                heading_text=_full_text(open_heading.text),
                 page_start=min(pages),
                 page_end=max(pages),
                 member_logical_block_ids=[m.id for m in members],
@@ -375,8 +450,16 @@ def write_human_section_log(
                 A("    item evidence   :")
                 for k, v in b.evidence.signals.items():
                     A(f"      - {k}: {v:.2f}" if isinstance(v, float) else f"      - {k}: {v}")
-            preview = _preview(b.text, 160)
-            A(f"    text            : {preview}")
+            A(f"    text            : {_full_text(b.text)}")
+            if b.structured_fields:
+                A("    fields          :")
+                for sf in b.structured_fields:
+                    part = sf.get("field_part")
+                    prefix = f"      [{sf.get('field_position', '?')}"
+                    if part is not None:
+                        prefix += f".{part}"
+                    prefix += "]"
+                    A(f"{prefix} {_full_text(str(sf.get('field_text', '')))}")
             A("")
 
     A("=" * 78)

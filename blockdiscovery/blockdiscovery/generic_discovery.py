@@ -62,16 +62,17 @@ _FORM_SIGNALS = (
 )
 
 _BOUND_WEIGHTS = {
-    "semantic_transition": 0.15,
-    "spatial_boundary": 0.10,
-    "formatting_transition": 0.09,
+    "semantic_transition": 0.12,
+    "spatial_boundary": 0.09,
+    "formatting_transition": 0.08,
     "alignment_transition": 0.05,
-    "structural_transition": 0.09,
-    "repetition_boundary": 0.17,
+    "structural_transition": 0.10,
+    "repetition_boundary": 0.14,
     "container_boundary": 0.12,
-    "reading_order_discontinuity": 0.06,
+    "reading_order_discontinuity": 0.05,
     "prominence_onset": 0.07,
     "hierarchy_onset": 0.10,
+    "layout_transition": 0.08,
 }
 
 
@@ -159,6 +160,26 @@ def _first_char_class(text: str) -> str:
     if c.islower():
         return "L"
     return "P"
+
+
+def _split_bullet_parts(text: str, bullet_chars: frozenset) -> List[str]:
+    """Split a cell on bullet glyphs into nested item parts (no regex)."""
+    if not text or not any(ch in bullet_chars for ch in text):
+        return [text] if text is not None else []
+    parts: List[str] = []
+    buf: List[str] = []
+    for ch in text:
+        if ch in bullet_chars:
+            piece = " ".join("".join(buf).split())
+            if piece:
+                parts.append(piece)
+            buf = []
+            continue
+        buf.append(ch)
+    tail = " ".join("".join(buf).split())
+    if tail:
+        parts.append(tail)
+    return parts or [text]
 
 
 # --------------------------------------------------------------------------- #
@@ -374,7 +395,7 @@ class GenericDiscoveryEngine:
                         block_ids=[tb.id],
                         bbox=ru.bbox,
                         layout_class=ru.layout_class,
-                        cells=[c for c in ru.cells if c.strip()],
+                        cells=list(ru.cells),
                         lines=list(ru.lines) or [ru.text],
                         grid_id=ru.grid_id,
                         grid_row_index=ru.grid_row_index,
@@ -476,6 +497,8 @@ class GenericDiscoveryEngine:
                 "in_grid": 1.0 if c.grid_id else 0.0,
                 "page_fraction": c.page_number / max(1, document.page_count),
                 "terminal_punctuation": 1.0 if c.text.rstrip().endswith((".", "?", "!")) else 0.0,
+                "layout_section_header": 1.0 if c.layout_class == "section-header" else 0.0,
+                "layout_list_item": 1.0 if c.layout_class == "list-item" else 0.0,
                 **prof,
             }
             c.features["prominence"] = clip01(
@@ -876,6 +899,21 @@ class GenericDiscoveryEngine:
             else 0.0
         )
 
+        # Extractor layout class is geometry/typography evidence. A change of
+        # class (heading ↔ body ↔ list ↔ table) is a real structural boundary.
+        # Distinct list items are also separate content units by construction.
+        layout_transition = 0.0
+        if a.layout_class != b.layout_class:
+            layout_transition = 0.85
+        # Each list item is its own unit — including consecutive list items.
+        if a.layout_class == "list-item" or b.layout_class == "list-item":
+            layout_transition = max(layout_transition, 0.95)
+        # Consecutive section headers are distinct heads, not one blob.
+        if a.layout_class == "section-header" and b.layout_class == "section-header":
+            layout_transition = max(layout_transition, 0.95)
+        if (a.grid_id is None) != (b.grid_id is None):
+            layout_transition = max(layout_transition, 0.90)
+
         return {
             "semantic_transition": clip01(1.0 - rel["semantic_similarity"]),
             "spatial_boundary": clip01((gap_ratio - 1.0) / 2.5) if same_page else 1.0,
@@ -889,6 +927,7 @@ class GenericDiscoveryEngine:
             "reading_order_discontinuity": 0.0 if same_page else 1.0,
             "prominence_onset": onset,
             "hierarchy_onset": hierarchy_onset,
+            "layout_transition": layout_transition,
         }
 
     @staticmethod
@@ -999,20 +1038,82 @@ class GenericDiscoveryEngine:
                 "form_discount_template": round(discount["template"], 3),
                 "form_discount_container_change": round(discount["container_change"], 3),
             }
-            split = net < cut
+            # Decisive structural evidence forces a new block even when the
+            # adaptive cut would otherwise continue. This prevents over-grouping
+            # of headings, list items and table rows into one prose blob.
+            forced_split = False
+            force_reason = ""
+            if bnd.get("hierarchy_onset", 0.0) >= 0.95:
+                forced_split = True
+                force_reason = "Heading-level onset from formatting evidence."
+            elif bnd.get("layout_transition", 0.0) >= 0.90:
+                forced_split = True
+                force_reason = (
+                    f"Layout class transition {a.layout_class!r} → {b.layout_class!r}."
+                    if a.layout_class != b.layout_class
+                    else "List-item atomic boundary."
+                )
+            elif bnd.get("repetition_boundary", 0.0) >= 0.70 and (
+                a.grid_id and a.grid_id == b.grid_id
+            ):
+                forced_split = True
+                force_reason = "Repeated grid-row template boundary."
+            elif (
+                a.layout_class == "list-item"
+                or b.layout_class == "list-item"
+                or a.layout_class == "section-header"
+                or b.layout_class == "section-header"
+            ) and a.layout_class != b.layout_class:
+                forced_split = True
+                force_reason = "Atomic layout role change (list/heading)."
+            elif (
+                (not a.grid_id)
+                and a.text.rstrip().endswith((".", "?", "!"))
+                and bool(b.text.strip())
+                and b.text.lstrip()[:1].isupper()
+            ):
+                # Finished prose unit followed by a new capitalised unit —
+                # keep as separate items (anti-over-grouping).
+                forced_split = True
+                force_reason = "Finished sentence followed by a new capitalised unit."
+            elif (
+                (not a.grid_id)
+                and a.text.rstrip().endswith(":")
+                and bool(b.text.strip())
+                and (
+                    b.text.lstrip()[:1].isupper()
+                    or b.text.lstrip().startswith("```")
+                    or b.layout_class != a.layout_class
+                )
+            ):
+                forced_split = True
+                force_reason = "Intro/label line followed by a distinct unit."
+            elif (not a.grid_id) and (
+                a.text.lstrip().startswith("```") or b.text.lstrip().startswith("```")
+            ):
+                forced_split = True
+                force_reason = "Code/example fence boundary."
+
+            split = forced_split or (net < cut)
             spread = abs(net - cut)
             confidence = clip01(0.5 + spread * 2.0)
-            top = max(bnd.items(), key=lambda kv: kv[1] * bnd_weights[kv[0]])
+            if forced_split:
+                confidence = max(confidence, 0.85)
+            top = max(bnd.items(), key=lambda kv: kv[1] * bnd_weights.get(kv[0], 0.0))
             top_rel = max(
                 ((k, v) for k, v in rel.items() if k in rel_weights),
                 key=lambda kv: kv[1] * rel_weights[kv[0]],
             )
             if split:
                 reason = (
-                    f"Boundary evidence dominates; strongest signal '{top[0]}'={top[1]:.2f} "
-                    f"against relationship score {r:.2f}."
+                    force_reason
+                    if forced_split
+                    else (
+                        f"Boundary evidence dominates; strongest signal '{top[0]}'={top[1]:.2f} "
+                        f"against relationship score {r:.2f}."
+                    )
                 )
-                if explained >= 0.4:
+                if (not forced_split) and explained >= 0.4:
                     cause = (
                         "a recurring template already predicts it"
                         if discount["template"] >= discount["container_change"]
@@ -1305,23 +1406,28 @@ class GenericDiscoveryEngine:
     @staticmethod
     def _structured_fields(group: List[CandidateUnit]) -> List[Dict[str, Any]]:
         fields_out: List[Dict[str, Any]] = []
+        bullet_chars = frozenset("•·∙●◦▪▸")
         for c in group:
             for pos, cell in enumerate(c.cells):
-                if not cell.strip():
-                    continue
-                prof = _char_profile(cell)
-                fields_out.append(
-                    {
+                # Keep empty cells so column indices stay aligned with the grid.
+                parts = _split_bullet_parts(cell, bullet_chars)
+                if len(parts) <= 1:
+                    parts = [cell]
+                for pi, part in enumerate(parts):
+                    prof = _char_profile(part)
+                    entry: Dict[str, Any] = {
                         "field_position": pos,
-                        "field_text": cell[:300],
+                        "field_text": part,
                         "column_signature": (
                             f"pos{pos}"
-                            f"|len{min(6, int(math.log1p(len(cell)) / 1.2))}"
+                            f"|len{min(6, int(math.log1p(len(part)) / 1.2))}"
                             f"|d{int(prof['digit_ratio'] * 4)}"
                             f"|u{int(prof['upper_ratio'] * 4)}"
                         ),
                     }
-                )
+                    if len(parts) > 1:
+                        entry["field_part"] = pi
+                    fields_out.append(entry)
         return fields_out
 
     @staticmethod
@@ -1423,12 +1529,20 @@ class GenericDiscoveryEngine:
             f = b.structural_features
             if f.get("in_grid", 0.0) >= 1.0:
                 return False
+            if b.block_type == "structured_record":
+                return False
+            text = (b.text or "").strip()
+            words = len(text.split())
+            # Sentence-length units (even bold warnings) stay as items.
+            if text.endswith((".", "?", "!")) and words >= 8:
+                return False
             depth = f.get("marker_depth", 0.0)
             if depth_present:
                 return depth > 0
             return (
                 f.get("prominence", 0.0) >= prom_cut
-                and f.get("char_count", 0.0) <= 160
+                and f.get("char_count", 0.0) <= 120
+                and words <= 14
                 and f.get("terminal_punctuation", 0.0) < 1.0
             )
 
@@ -1452,7 +1566,7 @@ class GenericDiscoveryEngine:
                     id=f"{document.id}_context_{counter:03d}",
                     document_id=document.id,
                     heading_block_id=open_head.id,
-                    heading_text=open_head.text[:200],
+                    heading_text=open_head.text,
                     page_start=open_head.source_page,
                     page_end=meaningful[-1].page_end or meaningful[-1].source_page,
                     member_logical_block_ids=[m.id for m in meaningful],
@@ -1497,7 +1611,7 @@ class GenericDiscoveryEngine:
                     {
                         "logical_block_id": open_head.id,
                         "page": open_head.source_page,
-                        "text": open_head.text[:100],
+                        "text": open_head.text,
                         "reason": "Heading-like evidence with no meaningful descendants.",
                     }
                 )

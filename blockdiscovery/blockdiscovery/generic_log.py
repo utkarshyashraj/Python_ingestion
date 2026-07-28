@@ -17,9 +17,9 @@ from .models import Document, LogicalBlock
 _SEP = "=" * 60
 
 
-def _preview(text: str, n: int = 110) -> str:
-    t = " ".join((text or "").split())
-    return t if len(t) <= n else t[: n - 1] + "…"
+def _full_text(text: str) -> str:
+    """Full human-readable text — every word kept; only whitespace is normalized."""
+    return " ".join((text or "").split())
 
 
 def _signal_lines(signals: Dict[str, Any], indent: str = "  ") -> List[str]:
@@ -113,7 +113,7 @@ def write_generic_discovery_log(
         A("Rejected running elements (found by cross-page repetition, not by name):")
         A("")
         for r in rejected[:20]:
-            A(f"  {r['candidate_id']} p{r['page']}: {_preview(r['text'], 60)}")
+            A(f"  {r['candidate_id']} p{r['page']}: {_full_text(r['text'])}")
             for ln in _signal_lines(r["evidence"], indent="      "):
                 A(ln)
             A(f"      reason : {r['reason']}")
@@ -239,7 +239,7 @@ def write_generic_discovery_log(
             for f in lb.structured_fields:
                 A(
                     f"    [{f['field_position']}] {f['column_signature']} : "
-                    f"{_preview(f['field_text'], 70)}"
+                    f"{_full_text(f['field_text'])}"
                 )
         A("  Structural Fingerprint:")
         for ln in _signal_lines(lb.structural_fingerprint, indent="    "):
@@ -253,7 +253,7 @@ def write_generic_discovery_log(
         A("  Evidence:")
         for ln in _signal_lines(lb.evidence.signals if lb.evidence else {}, indent="    "):
             A(ln)
-        A(f"  Text          : {_preview(lb.text, 140)}")
+        A(f"  Text          : {_full_text(lb.text)}")
         A("")
 
     # ---------------------------------------------------------------- #
@@ -279,7 +279,7 @@ def write_generic_discovery_log(
                 f"semantic={o['semantic_similarity']:.2f} "
                 f"discount_applied={o['form_discount_applied']:.2f}"
             )
-            A(f"      next unit: {_preview(o['text_b'], 70)}")
+            A(f"      next unit: {_full_text(o['text_b'])}")
         A("")
     else:
         A("Every flagged edge was resolved into a boundary.")
@@ -295,7 +295,7 @@ def write_generic_discovery_log(
         A("")
     for s in sections:
         A(f"Context {s.id}:")
-        A(f"  Heading evidence : {_preview(s.heading_text, 90)}")
+        A(f"  Heading evidence : {_full_text(s.heading_text)}")
         A(f"  Pages            : {s.page_start}-{s.page_end}")
         A(f"  Member count     : {len(s.member_logical_block_ids)}")
         A("  Structural evidence:")
@@ -307,7 +307,7 @@ def write_generic_discovery_log(
         A("Heading-like units that did NOT become contexts (no meaningful members):")
         A("")
         for h in heading_contexts:
-            A(f"  {h['logical_block_id']} p{h['page']}: {_preview(h['text'], 70)}")
+            A(f"  {h['logical_block_id']} p{h['page']}: {_full_text(h['text'])}")
             A(f"      reason: {h['reason']}")
         A("")
 

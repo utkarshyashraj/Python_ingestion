@@ -28,29 +28,89 @@ _RULE_CHARS = frozenset("-:| ")
 _EMPHASIS_TOKENS = ("**", "__")
 
 
+# Extractor HTML tags (machine format). Template placeholders like
+# ``<platform>`` are content and must not be stripped.
+_HTML_TAGS = frozenset(
+    {
+        "a",
+        "b",
+        "br",
+        "div",
+        "em",
+        "i",
+        "li",
+        "ol",
+        "p",
+        "span",
+        "strong",
+        "sub",
+        "sup",
+        "table",
+        "tbody",
+        "td",
+        "th",
+        "thead",
+        "tr",
+        "u",
+        "ul",
+    }
+)
+
+
 def collapse_whitespace(text: str) -> str:
     return " ".join((text or "").split())
 
 
+def _is_html_tag_inner(inner: str) -> bool:
+    """True when an angle-bracket interior is extractor HTML, not content."""
+    s = (inner or "").strip()
+    if not s:
+        return True
+    if s.startswith("!") or s.startswith("?"):
+        return True
+    if s.startswith("/"):
+        s = s[1:].strip()
+    name = []
+    for ch in s:
+        if ch.isspace() or ch in "=/":
+            break
+        name.append(ch)
+    tag = "".join(name).rstrip("/").casefold()
+    if not tag:
+        return True
+    if any(ch.isspace() or ch == "=" for ch in s):
+        return tag.isalpha()
+    return tag in _HTML_TAGS
+
+
 def strip_markup(text: str) -> str:
-    """Remove extractor markup artefacts (emphasis runs and angle-bracket tags).
+    """Remove extractor markup artefacts (emphasis runs and HTML tags).
 
     Regex-free on purpose: this is a character scan over a machine-generated
-    format, and it never inspects words.
+    format. Template placeholders such as ``<platform>`` are preserved.
     """
     t = (text or "").replace("<br>", " ").replace("<br/>", " ").replace("<br />", " ")
     for token in _EMPHASIS_TOKENS:
         t = t.replace(token, "")
     out: List[str] = []
-    depth = 0
-    for ch in t:
+    i = 0
+    while i < len(t):
+        ch = t[i]
         if ch == "<":
-            depth += 1
-        elif ch == ">":
-            if depth:
-                depth -= 1
-        elif depth == 0:
-            out.append(ch)
+            j = t.find(">", i + 1)
+            if j < 0:
+                out.append(ch)
+                i += 1
+                continue
+            inner = t[i + 1 : j]
+            if _is_html_tag_inner(inner):
+                i = j + 1
+                continue
+            out.append(t[i : j + 1])
+            i = j + 1
+            continue
+        out.append(ch)
+        i += 1
     return collapse_whitespace("".join(out))
 
 
@@ -185,7 +245,41 @@ def _grid_rows_from_segment(segment: str) -> List[List[str]]:
         if not any(c.strip() for c in cells):
             continue
         rows.append(cells)
-    return rows
+    return _merge_split_label_rows(rows)
+
+
+def _merge_split_label_rows(rows: List[List[str]]) -> List[List[str]]:
+    """Merge a fragmented first label row into the next when columns align.
+
+    Some extractors emit multi-line header labels as two short rows (e.g.
+    ``Archive`` then ``Number | Content…``). Combining them restores the
+    column schema without inspecting words.
+    """
+    if len(rows) < 2:
+        return rows
+    width = max(len(r) for r in rows)
+    def pad(r: List[str]) -> List[str]:
+        return list(r) + [""] * (width - len(r))
+
+    a, b = pad(rows[0]), pad(rows[1])
+    a_fill = sum(1 for c in a if c.strip())
+    b_fill = sum(1 for c in b if c.strip())
+    if a_fill <= 0 or a_fill >= b_fill or a_fill > max(1, width // 2):
+        return [pad(r) for r in rows]
+    # Prefer merge when empty slots in a are filled by b (split labels).
+    complementary = 0
+    for ca, cb in zip(a, b):
+        if (not ca.strip()) and cb.strip():
+            complementary += 1
+        if ca.strip() and cb.strip():
+            complementary += 1
+    if complementary < 1:
+        return [pad(r) for r in rows]
+    merged = []
+    for ca, cb in zip(a, b):
+        parts = [p for p in (ca.strip(), cb.strip()) if p]
+        merged.append(" ".join(parts))
+    return [merged] + [pad(r) for r in rows[2:]]
 
 
 def _interpolate_row_bbox(table_bbox: BBox, row_index: int, row_count: int) -> BBox:

@@ -410,6 +410,11 @@ class LogicalBlock:
     block_type: str = "content"  # "content" | "structured_record" | "heading"
     structured_fields: Optional[List[Dict[str, str]]] = None
     source_table_id: Optional[str] = None
+    # Populated by the post-discovery consolidation layer when several discovered
+    # logical blocks are joined into one coherent unit.
+    source_logical_block_ids: Optional[List[str]] = None
+    source_content_unit_ids: Optional[List[str]] = None
+    consolidation_evidence: Optional[Evidence] = None
 
     def to_dict(self, include_vector: bool = False) -> Dict[str, Any]:
         d = {
@@ -439,6 +444,12 @@ class LogicalBlock:
             d["structured_fields"] = self.structured_fields
         if self.source_table_id is not None:
             d["source_table_id"] = self.source_table_id
+        if self.source_logical_block_ids is not None:
+            d["source_logical_block_ids"] = list(self.source_logical_block_ids)
+        if self.source_content_unit_ids is not None:
+            d["source_content_unit_ids"] = list(self.source_content_unit_ids)
+        if self.consolidation_evidence is not None:
+            d["consolidation_evidence"] = self.consolidation_evidence.to_dict()
         if include_vector and self.semantic_vector is not None:
             d["semantic_vector"] = self.semantic_vector
         return d

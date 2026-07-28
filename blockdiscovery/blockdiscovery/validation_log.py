@@ -13,9 +13,8 @@ from .knowledge import KnowledgeBase
 from .models import Document, LogicalBlock
 
 
-def _preview(text: str, n: int = 120) -> str:
-    t = (text or "").replace("\n", " ").strip()
-    return t if len(t) <= n else t[: n - 1] + "…"
+def _full_text(text: str) -> str:
+    return " ".join((text or "").split())
 
 
 def _fmt_signals(signals: Dict[str, float], indent: str = "    ") -> List[str]:
@@ -189,8 +188,11 @@ def write_validation_discovery_log(
             add(f"  Fields:")
             for sf in lb.structured_fields:
                 add(f"    [{sf.get('field_position', '?')}] {sf.get('column_signature', '?')}: "
-                    f"{_preview(sf.get('field_text', ''), 80)}")
+                    f"{_full_text(str(sf.get('field_text', '')))}")
             add("")
+
+        add(f"  Text: {_full_text(lb.text)}")
+        add("")
 
         add(f"  Structural Fingerprint:")
         for ln in _fmt_signals(lb.structural_fingerprint or {}, indent="    "):
