@@ -1,32 +1,37 @@
 [
   {
     "id": "pattern_001",
-    "size": 67,
+    "size": 106,
     "member_unit_ids": [
+      "26_3_update_unit_0006",
+      "26_3_update_unit_0007",
+      "26_3_update_unit_0008",
+      "26_3_update_unit_0025",
+      "26_3_update_unit_0026",
+      "26_3_update_unit_0027",
+      "26_3_update_unit_0028",
+      "26_3_update_unit_0036",
+      "26_3_update_unit_0037",
+      "26_3_update_unit_0038",
+      "26_3_update_unit_0039",
+      "26_3_update_unit_0040",
+      "26_3_update_unit_0041",
+      "26_3_update_unit_0042",
+      "26_3_update_unit_0043",
+      "26_3_update_unit_0044",
+      "26_3_update_unit_0045",
       "26_3_update_unit_0046",
       "26_3_update_unit_0047",
       "26_3_update_unit_0048",
-      "26_3_update_unit_0049",
       "26_3_update_unit_0050",
+      "26_3_update_unit_0051",
       "26_3_update_unit_0052",
       "26_3_update_unit_0053",
       "26_3_update_unit_0054",
+      "26_3_update_unit_0055",
+      "26_3_update_unit_0056",
+      "26_3_update_unit_0057",
       "26_3_update_unit_0058",
-      "26_3_update_unit_0059",
-      "26_3_update_unit_0060",
-      "26_3_update_unit_0061",
-      "26_3_update_unit_0062",
-      "26_3_update_unit_0063",
-      "26_3_update_unit_0064",
-      "26_3_update_unit_0065",
-      "26_3_update_unit_0066",
-      "26_3_update_unit_0067",
-      "26_3_update_unit_0068",
-      "26_3_update_unit_0069",
-      "26_3_update_unit_0070",
-      "26_3_update_unit_0071",
-      "26_3_update_unit_0072",
-      "26_3_update_unit_0073",
       "26_3_update_unit_0074",
       "26_3_update_unit_0075",
       "26_3_update_unit_0076",
@@ -39,24 +44,12 @@
       "26_3_update_unit_0083",
       "26_3_update_unit_0084",
       "26_3_update_unit_0085",
-      "26_3_update_unit_0086",
-      "26_3_update_unit_0087",
-      "26_3_update_unit_0088",
-      "26_3_update_unit_0089",
-      "26_3_update_unit_0090",
-      "26_3_update_unit_0091",
-      "26_3_update_unit_0092",
-      "26_3_update_unit_0093",
-      "26_3_update_unit_0094",
-      "26_3_update_unit_0095",
-      "26_3_update_unit_0096",
-      "26_3_update_unit_0097",
-      "26_3_update_unit_0098",
-      "26_3_update_unit_0099",
       "26_3_update_unit_0100",
       "26_3_update_unit_0101",
       "26_3_update_unit_0102",
       "26_3_update_unit_0103",
+      "26_3_update_unit_0104",
+      "26_3_update_unit_0105",
       "26_3_update_unit_0106",
       "26_3_update_unit_0107",
       "26_3_update_unit_0108",
@@ -68,72 +61,56 @@
       "26_3_update_unit_0114",
       "26_3_update_unit_0115",
       "26_3_update_unit_0116",
-      "26_3_update_unit_0128",
-      "26_3_update_unit_0129"
-    ],
-    "representative_signature": "P1B0M0",
-    "role_template": [
-      "PROMINENT"
-    ],
-    "inferred_label": null,
-    "label_confidence": 0.0,
-    "evidence": {
-      "signals": {
-        "member_count": 67.0,
-        "signature_purity": 0.9552
-      },
-      "weights": {
-        "member_count": 0.5,
-        "signature_purity": 0.5
-      },
-      "confidence": 0.9552,
-      "notes": []
-    }
-  },
-  {
-    "id": "pattern_002",
-    "size": 38,
-    "member_unit_ids": [
-      "26_3_update_unit_0002",
-      "26_3_update_unit_0003",
-      "26_3_update_unit_0004",
-      "26_3_update_unit_0009",
-      "26_3_update_unit_0010",
-      "26_3_update_unit_0011",
-      "26_3_update_unit_0012",
-      "26_3_update_unit_0014",
-      "26_3_update_unit_0015",
-      "26_3_update_unit_0016",
-      "26_3_update_unit_0017",
-      "26_3_update_unit_0018",
-      "26_3_update_unit_0019",
-      "26_3_update_unit_0020",
-      "26_3_update_unit_0021",
-      "26_3_update_unit_0022",
-      "26_3_update_unit_0023",
-      "26_3_update_unit_0024",
-      "26_3_update_unit_0025",
-      "26_3_update_unit_0026",
-      "26_3_update_unit_0028",
-      "26_3_update_unit_0029",
-      "26_3_update_unit_0030",
-      "26_3_update_unit_0031",
-      "26_3_update_unit_0032",
-      "26_3_update_unit_0033",
-      "26_3_update_unit_0034",
-      "26_3_update_unit_0035",
-      "26_3_update_unit_0036",
-      "26_3_update_unit_0037",
-      "26_3_update_unit_0045",
-      "26_3_update_unit_0057",
-      "26_3_update_unit_0105",
+      "26_3_update_unit_0117",
+      "26_3_update_unit_0118",
       "26_3_update_unit_0119",
       "26_3_update_unit_0120",
       "26_3_update_unit_0121",
       "26_3_update_unit_0122",
-      "26_3_update_unit_0123"
+      "26_3_update_unit_0123",
+      "26_3_update_unit_0124",
+      "26_3_update_unit_0125",
+      "26_3_update_unit_0126",
+      "26_3_update_unit_0127",
+      "26_3_update_unit_0128",
+      "26_3_update_unit_0129",
+      "26_3_update_unit_0130",
+      "26_3_update_unit_0131",
+      "26_3_update_unit_0132",
+      "26_3_update_unit_0133",
+      "26_3_update_unit_0134",
+      "26_3_update_unit_0135",
+      "26_3_update_unit_0136",
+      "26_3_update_unit_0137",
+      "26_3_update_unit_0138",
+      "26_3_update_unit_0139",
+      "26_3_update_unit_0140",
+      "26_3_update_unit_0141",
+      "26_3_update_unit_0142",
+      "26_3_update_unit_0143",
+      "26_3_update_unit_0144",
+      "26_3_update_unit_0145",
+      "26_3_update_unit_0148",
+      "26_3_update_unit_0149",
+      "26_3_update_unit_0150",
+      "26_3_update_unit_0151",
+      "26_3_update_unit_0152",
+      "26_3_update_unit_0153",
+      "26_3_update_unit_0154",
+      "26_3_update_unit_0155",
+      "26_3_update_unit_0156",
+      "26_3_update_unit_0157",
+      "26_3_update_unit_0158",
+      "26_3_update_unit_0159",
+      "26_3_update_unit_0160",
+      "26_3_update_unit_0161",
+      "26_3_update_unit_0169",
+      "26_3_update_unit_0170",
+      "26_3_update_unit_0171",
+      "26_3_update_unit_0172",
+      "26_3_update_unit_0173"
     ],
-    "representative_signature": "P0B0M1",
+    "representative_signature": "P1B0M0",
     "role_template": [
       "META"
     ],
@@ -141,98 +118,113 @@
     "label_confidence": 0.0,
     "evidence": {
       "signals": {
-        "member_count": 38.0,
-        "signature_purity": 0.5
+        "member_count": 106.0,
+        "signature_purity": 0.6415
       },
       "weights": {
         "member_count": 0.5,
         "signature_purity": 0.5
       },
-      "confidence": 0.5,
+      "confidence": 0.6415,
+      "notes": []
+    }
+  },
+  {
+    "id": "pattern_002",
+    "size": 49,
+    "member_unit_ids": [
+      "26_3_update_unit_0001",
+      "26_3_update_unit_0002",
+      "26_3_update_unit_0004",
+      "26_3_update_unit_0011",
+      "26_3_update_unit_0012",
+      "26_3_update_unit_0013",
+      "26_3_update_unit_0014",
+      "26_3_update_unit_0015",
+      "26_3_update_unit_0016",
+      "26_3_update_unit_0017",
+      "26_3_update_unit_0018",
+      "26_3_update_unit_0021",
+      "26_3_update_unit_0022",
+      "26_3_update_unit_0023",
+      "26_3_update_unit_0024",
+      "26_3_update_unit_0029",
+      "26_3_update_unit_0030",
+      "26_3_update_unit_0031",
+      "26_3_update_unit_0032",
+      "26_3_update_unit_0033",
+      "26_3_update_unit_0034",
+      "26_3_update_unit_0035",
+      "26_3_update_unit_0049",
+      "26_3_update_unit_0060",
+      "26_3_update_unit_0062",
+      "26_3_update_unit_0063",
+      "26_3_update_unit_0064",
+      "26_3_update_unit_0068",
+      "26_3_update_unit_0072",
+      "26_3_update_unit_0073",
+      "26_3_update_unit_0092",
+      "26_3_update_unit_0098",
+      "26_3_update_unit_0146",
+      "26_3_update_unit_0147",
+      "26_3_update_unit_0162",
+      "26_3_update_unit_0164",
+      "26_3_update_unit_0166",
+      "26_3_update_unit_0167",
+      "26_3_update_unit_0168",
+      "26_3_update_unit_0174",
+      "26_3_update_unit_0176",
+      "26_3_update_unit_0177",
+      "26_3_update_unit_0178",
+      "26_3_update_unit_0182",
+      "26_3_update_unit_0183",
+      "26_3_update_unit_0184",
+      "26_3_update_unit_0185",
+      "26_3_update_unit_0186",
+      "26_3_update_unit_0187"
+    ],
+    "representative_signature": "P0B1M0",
+    "role_template": [
+      "META"
+    ],
+    "inferred_label": null,
+    "label_confidence": 0.0,
+    "evidence": {
+      "signals": {
+        "member_count": 49.0,
+        "signature_purity": 0.6531
+      },
+      "weights": {
+        "member_count": 0.5,
+        "signature_purity": 0.5
+      },
+      "confidence": 0.6531,
       "notes": []
     }
   },
   {
     "id": "pattern_003",
-    "size": 9,
+    "size": 19,
     "member_unit_ids": [
-      "26_3_update_unit_0006",
-      "26_3_update_unit_0008",
-      "26_3_update_unit_0013",
-      "26_3_update_unit_0027",
-      "26_3_update_unit_0038",
-      "26_3_update_unit_0043",
-      "26_3_update_unit_0055",
-      "26_3_update_unit_0104",
-      "26_3_update_unit_0124"
-    ],
-    "representative_signature": "P0B1M0",
-    "role_template": [
-      "META",
-      "META",
-      "META",
-      "META",
-      "BODY",
-      "BODY"
-    ],
-    "inferred_label": null,
-    "label_confidence": 0.0,
-    "evidence": {
-      "signals": {
-        "member_count": 9.0,
-        "signature_purity": 0.2222
-      },
-      "weights": {
-        "member_count": 0.5,
-        "signature_purity": 0.5
-      },
-      "confidence": 0.2222,
-      "notes": []
-    }
-  },
-  {
-    "id": "pattern_004",
-    "size": 8,
-    "member_unit_ids": [
-      "26_3_update_unit_0001",
-      "26_3_update_unit_0005",
-      "26_3_update_unit_0007",
-      "26_3_update_unit_0040",
-      "26_3_update_unit_0042",
-      "26_3_update_unit_0051",
-      "26_3_update_unit_0118",
-      "26_3_update_unit_0127"
-    ],
-    "representative_signature": "P1B2M1",
-    "role_template": [
-      "META",
-      "META",
-      "PROMINENT",
-      "BODY",
-      "PROMINENT"
-    ],
-    "inferred_label": null,
-    "label_confidence": 0.0,
-    "evidence": {
-      "signals": {
-        "member_count": 8.0,
-        "signature_purity": 0.25
-      },
-      "weights": {
-        "member_count": 0.5,
-        "signature_purity": 0.5
-      },
-      "confidence": 0.25,
-      "notes": []
-    }
-  },
-  {
-    "id": "pattern_005",
-    "size": 3,
-    "member_unit_ids": [
-      "26_3_update_unit_0039",
-      "26_3_update_unit_0041",
-      "26_3_update_unit_0056"
+      "26_3_update_unit_0010",
+      "26_3_update_unit_0020",
+      "26_3_update_unit_0061",
+      "26_3_update_unit_0067",
+      "26_3_update_unit_0071",
+      "26_3_update_unit_0086",
+      "26_3_update_unit_0088",
+      "26_3_update_unit_0089",
+      "26_3_update_unit_0090",
+      "26_3_update_unit_0091",
+      "26_3_update_unit_0093",
+      "26_3_update_unit_0094",
+      "26_3_update_unit_0095",
+      "26_3_update_unit_0096",
+      "26_3_update_unit_0097",
+      "26_3_update_unit_0175",
+      "26_3_update_unit_0179",
+      "26_3_update_unit_0188",
+      "26_3_update_unit_0189"
     ],
     "representative_signature": "P1B0M0",
     "role_template": [
@@ -242,7 +234,7 @@
     "label_confidence": 0.0,
     "evidence": {
       "signals": {
-        "member_count": 3.0,
+        "member_count": 19.0,
         "signature_purity": 1.0
       },
       "weights": {
@@ -254,60 +246,41 @@
     }
   },
   {
-    "id": "pattern_006",
-    "size": 3,
+    "id": "pattern_004",
+    "size": 15,
     "member_unit_ids": [
-      "26_3_update_unit_0117",
-      "26_3_update_unit_0125",
-      "26_3_update_unit_0126"
+      "26_3_update_unit_0003",
+      "26_3_update_unit_0005",
+      "26_3_update_unit_0009",
+      "26_3_update_unit_0019",
+      "26_3_update_unit_0059",
+      "26_3_update_unit_0065",
+      "26_3_update_unit_0066",
+      "26_3_update_unit_0069",
+      "26_3_update_unit_0070",
+      "26_3_update_unit_0087",
+      "26_3_update_unit_0099",
+      "26_3_update_unit_0163",
+      "26_3_update_unit_0165",
+      "26_3_update_unit_0180",
+      "26_3_update_unit_0181"
     ],
-    "representative_signature": "P1B1M0",
+    "representative_signature": "P1B0M0",
     "role_template": [
-      "BODY",
       "PROMINENT"
     ],
     "inferred_label": null,
     "label_confidence": 0.0,
     "evidence": {
       "signals": {
-        "member_count": 3.0,
-        "signature_purity": 0.6667
+        "member_count": 15.0,
+        "signature_purity": 0.7333
       },
       "weights": {
         "member_count": 0.5,
         "signature_purity": 0.5
       },
-      "confidence": 0.6667,
-      "notes": []
-    }
-  },
-  {
-    "id": "pattern_007",
-    "size": 1,
-    "member_unit_ids": [
-      "26_3_update_unit_0044"
-    ],
-    "representative_signature": "P4B2M0",
-    "role_template": [
-      "PROMINENT",
-      "PROMINENT",
-      "PROMINENT",
-      "BODY",
-      "PROMINENT",
-      "BODY"
-    ],
-    "inferred_label": null,
-    "label_confidence": 0.0,
-    "evidence": {
-      "signals": {
-        "member_count": 1.0,
-        "signature_purity": 1.0
-      },
-      "weights": {
-        "member_count": 0.5,
-        "signature_purity": 0.5
-      },
-      "confidence": 1.0,
+      "confidence": 0.7333,
       "notes": []
     }
   }
