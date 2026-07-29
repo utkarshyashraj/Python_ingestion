@@ -1,0 +1,3713 @@
+{
+  "section_groups": [
+    {
+      "section_id": "26_3_update_section_001",
+      "label": null,
+      "heading": "Siebel CRM Update Guide and Known Issues",
+      "pages": "1-1",
+      "items": [
+        {
+          "logical_block_id": "26_3_update_logical_block_0002",
+          "preview": "Siebel CRM 26.3 Update March 2026"
+        }
+      ]
+    },
+    {
+      "section_id": "26_3_update_section_002",
+      "label": null,
+      "heading": "Required Patches",
+      "pages": "1-1",
+      "items": [
+        {
+          "logical_block_id": "26_3_update_logical_block_0004",
+          "preview": "NOTE: Immediately after installing the 26.3 Monthly Update, one or more patches "
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0005",
+          "preview": "You are not in a supported configuration if any required patch is not installed."
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0006",
+          "preview": "Platforms Required Patches"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0007",
+          "preview": "Windows (serversandMobile Web Clients) 39111271"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0008",
+          "preview": "Linux(servers) 39186423"
+        }
+      ]
+    },
+    {
+      "section_id": "26_3_update_section_003",
+      "label": null,
+      "heading": "Effect of Encryption Upgrade in 25.10 and Later",
+      "pages": "1-1",
+      "items": [
+        {
+          "logical_block_id": "26_3_update_logical_block_0010",
+          "preview": "The 25.10 Monthly Update includes an upgrade to the encryption used by Siebel CR"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0011",
+          "preview": "Information about this Siebel CRM Monthly Update:"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0012",
+          "preview": "- Required Downloads"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0013",
+          "preview": "- Update Basics"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0014",
+          "preview": "- Repository Updates"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0015",
+          "preview": "- Features and Bug Fixes by Release"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0016",
+          "preview": "- Known Issues"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0017",
+          "preview": "NOTE: For an HTML version of this document, please download the first ZIP file i"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0018",
+          "preview": "NOTE: If you need an earlier or later version of this document, you can find all"
+        }
+      ]
+    },
+    {
+      "section_id": "26_3_update_section_004",
+      "label": null,
+      "heading": "Required Downloads",
+      "pages": "1-3",
+      "items": [
+        {
+          "logical_block_id": "26_3_update_logical_block_0020",
+          "preview": "Each Monthly Update patch available on My Oracle Support is divided into a serie"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0021",
+          "preview": "The ZIP files provided in the Monthly Update will all have a name of the form p<"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0022",
+          "preview": "- <patch> refers to the MOS patch number for the Monthly Update. It will be an e"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0023",
+          "preview": "- <updateversion> refers to the Monthly Update’s release in the form YYM, withou"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0024",
+          "preview": "- <platform> refers to one of the supported platforms:"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0025",
+          "preview": "<platform> Description"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0026",
+          "preview": "MSWIN-x86-64 Microsoft Windows x64"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0027",
+          "preview": "Linux x86-64 Linux x86-64"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0028",
+          "preview": "AIX64-5L IBM AIX on POWER Systems"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0029",
+          "preview": "NOTE: As of the 25.5 release, Solaris and HPUX are no longer available for downl"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0030",
+          "preview": "- <XofY> makes identifies the specific ZIP file within the series, such as “5of1"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0031",
+          "preview": "An example representing ZIP file 5 of 14 for Windows, Siebel Monthly Update 24.1"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0032",
+          "preview": "``` p37386170_2412_MSWIN-x86-64_5of14.zip ```"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0033",
+          "preview": "The ZIP files for Windows versus the other supported platforms are different, as"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0034",
+          "preview": "NOTE: You do not need to download everything—for example, if you are not using D"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0035",
+          "preview": "Windows Archive Files"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0036",
+          "preview": "Archive Number Content Description Required?"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0037",
+          "preview": "1 ReadMe File Optional"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0038",
+          "preview": "2 • Installer • Siebel Binaries and Shared Files • Enterprise Components • Appli"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0039",
+          "preview": "3 Siebel Non-English (US) Safeboot Required for non-English (US) deployments onl"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0040",
+          "preview": "4 Siebel Standard Repository Required for new deployments"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0041",
+          "preview": "5 Siebel Approval Manager Optional"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0042",
+          "preview": "6 Siebel Desktop Integration (DISA) Optional"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0043",
+          "preview": "7 Siebel IAA XML Connector Optional"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0044",
+          "preview": "8 Siebel Email Marketing Server Optional"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0045",
+          "preview": "9 Siebel Open Integration Optional"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0046",
+          "preview": "10 Siebel Smart Answer Optional"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0047",
+          "preview": "11 Oracle Database SE2 Required for new installations of the Siebel Mobile Web C"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0048",
+          "preview": "12 Siebel Ancestor Repositories Required for Upgrades from pre-IP2017"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0049",
+          "preview": "Linux/Unix Archive Files"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0050",
+          "preview": "Archive Number Content Description Required?"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0051",
+          "preview": "1 ReadMe File Optional"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0052",
+          "preview": "2 • Installer • Siebel Binaries and Shared Files • Enterprise Components • Appli"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0053",
+          "preview": "3 Siebel Non-English (US) Safeboot Required for non-English (US) deployments onl"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0054",
+          "preview": "4 Siebel Standard Repository Required for new deployments"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0055",
+          "preview": "5 Siebel Approval Manager Optional"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0056",
+          "preview": "6 Siebel Email Marketing Server Optional"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0057",
+          "preview": "7 Siebel Open Integration Optional"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0058",
+          "preview": "8 Siebel Ancestor Repositories Required for Upgrades from pre-IP2017"
+        }
+      ]
+    },
+    {
+      "section_id": "26_3_update_section_005",
+      "label": null,
+      "heading": "Update Basics",
+      "pages": "3-3",
+      "items": [
+        {
+          "logical_block_id": "26_3_update_logical_block_0060",
+          "preview": "A Monthly Update provides new product features and available fixes. Beyond this "
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0061",
+          "preview": "- Installation instructions: For more about this Siebel CRM Update, including in"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0062",
+          "preview": "- Third-Party Certifications: For a list of Third-Party Certifications, please v"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0063",
+          "preview": "- FAQ: The Siebel CRM Continuous Release Model (Doc ID 2378034.1)."
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0064",
+          "preview": "NOTE: This document contains two years (24 months) of rolling content. For bug f"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0065",
+          "preview": "Back to top"
+        }
+      ]
+    },
+    {
+      "section_id": "26_3_update_section_006",
+      "label": null,
+      "heading": "Repository Updates",
+      "pages": "3-3",
+      "items": [
+        {
+          "logical_block_id": "26_3_update_logical_block_0067",
+          "preview": "Some features require Repository, Seed, or Manifest changes in order to take adv"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0068",
+          "preview": "NOTE: Not all features require Repository changes. Examine the “Repository Updat"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0069",
+          "preview": "Back to top"
+        }
+      ]
+    },
+    {
+      "section_id": "26_3_update_section_007",
+      "label": null,
+      "heading": "Features and Bug Fixes by Release",
+      "pages": "3-15",
+      "items": [
+        {
+          "logical_block_id": "26_3_update_logical_block_0071",
+          "preview": "In addition to the documentation provided in the listed guides from Siebel Books"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0072",
+          "preview": "New Features and Bug Fixes in Siebel CRM Monthly Update 26.3"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0073",
+          "preview": "New Features in Siebel CRM 26.3"
+        },
+        {
+          "logical_block_id": "26_3_update_consolidated_block_0001",
+          "preview": "Feature Name Description Documentation Repository Update Required?"
+        },
+        {
+          "logical_block_id": "26_3_update_consolidated_block_0002",
+          "preview": "Developer Experience: This enhancement provides the following operational benefi"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0079",
+          "preview": "Customer Order Management – Improved Promotions UX In Siebel Customer Order Mana"
+        },
+        {
+          "logical_block_id": "26_3_update_consolidated_block_0003",
+          "preview": "Siebel UCM: Publish in Hybrid Mode Siebel Universal Customer Master (UCM) is enh"
+        },
+        {
+          "logical_block_id": "26_3_update_consolidated_block_0004",
+          "preview": "Schema Changes without Downtime for Updates and Migration This feature leverages"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0086",
+          "preview": "various Siebel CRM utilities have used could introduce \"table locks\" or other co"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0087",
+          "preview": "Basic Technical Information"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0088",
+          "preview": "By modifying our existing utilities to leverage built-in capabilities of modern "
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0089",
+          "preview": "- For Oracle platforms, we leverage the DBMS_REDEFINITION package to make change"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0090",
+          "preview": "- For Microsoft SQL Server platforms, we leverage the \"ONLINE\" keyword to modify"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0091",
+          "preview": "For more information on the technical details of these database-level capabiliti"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0092",
+          "preview": "NOTE: This change is not applicable to either DB2 database platform."
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0093",
+          "preview": "Replacement of Obsolete Data Types from Oracle and MSSQL Databases Training on t"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0094",
+          "preview": "Developer Experience: Web Tools Applet Method Menu Wizard NOTE: Please review th"
+        },
+        {
+          "logical_block_id": "26_3_update_consolidated_block_0005",
+          "preview": "Developer Experience: REST APIs for Workspaces REST APIs allow Workspaces to be "
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0097",
+          "preview": "Siebel Cloud Manager - Smarter Ingress Routing Siebel Cloud Manager introduces s"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0098",
+          "preview": "reliable, and aligned with CNCF guiding principles."
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0099",
+          "preview": "Fixes in Siebel CRM 26.3"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0100",
+          "preview": "Product Name Reference Category Description Configuration Instructions"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0101",
+          "preview": "Siebel Apps - Clinical Trials Management System 38357102 Contact Enhances usabil"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0102",
+          "preview": "Siebel Apps - Clinical Trials Management System 38091478 Site Management Enhance"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0103",
+          "preview": "Siebel Apps - Clinical Trials Management System 38104111 Site Management Enhance"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0104",
+          "preview": "Siebel Apps - Clinical Trials Management System 38721778 Site Management Address"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0105",
+          "preview": "Siebel Apps - Clinical Trials Management System 38376840 Site Management Address"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0106",
+          "preview": "Siebel Apps - Clinical Trials Management System 38472842 Site Management Address"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0107",
+          "preview": "Siebel Apps - Clinical Trials Management System 38907876 Site Management Address"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0108",
+          "preview": "Siebel Apps - Clinical Trials 38105978 Site Management Enhances security and gov"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0109",
+          "preview": "Management System Siebel Apps - Clinical Trials Management System 38472853 Site "
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0110",
+          "preview": "Siebel Apps - Clinical Trials Management System 37919326 Site Management Address"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0111",
+          "preview": "Siebel Apps - Clinical Trials Management System 38088625 Site Management Address"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0112",
+          "preview": "Siebel Apps - Clinical Trials Management System 38104008 Site Management HANDLE "
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0113",
+          "preview": "Siebel Apps - Clinical Trials Management System 38375441 Site Management Address"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0114",
+          "preview": "Siebel Apps - Clinical Trials Management System 38141228 Site Management Address"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0115",
+          "preview": "Siebel Apps - Clinical Trials Management System 38907819 Site Management Address"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0116",
+          "preview": "Siebel Apps - Clinical Trials Management System 35982623 Site Management Address"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0117",
+          "preview": "Siebel Apps - Clinical Trials Management System 38152283 Site Management Address"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0118",
+          "preview": "Siebel Apps - Clinical Trials Management System 38390917 Site Management Address"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0119",
+          "preview": "Siebel Apps - Clinical Trials Management System 38208060 Site Management Enhance"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0120",
+          "preview": "Siebel Apps - Clinical Trials Management System 38419875 Site Management Address"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0121",
+          "preview": "Siebel Apps - Clinical Trials Management System 38390240 Site Management Address"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0122",
+          "preview": "Siebel Apps - Customer Order Management 38612771 Product Administration After de"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0123",
+          "preview": "Siebel CRM Deployment 38089901 Application Interface Siebel uses only serverAuth"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0124",
+          "preview": "Siebel CRM Deployment 37167823 Database Upgrade This bug fix ensures that the ob"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0125",
+          "preview": "Siebel CRM Deployment 31589382 Database Upgrade This fix changes the way that sc"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0126",
+          "preview": "Siebel CRM Deployment 38772851 Installation Addressed IBMJCE Migration Issue rel"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0127",
+          "preview": "Siebel CRM Deployment 38729891 Installation Add Support erverAuth using EKU In S"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0128",
+          "preview": "Siebel CRM Deployment 38633633 Installation Improved the ability to use default "
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0129",
+          "preview": "Siebel CRM Deployment 38571707 Installation Addressed IBMJCE Migration Issue rel"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0130",
+          "preview": "Siebel CRM Deployment 38721251 Installation Improved ODBCSQL Connection Support "
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0131",
+          "preview": "Siebel CRM Deployment 38883351 Installation Consolidated Outlook_addin Installat"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0132",
+          "preview": "Siebel CRM Deployment 38876681 Migration Restores the Application Data Migration"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0133",
+          "preview": "Siebel CRM Deployment 30501821 Repository Utilities Eliminates a problem where t"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0134",
+          "preview": "Siebel CRM Development 38698788 Workflow When purging Workflow Process instance "
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0135",
+          "preview": "Siebel CRM Development 38663266 Workflow When creating or updating database trig"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0136",
+          "preview": "Siebel CRM Development 38142176 Workflow The Purge button on the Workflow Proces"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0137",
+          "preview": "Siebel CRM Development 38755215 Workspaces There was a missing parameter in Sieb"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0138",
+          "preview": "Siebel CRM Documentation 27507784 Configuring Siebel Open UI Documented the Gene"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0139",
+          "preview": "Siebel CRM Documentation 38584584 Object Interfaces Reference This documentation"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0140",
+          "preview": "Siebel CRM Documentation 38944807 System Admin Gd The System Administration Guid"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0141",
+          "preview": "Siebel CRM Documentation 38301898 Transp/Interface: EAI Documentation on TLS mut"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0142",
+          "preview": "Siebel CRM End User 38444710 User Interface TinyMCE improvement to support Style"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0143",
+          "preview": "Siebel CRM End User 38556974 User Interface Fixed Toggle applets to display data"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0144",
+          "preview": "Siebel CRM End User 38588428 User Interface LEFT AND RIGHT Arrows are added in s"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0145",
+          "preview": "Siebel CRM Integration 38684263 EAI Outbound REST requests that send negative nu"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0146",
+          "preview": "New Features and Bug Fixes in Siebel CRM Monthly Update 26.2 New Features in Sie"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0147",
+          "preview": "Fixes in Siebel CRM 26.2"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0148",
+          "preview": "Product Name Reference Category Description Configuration Instructions"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0149",
+          "preview": "Siebel Apps - 38679336 Promotions Previously, when you cancelled an Instructions"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0150",
+          "preview": "Customer Order upgrade promotion and then tried to 38679336"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0151",
+          "preview": "Management start a new upgrade with a different"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0152",
+          "preview": "Siebel CRM Deployment 31264888 Database Upgrade promotion, the system would inco"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0153",
+          "preview": "Siebel CRM Deployment 38792489 Server Infrastructure Improved DNS Lookup Perform"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0154",
+          "preview": "Siebel CRM Deployment 38685764 Server Infrastructure Resolution for the inabilit"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0155",
+          "preview": "Siebel CRM Deployment 38603047 Server Infrastructure Addressed \"ACCESS TO USER P"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0156",
+          "preview": "Siebel CRM Development 38250077 Configuration Tools Web Tools now correctly resp"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0157",
+          "preview": "Siebel CRM Documentation 29468742 Task UI Guide Documents the ProcessArgAsc para"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0158",
+          "preview": "Siebel CRM End User 12599692 Reports Enabled Excel template support functionalit"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0159",
+          "preview": "Siebel CRM Integration 38681800 EAI When the EAI HTTP Transport Business Service"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0160",
+          "preview": "Siebel CRM Integration 38779291 Open Integration Fixed an issue to publish Opera"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0161",
+          "preview": "Siebel CRM Integration 38176388 SSSE Improves the PIMSI Dispatcher’s ability to "
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0162",
+          "preview": "Special Configuration Instructions for Release 26.2 Instructions for 38679336--P"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0163",
+          "preview": "_Background_"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0164",
+          "preview": "To resolve the issue causing an incorrect Promotion Name to appear in the Promot"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0165",
+          "preview": "_Repository Changes_"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0166",
+          "preview": "1. Edit the Workflow Process _ISS Promotion Finish Upgrade Sub Process_ as follo"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0167",
+          "preview": "- i. Add a Business Service WF Step _Empty Header BC_ between _Done?_ and _Empty"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0168",
+          "preview": "- ii. For the WF Step _Empty Header BC_ , set the following properties."
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0169",
+          "preview": "Name Business Service Name Business Service Method"
+        },
+        {
+          "logical_block_id": "26_3_update_consolidated_block_0006",
+          "preview": "EmptyHeader BC InMemoryUpgrade Data Service Invoke BC Method For the WF Step _Em"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0172",
+          "preview": "BC Name Literal ISS Promotion Upgrade Header VBC"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0173",
+          "preview": "Method Name Literal EmptyRecord"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0174",
+          "preview": "- iii. For the WF Step _Empty Header BC_ , add the following Input Arguments."
+        },
+        {
+          "logical_block_id": "26_3_update_consolidated_block_0007",
+          "preview": "- iv. Modify the existing WF Branch Connector between WF Step _Done?_ and WF Ste"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0177",
+          "preview": "Instructions for 38779291--Fixed an issue to publish Operation field in Integrat"
+        },
+        {
+          "logical_block_id": "26_3_update_consolidated_block_0008",
+          "preview": "_Background_ <mark>User creation via the</mark> _<mark>User</mark>_ <mark>Integr"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0180",
+          "preview": "_Steps_"
+        }
+      ]
+    },
+    {
+      "section_id": "26_3_update_section_008",
+      "label": null,
+      "heading": "Repository Changes",
+      "pages": "15-30",
+      "items": [
+        {
+          "logical_block_id": "26_3_update_logical_block_0182",
+          "preview": "Perform the following changes to convert the _operation_ field from “system” to "
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0183",
+          "preview": "1. Select the _Users_ Integration Object."
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0184",
+          "preview": "2. Select the child Integration Component _User_ ."
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0185",
+          "preview": "3. Select the child Integration Component Field _operation_ ."
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0186",
+          "preview": "4. Modify the Type attribute to “Data”."
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0187",
+          "preview": "New Features and Bug Fixes in Siebel CRM Monthly Update 26.1 New Features in Sie"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0188",
+          "preview": "Feature Name Description Documentation Repository Update Required?"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0189",
+          "preview": "Preserve Customer Configuration Changes During Monthly Updates This feature decr"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0190",
+          "preview": "User Experience – Web Component Framework leading to greatert effort and cost in"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0191",
+          "preview": "Event-Based Reward Triggers for Loyalty Members In summary, the Web Component Fr"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0192",
+          "preview": "Support for Microsoft Azure SQL Databases Consistent with Siebel CRM's strategic"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0193",
+          "preview": "Redwood UX for Tablet Applications . Redwood UX for Tablet Applications provides"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0194",
+          "preview": "experience. Recognizing the unique demands of tablet usage, the redesign focuses"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0195",
+          "preview": "Fixes in Siebel CRM 26.1"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0196",
+          "preview": "Product Name Reference Category Description Configuration Instructions"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0197",
+          "preview": "Siebel Apps - Customer Order Management 38294294 Order Management Corrects the S"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0198",
+          "preview": "Siebel Apps - Customer Order 38506349 Promotions Importing a bundle promotion is"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0199",
+          "preview": "Management (S_PROD_INT.PART_NUM) is different from the ROW_ID without giving err"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0200",
+          "preview": "Siebel Apps - Marketing 38955753 Campaign Management Information on how to creat"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0201",
+          "preview": "Siebel Apps - Marketing 39006748 Segmentation Steps to pass the column detail to"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0202",
+          "preview": "Siebel CRM Cloud Applications 38775206 Siebel Cloud Manager This fix eliminates "
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0203",
+          "preview": "Siebel CRM Deployment 28882704 Database Configuration Provides support for Azure"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0204",
+          "preview": "Siebel CRM Deployment 38856646 Installation Outlook addin is now delivered as pa"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0205",
+          "preview": "Siebel CRM Deployment 36099145 Monthly Update Issues Addresses the issue of cust"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0206",
+          "preview": "Siebel CRM Deployment 38703534 Server Infrastructure Improved saving of Siebel T"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0207",
+          "preview": "Siebel CRM Deployment 38704783 Server Infrastructure Improved NFS behavior by re"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0208",
+          "preview": "Siebel CRM Deployment 37558530 Test Automation Fixed duplicate test step generat"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0209",
+          "preview": "Siebel CRM End User 38561775 Reports Addresses an issue while deploying custom S"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0210",
+          "preview": "Siebel CRM Integration 38290455 SSSE This fixes the issue of \"maximum open curso"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0211",
+          "preview": "New Features and Bug Fixes in Siebel CRM Monthly Update 25.12 New Features in Si"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0212",
+          "preview": "Feature Name Description Documentation Repository Update Required?"
+        },
+        {
+          "logical_block_id": "26_3_update_consolidated_block_0009",
+          "preview": "Siebel Intelligent Data Archival The Siebel Data Archival solution helps optimiz"
+        },
+        {
+          "logical_block_id": "26_3_update_consolidated_block_0010",
+          "preview": "Siebel Open Integration It is common with customers that have been using Siebel "
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0219",
+          "preview": "Services, Applets, Workflows, etc. within Siebel CRM to external applications th"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0220",
+          "preview": "There are key benefits with this feature:"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0221",
+          "preview": "- Sophisticated integration for UX, AI and beyond - this provides complete “head"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0222",
+          "preview": "- Simplified and accelerated creation of bespoke user interfaces outside of the "
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0223",
+          "preview": "- Tighter interoperability for Siebel CRM with Oracle CX Industry applications."
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0224",
+          "preview": "- Supporting IoT driven event flows that would provide end to end, straight-thro"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0225",
+          "preview": "- The use of advanced A.I. solutions such as Agentic AI to execute against a Sie"
+        },
+        {
+          "logical_block_id": "26_3_update_consolidated_block_0011",
+          "preview": "- Maximum re-use - as part of the REST API generation process, customizations ar"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0228",
+          "preview": "- Advanced interoperability - In addition to the processes, the REST APIs also p"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0229",
+          "preview": "Siebel Test Automation: Logical Looping for Enhanced Scenario Coverage NOTE: Sie"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0230",
+          "preview": "Siebel CRM Observability - Data Visualization and Metrics Monitoring for Oracle "
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0231",
+          "preview": "Organizations can monitor database health and operational behavior in real time,"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0232",
+          "preview": "- Easily pull data from Oracle database tables and display it as clear, visual m"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0233",
+          "preview": "• Keep an eye on the health of your Oracle database that works with Siebel CRM o"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0234",
+          "preview": "- Efficiency at Scale: Experience faster data transfer and reduced storage consu"
+        },
+        {
+          "logical_block_id": "26_3_update_consolidated_block_0012",
+          "preview": "Siebel UCM: Event Driven Architecture - Approve and Merge Request ultra-compact "
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0238",
+          "preview": "Fixes in Siebel CRM 25.12"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0239",
+          "preview": "Product Name Reference Category Description Configuration Instructions"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0240",
+          "preview": "Siebel Apps - 38389227 Site Addresses issue where transferring"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0241",
+          "preview": "Clinical Trials Management multiple subjects via the Subject API"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0242",
+          "preview": "Management fails with a record modified by another"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0243",
+          "preview": "System user error due to concurrent updates to the Net Transfer Count field on t"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0244",
+          "preview": "Siebel Apps - 38429722 Product While migrating bundle promotions"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0245",
+          "preview": "Customer Administration from test to production environment"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0246",
+          "preview": "Order Management Siebel Apps - Customer Order Management 38196156 Promotions usi"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0247",
+          "preview": "Siebel Apps - Marketing 38129718 Responses During launch campaign in DEU applica"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0248",
+          "preview": "Siebel CRM Deployment 38469767 Application Interface Resolved Issue where Tomcat"
+        },
+        {
+          "logical_block_id": "26_3_update_consolidated_block_0013",
+          "preview": "Siebel CRM Deployment 38397401 Database Upgrade When running the RepositoryUpgra"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0251",
+          "preview": "Siebel CRM Deployment 38245133 Installation Properly Migrated AuthToken from pre"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0252",
+          "preview": "Siebel CRM Deployment 38319184 Migration When the irrendversion parameter is not"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0253",
+          "preview": "Siebel CRM Deployment 38593766 Server Infrastructure Removed possibility of \"SER"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0254",
+          "preview": "Siebel CRM Deployment 37294722 Test Automation This release introduces a feature"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0255",
+          "preview": "Siebel CRM Development 38195429 Configuration Tools Manually adjusting a Form Ap"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0256",
+          "preview": "Siebel CRM Development 38177259 Scripting Using the EAI Siebel Adapter in the sc"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0257",
+          "preview": "Siebel CRM End User 31116567 Reports Addresses a problem in Siebel Reports where"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0258",
+          "preview": "Siebel CRM Integration 38438442 EAI REST calls to dynamically created Integratio"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0259",
+          "preview": "Siebel CRM Integration 38479780 EAI Invalidating instances of objects in the JBS"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0260",
+          "preview": "Siebel CRM Integration 38006819 SSSE Fixes the issue with all day activities not"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0261",
+          "preview": "Special Configuration Instructions for Release 25.12 Instructions for 38196156--"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0262",
+          "preview": "_Background_"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0263",
+          "preview": "Get Promotion Upgrade Path REST API and the workflow is rectified to return corr"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0264",
+          "preview": "2. Make the following changes for _ISS Promotion WS - In Memory Upgrade Process-"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0265",
+          "preview": "- i. Add the following process property."
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0266",
+          "preview": "Name In/Out Business Object Data Type"
+        },
+        {
+          "logical_block_id": "26_3_update_consolidated_block_0014",
+          "preview": "Target Promotion Id In/Out Account String ii. In the_GetPenalty Detai_ Arguments"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0269",
+          "preview": "Old Property Name New Property Name"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0270",
+          "preview": "New Promotion Id Target Promotion Id"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0271",
+          "preview": "iii. In the _In Memory Promotion Upgrade Process_ WF Step, update the Input Argu"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0272",
+          "preview": "Name Type Value"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0273",
+          "preview": "New Promotion Expression IIF([&New Promotion Id] is NULL, [&Target Promotion Id]"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0274",
+          "preview": "Id [&New Promotion Id])"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0275",
+          "preview": "New Features and Bug Fixes in Siebel CRM Monthly Update 25.11 New Features in Si"
+        },
+        {
+          "logical_block_id": "26_3_update_consolidated_block_0015",
+          "preview": "Feature Name Description Documentation Repository Update Required?"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0278",
+          "preview": "Siebel Marketing - Leveraging Analysis for Segmentation Replacement Siebel Marke"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0279",
+          "preview": "Multilingual Support for Web Tools on Containerized Deployments Accelerate your "
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0280",
+          "preview": "Leverage the Siebel Installer within Siebel Cloud Manager to effortlessly build "
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0281",
+          "preview": "Key Benefits:"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0282",
+          "preview": "- Global Reach & Diversity: Extend Siebel Web Tools functionality to Developers "
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0283",
+          "preview": "- Streamlined Automation: Integrates seamlessly with Siebel Cloud Manager, autom"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0284",
+          "preview": "- Consistent User Experience: Ensure language consistency and compliance across "
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0285",
+          "preview": "- Operational Efficiency: Save time and resources by building and managing multi"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0286",
+          "preview": "Transform your Siebel implementation with agile, containerized, and multilingual"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0287",
+          "preview": "Training on this feature can be found on Oracle University."
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0288",
+          "preview": "Enhanced Digital APIs for Insightful Buying Journeys This feature helps both age"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0289",
+          "preview": "- Siebel REST API Yes Guide - • Siebel Order Management Guide"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0290",
+          "preview": "Key Benefits:"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0291",
+          "preview": "- Promotion Browsing by Product Category and Line: Agents and customers can brow"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0292",
+          "preview": "Training on this feature can be found on Oracle University."
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0293",
+          "preview": "Fixes in Siebel CRM 25.11"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0294",
+          "preview": "Product Name Reference Category Description Configuration Instructions"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0295",
+          "preview": "Siebel Apps - Customer Order Management 38304438 Order Management Sales reps can"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0296",
+          "preview": "Siebel Apps - Customer Order Management 38358239 Quotes & Orders Display Synchro"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0297",
+          "preview": "Siebel CRM Deployment 37471010 Database Platform and ODBC Added lower case Table"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0298",
+          "preview": "Siebel CRM Deployment 38430013 Migration The Migration Rules View and the functi"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0299",
+          "preview": "Siebel CRM Deployment 38355372 Perf/Scalability/Reliability Resolved Siebel Serv"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0300",
+          "preview": "Siebel CRM Development 38285513 Workspaces Labels stored in the Coherence Cache "
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0301",
+          "preview": "Siebel CRM Development 37849599 Workspaces When you have many delivered Develope"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0302",
+          "preview": "Siebel CRM Documentation 32747606 Security Guide Provides documentation on Singl"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0303",
+          "preview": "Siebel CRM End User 37924781 Accessibility Accessible name is now reflected for "
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0304",
+          "preview": "Siebel CRM End User 38274965 User Interface Added default for Browser Spellcheck"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0305",
+          "preview": "Siebel CRM Integration 38216232 Enterprise Integration Manager After importing L"
+        },
+        {
+          "logical_block_id": "26_3_update_logical_block_0306",
+          "preview": "Siebel CRM Integration 38249096 REST When a Workflow Process is invoked through "
+        }
+      ]
+    }
+  ],
+  "cross_document_groups": [
+    {
+      "group_id": "logical_group_001",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0079",
+            "page": 4,
+            "pattern": "pattern_001",
+            "confidence": 0.987,
+            "preview": "Customer Order Management – Improved Promotions UX In Siebel Customer Order Mana"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0097",
+            "page": 7,
+            "pattern": "pattern_001",
+            "confidence": 1.0,
+            "preview": "Siebel Cloud Manager - Smarter Ingress Routing Siebel Cloud Manager introduces s"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0101",
+            "page": 8,
+            "pattern": "pattern_001",
+            "confidence": 0.907,
+            "preview": "Siebel Apps - Clinical Trials Management System 38357102 Contact Enhances usabil"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0102",
+            "page": 8,
+            "pattern": "pattern_001",
+            "confidence": 0.929,
+            "preview": "Siebel Apps - Clinical Trials Management System 38091478 Site Management Enhance"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0103",
+            "page": 8,
+            "pattern": "pattern_001",
+            "confidence": 0.945,
+            "preview": "Siebel Apps - Clinical Trials Management System 38104111 Site Management Enhance"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0104",
+            "page": 8,
+            "pattern": "pattern_001",
+            "confidence": 0.908,
+            "preview": "Siebel Apps - Clinical Trials Management System 38721778 Site Management Address"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0105",
+            "page": 8,
+            "pattern": "pattern_001",
+            "confidence": 0.912,
+            "preview": "Siebel Apps - Clinical Trials Management System 38376840 Site Management Address"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0106",
+            "page": 8,
+            "pattern": "pattern_001",
+            "confidence": 0.924,
+            "preview": "Siebel Apps - Clinical Trials Management System 38472842 Site Management Address"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0107",
+            "page": 8,
+            "pattern": "pattern_001",
+            "confidence": 0.887,
+            "preview": "Siebel Apps - Clinical Trials Management System 38907876 Site Management Address"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0108",
+            "page": 8,
+            "pattern": "pattern_001",
+            "confidence": 0.879,
+            "preview": "Siebel Apps - Clinical Trials 38105978 Site Management Enhances security and gov"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0109",
+            "page": 9,
+            "pattern": "pattern_001",
+            "confidence": 0.968,
+            "preview": "Management System Siebel Apps - Clinical Trials Management System 38472853 Site "
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0110",
+            "page": 9,
+            "pattern": "pattern_001",
+            "confidence": 0.907,
+            "preview": "Siebel Apps - Clinical Trials Management System 37919326 Site Management Address"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0111",
+            "page": 9,
+            "pattern": "pattern_001",
+            "confidence": 0.949,
+            "preview": "Siebel Apps - Clinical Trials Management System 38088625 Site Management Address"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0112",
+            "page": 9,
+            "pattern": "pattern_001",
+            "confidence": 0.862,
+            "preview": "Siebel Apps - Clinical Trials Management System 38104008 Site Management HANDLE "
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0113",
+            "page": 9,
+            "pattern": "pattern_001",
+            "confidence": 0.931,
+            "preview": "Siebel Apps - Clinical Trials Management System 38375441 Site Management Address"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0114",
+            "page": 9,
+            "pattern": "pattern_001",
+            "confidence": 0.898,
+            "preview": "Siebel Apps - Clinical Trials Management System 38141228 Site Management Address"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0115",
+            "page": 9,
+            "pattern": "pattern_001",
+            "confidence": 0.9,
+            "preview": "Siebel Apps - Clinical Trials Management System 38907819 Site Management Address"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0116",
+            "page": 9,
+            "pattern": "pattern_001",
+            "confidence": 0.895,
+            "preview": "Siebel Apps - Clinical Trials Management System 35982623 Site Management Address"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0117",
+            "page": 9,
+            "pattern": "pattern_001",
+            "confidence": 0.931,
+            "preview": "Siebel Apps - Clinical Trials Management System 38152283 Site Management Address"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0118",
+            "page": 10,
+            "pattern": "pattern_001",
+            "confidence": 0.879,
+            "preview": "Siebel Apps - Clinical Trials Management System 38390917 Site Management Address"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0119",
+            "page": 10,
+            "pattern": "pattern_001",
+            "confidence": 0.935,
+            "preview": "Siebel Apps - Clinical Trials Management System 38208060 Site Management Enhance"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0120",
+            "page": 10,
+            "pattern": "pattern_001",
+            "confidence": 0.894,
+            "preview": "Siebel Apps - Clinical Trials Management System 38419875 Site Management Address"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0121",
+            "page": 10,
+            "pattern": "pattern_001",
+            "confidence": 0.897,
+            "preview": "Siebel Apps - Clinical Trials Management System 38390240 Site Management Address"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0122",
+            "page": 10,
+            "pattern": "pattern_001",
+            "confidence": 0.95,
+            "preview": "Siebel Apps - Customer Order Management 38612771 Product Administration After de"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0140",
+            "page": 12,
+            "pattern": "pattern_001",
+            "confidence": 1.0,
+            "preview": "Siebel CRM Documentation 38944807 System Admin Gd The System Administration Guid"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0197",
+            "page": 18,
+            "pattern": "pattern_001",
+            "confidence": 0.905,
+            "preview": "Siebel Apps - Customer Order Management 38294294 Order Management Corrects the S"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0200",
+            "page": 18,
+            "pattern": "pattern_001",
+            "confidence": 0.869,
+            "preview": "Siebel Apps - Marketing 38955753 Campaign Management Information on how to creat"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0241",
+            "page": 24,
+            "pattern": "pattern_001",
+            "confidence": 0.832,
+            "preview": "Clinical Trials Management multiple subjects via the Subject API"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_002",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0124",
+            "page": 10,
+            "pattern": "pattern_001",
+            "confidence": 0.929,
+            "preview": "Siebel CRM Deployment 37167823 Database Upgrade This bug fix ensures that the ob"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0125",
+            "page": 10,
+            "pattern": "pattern_001",
+            "confidence": 0.947,
+            "preview": "Siebel CRM Deployment 31589382 Database Upgrade This fix changes the way that sc"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0126",
+            "page": 10,
+            "pattern": "pattern_001",
+            "confidence": 0.857,
+            "preview": "Siebel CRM Deployment 38772851 Installation Addressed IBMJCE Migration Issue rel"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0127",
+            "page": 10,
+            "pattern": "pattern_001",
+            "confidence": 0.849,
+            "preview": "Siebel CRM Deployment 38729891 Installation Add Support erverAuth using EKU In S"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0128",
+            "page": 11,
+            "pattern": "pattern_001",
+            "confidence": 0.851,
+            "preview": "Siebel CRM Deployment 38633633 Installation Improved the ability to use default "
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0129",
+            "page": 11,
+            "pattern": "pattern_001",
+            "confidence": 0.853,
+            "preview": "Siebel CRM Deployment 38571707 Installation Addressed IBMJCE Migration Issue rel"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0130",
+            "page": 11,
+            "pattern": "pattern_001",
+            "confidence": 0.846,
+            "preview": "Siebel CRM Deployment 38721251 Installation Improved ODBCSQL Connection Support "
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0131",
+            "page": 11,
+            "pattern": "pattern_001",
+            "confidence": 0.867,
+            "preview": "Siebel CRM Deployment 38883351 Installation Consolidated Outlook_addin Installat"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0132",
+            "page": 11,
+            "pattern": "pattern_001",
+            "confidence": 0.948,
+            "preview": "Siebel CRM Deployment 38876681 Migration Restores the Application Data Migration"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0133",
+            "page": 11,
+            "pattern": "pattern_001",
+            "confidence": 0.892,
+            "preview": "Siebel CRM Deployment 30501821 Repository Utilities Eliminates a problem where t"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0138",
+            "page": 12,
+            "pattern": "pattern_001",
+            "confidence": 0.868,
+            "preview": "Siebel CRM Documentation 27507784 Configuring Siebel Open UI Documented the Gene"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0153",
+            "page": 13,
+            "pattern": "pattern_001",
+            "confidence": 0.842,
+            "preview": "Siebel CRM Deployment 38792489 Server Infrastructure Improved DNS Lookup Perform"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0154",
+            "page": 13,
+            "pattern": "pattern_001",
+            "confidence": 0.883,
+            "preview": "Siebel CRM Deployment 38685764 Server Infrastructure Resolution for the inabilit"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0203",
+            "page": 18,
+            "pattern": "pattern_001",
+            "confidence": 0.889,
+            "preview": "Siebel CRM Deployment 28882704 Database Configuration Provides support for Azure"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0204",
+            "page": 18,
+            "pattern": "pattern_001",
+            "confidence": 0.873,
+            "preview": "Siebel CRM Deployment 38856646 Installation Outlook addin is now delivered as pa"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0208",
+            "page": 19,
+            "pattern": "pattern_001",
+            "confidence": 0.826,
+            "preview": "Siebel CRM Deployment 37558530 Test Automation Fixed duplicate test step generat"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0225",
+            "page": 21,
+            "pattern": "pattern_002",
+            "confidence": 0.746,
+            "preview": "- The use of advanced A.I. solutions such as Agentic AI to execute against a Sie"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0252",
+            "page": 25,
+            "pattern": "pattern_001",
+            "confidence": 0.904,
+            "preview": "Siebel CRM Deployment 38319184 Migration When the irrendversion parameter is not"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0297",
+            "page": 29,
+            "pattern": "pattern_001",
+            "confidence": 0.855,
+            "preview": "Siebel CRM Deployment 37471010 Database Platform and ODBC Added lower case Table"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0298",
+            "page": 30,
+            "pattern": "pattern_001",
+            "confidence": 0.923,
+            "preview": "Siebel CRM Deployment 38430013 Migration The Migration Rules View and the functi"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_003",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0025",
+            "page": 2,
+            "pattern": "pattern_001",
+            "confidence": 0.706,
+            "preview": "<platform> Description"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0036",
+            "page": 2,
+            "pattern": "pattern_001",
+            "confidence": 0.796,
+            "preview": "Archive Number Content Description Required?"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0050",
+            "page": 2,
+            "pattern": "pattern_001",
+            "confidence": 0.743,
+            "preview": "Archive Number Content Description Required?"
+          },
+          {
+            "logical_block_id": "26_3_update_consolidated_block_0001",
+            "page": 4,
+            "pattern": "pattern_001",
+            "confidence": 0.796,
+            "preview": "Feature Name Description Documentation Repository Update Required?"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0100",
+            "page": 8,
+            "pattern": "pattern_001",
+            "confidence": 0.835,
+            "preview": "Product Name Reference Category Description Configuration Instructions"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0148",
+            "page": 12,
+            "pattern": "pattern_001",
+            "confidence": 0.835,
+            "preview": "Product Name Reference Category Description Configuration Instructions"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0188",
+            "page": 15,
+            "pattern": "pattern_001",
+            "confidence": 0.833,
+            "preview": "Feature Name Description Documentation Repository Update Required?"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0196",
+            "page": 18,
+            "pattern": "pattern_001",
+            "confidence": 0.835,
+            "preview": "Product Name Reference Category Description Configuration Instructions"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0212",
+            "page": 19,
+            "pattern": "pattern_001",
+            "confidence": 0.833,
+            "preview": "Feature Name Description Documentation Repository Update Required?"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0239",
+            "page": 24,
+            "pattern": "pattern_001",
+            "confidence": 0.835,
+            "preview": "Product Name Reference Category Description Configuration Instructions"
+          },
+          {
+            "logical_block_id": "26_3_update_consolidated_block_0015",
+            "page": 27,
+            "pattern": "pattern_001",
+            "confidence": 0.802,
+            "preview": "Feature Name Description Documentation Repository Update Required?"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0294",
+            "page": 29,
+            "pattern": "pattern_001",
+            "confidence": 0.835,
+            "preview": "Product Name Reference Category Description Configuration Instructions"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_004",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_consolidated_block_0002",
+            "page": 4,
+            "pattern": "pattern_001",
+            "confidence": 0.835,
+            "preview": "Developer Experience: This enhancement provides the following operational benefi"
+          },
+          {
+            "logical_block_id": "26_3_update_consolidated_block_0003",
+            "page": 4,
+            "pattern": "pattern_001",
+            "confidence": 0.884,
+            "preview": "Siebel UCM: Publish in Hybrid Mode Siebel Universal Customer Master (UCM) is enh"
+          },
+          {
+            "logical_block_id": "26_3_update_consolidated_block_0004",
+            "page": 5,
+            "pattern": "pattern_001",
+            "confidence": 0.844,
+            "preview": "Schema Changes without Downtime for Updates and Migration This feature leverages"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0086",
+            "page": 6,
+            "pattern": "pattern_004",
+            "confidence": 0.796,
+            "preview": "various Siebel CRM utilities have used could introduce \"table locks\" or other co"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0088",
+            "page": 6,
+            "pattern": "pattern_004",
+            "confidence": 0.718,
+            "preview": "By modifying our existing utilities to leverage built-in capabilities of modern "
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0093",
+            "page": 6,
+            "pattern": "pattern_001",
+            "confidence": 1.0,
+            "preview": "Replacement of Obsolete Data Types from Oracle and MSSQL Databases Training on t"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0094",
+            "page": 7,
+            "pattern": "pattern_001",
+            "confidence": 1.0,
+            "preview": "Developer Experience: Web Tools Applet Method Menu Wizard NOTE: Please review th"
+          },
+          {
+            "logical_block_id": "26_3_update_consolidated_block_0005",
+            "page": 7,
+            "pattern": "pattern_001",
+            "confidence": 0.866,
+            "preview": "Developer Experience: REST APIs for Workspaces REST APIs allow Workspaces to be "
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0190",
+            "page": 16,
+            "pattern": "pattern_004",
+            "confidence": 1.0,
+            "preview": "User Experience – Web Component Framework leading to greatert effort and cost in"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0191",
+            "page": 17,
+            "pattern": "pattern_001",
+            "confidence": 1.0,
+            "preview": "Event-Based Reward Triggers for Loyalty Members In summary, the Web Component Fr"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0192",
+            "page": 17,
+            "pattern": "pattern_001",
+            "confidence": 1.0,
+            "preview": "Support for Microsoft Azure SQL Databases Consistent with Siebel CRM's strategic"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0193",
+            "page": 17,
+            "pattern": "pattern_001",
+            "confidence": 0.955,
+            "preview": "Redwood UX for Tablet Applications . Redwood UX for Tablet Applications provides"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_005",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0015",
+            "page": 1,
+            "pattern": "pattern_002",
+            "confidence": 0.647,
+            "preview": "- Features and Bug Fixes by Release"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0060",
+            "page": 3,
+            "pattern": "pattern_002",
+            "confidence": 0.757,
+            "preview": "A Monthly Update provides new product features and available fixes. Beyond this "
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0070",
+            "page": 3,
+            "pattern": "pattern_005",
+            "confidence": 0.62,
+            "preview": "Features and Bug Fixes by Release"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0072",
+            "page": 4,
+            "pattern": "pattern_002",
+            "confidence": 0.633,
+            "preview": "New Features and Bug Fixes in Siebel CRM Monthly Update 26.3"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0073",
+            "page": 4,
+            "pattern": "pattern_002",
+            "confidence": 0.671,
+            "preview": "New Features in Siebel CRM 26.3"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0146",
+            "page": 12,
+            "pattern": "pattern_002",
+            "confidence": 0.713,
+            "preview": "New Features and Bug Fixes in Siebel CRM Monthly Update 26.2 New Features in Sie"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0187",
+            "page": 15,
+            "pattern": "pattern_002",
+            "confidence": 0.828,
+            "preview": "New Features and Bug Fixes in Siebel CRM Monthly Update 26.1 New Features in Sie"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0211",
+            "page": 19,
+            "pattern": "pattern_002",
+            "confidence": 0.65,
+            "preview": "New Features and Bug Fixes in Siebel CRM Monthly Update 25.12 New Features in Si"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0254",
+            "page": 26,
+            "pattern": "pattern_001",
+            "confidence": 0.9,
+            "preview": "Siebel CRM Deployment 37294722 Test Automation This release introduces a feature"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0275",
+            "page": 27,
+            "pattern": "pattern_002",
+            "confidence": 0.811,
+            "preview": "New Features and Bug Fixes in Siebel CRM Monthly Update 25.11 New Features in Si"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_006",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0041",
+            "page": 2,
+            "pattern": "pattern_001",
+            "confidence": 0.791,
+            "preview": "5 Siebel Approval Manager Optional"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0042",
+            "page": 2,
+            "pattern": "pattern_001",
+            "confidence": 0.796,
+            "preview": "6 Siebel Desktop Integration (DISA) Optional"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0043",
+            "page": 2,
+            "pattern": "pattern_001",
+            "confidence": 0.791,
+            "preview": "7 Siebel IAA XML Connector Optional"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0044",
+            "page": 2,
+            "pattern": "pattern_001",
+            "confidence": 0.794,
+            "preview": "8 Siebel Email Marketing Server Optional"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0045",
+            "page": 2,
+            "pattern": "pattern_001",
+            "confidence": 0.791,
+            "preview": "9 Siebel Open Integration Optional"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0046",
+            "page": 2,
+            "pattern": "pattern_001",
+            "confidence": 0.789,
+            "preview": "10 Siebel Smart Answer Optional"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0055",
+            "page": 3,
+            "pattern": "pattern_001",
+            "confidence": 0.778,
+            "preview": "5 Siebel Approval Manager Optional"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0056",
+            "page": 3,
+            "pattern": "pattern_001",
+            "confidence": 0.781,
+            "preview": "6 Siebel Email Marketing Server Optional"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0057",
+            "page": 3,
+            "pattern": "pattern_001",
+            "confidence": 0.778,
+            "preview": "7 Siebel Open Integration Optional"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_007",
+      "dominant_pattern": "pattern_004",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_consolidated_block_0009",
+            "page": 19,
+            "pattern": "pattern_001",
+            "confidence": 0.819,
+            "preview": "Siebel Intelligent Data Archival The Siebel Data Archival solution helps optimiz"
+          },
+          {
+            "logical_block_id": "26_3_update_consolidated_block_0010",
+            "page": 20,
+            "pattern": "pattern_001",
+            "confidence": 0.858,
+            "preview": "Siebel Open Integration It is common with customers that have been using Siebel "
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0230",
+            "page": 22,
+            "pattern": "pattern_004",
+            "confidence": 1.0,
+            "preview": "Siebel CRM Observability - Data Visualization and Metrics Monitoring for Oracle "
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0231",
+            "page": 23,
+            "pattern": "pattern_004",
+            "confidence": 0.782,
+            "preview": "Organizations can monitor database health and operational behavior in real time,"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0232",
+            "page": 23,
+            "pattern": "pattern_004",
+            "confidence": 0.707,
+            "preview": "- Easily pull data from Oracle database tables and display it as clear, visual m"
+          },
+          {
+            "logical_block_id": "26_3_update_consolidated_block_0012",
+            "page": 24,
+            "pattern": "pattern_001",
+            "confidence": 0.812,
+            "preview": "Siebel UCM: Event Driven Architecture - Approve and Merge Request ultra-compact "
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0279",
+            "page": 27,
+            "pattern": "pattern_001",
+            "confidence": 1.0,
+            "preview": "Multilingual Support for Web Tools on Containerized Deployments Accelerate your "
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0280",
+            "page": 28,
+            "pattern": "pattern_004",
+            "confidence": 0.823,
+            "preview": "Leverage the Siebel Installer within Siebel Cloud Manager to effortlessly build "
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0283",
+            "page": 28,
+            "pattern": "pattern_004",
+            "confidence": 0.724,
+            "preview": "- Streamlined Automation: Integrates seamlessly with Siebel Cloud Manager, autom"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_008",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0014",
+            "page": 1,
+            "pattern": "pattern_002",
+            "confidence": 0.653,
+            "preview": "- Repository Updates"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0066",
+            "page": 3,
+            "pattern": "pattern_005",
+            "confidence": 0.625,
+            "preview": "Repository Updates"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0067",
+            "page": 3,
+            "pattern": "pattern_002",
+            "confidence": 0.771,
+            "preview": "Some features require Repository, Seed, or Manifest changes in order to take adv"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0068",
+            "page": 3,
+            "pattern": "pattern_002",
+            "confidence": 0.713,
+            "preview": "NOTE: Not all features require Repository changes. Examine the “Repository Updat"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0165",
+            "page": 14,
+            "pattern": "pattern_003",
+            "confidence": 0.653,
+            "preview": "_Repository Changes_"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0181",
+            "page": 15,
+            "pattern": "pattern_003",
+            "confidence": 0.652,
+            "preview": "Repository Changes"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0189",
+            "page": 15,
+            "pattern": "pattern_001",
+            "confidence": 1.0,
+            "preview": "Preserve Customer Configuration Changes During Monthly Updates This feature decr"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0205",
+            "page": 18,
+            "pattern": "pattern_001",
+            "confidence": 0.968,
+            "preview": "Siebel CRM Deployment 36099145 Monthly Update Issues Addresses the issue of cust"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_009",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0029",
+            "page": 2,
+            "pattern": "pattern_002",
+            "confidence": 0.727,
+            "preview": "NOTE: As of the 25.5 release, Solaris and HPUX are no longer available for downl"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0038",
+            "page": 2,
+            "pattern": "pattern_001",
+            "confidence": 0.892,
+            "preview": "2 • Installer • Siebel Binaries and Shared Files • Enterprise Components • Appli"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0047",
+            "page": 2,
+            "pattern": "pattern_001",
+            "confidence": 0.816,
+            "preview": "11 Oracle Database SE2 Required for new installations of the Siebel Mobile Web C"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0052",
+            "page": 3,
+            "pattern": "pattern_001",
+            "confidence": 0.863,
+            "preview": "2 • Installer • Siebel Binaries and Shared Files • Enterprise Components • Appli"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0061",
+            "page": 3,
+            "pattern": "pattern_002",
+            "confidence": 0.736,
+            "preview": "- Installation instructions: For more about this Siebel CRM Update, including in"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0123",
+            "page": 10,
+            "pattern": "pattern_001",
+            "confidence": 0.852,
+            "preview": "Siebel CRM Deployment 38089901 Application Interface Siebel uses only serverAuth"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0139",
+            "page": 12,
+            "pattern": "pattern_001",
+            "confidence": 0.881,
+            "preview": "Siebel CRM Documentation 38584584 Object Interfaces Reference This documentation"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0141",
+            "page": 12,
+            "pattern": "pattern_001",
+            "confidence": 0.858,
+            "preview": "Siebel CRM Documentation 38301898 Transp/Interface: EAI Documentation on TLS mut"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_010",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0135",
+            "page": 11,
+            "pattern": "pattern_001",
+            "confidence": 0.884,
+            "preview": "Siebel CRM Development 38663266 Workflow When creating or updating database trig"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0142",
+            "page": 12,
+            "pattern": "pattern_001",
+            "confidence": 0.861,
+            "preview": "Siebel CRM End User 38444710 User Interface TinyMCE improvement to support Style"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0143",
+            "page": 12,
+            "pattern": "pattern_001",
+            "confidence": 0.845,
+            "preview": "Siebel CRM End User 38556974 User Interface Fixed Toggle applets to display data"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0144",
+            "page": 12,
+            "pattern": "pattern_001",
+            "confidence": 0.854,
+            "preview": "Siebel CRM End User 38588428 User Interface LEFT AND RIGHT Arrows are added in s"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0158",
+            "page": 13,
+            "pattern": "pattern_001",
+            "confidence": 0.849,
+            "preview": "Siebel CRM End User 12599692 Reports Enabled Excel template support functionalit"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0209",
+            "page": 19,
+            "pattern": "pattern_001",
+            "confidence": 0.842,
+            "preview": "Siebel CRM End User 38561775 Reports Addresses an issue while deploying custom S"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0257",
+            "page": 26,
+            "pattern": "pattern_001",
+            "confidence": 0.894,
+            "preview": "Siebel CRM End User 31116567 Reports Addresses a problem in Siebel Reports where"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0304",
+            "page": 30,
+            "pattern": "pattern_001",
+            "confidence": 0.848,
+            "preview": "Siebel CRM End User 38274965 User Interface Added default for Browser Spellcheck"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_011",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0145",
+            "page": 12,
+            "pattern": "pattern_001",
+            "confidence": 0.9,
+            "preview": "Siebel CRM Integration 38684263 EAI Outbound REST requests that send negative nu"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0157",
+            "page": 13,
+            "pattern": "pattern_001",
+            "confidence": 0.892,
+            "preview": "Siebel CRM Documentation 29468742 Task UI Guide Documents the ProcessArgAsc para"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0159",
+            "page": 13,
+            "pattern": "pattern_001",
+            "confidence": 0.889,
+            "preview": "Siebel CRM Integration 38681800 EAI When the EAI HTTP Transport Business Service"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0160",
+            "page": 13,
+            "pattern": "pattern_001",
+            "confidence": 0.871,
+            "preview": "Siebel CRM Integration 38779291 Open Integration Fixed an issue to publish Opera"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0161",
+            "page": 13,
+            "pattern": "pattern_001",
+            "confidence": 0.854,
+            "preview": "Siebel CRM Integration 38176388 SSSE Improves the PIMSI Dispatcher’s ability to "
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0177",
+            "page": 14,
+            "pattern": "pattern_002",
+            "confidence": 0.742,
+            "preview": "Instructions for 38779291--Fixed an issue to publish Operation field in Integrat"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0210",
+            "page": 19,
+            "pattern": "pattern_001",
+            "confidence": 0.82,
+            "preview": "Siebel CRM Integration 38290455 SSSE This fixes the issue of \"maximum open curso"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0260",
+            "page": 26,
+            "pattern": "pattern_001",
+            "confidence": 0.869,
+            "preview": "Siebel CRM Integration 38006819 SSSE Fixes the issue with all day activities not"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_012",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0099",
+            "page": 8,
+            "pattern": "pattern_003",
+            "confidence": 0.655,
+            "preview": "Fixes in Siebel CRM 26.3"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0147",
+            "page": 12,
+            "pattern": "pattern_002",
+            "confidence": 0.694,
+            "preview": "Fixes in Siebel CRM 26.2"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0195",
+            "page": 18,
+            "pattern": "pattern_002",
+            "confidence": 0.694,
+            "preview": "Fixes in Siebel CRM 26.1"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0202",
+            "page": 18,
+            "pattern": "pattern_001",
+            "confidence": 0.902,
+            "preview": "Siebel CRM Cloud Applications 38775206 Siebel Cloud Manager This fix eliminates "
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0219",
+            "page": 21,
+            "pattern": "pattern_002",
+            "confidence": 0.651,
+            "preview": "Services, Applets, Workflows, etc. within Siebel CRM to external applications th"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0238",
+            "page": 24,
+            "pattern": "pattern_002",
+            "confidence": 0.694,
+            "preview": "Fixes in Siebel CRM 25.12"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0293",
+            "page": 29,
+            "pattern": "pattern_003",
+            "confidence": 0.655,
+            "preview": "Fixes in Siebel CRM 25.11"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_013",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0134",
+            "page": 11,
+            "pattern": "pattern_001",
+            "confidence": 0.968,
+            "preview": "Siebel CRM Development 38698788 Workflow When purging Workflow Process instance "
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0136",
+            "page": 11,
+            "pattern": "pattern_001",
+            "confidence": 0.888,
+            "preview": "Siebel CRM Development 38142176 Workflow The Purge button on the Workflow Proces"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0137",
+            "page": 11,
+            "pattern": "pattern_001",
+            "confidence": 0.909,
+            "preview": "Siebel CRM Development 38755215 Workspaces There was a missing parameter in Sieb"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0152",
+            "page": 13,
+            "pattern": "pattern_001",
+            "confidence": 0.998,
+            "preview": "Siebel CRM Deployment 31264888 Database Upgrade promotion, the system would inco"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0156",
+            "page": 13,
+            "pattern": "pattern_001",
+            "confidence": 0.867,
+            "preview": "Siebel CRM Development 38250077 Configuration Tools Web Tools now correctly resp"
+          },
+          {
+            "logical_block_id": "26_3_update_consolidated_block_0013",
+            "page": 25,
+            "pattern": "pattern_001",
+            "confidence": 0.815,
+            "preview": "Siebel CRM Deployment 38397401 Database Upgrade When running the RepositoryUpgra"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0300",
+            "page": 30,
+            "pattern": "pattern_001",
+            "confidence": 0.879,
+            "preview": "Siebel CRM Development 38285513 Workspaces Labels stored in the Coherence Cache "
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_014",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0164",
+            "page": 14,
+            "pattern": "pattern_002",
+            "confidence": 0.734,
+            "preview": "To resolve the issue causing an incorrect Promotion Name to appear in the Promot"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0166",
+            "page": 14,
+            "pattern": "pattern_002",
+            "confidence": 0.658,
+            "preview": "1. Edit the Workflow Process _ISS Promotion Finish Upgrade Sub Process_ as follo"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0172",
+            "page": 14,
+            "pattern": "pattern_001",
+            "confidence": 0.772,
+            "preview": "BC Name Literal ISS Promotion Upgrade Header VBC"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0261",
+            "page": 26,
+            "pattern": "pattern_002",
+            "confidence": 0.746,
+            "preview": "Special Configuration Instructions for Release 25.12 Instructions for 38196156--"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0263",
+            "page": 26,
+            "pattern": "pattern_002",
+            "confidence": 0.705,
+            "preview": "Get Promotion Upgrade Path REST API and the workflow is rectified to return corr"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0264",
+            "page": 26,
+            "pattern": "pattern_002",
+            "confidence": 0.72,
+            "preview": "2. Make the following changes for _ISS Promotion WS - In Memory Upgrade Process-"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0271",
+            "page": 27,
+            "pattern": "pattern_002",
+            "confidence": 0.654,
+            "preview": "iii. In the _In Memory Promotion Upgrade Process_ WF Step, update the Input Argu"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_015",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0183",
+            "page": 15,
+            "pattern": "pattern_002",
+            "confidence": 0.65,
+            "preview": "1. Select the _Users_ Integration Object."
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0184",
+            "page": 15,
+            "pattern": "pattern_002",
+            "confidence": 0.654,
+            "preview": "2. Select the child Integration Component _User_ ."
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0185",
+            "page": 15,
+            "pattern": "pattern_002",
+            "confidence": 0.66,
+            "preview": "3. Select the child Integration Component Field _operation_ ."
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0221",
+            "page": 21,
+            "pattern": "pattern_002",
+            "confidence": 0.749,
+            "preview": "- Sophisticated integration for UX, AI and beyond - this provides complete “head"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0258",
+            "page": 26,
+            "pattern": "pattern_001",
+            "confidence": 0.869,
+            "preview": "Siebel CRM Integration 38438442 EAI REST calls to dynamically created Integratio"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0259",
+            "page": 26,
+            "pattern": "pattern_001",
+            "confidence": 0.876,
+            "preview": "Siebel CRM Integration 38479780 EAI Invalidating instances of objects in the JBS"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0305",
+            "page": 30,
+            "pattern": "pattern_001",
+            "confidence": 0.948,
+            "preview": "Siebel CRM Integration 38216232 Enterprise Integration Manager After importing L"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_016",
+      "dominant_pattern": "pattern_004",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_consolidated_block_0011",
+            "page": 21,
+            "pattern": "pattern_004",
+            "confidence": 0.868,
+            "preview": "- Maximum re-use - as part of the REST API generation process, customizations ar"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0228",
+            "page": 21,
+            "pattern": "pattern_004",
+            "confidence": 0.753,
+            "preview": "- Advanced interoperability - In addition to the processes, the REST APIs also p"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0229",
+            "page": 22,
+            "pattern": "pattern_004",
+            "confidence": 1.0,
+            "preview": "Siebel Test Automation: Logical Looping for Enhanced Scenario Coverage NOTE: Sie"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0233",
+            "page": 23,
+            "pattern": "pattern_004",
+            "confidence": 0.803,
+            "preview": "• Keep an eye on the health of your Oracle database that works with Siebel CRM o"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0278",
+            "page": 27,
+            "pattern": "pattern_001",
+            "confidence": 1.0,
+            "preview": "Siebel Marketing - Leveraging Analysis for Segmentation Replacement Siebel Marke"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0288",
+            "page": 28,
+            "pattern": "pattern_004",
+            "confidence": 0.684,
+            "preview": "Enhanced Digital APIs for Insightful Buying Journeys This feature helps both age"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0291",
+            "page": 29,
+            "pattern": "pattern_006",
+            "confidence": 0.803,
+            "preview": "- Promotion Browsing by Product Category and Line: Agents and customers can brow"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_017",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0017",
+            "page": 1,
+            "pattern": "pattern_002",
+            "confidence": 0.812,
+            "preview": "NOTE: For an HTML version of this document, please download the first ZIP file i"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0020",
+            "page": 1,
+            "pattern": "pattern_002",
+            "confidence": 0.816,
+            "preview": "Each Monthly Update patch available on My Oracle Support is divided into a serie"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0021",
+            "page": 1,
+            "pattern": "pattern_002",
+            "confidence": 0.722,
+            "preview": "The ZIP files provided in the Monthly Update will all have a name of the form p<"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0023",
+            "page": 2,
+            "pattern": "pattern_002",
+            "confidence": 0.702,
+            "preview": "- <updateversion> refers to the Monthly Update’s release in the form YYM, withou"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0024",
+            "page": 2,
+            "pattern": "pattern_002",
+            "confidence": 0.656,
+            "preview": "- <platform> refers to one of the supported platforms:"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0033",
+            "page": 2,
+            "pattern": "pattern_002",
+            "confidence": 0.717,
+            "preview": "The ZIP files for Windows versus the other supported platforms are different, as"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_018",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0039",
+            "page": 2,
+            "pattern": "pattern_001",
+            "confidence": 0.814,
+            "preview": "3 Siebel Non-English (US) Safeboot Required for non-English (US) deployments onl"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0040",
+            "page": 2,
+            "pattern": "pattern_001",
+            "confidence": 0.802,
+            "preview": "4 Siebel Standard Repository Required for new deployments"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0048",
+            "page": 2,
+            "pattern": "pattern_001",
+            "confidence": 0.808,
+            "preview": "12 Siebel Ancestor Repositories Required for Upgrades from pre-IP2017"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0053",
+            "page": 3,
+            "pattern": "pattern_001",
+            "confidence": 0.801,
+            "preview": "3 Siebel Non-English (US) Safeboot Required for non-English (US) deployments onl"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0054",
+            "page": 3,
+            "pattern": "pattern_001",
+            "confidence": 0.789,
+            "preview": "4 Siebel Standard Repository Required for new deployments"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0058",
+            "page": 3,
+            "pattern": "pattern_001",
+            "confidence": 0.795,
+            "preview": "8 Siebel Ancestor Repositories Required for Upgrades from pre-IP2017"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_019",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0149",
+            "page": 12,
+            "pattern": "pattern_001",
+            "confidence": 0.842,
+            "preview": "Siebel Apps - 38679336 Promotions Previously, when you cancelled an Instructions"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0150",
+            "page": 12,
+            "pattern": "pattern_001",
+            "confidence": 0.829,
+            "preview": "Customer Order upgrade promotion and then tried to 38679336"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0198",
+            "page": 18,
+            "pattern": "pattern_001",
+            "confidence": 0.865,
+            "preview": "Siebel Apps - Customer Order 38506349 Promotions Importing a bundle promotion is"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0244",
+            "page": 24,
+            "pattern": "pattern_001",
+            "confidence": 0.832,
+            "preview": "Siebel Apps - 38429722 Product While migrating bundle promotions"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0245",
+            "page": 24,
+            "pattern": "pattern_001",
+            "confidence": 0.829,
+            "preview": "Customer Administration from test to production environment"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0246",
+            "page": 25,
+            "pattern": "pattern_001",
+            "confidence": 1.0,
+            "preview": "Order Management Siebel Apps - Customer Order Management 38196156 Promotions usi"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_020",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0155",
+            "page": 13,
+            "pattern": "pattern_001",
+            "confidence": 0.903,
+            "preview": "Siebel CRM Deployment 38603047 Server Infrastructure Addressed \"ACCESS TO USER P"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0206",
+            "page": 19,
+            "pattern": "pattern_001",
+            "confidence": 0.813,
+            "preview": "Siebel CRM Deployment 38703534 Server Infrastructure Improved saving of Siebel T"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0207",
+            "page": 19,
+            "pattern": "pattern_001",
+            "confidence": 0.812,
+            "preview": "Siebel CRM Deployment 38704783 Server Infrastructure Improved NFS behavior by re"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0251",
+            "page": 25,
+            "pattern": "pattern_001",
+            "confidence": 0.865,
+            "preview": "Siebel CRM Deployment 38245133 Installation Properly Migrated AuthToken from pre"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0253",
+            "page": 25,
+            "pattern": "pattern_001",
+            "confidence": 0.867,
+            "preview": "Siebel CRM Deployment 38593766 Server Infrastructure Removed possibility of \"SER"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0299",
+            "page": 30,
+            "pattern": "pattern_001",
+            "confidence": 0.853,
+            "preview": "Siebel CRM Deployment 38355372 Perf/Scalability/Reliability Resolved Siebel Serv"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_021",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0004",
+            "page": 1,
+            "pattern": "pattern_002",
+            "confidence": 0.673,
+            "preview": "NOTE: Immediately after installing the 26.3 Monthly Update, one or more patches "
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0010",
+            "page": 1,
+            "pattern": "pattern_002",
+            "confidence": 0.765,
+            "preview": "The 25.10 Monthly Update includes an upgrade to the encryption used by Siebel CR"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0011",
+            "page": 1,
+            "pattern": "pattern_002",
+            "confidence": 0.654,
+            "preview": "Information about this Siebel CRM Monthly Update:"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0022",
+            "page": 1,
+            "pattern": "pattern_002",
+            "confidence": 0.701,
+            "preview": "- <patch> refers to the MOS patch number for the Monthly Update. It will be an e"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0031",
+            "page": 2,
+            "pattern": "pattern_002",
+            "confidence": 0.741,
+            "preview": "An example representing ZIP file 5 of 14 for Windows, Siebel Monthly Update 24.1"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_022",
+      "dominant_pattern": "pattern_003",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0065",
+            "page": 3,
+            "pattern": "pattern_003",
+            "confidence": 0.635,
+            "preview": "Back to top"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0069",
+            "page": 3,
+            "pattern": "pattern_003",
+            "confidence": 0.635,
+            "preview": "Back to top"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0163",
+            "page": 14,
+            "pattern": "pattern_003",
+            "confidence": 0.622,
+            "preview": "_Background_"
+          },
+          {
+            "logical_block_id": "26_3_update_consolidated_block_0008",
+            "page": 15,
+            "pattern": "pattern_002",
+            "confidence": 0.727,
+            "preview": "_Background_ <mark>User creation via the</mark> _<mark>User</mark>_ <mark>Integr"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0262",
+            "page": 26,
+            "pattern": "pattern_003",
+            "confidence": 0.622,
+            "preview": "_Background_"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_023",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0167",
+            "page": 14,
+            "pattern": "pattern_002",
+            "confidence": 0.667,
+            "preview": "- i. Add a Business Service WF Step _Empty Header BC_ between _Done?_ and _Empty"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0168",
+            "page": 14,
+            "pattern": "pattern_002",
+            "confidence": 0.652,
+            "preview": "- ii. For the WF Step _Empty Header BC_ , set the following properties."
+          },
+          {
+            "logical_block_id": "26_3_update_consolidated_block_0006",
+            "page": 14,
+            "pattern": "pattern_001",
+            "confidence": 0.845,
+            "preview": "EmptyHeader BC InMemoryUpgrade Data Service Invoke BC Method For the WF Step _Em"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0174",
+            "page": 14,
+            "pattern": "pattern_002",
+            "confidence": 0.655,
+            "preview": "- iii. For the WF Step _Empty Header BC_ , add the following Input Arguments."
+          },
+          {
+            "logical_block_id": "26_3_update_consolidated_block_0007",
+            "page": 14,
+            "pattern": "pattern_002",
+            "confidence": 0.844,
+            "preview": "- iv. Modify the existing WF Branch Connector between WF Step _Done?_ and WF Ste"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_024",
+      "dominant_pattern": "pattern_005",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0001",
+            "page": 1,
+            "pattern": "pattern_005",
+            "confidence": 0.623,
+            "preview": "Siebel CRM Update Guide and Known Issues"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0002",
+            "page": 1,
+            "pattern": "pattern_002",
+            "confidence": 0.698,
+            "preview": "Siebel CRM 26.3 Update March 2026"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0013",
+            "page": 1,
+            "pattern": "pattern_002",
+            "confidence": 0.65,
+            "preview": "- Update Basics"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0059",
+            "page": 3,
+            "pattern": "pattern_005",
+            "confidence": 0.623,
+            "preview": "Update Basics"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_025",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0035",
+            "page": 2,
+            "pattern": "pattern_002",
+            "confidence": 0.692,
+            "preview": "Windows Archive Files"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0037",
+            "page": 2,
+            "pattern": "pattern_001",
+            "confidence": 0.785,
+            "preview": "1 ReadMe File Optional"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0049",
+            "page": 2,
+            "pattern": "pattern_002",
+            "confidence": 0.694,
+            "preview": "Linux/Unix Archive Files"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0051",
+            "page": 2,
+            "pattern": "pattern_001",
+            "confidence": 0.732,
+            "preview": "1 ReadMe File Optional"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_026",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_consolidated_block_0014",
+            "page": 26,
+            "pattern": "pattern_001",
+            "confidence": 0.893,
+            "preview": "Target Promotion Id In/Out Account String ii. In the_GetPenalty Detai_ Arguments"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0270",
+            "page": 26,
+            "pattern": "pattern_001",
+            "confidence": 0.766,
+            "preview": "New Promotion Id Target Promotion Id"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0273",
+            "page": 27,
+            "pattern": "pattern_001",
+            "confidence": 0.749,
+            "preview": "New Promotion Expression IIF([&New Promotion Id] is NULL, [&Target Promotion Id]"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0274",
+            "page": 27,
+            "pattern": "pattern_001",
+            "confidence": 0.72,
+            "preview": "Id [&New Promotion Id])"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_027",
+      "dominant_pattern": "pattern_003",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0003",
+            "page": 1,
+            "pattern": "pattern_003",
+            "confidence": 0.611,
+            "preview": "Required Patches"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0005",
+            "page": 1,
+            "pattern": "pattern_003",
+            "confidence": 0.643,
+            "preview": "You are not in a supported configuration if any required patch is not installed."
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0006",
+            "page": 1,
+            "pattern": "pattern_001",
+            "confidence": 0.695,
+            "preview": "Platforms Required Patches"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_028",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0012",
+            "page": 1,
+            "pattern": "pattern_002",
+            "confidence": 0.653,
+            "preview": "- Required Downloads"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0019",
+            "page": 1,
+            "pattern": "pattern_003",
+            "confidence": 0.612,
+            "preview": "Required Downloads"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0034",
+            "page": 2,
+            "pattern": "pattern_002",
+            "confidence": 0.763,
+            "preview": "NOTE: You do not need to download everything—for example, if you are not using D"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_029",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0018",
+            "page": 1,
+            "pattern": "pattern_002",
+            "confidence": 0.702,
+            "preview": "NOTE: If you need an earlier or later version of this document, you can find all"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0062",
+            "page": 3,
+            "pattern": "pattern_002",
+            "confidence": 0.731,
+            "preview": "- Third-Party Certifications: For a list of Third-Party Certifications, please v"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0064",
+            "page": 3,
+            "pattern": "pattern_002",
+            "confidence": 0.81,
+            "preview": "NOTE: This document contains two years (24 months) of rolling content. For bug f"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_030",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0026",
+            "page": 2,
+            "pattern": "pattern_001",
+            "confidence": 0.712,
+            "preview": "MSWIN-x86-64 Microsoft Windows x64"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0027",
+            "page": 2,
+            "pattern": "pattern_001",
+            "confidence": 0.707,
+            "preview": "Linux x86-64 Linux x86-64"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0032",
+            "page": 2,
+            "pattern": "pattern_002",
+            "confidence": 0.626,
+            "preview": "``` p37386170_2412_MSWIN-x86-64_5of14.zip ```"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_031",
+      "dominant_pattern": "pattern_003",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0087",
+            "page": 6,
+            "pattern": "pattern_003",
+            "confidence": 0.617,
+            "preview": "Basic Technical Information"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0091",
+            "page": 6,
+            "pattern": "pattern_002",
+            "confidence": 0.68,
+            "preview": "For more information on the technical details of these database-level capabiliti"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0194",
+            "page": 18,
+            "pattern": "pattern_004",
+            "confidence": 0.746,
+            "preview": "experience. Recognizing the unique demands of tablet usage, the redesign focuses"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_032",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0089",
+            "page": 6,
+            "pattern": "pattern_002",
+            "confidence": 0.671,
+            "preview": "- For Oracle platforms, we leverage the DBMS_REDEFINITION package to make change"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0090",
+            "page": 6,
+            "pattern": "pattern_002",
+            "confidence": 0.67,
+            "preview": "- For Microsoft SQL Server platforms, we leverage the \"ONLINE\" keyword to modify"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0092",
+            "page": 6,
+            "pattern": "pattern_002",
+            "confidence": 0.637,
+            "preview": "NOTE: This change is not applicable to either DB2 database platform."
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_033",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0169",
+            "page": 14,
+            "pattern": "pattern_001",
+            "confidence": 0.773,
+            "preview": "Name Business Service Name Business Service Method"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0173",
+            "page": 14,
+            "pattern": "pattern_001",
+            "confidence": 0.763,
+            "preview": "Method Name Literal EmptyRecord"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0199",
+            "page": 18,
+            "pattern": "pattern_001",
+            "confidence": 0.876,
+            "preview": "Management (S_PROD_INT.PART_NUM) is different from the ROW_ID without giving err"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_034",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0201",
+            "page": 18,
+            "pattern": "pattern_001",
+            "confidence": 0.86,
+            "preview": "Siebel Apps - Marketing 39006748 Segmentation Steps to pass the column detail to"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0240",
+            "page": 24,
+            "pattern": "pattern_001",
+            "confidence": 0.831,
+            "preview": "Siebel Apps - 38389227 Site Addresses issue where transferring"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0247",
+            "page": 25,
+            "pattern": "pattern_001",
+            "confidence": 0.853,
+            "preview": "Siebel Apps - Marketing 38129718 Responses During launch campaign in DEU applica"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_035",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0220",
+            "page": 21,
+            "pattern": "pattern_002",
+            "confidence": 0.624,
+            "preview": "There are key benefits with this feature:"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0281",
+            "page": 28,
+            "pattern": "pattern_003",
+            "confidence": 0.61,
+            "preview": "Key Benefits:"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0290",
+            "page": 28,
+            "pattern": "pattern_002",
+            "confidence": 0.61,
+            "preview": "Key Benefits:"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_036",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0255",
+            "page": 26,
+            "pattern": "pattern_001",
+            "confidence": 0.894,
+            "preview": "Siebel CRM Development 38195429 Configuration Tools Manually adjusting a Form Ap"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0256",
+            "page": 26,
+            "pattern": "pattern_001",
+            "confidence": 0.875,
+            "preview": "Siebel CRM Development 38177259 Scripting Using the EAI Siebel Adapter in the sc"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0282",
+            "page": 28,
+            "pattern": "pattern_002",
+            "confidence": 0.744,
+            "preview": "- Global Reach & Diversity: Extend Siebel Web Tools functionality to Developers "
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_037",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0289",
+            "page": 28,
+            "pattern": "pattern_002",
+            "confidence": 0.634,
+            "preview": "- Siebel REST API Yes Guide - • Siebel Order Management Guide"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0295",
+            "page": 29,
+            "pattern": "pattern_001",
+            "confidence": 0.923,
+            "preview": "Siebel Apps - Customer Order Management 38304438 Order Management Sales reps can"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0296",
+            "page": 29,
+            "pattern": "pattern_001",
+            "confidence": 0.903,
+            "preview": "Siebel Apps - Customer Order Management 38358239 Quotes & Orders Display Synchro"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_038",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0007",
+            "page": 1,
+            "pattern": "pattern_001",
+            "confidence": 0.705,
+            "preview": "Windows (serversandMobile Web Clients) 39111271"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0008",
+            "page": 1,
+            "pattern": "pattern_001",
+            "confidence": 0.693,
+            "preview": "Linux(servers) 39186423"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_039",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0016",
+            "page": 1,
+            "pattern": "pattern_002",
+            "confidence": 0.65,
+            "preview": "- Known Issues"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0248",
+            "page": 25,
+            "pattern": "pattern_001",
+            "confidence": 0.897,
+            "preview": "Siebel CRM Deployment 38469767 Application Interface Resolved Issue where Tomcat"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_040",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0063",
+            "page": 3,
+            "pattern": "pattern_002",
+            "confidence": 0.636,
+            "preview": "- FAQ: The Siebel CRM Continuous Release Model (Doc ID 2378034.1)."
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0071",
+            "page": 3,
+            "pattern": "pattern_002",
+            "confidence": 0.752,
+            "preview": "In addition to the documentation provided in the listed guides from Siebel Books"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_041",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0151",
+            "page": 12,
+            "pattern": "pattern_001",
+            "confidence": 0.823,
+            "preview": "Management start a new upgrade with a different"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0162",
+            "page": 13,
+            "pattern": "pattern_002",
+            "confidence": 0.721,
+            "preview": "Special Configuration Instructions for Release 26.2 Instructions for 38679336--P"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_042",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0182",
+            "page": 15,
+            "pattern": "pattern_002",
+            "confidence": 0.66,
+            "preview": "Perform the following changes to convert the _operation_ field from “system” to "
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0186",
+            "page": 15,
+            "pattern": "pattern_002",
+            "confidence": 0.649,
+            "preview": "4. Modify the Type attribute to “Data”."
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_043",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0222",
+            "page": 21,
+            "pattern": "pattern_002",
+            "confidence": 0.694,
+            "preview": "- Simplified and accelerated creation of bespoke user interfaces outside of the "
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0223",
+            "page": 21,
+            "pattern": "pattern_002",
+            "confidence": 0.682,
+            "preview": "- Tighter interoperability for Siebel CRM with Oracle CX Industry applications."
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_044",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0224",
+            "page": 21,
+            "pattern": "pattern_002",
+            "confidence": 0.737,
+            "preview": "- Supporting IoT driven event flows that would provide end to end, straight-thro"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0265",
+            "page": 26,
+            "pattern": "pattern_002",
+            "confidence": 0.623,
+            "preview": "- i. Add the following process property."
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_045",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0269",
+            "page": 26,
+            "pattern": "pattern_001",
+            "confidence": 0.765,
+            "preview": "Old Property Name New Property Name"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0272",
+            "page": 27,
+            "pattern": "pattern_001",
+            "confidence": 0.716,
+            "preview": "Name Type Value"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_046",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0285",
+            "page": 28,
+            "pattern": "pattern_002",
+            "confidence": 0.759,
+            "preview": "- Operational Efficiency: Save time and resources by building and managing multi"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0286",
+            "page": 28,
+            "pattern": "pattern_002",
+            "confidence": 0.675,
+            "preview": "Transform your Siebel implementation with agile, containerized, and multilingual"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_047",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0287",
+            "page": 28,
+            "pattern": "pattern_002",
+            "confidence": 0.646,
+            "preview": "Training on this feature can be found on Oracle University."
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0292",
+            "page": 29,
+            "pattern": "pattern_002",
+            "confidence": 0.646,
+            "preview": "Training on this feature can be found on Oracle University."
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_048",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0302",
+            "page": 30,
+            "pattern": "pattern_001",
+            "confidence": 0.879,
+            "preview": "Siebel CRM Documentation 32747606 Security Guide Provides documentation on Singl"
+          },
+          {
+            "logical_block_id": "26_3_update_logical_block_0306",
+            "page": 30,
+            "pattern": "pattern_001",
+            "confidence": 0.885,
+            "preview": "Siebel CRM Integration 38249096 REST When a Workflow Process is invoked through "
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_049",
+      "dominant_pattern": "pattern_003",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0009",
+            "page": 1,
+            "pattern": "pattern_003",
+            "confidence": 0.627,
+            "preview": "Effect of Encryption Upgrade in 25.10 and Later"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_050",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0028",
+            "page": 2,
+            "pattern": "pattern_001",
+            "confidence": 0.712,
+            "preview": "AIX64-5L IBM AIX on POWER Systems"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_051",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0030",
+            "page": 2,
+            "pattern": "pattern_002",
+            "confidence": 0.658,
+            "preview": "- <XofY> makes identifies the specific ZIP file within the series, such as “5of1"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_052",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0098",
+            "page": 8,
+            "pattern": "pattern_002",
+            "confidence": 0.629,
+            "preview": "reliable, and aligned with CNCF guiding principles."
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_053",
+      "dominant_pattern": "pattern_003",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0180",
+            "page": 15,
+            "pattern": "pattern_003",
+            "confidence": 0.633,
+            "preview": "_Steps_"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_054",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0234",
+            "page": 23,
+            "pattern": "pattern_002",
+            "confidence": 0.692,
+            "preview": "- Efficiency at Scale: Experience faster data transfer and reduced storage consu"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_055",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0242",
+            "page": 24,
+            "pattern": "pattern_001",
+            "confidence": 0.825,
+            "preview": "Management fails with a record modified by another"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_056",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0243",
+            "page": 24,
+            "pattern": "pattern_001",
+            "confidence": 0.853,
+            "preview": "System user error due to concurrent updates to the Net Transfer Count field on t"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_057",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0266",
+            "page": 26,
+            "pattern": "pattern_001",
+            "confidence": 0.766,
+            "preview": "Name In/Out Business Object Data Type"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_058",
+      "dominant_pattern": "pattern_002",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0284",
+            "page": 28,
+            "pattern": "pattern_002",
+            "confidence": 0.743,
+            "preview": "- Consistent User Experience: Ensure language consistency and compliance across "
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_059",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0301",
+            "page": 30,
+            "pattern": "pattern_001",
+            "confidence": 0.889,
+            "preview": "Siebel CRM Development 37849599 Workspaces When you have many delivered Develope"
+          }
+        ]
+      }
+    },
+    {
+      "group_id": "logical_group_060",
+      "dominant_pattern": "pattern_001",
+      "inferred_label": null,
+      "documents": {
+        "26_3_update": [
+          {
+            "logical_block_id": "26_3_update_logical_block_0303",
+            "page": 30,
+            "pattern": "pattern_001",
+            "confidence": 0.848,
+            "preview": "Siebel CRM End User 37924781 Accessibility Accessible name is now reflected for "
+          }
+        ]
+      }
+    }
+  ]
+}
