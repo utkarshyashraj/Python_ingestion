@@ -1,0 +1,318 @@
+:root {
+  --ink: #10231c;
+  --ink-soft: #1c3a2f;
+  --fog: #d7e4dc;
+  --paper: #f3f7f4;
+  --panel: rgba(255, 255, 255, 0.78);
+  --line: rgba(16, 35, 28, 0.14);
+  --jade: #1f7a5c;
+  --jade-deep: #145a43;
+  --warn: #9a4d1c;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+  --sans: "Sora", system-ui, sans-serif;
+  --display: "Fraunces", Georgia, serif;
+  --shadow: 0 24px 60px rgba(16, 35, 28, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.45;
+}
+
+.atmosphere {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(31, 122, 92, 0.18), transparent 55%),
+    radial-gradient(900px 500px at 90% 0%, rgba(16, 35, 28, 0.12), transparent 50%),
+    linear-gradient(165deg, #eaf2ed 0%, #f3f7f4 45%, #e5efe8 100%);
+}
+
+.atmosphere::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.topbar {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2.25rem 1.5rem 0.5rem;
+}
+
+.brand {
+  font-family: var(--display);
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--ink);
+  animation: rise 700ms ease-out both;
+}
+
+.tagline {
+  margin: 0.65rem 0 0;
+  max-width: 36rem;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  animation: rise 850ms ease-out both;
+}
+
+.layout {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem 3rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+}
+
+.upload-panel {
+  position: relative;
+  padding: 1.75rem;
+  transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
+}
+
+.upload-panel.dragover {
+  border-color: var(--jade);
+  background: rgba(31, 122, 92, 0.08);
+  transform: translateY(-2px);
+}
+
+.drop-inner h1 {
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin: 0 0 0.4rem;
+  letter-spacing: -0.02em;
+}
+
+.drop-inner p {
+  margin: 0;
+  color: var(--ink-soft);
+  max-width: 40rem;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  align-items: end;
+  margin-top: 1.35rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.field input,
+.field select {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  text-transform: none;
+  letter-spacing: 0;
+  min-width: 7.5rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+}
+
+.btn {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.92rem;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  padding: 0.62rem 1rem;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn.primary {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #f4faf7;
+}
+
+.btn.run {
+  margin-top: 1.1rem;
+  border-color: var(--jade-deep);
+  background: var(--jade);
+  color: #f3fbf7;
+  min-width: 9rem;
+}
+
+.btn.run:hover:not(:disabled) {
+  background: var(--jade-deep);
+}
+
+.btn.ghost {
+  background: transparent;
+}
+
+.file-name {
+  margin-top: 0.9rem;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.status {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  gap: 0.8rem;
+  background: rgba(243, 247, 244, 0.88);
+  text-align: center;
+}
+
+.spinner {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 auto;
+  border: 2px solid rgba(16, 35, 28, 0.15);
+  border-top-color: var(--jade);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.results-panel {
+  padding: 1.25rem 1.25rem 1.5rem;
+  animation: rise 500ms ease-out both;
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+.results-header h2 {
+  font-family: var(--display);
+  font-size: 1.7rem;
+  margin: 0;
+}
+
+.meta {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.result-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.summary {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.25rem;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  max-height: 10rem;
+  overflow: auto;
+  padding: 0.75rem;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.summary .row {
+  white-space: pre;
+}
+
+.log {
+  margin: 1rem 0 0;
+  max-height: min(62vh, 720px);
+  overflow: auto;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  background: #0f1a16;
+  color: #d5e8de;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.foot {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.5rem 2.5rem;
+  font-size: 0.82rem;
+  color: rgba(16, 35, 28, 0.62);
+}
+
+.error {
+  color: var(--warn);
+  font-weight: 500;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 720px) {
+  .layout {
+    padding: 1rem 1rem 2rem;
+  }
+
+  .upload-panel,
+  .results-panel {
+    padding: 1.1rem;
+  }
+}

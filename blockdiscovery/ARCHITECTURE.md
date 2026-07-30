@@ -383,6 +383,17 @@ Synthetic PDFs use invented labels so the engine cannot “cheat” with real pr
 - `requirements.txt` — dependencies
 - `genericity_audit.json` (per run) — live proof of generic constraints
 
+## 14. Web UI (branch `feature/ingest-ui`)
+
+A FastAPI UI lets you **drag-and-drop / upload** a PDF, run the same discovery engine, and view the **human-readable log** in the browser.
+
+```bash
+export PYTHONPATH=.
+uvicorn blockdiscovery.web.app:app --host 127.0.0.1 --port 8000
+```
+
+See `blockdiscovery/web/README.md` for details.
+
 ---
 
-*Last updated to reflect nested section discovery (`depth` / parent / children), structured ingestion via pymupdf4llm, and multi-PDF full-document runs.*
+*Last updated to reflect nested section discovery (`depth` / parent / children), structured ingestion via pymupdf4llm, multi-PDF full-document runs, and the ingest web UI.*

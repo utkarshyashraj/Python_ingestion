@@ -5,6 +5,11 @@ numpy>=1.24             # vectorised feature/semantic maths
 # Structure-aware ingestion (recommended for table-heavy PDFs such as release notes).
 pymupdf4llm>=0.0.17      # layout-aware markdown + table rows
 
+# Web UI (upload / drag-drop + human-readable log viewer).
+fastapi>=0.110
+uvicorn[standard]>=0.27
+python-multipart>=0.0.9
+
 # Optional: IBM Docling for layout/table AI. Prefer wheels; may fail to build
 # from source on some platforms (docling-parse). When unavailable the engine
 # falls back to pymupdf4llm if ingestion_backend="docling".

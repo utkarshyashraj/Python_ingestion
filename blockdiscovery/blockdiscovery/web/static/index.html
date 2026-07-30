@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Block Discovery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Sora:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/app.css" />
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+  <header class="topbar">
+    <div class="brand">Block Discovery</div>
+    <p class="tagline">Evidence-first PDF structure — upload any document, read the discovery log.</p>
+  </header>
+
+  <main class="layout">
+    <section class="panel upload-panel" id="dropzone" tabindex="0" aria-label="PDF upload dropzone">
+      <div class="drop-inner">
+        <h1>Drop a PDF</h1>
+        <p>Or click to choose a file. Discovery runs with the structured backend; no product-specific rules.</p>
+        <input type="file" id="file-input" accept="application/pdf,.pdf" hidden />
+        <div class="controls">
+          <label class="field">
+            <span>Max pages</span>
+            <input type="number" id="max-pages" min="1" placeholder="All" />
+          </label>
+          <label class="field">
+            <span>Backend</span>
+            <select id="backend">
+              <option value="structured" selected>structured</option>
+              <option value="native">native</option>
+              <option value="docling">docling</option>
+            </select>
+          </label>
+          <button type="button" class="btn primary" id="browse-btn">Choose PDF</button>
+        </div>
+        <p class="file-name" id="file-name">No file selected</p>
+        <button type="button" class="btn run" id="run-btn" disabled>Run ingest</button>
+      </div>
+      <div class="status" id="status" hidden>
+        <div class="spinner" aria-hidden="true"></div>
+        <p id="status-text">Running discovery…</p>
+      </div>
+    </section>
+
+    <section class="panel results-panel" id="results" hidden>
+      <div class="results-header">
+        <div>
+          <h2>Human-readable log</h2>
+          <p class="meta" id="meta"></p>
+        </div>
+        <div class="result-actions">
+          <button type="button" class="btn ghost" id="copy-btn">Copy log</button>
+          <button type="button" class="btn ghost" id="clear-btn">Clear</button>
+        </div>
+      </div>
+      <div class="summary" id="summary"></div>
+      <pre class="log" id="log" tabindex="0"></pre>
+    </section>
+  </main>
+
+  <footer class="foot">
+    Generic discovery · layout evidence only · same engine for any PDF family
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
