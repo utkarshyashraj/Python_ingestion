@@ -5,7 +5,6 @@
   const runBtn = document.getElementById("run-btn");
   const fileName = document.getElementById("file-name");
   const maxPages = document.getElementById("max-pages");
-  const backend = document.getElementById("backend");
   const status = document.getElementById("status");
   const statusText = document.getElementById("status-text");
   const results = document.getElementById("results");
@@ -95,7 +94,6 @@
 
     const body = new FormData();
     body.append("file", selectedFile, selectedFile.name);
-    body.append("backend", backend.value || "structured");
     if (maxPages.value) body.append("max_pages", maxPages.value);
 
     try {
@@ -112,7 +110,6 @@
         `${data.section_count} sections`,
         `${data.logical_block_count} logical blocks`,
         data.max_pages ? `max-pages ${data.max_pages}` : "all pages",
-        data.backend,
       ]
         .filter(Boolean)
         .join(" · ");

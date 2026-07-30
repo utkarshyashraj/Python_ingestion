@@ -28,7 +28,7 @@ Open http://127.0.0.1:8000
 
 - `GET /` — UI
 - `GET /api/health` — health check
-- `POST /api/ingest` — multipart form: `file` (PDF), optional `backend`, `max_pages`
+- `POST /api/ingest` — multipart form: `file` (PDF), optional `max_pages` (always uses the **structured** backend)
 - `GET /api/jobs/{job_id}/log` — re-fetch log for a completed job
 
-The UI calls the same `DiscoveryEngine` used by the CLI (`--backend structured` by default). No product-specific hardcoding.
+The UI calls the same `DiscoveryEngine` used by the CLI with `--backend structured`. No product-specific hardcoding.

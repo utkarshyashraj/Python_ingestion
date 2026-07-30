@@ -204,6 +204,10 @@ body {
   text-align: center;
 }
 
+.status[hidden] {
+  display: none !important;
+}
+
 .spinner {
   width: 2rem;
   height: 2rem;

@@ -75,7 +75,6 @@ def _section_summary(section_groups_path: Path) -> List[Dict[str, Any]]:
 @app.post("/api/ingest")
 async def ingest_pdf(
     file: UploadFile = File(...),
-    backend: str = Form("structured"),
     max_pages: Optional[int] = Form(None),
 ) -> Dict[str, Any]:
     """Accept a PDF upload, run discovery, return the human-readable log."""
@@ -83,8 +82,7 @@ async def ingest_pdf(
     if not filename.lower().endswith(".pdf"):
         raise HTTPException(status_code=400, detail="Only PDF files are supported.")
 
-    if backend not in {"structured", "native", "docling"}:
-        raise HTTPException(status_code=400, detail="Invalid backend.")
+    backend = "structured"
 
     pages: Optional[int] = None
     if max_pages is not None:
