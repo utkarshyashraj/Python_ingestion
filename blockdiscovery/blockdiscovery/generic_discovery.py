@@ -162,6 +162,33 @@ def _first_char_class(text: str) -> str:
     return "P"
 
 
+# Opening quote glyphs (straight + typographic). Used only to look past a
+# leading quote when judging whether a unit starts a capitalised entry —
+# no vocabulary and no regex.
+_QUOTE_OPENERS = frozenset({'"', "'", "“", "‘", "„", "‹", "«"})
+
+
+def _first_alpha(text: str) -> str:
+    for ch in text or "":
+        if ch.isalpha():
+            return ch
+    return ""
+
+
+def _starts_capitalised_unit(text: str) -> bool:
+    """True when the first letter (ignoring leading quotes/space) is uppercase."""
+    fa = _first_alpha(text)
+    return bool(fa) and fa.isupper()
+
+
+def _opens_quoted_capital(text: str) -> bool:
+    """Quoted capitalised entry opener (definition / glossary style lines)."""
+    s = (text or "").lstrip()
+    if not s or s[0] not in _QUOTE_OPENERS:
+        return False
+    return _starts_capitalised_unit(s)
+
+
 def _split_bullet_parts(text: str, bullet_chars: frozenset) -> List[str]:
     """Split a cell on bullet glyphs into nested item parts (no regex)."""
     if not text or not any(ch in bullet_chars for ch in text):
@@ -1071,12 +1098,23 @@ class GenericDiscoveryEngine:
                 force_reason = "Atomic layout role change (list/heading)."
             elif (
                 (not a.grid_id)
+                and (not b.grid_id)
+                and _opens_quoted_capital(a.text)
+                and _opens_quoted_capital(b.text)
+            ):
+                # Parallel quoted capitalised entries (definition / glossary
+                # style) share form but are independent items.
+                forced_split = True
+                force_reason = "Parallel quoted term entries stay atomic."
+            elif (
+                (not a.grid_id)
                 and a.text.rstrip().endswith((".", "?", "!"))
                 and bool(b.text.strip())
-                and b.text.lstrip()[:1].isupper()
+                and _starts_capitalised_unit(b.text)
             ):
                 # Finished prose unit followed by a new capitalised unit —
-                # keep as separate items (anti-over-grouping).
+                # keep as separate items (anti-over-grouping). Look past a
+                # leading quote so “ Term ”… lines are not glued together.
                 forced_split = True
                 force_reason = "Finished sentence followed by a new capitalised unit."
             elif (
@@ -1095,15 +1133,15 @@ class GenericDiscoveryEngine:
                     0 < aw <= 14
                     and len(at) <= 120
                     and not at.endswith((".", "?", "!", ";", ":"))
-                    and bool(at[:1].isupper() if at else False)
+                    and _starts_capitalised_unit(at)
                 )
                 b_title = (
                     0 < bw <= 14
                     and len(bt) <= 120
                     and not bt.endswith((".", "?", "!", ";", ":"))
-                    and bool(bt[:1].isupper() if bt else False)
+                    and _starts_capitalised_unit(bt)
                 )
-                if a_title and (b_title or (bw <= 20 and bt[:1].isupper())):
+                if a_title and (b_title or (bw <= 20 and _starts_capitalised_unit(bt))):
                     forced_split = True
                     force_reason = "Adjacent title-like units stay atomic."
             elif (
@@ -1111,7 +1149,7 @@ class GenericDiscoveryEngine:
                 and a.text.rstrip().endswith(":")
                 and bool(b.text.strip())
                 and (
-                    b.text.lstrip()[:1].isupper()
+                    _starts_capitalised_unit(b.text)
                     or b.text.lstrip().startswith("```")
                     or b.layout_class != a.layout_class
                 )

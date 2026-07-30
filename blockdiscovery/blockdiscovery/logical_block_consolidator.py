@@ -354,6 +354,20 @@ def _first_alpha(text: str) -> str:
     return ""
 
 
+# Opening quote glyphs (straight + typographic). Used only to recognise
+# parallel quoted-term entries — no vocabulary and no regex.
+_QUOTE_OPENERS = frozenset({'"', "'", "“", "‘", "„", "‹", "«"})
+
+
+def _opens_quoted_capital(text: str) -> bool:
+    """True when text opens with a quote then a capital letter."""
+    s = (text or "").lstrip()
+    if not s or s[0] not in _QUOTE_OPENERS:
+        return False
+    fa = _first_alpha(s)
+    return bool(fa) and fa.isupper()
+
+
 def _tokens(text: str) -> List[str]:
     out: List[str] = []
     buf: List[str] = []
@@ -739,6 +753,13 @@ class LogicalBlockConsolidator:
             and len((current.text or "").split()) <= 24
         ):
             return "Parallel enumerated items share an opener class; keep separate."
+
+        # Parallel quoted capitalised entries (definition / glossary style)
+        # share form but are independent items — including long paragraphs.
+        if _opens_quoted_capital(previous.text or "") and _opens_quoted_capital(
+            current.text or ""
+        ):
+            return "Parallel quoted term entries stay separate."
 
         # Extractor section/page headers are atomic openers — never absorb the
         # following body unless the next fragment is a true lowercase wrap.

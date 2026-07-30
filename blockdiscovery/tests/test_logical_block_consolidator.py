@@ -433,6 +433,41 @@ class LogicalBlockConsolidatorTests(unittest.TestCase):
         )
         self.assertIsNotNone(merged.consolidation_evidence)
 
+    def test_parallel_quoted_definitions_stay_separate(self) -> None:
+        prev = _block(
+            "msa",
+            1,
+            "\u201c Affiliate \u201d means any entity that directly or indirectly "
+            "controls, is controlled by, or is under common control with the "
+            "subject entity. Control means ownership of more than fifty percent "
+            "of the voting interests of the subject entity under this agreement.",
+            features={"prominence": 0.2, "mean_line_height_ratio": 0.9, "rel_x0": 0.1},
+        )
+        cur = _block(
+            "msa",
+            2,
+            "\u201c Agreement \u201d means this Main Services Agreement together with "
+            "all Order Forms and any exhibits, addenda, and supplements entered "
+            "into between the parties and their Affiliates under these terms.",
+            features={
+                "prominence": 0.2,
+                "mean_line_height_ratio": 0.9,
+                "rel_x0": 0.1,
+                "gap_above_ratio": 0.4,
+            },
+        )
+        document = _doc_with_boxes(
+            "msa",
+            [prev, cur],
+            {
+                prev.source_block_ids[0]: BoundingBox(40, 100, 520, 160),
+                cur.source_block_ids[0]: BoundingBox(40, 165, 520, 220),
+            },
+        )
+        decision = self.consolidator.evaluate_pair(document, prev, cur)
+        self.assertEqual(decision.decision, "KEEP_SEPARATE")
+        self.assertIn("quoted term", (decision.veto or "").lower())
+
 
 if __name__ == "__main__":
     unittest.main()
