@@ -414,6 +414,9 @@ class DiscoveryEngine:
                     "section_id": s.id,
                     "label": s.inferred_label,
                     "heading": s.heading_text,
+                    "depth": s.depth,
+                    "parent_section_id": s.parent_section_id,
+                    "child_section_ids": list(s.child_section_ids),
                     "pages": f"{s.page_start}-{s.page_end}",
                     "items": [
                         {

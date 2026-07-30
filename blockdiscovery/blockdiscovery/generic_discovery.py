@@ -1081,6 +1081,33 @@ class GenericDiscoveryEngine:
                 force_reason = "Finished sentence followed by a new capitalised unit."
             elif (
                 (not a.grid_id)
+                and (not b.grid_id)
+                and a.layout_class in {"text", "section-header", "page-header", None, ""}
+                and b.layout_class in {"text", "section-header", "page-header", None, ""}
+            ):
+                # Adjacent compact title-like fragments stay atomic so nested
+                # section hierarchy can open each one (release/band/leaf titles).
+                at = (a.text or "").strip()
+                bt = (b.text or "").strip()
+                aw = len(at.split())
+                bw = len(bt.split())
+                a_title = (
+                    0 < aw <= 14
+                    and len(at) <= 120
+                    and not at.endswith((".", "?", "!", ";", ":"))
+                    and bool(at[:1].isupper() if at else False)
+                )
+                b_title = (
+                    0 < bw <= 14
+                    and len(bt) <= 120
+                    and not bt.endswith((".", "?", "!", ";", ":"))
+                    and bool(bt[:1].isupper() if bt else False)
+                )
+                if a_title and (b_title or (bw <= 20 and bt[:1].isupper())):
+                    forced_split = True
+                    force_reason = "Adjacent title-like units stay atomic."
+            elif (
+                (not a.grid_id)
                 and a.text.rstrip().endswith(":")
                 and bool(b.text.strip())
                 and (

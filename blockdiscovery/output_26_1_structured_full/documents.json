@@ -1,0 +1,17 @@
+{
+  "26_1_update": {
+    "id": "26_1_update",
+    "metadata": {
+      "title": "",
+      "page_count_total": 172,
+      "page_count_processed": 172,
+      "extraction_backend": "structured"
+    },
+    "page_count": 172,
+    "block_count": 3315,
+    "stats": {
+      "page_width": 612.0,
+      "page_height": 792.0
+    }
+  }
+}

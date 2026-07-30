@@ -1,0 +1,46 @@
+{
+  "files_scanned": 26,
+  "violation_counts": {
+    "hardcoded_semantic_category": 0,
+    "document_specific_section_rule": 0,
+    "regex_structure_discovery": 0,
+    "fixed_coordinate_rule": 0,
+    "fixed_page_rule": 0,
+    "absolute_font_size_rule": 0
+  },
+  "valid_generic": [
+    {
+      "file": "cross_document.py",
+      "line": 28,
+      "kind": "regex_structure_discovery",
+      "classification": "VALID_GENERIC",
+      "snippet": "_SIG_RE = re.compile(r\"P(\\d+)B(\\d+)M(\\d+)\")",
+      "note": "parsing the engine's own role-signature serialization"
+    },
+    {
+      "file": "normalization.py",
+      "line": 21,
+      "kind": "regex_structure_discovery",
+      "classification": "VALID_GENERIC",
+      "snippet": "_WS_RE = re.compile(r\"[ \\t\\u00a0]+\")",
+      "note": "whitespace normalization"
+    },
+    {
+      "file": "semantics.py",
+      "line": 26,
+      "kind": "regex_structure_discovery",
+      "classification": "VALID_GENERIC",
+      "snippet": "_TOKEN_RE = re.compile(r\"[A-Za-z0-9]+\")",
+      "note": "non-semantic token splitting for embeddings"
+    },
+    {
+      "file": "utils.py",
+      "line": 20,
+      "kind": "regex_structure_discovery",
+      "classification": "VALID_GENERIC",
+      "snippet": "slug = re.sub(r\"[^A-Za-z0-9]+\", \"_\", base).strip(\"_\").lower()",
+      "note": "filesystem slug generation (non-semantic)"
+    }
+  ],
+  "document_specific": []
+}

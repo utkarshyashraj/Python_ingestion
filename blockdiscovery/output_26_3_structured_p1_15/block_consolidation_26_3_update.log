@@ -3,27 +3,27 @@ BLOCK CONSOLIDATION
 ============================================================
 
 Document: 26_3_update
-Initial logical blocks: 189
-Consolidated logical blocks: 179
+Initial logical blocks: 190
+Consolidated logical blocks: 180
 Blocks merged: 17
 Number of merge chains: 7
 Average consolidation confidence: 0.83
 
 Merged chains:
 
-  26_3_update_logical_block_0074 → 26_3_update_logical_block_0075
+  26_3_update_logical_block_0072 → 26_3_update_logical_block_0073
   Reason: Continuation of same logical content.
 
-  26_3_update_logical_block_0076 → 26_3_update_logical_block_0077 → 26_3_update_logical_block_0078
+  26_3_update_logical_block_0074 → 26_3_update_logical_block_0075 → 26_3_update_logical_block_0076
   Reason: Continuation of same logical content.
 
-  26_3_update_logical_block_0080 → 26_3_update_logical_block_0081 → 26_3_update_logical_block_0082
+  26_3_update_logical_block_0078 → 26_3_update_logical_block_0079 → 26_3_update_logical_block_0080
   Reason: Continuation of same logical content.
 
-  26_3_update_logical_block_0083 → 26_3_update_logical_block_0084 → 26_3_update_logical_block_0085
+  26_3_update_logical_block_0081 → 26_3_update_logical_block_0082 → 26_3_update_logical_block_0083
   Reason: Continuation of same logical content.
 
-  26_3_update_logical_block_0095 → 26_3_update_logical_block_0096
+  26_3_update_logical_block_0093 → 26_3_update_logical_block_0094
   Reason: Continuation of same logical content.
 
   26_3_update_logical_block_0170 → 26_3_update_logical_block_0171
@@ -95,8 +95,8 @@ Continuation Decision:
     table_boundary: 0.00
     role_change: 0.55
   Decision: KEEP_SEPARATE
-  Confidence: 0.57
-  Reason: Strong new prominent structure detected.
+  Confidence: 0.95
+  Reason: Adjacent title-like units stay separate for hierarchy.
 
 Continuation Decision:
   previous_block_id: 26_3_update_logical_block_0003
@@ -951,7 +951,7 @@ Continuation Decision:
   previous page: 2
   current page: 2
   previous text: - <XofY> makes identifies the specific ZIP file within the series, such as “5of14”.
-  current text: An example representing ZIP file 5 of 14 for Windows, Siebel Monthly Update 24.12 would be:
+  current text: An example representing ZIP file 5 of 14 for Windows, Siebel Monthly Update 24.12 would be: ``` p37386170_2412_MSWIN-x86-64_5of14.zip ``` The ZIP files for Windows versus the other supported platforms are different, as some components (such as DISA) only run on Windows platforms. Expand the link below that is relevant to your environment.
   continuation_score: 0.48
   new_boundary_score: 0.11
   Continuation evidence:
@@ -960,7 +960,7 @@ Continuation Decision:
     capitalization_score: 0.05
     punctuation_score: 0.08
     spatial_proximity_score: 0.84
-    alignment_score: 0.86
+    alignment_score: 0.82
     typography_score: 1.00
     reading_order_score: 1.00
     page_continuation_score: 0.85
@@ -982,72 +982,9 @@ Continuation Decision:
   current_block_id: 26_3_update_logical_block_0032
   previous page: 2
   current page: 2
-  previous text: An example representing ZIP file 5 of 14 for Windows, Siebel Monthly Update 24.12 would be:
-  current text: ``` p37386170_2412_MSWIN-x86-64_5of14.zip ```
-  continuation_score: 0.67
-  new_boundary_score: 0.03
-  Continuation evidence:
-    sentence_continuation_score: 0.45
-    lexical_continuation_score: 0.00
-    capitalization_score: 0.95
-    punctuation_score: 0.55
-    spatial_proximity_score: 0.86
-    alignment_score: 0.83
-    typography_score: 0.66
-    reading_order_score: 1.00
-    page_continuation_score: 0.85
-    role_compatibility_score: 0.95
-  New boundary evidence:
-    heading_change: 0.00
-    structural_change: 0.00
-    spacing_break: 0.14
-    reading_region_change: 0.00
-    table_boundary: 0.00
-    role_change: 0.00
-  Decision: KEEP_SEPARATE
-  Confidence: 0.51
-  Reason: New-boundary evidence dominates continuation evidence.
-  Reason: Adjacent units look related but previous text is finished; kept as separate items to avoid over-grouping.
-
-Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0032
-  current_block_id: 26_3_update_logical_block_0033
-  previous page: 2
-  current page: 2
-  previous text: ``` p37386170_2412_MSWIN-x86-64_5of14.zip ```
-  current text: The ZIP files for Windows versus the other supported platforms are different, as some components (such as DISA) only run on Windows platforms. Expand the link below that is relevant to your environment.
-  continuation_score: 0.63
-  new_boundary_score: 0.11
-  Continuation evidence:
-    sentence_continuation_score: 0.55
-    lexical_continuation_score: 0.00
-    capitalization_score: 0.25
-    punctuation_score: 0.70
-    spatial_proximity_score: 0.83
-    alignment_score: 0.82
-    typography_score: 0.60
-    reading_order_score: 1.00
-    page_continuation_score: 0.85
-    role_compatibility_score: 0.95
-  New boundary evidence:
-    heading_change: 0.00
-    structural_change: 0.00
-    spacing_break: 0.17
-    reading_region_change: 0.59
-    table_boundary: 0.00
-    role_change: 0.00
-  Decision: KEEP_SEPARATE
-  Confidence: 0.52
-  Reason: Different reading column / region.
-
-Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0033
-  current_block_id: 26_3_update_logical_block_0034
-  previous page: 2
-  current page: 2
-  previous text: The ZIP files for Windows versus the other supported platforms are different, as some components (such as DISA) only run on Windows platforms. Expand the link below that is relevant to your environment.
+  previous text: An example representing ZIP file 5 of 14 for Windows, Siebel Monthly Update 24.12 would be: ``` p37386170_2412_MSWIN-x86-64_5of14.zip ``` The ZIP files for Windows versus the other supported platforms are different, as some components (such as DISA) only run on Windows platforms. Expand the link below that is relevant to your environment.
   current text: NOTE: You do not need to download everything—for example, if you are not using DISA, there is no requirement to download that ZIP file.
-  continuation_score: 0.47
+  continuation_score: 0.49
   new_boundary_score: 0.11
   Continuation evidence:
     sentence_continuation_score: 0.00
@@ -1056,7 +993,7 @@ Continuation Decision:
     punctuation_score: 0.08
     spatial_proximity_score: 0.84
     alignment_score: 1.00
-    typography_score: 0.71
+    typography_score: 0.89
     reading_order_score: 1.00
     page_continuation_score: 0.85
     role_compatibility_score: 0.95
@@ -1073,8 +1010,8 @@ Continuation Decision:
   Reason: Previous block does not look incomplete.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0034
-  current_block_id: 26_3_update_logical_block_0035
+  previous_block_id: 26_3_update_logical_block_0032
+  current_block_id: 26_3_update_logical_block_0033
   previous page: 2
   current page: 2
   previous text: NOTE: You do not need to download everything—for example, if you are not using DISA, there is no requirement to download that ZIP file.
@@ -1107,8 +1044,8 @@ Continuation Decision:
   Reason: Previous block does not look incomplete.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0035
-  current_block_id: 26_3_update_logical_block_0036
+  previous_block_id: 26_3_update_logical_block_0033
+  current_block_id: 26_3_update_logical_block_0034
   previous page: 2
   current page: 2
   previous text: Windows Archive Files
@@ -1138,8 +1075,8 @@ Continuation Decision:
   Reason: Structured record adjacent to non-record content.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0036
-  current_block_id: 26_3_update_logical_block_0037
+  previous_block_id: 26_3_update_logical_block_0034
+  current_block_id: 26_3_update_logical_block_0035
   previous page: 2
   current page: 2
   previous text: Archive Number Content Description Required?
@@ -1169,8 +1106,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0037
-  current_block_id: 26_3_update_logical_block_0038
+  previous_block_id: 26_3_update_logical_block_0035
+  current_block_id: 26_3_update_logical_block_0036
   previous page: 2
   current page: 2
   previous text: 1 ReadMe File Optional
@@ -1200,8 +1137,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0038
-  current_block_id: 26_3_update_logical_block_0039
+  previous_block_id: 26_3_update_logical_block_0036
+  current_block_id: 26_3_update_logical_block_0037
   previous page: 2
   current page: 2
   previous text: 2 • Installer • Siebel Binaries and Shared Files • Enterprise Components • Application Interface • Mobile Web Client • Siebel Tools • Siebel Mobile • Siebel Outlook Add-in for SSSE • Oracle Database Connectivity Required for each release
@@ -1231,8 +1168,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0039
-  current_block_id: 26_3_update_logical_block_0040
+  previous_block_id: 26_3_update_logical_block_0037
+  current_block_id: 26_3_update_logical_block_0038
   previous page: 2
   current page: 2
   previous text: 3 Siebel Non-English (US) Safeboot Required for non-English (US) deployments only
@@ -1262,8 +1199,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0040
-  current_block_id: 26_3_update_logical_block_0041
+  previous_block_id: 26_3_update_logical_block_0038
+  current_block_id: 26_3_update_logical_block_0039
   previous page: 2
   current page: 2
   previous text: 4 Siebel Standard Repository Required for new deployments
@@ -1293,8 +1230,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0041
-  current_block_id: 26_3_update_logical_block_0042
+  previous_block_id: 26_3_update_logical_block_0039
+  current_block_id: 26_3_update_logical_block_0040
   previous page: 2
   current page: 2
   previous text: 5 Siebel Approval Manager Optional
@@ -1324,8 +1261,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0042
-  current_block_id: 26_3_update_logical_block_0043
+  previous_block_id: 26_3_update_logical_block_0040
+  current_block_id: 26_3_update_logical_block_0041
   previous page: 2
   current page: 2
   previous text: 6 Siebel Desktop Integration (DISA) Optional
@@ -1355,8 +1292,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0043
-  current_block_id: 26_3_update_logical_block_0044
+  previous_block_id: 26_3_update_logical_block_0041
+  current_block_id: 26_3_update_logical_block_0042
   previous page: 2
   current page: 2
   previous text: 7 Siebel IAA XML Connector Optional
@@ -1386,8 +1323,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0044
-  current_block_id: 26_3_update_logical_block_0045
+  previous_block_id: 26_3_update_logical_block_0042
+  current_block_id: 26_3_update_logical_block_0043
   previous page: 2
   current page: 2
   previous text: 8 Siebel Email Marketing Server Optional
@@ -1417,8 +1354,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0045
-  current_block_id: 26_3_update_logical_block_0046
+  previous_block_id: 26_3_update_logical_block_0043
+  current_block_id: 26_3_update_logical_block_0044
   previous page: 2
   current page: 2
   previous text: 9 Siebel Open Integration Optional
@@ -1448,8 +1385,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0046
-  current_block_id: 26_3_update_logical_block_0047
+  previous_block_id: 26_3_update_logical_block_0044
+  current_block_id: 26_3_update_logical_block_0045
   previous page: 2
   current page: 2
   previous text: 10 Siebel Smart Answer Optional
@@ -1479,8 +1416,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0047
-  current_block_id: 26_3_update_logical_block_0048
+  previous_block_id: 26_3_update_logical_block_0045
+  current_block_id: 26_3_update_logical_block_0046
   previous page: 2
   current page: 2
   previous text: 11 Oracle Database SE2 Required for new installations of the Siebel Mobile Web Client
@@ -1510,8 +1447,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0048
-  current_block_id: 26_3_update_logical_block_0049
+  previous_block_id: 26_3_update_logical_block_0046
+  current_block_id: 26_3_update_logical_block_0047
   previous page: 2
   current page: 2
   previous text: 12 Siebel Ancestor Repositories Required for Upgrades from pre-IP2017
@@ -1541,8 +1478,8 @@ Continuation Decision:
   Reason: Structured record adjacent to non-record content.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0049
-  current_block_id: 26_3_update_logical_block_0050
+  previous_block_id: 26_3_update_logical_block_0047
+  current_block_id: 26_3_update_logical_block_0048
   previous page: 2
   current page: 2
   previous text: Linux/Unix Archive Files
@@ -1572,8 +1509,8 @@ Continuation Decision:
   Reason: Structured record adjacent to non-record content.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0050
-  current_block_id: 26_3_update_logical_block_0051
+  previous_block_id: 26_3_update_logical_block_0048
+  current_block_id: 26_3_update_logical_block_0049
   previous page: 2
   current page: 2
   previous text: Archive Number Content Description Required?
@@ -1603,8 +1540,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0051
-  current_block_id: 26_3_update_logical_block_0052
+  previous_block_id: 26_3_update_logical_block_0049
+  current_block_id: 26_3_update_logical_block_0050
   previous page: 2
   current page: 3
   previous text: 1 ReadMe File Optional
@@ -1634,8 +1571,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0052
-  current_block_id: 26_3_update_logical_block_0053
+  previous_block_id: 26_3_update_logical_block_0050
+  current_block_id: 26_3_update_logical_block_0051
   previous page: 3
   current page: 3
   previous text: 2 • Installer • Siebel Binaries and Shared Files • Enterprise Components • Application Interface • Mobile Web Client • Siebel Tools • Siebel Mobile • Oracle Database Connectivity Required for each release
@@ -1665,8 +1602,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0053
-  current_block_id: 26_3_update_logical_block_0054
+  previous_block_id: 26_3_update_logical_block_0051
+  current_block_id: 26_3_update_logical_block_0052
   previous page: 3
   current page: 3
   previous text: 3 Siebel Non-English (US) Safeboot Required for non-English (US) deployments only
@@ -1696,8 +1633,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0054
-  current_block_id: 26_3_update_logical_block_0055
+  previous_block_id: 26_3_update_logical_block_0052
+  current_block_id: 26_3_update_logical_block_0053
   previous page: 3
   current page: 3
   previous text: 4 Siebel Standard Repository Required for new deployments
@@ -1727,8 +1664,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0055
-  current_block_id: 26_3_update_logical_block_0056
+  previous_block_id: 26_3_update_logical_block_0053
+  current_block_id: 26_3_update_logical_block_0054
   previous page: 3
   current page: 3
   previous text: 5 Siebel Approval Manager Optional
@@ -1758,8 +1695,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0056
-  current_block_id: 26_3_update_logical_block_0057
+  previous_block_id: 26_3_update_logical_block_0054
+  current_block_id: 26_3_update_logical_block_0055
   previous page: 3
   current page: 3
   previous text: 6 Siebel Email Marketing Server Optional
@@ -1789,8 +1726,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0057
-  current_block_id: 26_3_update_logical_block_0058
+  previous_block_id: 26_3_update_logical_block_0055
+  current_block_id: 26_3_update_logical_block_0056
   previous page: 3
   current page: 3
   previous text: 7 Siebel Open Integration Optional
@@ -1820,8 +1757,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0058
-  current_block_id: 26_3_update_logical_block_0059
+  previous_block_id: 26_3_update_logical_block_0056
+  current_block_id: 26_3_update_logical_block_0057
   previous page: 3
   current page: 3
   previous text: 8 Siebel Ancestor Repositories Required for Upgrades from pre-IP2017
@@ -1851,8 +1788,8 @@ Continuation Decision:
   Reason: Structured record adjacent to non-record content.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0059
-  current_block_id: 26_3_update_logical_block_0060
+  previous_block_id: 26_3_update_logical_block_0057
+  current_block_id: 26_3_update_logical_block_0058
   previous page: 3
   current page: 3
   previous text: Update Basics
@@ -1882,8 +1819,8 @@ Continuation Decision:
   Reason: Layout heading unit stays separate from following content.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0060
-  current_block_id: 26_3_update_logical_block_0061
+  previous_block_id: 26_3_update_logical_block_0058
+  current_block_id: 26_3_update_logical_block_0059
   previous page: 3
   current page: 3
   previous text: A Monthly Update provides new product features and available fixes. Beyond this document, please review these related items:
@@ -1913,8 +1850,8 @@ Continuation Decision:
   Reason: Body followed by a new prominent unit with terminal punctuation.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0061
-  current_block_id: 26_3_update_logical_block_0062
+  previous_block_id: 26_3_update_logical_block_0059
+  current_block_id: 26_3_update_logical_block_0060
   previous page: 3
   current page: 3
   previous text: - Installation instructions: For more about this Siebel CRM Update, including instructions for preparing the product media and for installing Siebel CRM, see the latest version of the _Installation Guide_ in _Siebel Bookshelf_ from the Siebel CRM Documentation site.
@@ -1945,8 +1882,8 @@ Continuation Decision:
   Reason: Previous block does not look incomplete.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0062
-  current_block_id: 26_3_update_logical_block_0063
+  previous_block_id: 26_3_update_logical_block_0060
+  current_block_id: 26_3_update_logical_block_0061
   previous page: 3
   current page: 3
   previous text: - Third-Party Certifications: For a list of Third-Party Certifications, please visit My Oracle Support and search for “Siebel Industry Applications” on the _Certifications_ tab.
@@ -1976,8 +1913,8 @@ Continuation Decision:
   Reason: Parallel enumerated items share an opener class; keep separate.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0063
-  current_block_id: 26_3_update_logical_block_0064
+  previous_block_id: 26_3_update_logical_block_0061
+  current_block_id: 26_3_update_logical_block_0062
   previous page: 3
   current page: 3
   previous text: - FAQ: The Siebel CRM Continuous Release Model (Doc ID 2378034.1).
@@ -2008,8 +1945,8 @@ Continuation Decision:
   Reason: Previous block does not look incomplete.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0064
-  current_block_id: 26_3_update_logical_block_0065
+  previous_block_id: 26_3_update_logical_block_0062
+  current_block_id: 26_3_update_logical_block_0063
   previous page: 3
   current page: 3
   previous text: NOTE: This document contains two years (24 months) of rolling content. For bug fixes and known issues in versions released before the scope of this document, please download earlier versions from Oracle Support (DOC ID 2382435.1).
@@ -2039,8 +1976,8 @@ Continuation Decision:
   Reason: Body followed by a new prominent unit with terminal punctuation.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0065
-  current_block_id: 26_3_update_logical_block_0066
+  previous_block_id: 26_3_update_logical_block_0063
+  current_block_id: 26_3_update_logical_block_0064
   previous page: 3
   current page: 3
   previous text: Back to top
@@ -2070,8 +2007,8 @@ Continuation Decision:
   Reason: Layout heading unit stays separate from following content.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0066
-  current_block_id: 26_3_update_logical_block_0067
+  previous_block_id: 26_3_update_logical_block_0064
+  current_block_id: 26_3_update_logical_block_0065
   previous page: 3
   current page: 3
   previous text: Repository Updates
@@ -2101,8 +2038,8 @@ Continuation Decision:
   Reason: Layout heading unit stays separate from following content.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0067
-  current_block_id: 26_3_update_logical_block_0068
+  previous_block_id: 26_3_update_logical_block_0065
+  current_block_id: 26_3_update_logical_block_0066
   previous page: 3
   current page: 3
   previous text: Some features require Repository, Seed, or Manifest changes in order to take advantage of the feature. These changes must be imported through execution of the _RepositoryUpdate_ utility in the Development environment. Please refer to the _Database Upgrade Guide_ for information on how to use RepositoryUpdate.
@@ -2133,8 +2070,8 @@ Continuation Decision:
   Reason: Previous block does not look incomplete.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0068
-  current_block_id: 26_3_update_logical_block_0069
+  previous_block_id: 26_3_update_logical_block_0066
+  current_block_id: 26_3_update_logical_block_0067
   previous page: 3
   current page: 3
   previous text: NOTE: Not all features require Repository changes. Examine the “Repository Update Required” column in the New Features tables below to see if such changes are required for a particular feature.
@@ -2164,8 +2101,8 @@ Continuation Decision:
   Reason: Body followed by a new prominent unit with terminal punctuation.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0069
-  current_block_id: 26_3_update_logical_block_0070
+  previous_block_id: 26_3_update_logical_block_0067
+  current_block_id: 26_3_update_logical_block_0068
   previous page: 3
   current page: 3
   previous text: Back to top
@@ -2195,8 +2132,8 @@ Continuation Decision:
   Reason: Layout heading unit stays separate from following content.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0070
-  current_block_id: 26_3_update_logical_block_0071
+  previous_block_id: 26_3_update_logical_block_0068
+  current_block_id: 26_3_update_logical_block_0069
   previous page: 3
   current page: 3
   previous text: Features and Bug Fixes by Release
@@ -2226,8 +2163,8 @@ Continuation Decision:
   Reason: Layout heading unit stays separate from following content.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0071
-  current_block_id: 26_3_update_logical_block_0072
+  previous_block_id: 26_3_update_logical_block_0069
+  current_block_id: 26_3_update_logical_block_0070
   previous page: 3
   current page: 4
   previous text: In addition to the documentation provided in the listed guides from Siebel Bookshelf, please visit the Siebel CRM Learning Subscription site where authorized partners and customers can find free courses and transfer of information (TOI) videos on some Siebel CRM features.
@@ -2259,8 +2196,8 @@ Continuation Decision:
   Reason: Previous block does not look incomplete.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0072
-  current_block_id: 26_3_update_logical_block_0073
+  previous_block_id: 26_3_update_logical_block_0070
+  current_block_id: 26_3_update_logical_block_0071
   previous page: 4
   current page: 4
   previous text: New Features and Bug Fixes in Siebel CRM Monthly Update 26.3
@@ -2290,8 +2227,8 @@ Continuation Decision:
   Reason: Layout heading unit stays separate from following content.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0073
-  current_block_id: 26_3_update_logical_block_0074
+  previous_block_id: 26_3_update_logical_block_0071
+  current_block_id: 26_3_update_logical_block_0072
   previous page: 4
   current page: 4
   previous text: New Features in Siebel CRM 26.3
@@ -2321,8 +2258,8 @@ Continuation Decision:
   Reason: Structured record adjacent to non-record content.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0074
-  current_block_id: 26_3_update_logical_block_0075
+  previous_block_id: 26_3_update_logical_block_0072
+  current_block_id: 26_3_update_logical_block_0073
   previous page: 4
   current page: 4
   previous text: Feature Name Description Documentation Repository Update
@@ -2355,8 +2292,8 @@ Continuation Decision:
   Reason: Compatible across page boundary.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0075
-  current_block_id: 26_3_update_logical_block_0076
+  previous_block_id: 26_3_update_logical_block_0073
+  current_block_id: 26_3_update_logical_block_0074
   previous page: 4
   current page: 4
   previous text: Required?
@@ -2386,8 +2323,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0076
-  current_block_id: 26_3_update_logical_block_0077
+  previous_block_id: 26_3_update_logical_block_0074
+  current_block_id: 26_3_update_logical_block_0075
   previous page: 4
   current page: 4
   previous text: Developer Experience: This enhancement provides the following operational benefits: • System Administration No
@@ -2420,8 +2357,8 @@ Continuation Decision:
   Reason: Compatible across page boundary.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0077
-  current_block_id: 26_3_update_logical_block_0078
+  previous_block_id: 26_3_update_logical_block_0075
+  current_block_id: 26_3_update_logical_block_0076
   previous page: 4
   current page: 4
   previous text: Enterprise Cache Operational Enhancements • When deploying the Enterprise Cache Client Profile for your deployed Siebel servers, you can deploy the Client Profile once and it will automatically deploy to all your Siebel Servers. This will make your deployment of the Client Profiles much faster and less error prone. • When deploying the Enterprise Cache Client Profile, SSH tunnels are established automatically from each Siebel Server deployed to each Coherence Server that is deployed. • Improvements to the notification of Coherence cache status if the Coherence cache becomes unavailable and when it regains its footing. There are two areas where you can see the status of the Coherence cache accurately. • Help→Technical Support menu in the Siebel CRM Application • Siebel Management Console (SMC) Cache Status tab. Guide
@@ -2454,8 +2391,8 @@ Continuation Decision:
   Reason: Compatible across page boundary.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0078
-  current_block_id: 26_3_update_logical_block_0079
+  previous_block_id: 26_3_update_logical_block_0076
+  current_block_id: 26_3_update_logical_block_0077
   previous page: 4
   current page: 4
   previous text: Training on this feature is available onOracle University.
@@ -2485,8 +2422,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0079
-  current_block_id: 26_3_update_logical_block_0080
+  previous_block_id: 26_3_update_logical_block_0077
+  current_block_id: 26_3_update_logical_block_0078
   previous page: 4
   current page: 4
   previous text: Customer Order Management – Improved Promotions UX In Siebel Customer Order Management, a Bundle Promotion definition can have hundreds of products from various relationships to choose from. To make it easy for sales agents to capture a customer's quote or order, the “Edit Promotion” User Interface has been enhanced to support pagination and search. As a result, an agent can quickly add one or more products using a new pop-up applet, improving productivity and ensuring data accuracy. • Siebel Order Management Guide Yes
@@ -2516,8 +2453,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0080
-  current_block_id: 26_3_update_logical_block_0081
+  previous_block_id: 26_3_update_logical_block_0078
+  current_block_id: 26_3_update_logical_block_0079
   previous page: 4
   current page: 5
   previous text: Siebel UCM: Publish in Hybrid Mode Siebel Universal Customer Master (UCM) is enhanced to enable publishing to multiple middleware systems or combinations of middleware and edge systems in hybrid mode. Hybrid mode enables UCM to publish messages to all configured middleware and edge systems, • Oracle Customer Hub (UCM) Master Data Management Reference Yes
@@ -2553,8 +2490,8 @@ Continuation Decision:
   Reason: Compatible across page boundary.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0081
-  current_block_id: 26_3_update_logical_block_0082
+  previous_block_id: 26_3_update_logical_block_0079
+  current_block_id: 26_3_update_logical_block_0080
   previous page: 5
   current page: 5
   previous text: regardless of their integration protocol (SOAP or REST). With this capability, customers can design flexible and complex integration architectures — for example: • Integrating both SOAP and REST-based systems through separate middleware platforms. • Seamlessly connecting legacy and modern applications to UCM without protocol limitations.
@@ -2588,8 +2525,8 @@ Continuation Decision:
   Reason: Compatible across page boundary.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0082
-  current_block_id: 26_3_update_logical_block_0083
+  previous_block_id: 26_3_update_logical_block_0080
+  current_block_id: 26_3_update_logical_block_0081
   previous page: 5
   current page: 5
   previous text: This feature removes the current single- middleware restriction and allows enterprises to achieve unified, multi-protocol integration across diverse system landscapes.
@@ -2619,8 +2556,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0083
-  current_block_id: 26_3_update_logical_block_0084
+  previous_block_id: 26_3_update_logical_block_0081
+  current_block_id: 26_3_update_logical_block_0082
   previous page: 5
   current page: 5
   previous text: Schema Changes without Downtime for Updates and Migration This feature leverages capabilities available in the Oracle and Microsoft SQL Server database engines that allow for online modifications to schema objects. Benefits Downtime is avoided during schema changes, ensuring that all employees, partners, customers, and integration points have access to user data in the Siebel CRM database, even when the schema structure is being modified. • Database Upgrade Guide No
@@ -2653,8 +2590,8 @@ Continuation Decision:
   Reason: Compatible across page boundary.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0084
-  current_block_id: 26_3_update_logical_block_0085
+  previous_block_id: 26_3_update_logical_block_0082
+  current_block_id: 26_3_update_logical_block_0083
   previous page: 5
   current page: 5
   previous text: Examples include: • During the application of a Siebel Monthly Update's "PostInstallDBSetup" or "RepositoryUpdate" processes, which can make changes to the physical schema. • Performing a migration from a Development environment to any downstream environment, including Production.
@@ -2687,8 +2624,8 @@ Continuation Decision:
   Reason: Compatible across page boundary.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0085
-  current_block_id: 26_3_update_logical_block_0086
+  previous_block_id: 26_3_update_logical_block_0083
+  current_block_id: 26_3_update_logical_block_0084
   previous page: 5
   current page: 6
   previous text: NOTE: Full Runtime Repository Migration will leverage this feature to avoid changes required to modify schema objects, but there will still be downtime required to rename the Repositories. Additional Background Changes to database schema objects is performed using "Data Definition Language" (DDL). When DDL is provided upon an existing object (such as a change to a column definition) or to create certain kinds of new objects (such as indexes), the traditional approach that the
@@ -2718,8 +2655,8 @@ Continuation Decision:
   Reason: Structured record adjacent to non-record content.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0086
-  current_block_id: 26_3_update_logical_block_0087
+  previous_block_id: 26_3_update_logical_block_0084
+  current_block_id: 26_3_update_logical_block_0085
   previous page: 6
   current page: 6
   previous text: various Siebel CRM utilities have used could introduce "table locks" or other conditions that would block end users from being able to use the application while the DDL was executing. When this occurred, downtime could occur during the application of Siebel Updates (PostInstallDBSetup or RepositoryUpgrade) and Migration operations.
@@ -2753,8 +2690,8 @@ Continuation Decision:
   Reason: Previous block does not look incomplete.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0087
-  current_block_id: 26_3_update_logical_block_0088
+  previous_block_id: 26_3_update_logical_block_0085
+  current_block_id: 26_3_update_logical_block_0086
   previous page: 6
   current page: 6
   previous text: Basic Technical Information
@@ -2784,8 +2721,8 @@ Continuation Decision:
   Reason: Layout heading unit stays separate from following content.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0088
-  current_block_id: 26_3_update_logical_block_0089
+  previous_block_id: 26_3_update_logical_block_0086
+  current_block_id: 26_3_update_logical_block_0087
   previous page: 6
   current page: 6
   previous text: By modifying our existing utilities to leverage built-in capabilities of modern versions of the Oracle and Microsoft SQL Server database platforms, we can execute DDL that accomplishes the same end result without forcing downtime.
@@ -2818,8 +2755,8 @@ Continuation Decision:
   Reason: Previous block does not look incomplete.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0089
-  current_block_id: 26_3_update_logical_block_0090
+  previous_block_id: 26_3_update_logical_block_0087
+  current_block_id: 26_3_update_logical_block_0088
   previous page: 6
   current page: 6
   previous text: - For Oracle platforms, we leverage the DBMS_REDEFINITION package to make changes to objects without making any schema objects offline.
@@ -2849,8 +2786,8 @@ Continuation Decision:
   Reason: Parallel enumerated items share an opener class; keep separate.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0090
-  current_block_id: 26_3_update_logical_block_0091
+  previous_block_id: 26_3_update_logical_block_0088
+  current_block_id: 26_3_update_logical_block_0089
   previous page: 6
   current page: 6
   previous text: - For Microsoft SQL Server platforms, we leverage the "ONLINE" keyword to modify objects without bringing any schema objects offline.
@@ -2884,8 +2821,8 @@ Continuation Decision:
   Reason: Previous block does not look incomplete.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0091
-  current_block_id: 26_3_update_logical_block_0092
+  previous_block_id: 26_3_update_logical_block_0089
+  current_block_id: 26_3_update_logical_block_0090
   previous page: 6
   current page: 6
   previous text: For more information on the technical details of these database-level capabilities, please refer to the Oracle or Microsoft documentation as appropriate.
@@ -2917,8 +2854,8 @@ Continuation Decision:
   Reason: Previous block does not look incomplete.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0092
-  current_block_id: 26_3_update_logical_block_0093
+  previous_block_id: 26_3_update_logical_block_0090
+  current_block_id: 26_3_update_logical_block_0091
   previous page: 6
   current page: 6
   previous text: NOTE: This change is not applicable to either DB2 database platform.
@@ -2948,8 +2885,8 @@ Continuation Decision:
   Reason: Structured record adjacent to non-record content.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0093
-  current_block_id: 26_3_update_logical_block_0094
+  previous_block_id: 26_3_update_logical_block_0091
+  current_block_id: 26_3_update_logical_block_0092
   previous page: 6
   current page: 7
   previous text: Replacement of Obsolete Data Types from Oracle and MSSQL Databases Training on this feature is available onOracle University. This feature provides a utility to convert obsolete Column types, such as Oracle's LONG and Microsoft SQL Server's TEXT/NTEXT to their modern equivalents: CLOBs and VARCHAR(max)/NVARCHAR(max). The driver behind this is that the respective database vendors deprecated these data types a number of years ago and modern database engines are no longer being optimized for these older types. Replacing them with their modern equivalents will take advantage of their inherent benefits, such as greater data storage space, as well as future-proofing should either vendor ever elect to completely end support for these. • Database Upgrade Guide • Business Process Framework: Workfow Guide • Confguring Siebel Business Applications • Integration Platform Technologies: Siebel Enterprise Application Integration Guide No
@@ -2979,8 +2916,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0094
-  current_block_id: 26_3_update_logical_block_0095
+  previous_block_id: 26_3_update_logical_block_0092
+  current_block_id: 26_3_update_logical_block_0093
   previous page: 7
   current page: 7
   previous text: Developer Experience: Web Tools Applet Method Menu Wizard NOTE: Please review the training material for important considerationsbefore running this utility. Training on this feature is available onOracle University. The Siebel Tools Applet Method Menu Wizard allows you to modify an Applet Method Menu. This wizard has been re-implemented in Web Tools allowing you to quickly modify Applet Menus. Training on this feature is available onOracle University. • Confguring Siebel Business Applications No
@@ -3010,8 +2947,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0095
-  current_block_id: 26_3_update_logical_block_0096
+  previous_block_id: 26_3_update_logical_block_0093
+  current_block_id: 26_3_update_logical_block_0094
   previous page: 7
   current page: 7
   previous text: Developer Experience: REST APIs for Workspaces REST APIs allow Workspaces to be called independently without the need for the Web Tools or Siebel Tools user interface allowing automation and diverse use-cases. The REST APIs will extend Developer automation capabilities and save time. • REST API Guide No
@@ -3044,8 +2981,8 @@ Continuation Decision:
   Reason: Compatible across page boundary.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0096
-  current_block_id: 26_3_update_logical_block_0097
+  previous_block_id: 26_3_update_logical_block_0094
+  current_block_id: 26_3_update_logical_block_0095
   previous page: 7
   current page: 7
   previous text: • Create Workspace • Checkpoint Workspace • Revert Version • Delete Workspace • Submit for Delivery • UndoSubmit for Delivery • Deliver Workspace • Rebase Workspace • Cancel Rebase • Finish Rebase Training on this feature is available onOracle University.
@@ -3075,8 +3012,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0097
-  current_block_id: 26_3_update_logical_block_0098
+  previous_block_id: 26_3_update_logical_block_0095
+  current_block_id: 26_3_update_logical_block_0096
   previous page: 7
   current page: 8
   previous text: Siebel Cloud Manager - Smarter Ingress Routing Siebel Cloud Manager introduces support for Traefik as part of a Kubernetes deployment, to ensure continued security, support, and modern ingress traffic management. Support for Traefik is necessary as NGINX Ingress reaches end-of- life (March 2026). Traefik provides automatic SSL management, dynamic service discovery, and faster routing updates, reducing operational complexity. Its cloud-native design improves observability, scalability, and maintainability, and provides for the easy adoption of the Kubernetes Gateway API (a flexible, multi-protocol way to manage traffic routing). This enhancement ensures Siebel CRM deployments on Kubernetes remain secure, • Siebel Cloud Manager
@@ -3106,8 +3043,8 @@ Continuation Decision:
   Reason: Structured record adjacent to non-record content.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0098
-  current_block_id: 26_3_update_logical_block_0099
+  previous_block_id: 26_3_update_logical_block_0096
+  current_block_id: 26_3_update_logical_block_0097
   previous page: 8
   current page: 8
   previous text: reliable, and aligned with CNCF guiding principles.
@@ -3137,8 +3074,8 @@ Continuation Decision:
   Reason: Layout heading unit stays separate from following content.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0099
-  current_block_id: 26_3_update_logical_block_0100
+  previous_block_id: 26_3_update_logical_block_0097
+  current_block_id: 26_3_update_logical_block_0098
   previous page: 8
   current page: 8
   previous text: Fixes in Siebel CRM 26.3
@@ -3168,8 +3105,8 @@ Continuation Decision:
   Reason: Structured record adjacent to non-record content.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0100
-  current_block_id: 26_3_update_logical_block_0101
+  previous_block_id: 26_3_update_logical_block_0098
+  current_block_id: 26_3_update_logical_block_0099
   previous page: 8
   current page: 8
   previous text: Product Name Reference Category Description Configuration Instructions
@@ -3199,8 +3136,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0101
-  current_block_id: 26_3_update_logical_block_0102
+  previous_block_id: 26_3_update_logical_block_0099
+  current_block_id: 26_3_update_logical_block_0100
   previous page: 8
   current page: 8
   previous text: Siebel Apps - Clinical Trials Management System 38357102 Contact Enhances usability by splitting “Apply SVT” into “Apply SVT to Selected” and “Apply SVT to All,” reducing confusion and aligning with existing actions
@@ -3230,8 +3167,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0102
-  current_block_id: 26_3_update_logical_block_0103
+  previous_block_id: 26_3_update_logical_block_0100
+  current_block_id: 26_3_update_logical_block_0101
   previous page: 8
   current page: 8
   previous text: Siebel Apps - Clinical Trials Management System 38091478 Site Management Enhances Clinical One-CTMS integration by ensuring Site Account email addresses are captured and retained, preventing unintended overwrites and improving data consistency across systems
@@ -3261,8 +3198,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0103
-  current_block_id: 26_3_update_logical_block_0104
+  previous_block_id: 26_3_update_logical_block_0101
+  current_block_id: 26_3_update_logical_block_0102
   previous page: 8
   current page: 8
   previous text: Siebel Apps - Clinical Trials Management System 38104111 Site Management Enhances usability of the Clinical Protocol Site Subjects List Applet by adding tooltips and confirmation dialogs to clarify the behavior of “Apply Version to Selected,” “Apply Version to All,” and “Apply SVT” actions
@@ -3292,8 +3229,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0104
-  current_block_id: 26_3_update_logical_block_0105
+  previous_block_id: 26_3_update_logical_block_0102
+  current_block_id: 26_3_update_logical_block_0103
   previous page: 8
   current page: 8
   previous text: Siebel Apps - Clinical Trials Management System 38721778 Site Management Addresses an issue where the CRA Primary field on the Site Management screen did not display the correct primary user assigned to the site team.
@@ -3323,8 +3260,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0105
-  current_block_id: 26_3_update_logical_block_0106
+  previous_block_id: 26_3_update_logical_block_0103
+  current_block_id: 26_3_update_logical_block_0104
   previous page: 8
   current page: 8
   previous text: Siebel Apps - Clinical Trials Management System 38376840 Site Management Addresses issue where the SDV API incorrectly interprets visit names containing parentheses as dynamic visits because it does not check the Repeat Flag
@@ -3354,8 +3291,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0106
-  current_block_id: 26_3_update_logical_block_0107
+  previous_block_id: 26_3_update_logical_block_0104
+  current_block_id: 26_3_update_logical_block_0105
   previous page: 8
   current page: 8
   previous text: Siebel Apps - Clinical Trials Management System 38472842 Site Management Addresses an issue where a Completed Date was automatically populated after syncing from offline to online mode in Checklist Activities, even when no date was entered offline.
@@ -3385,8 +3322,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0107
-  current_block_id: 26_3_update_logical_block_0108
+  previous_block_id: 26_3_update_logical_block_0105
+  current_block_id: 26_3_update_logical_block_0106
   previous page: 8
   current page: 8
   previous text: Siebel Apps - Clinical Trials Management System 38907876 Site Management Addresses an issue where dynamic visit repeat numbers were incorrectly displayed as “0” in Activities
@@ -3416,8 +3353,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0108
-  current_block_id: 26_3_update_logical_block_0109
+  previous_block_id: 26_3_update_logical_block_0106
+  current_block_id: 26_3_update_logical_block_0107
   previous page: 8
   current page: 9
   previous text: Siebel Apps - Clinical Trials 38105978 Site Management Enhances security and governance by restricting “Change SVT Version at Site” and “Apply SVT” actions to
@@ -3447,8 +3384,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0109
-  current_block_id: 26_3_update_logical_block_0110
+  previous_block_id: 26_3_update_logical_block_0107
+  current_block_id: 26_3_update_logical_block_0108
   previous page: 9
   current page: 9
   previous text: Management System Siebel Apps - Clinical Trials Management System 38472853 Site Management users with designated responsibility, ensuring only authorized users can perform these operations Addresses an issue in Mobile app where the Completed Date field in Checklist Activities was editable in offline mode but read-only in online mode.
@@ -3478,8 +3415,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0110
-  current_block_id: 26_3_update_logical_block_0111
+  previous_block_id: 26_3_update_logical_block_0108
+  current_block_id: 26_3_update_logical_block_0109
   previous page: 9
   current page: 9
   previous text: Siebel Apps - Clinical Trials Management System 37919326 Site Management Addresses an issue where Responsibility and Position fields in certain Clinical MVG applets could be edited, bypassing authorization controls.
@@ -3509,8 +3446,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0111
-  current_block_id: 26_3_update_logical_block_0112
+  previous_block_id: 26_3_update_logical_block_0109
+  current_block_id: 26_3_update_logical_block_0110
   previous page: 9
   current page: 9
   previous text: Siebel Apps - Clinical Trials Management System 38088625 Site Management Addresses an issue where changes to SVT version at the site level were not automatically propagated to associated subjects in Clinical One to CTMS integration, requiring manual user action and risking version inconsistencies
@@ -3540,8 +3477,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0112
-  current_block_id: 26_3_update_logical_block_0113
+  previous_block_id: 26_3_update_logical_block_0110
+  current_block_id: 26_3_update_logical_block_0111
   previous page: 9
   current page: 9
   previous text: Siebel Apps - Clinical Trials Management System 38104008 Site Management HANDLE ORPHANED SUBJECTS W.R.T. CTMS-C1 INTEGRATION
@@ -3571,8 +3508,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0113
-  current_block_id: 26_3_update_logical_block_0114
+  previous_block_id: 26_3_update_logical_block_0111
+  current_block_id: 26_3_update_logical_block_0112
   previous page: 9
   current page: 9
   previous text: Siebel Apps - Clinical Trials Management System 38375441 Site Management Addresses issue where the LS Clinical Subject Visit Plan API incorrectly handles parentheses in visit names as dynamic visits without checking the Visit Repeat Flag, causing parsing errors.
@@ -3602,8 +3539,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0114
-  current_block_id: 26_3_update_logical_block_0115
+  previous_block_id: 26_3_update_logical_block_0112
+  current_block_id: 26_3_update_logical_block_0113
   previous page: 9
   current page: 9
   previous text: Siebel Apps - Clinical Trials Management System 38141228 Site Management Addresses an issue with Mobile SmartScripts displaying question numbers inconsistently in Clinical TripReport SmartScripts.
@@ -3633,8 +3570,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0115
-  current_block_id: 26_3_update_logical_block_0116
+  previous_block_id: 26_3_update_logical_block_0113
+  current_block_id: 26_3_update_logical_block_0114
   previous page: 9
   current page: 9
   previous text: Siebel Apps - Clinical Trials Management System 38907819 Site Management Addresses an issue where the subject status date in the Protocol Subject tab was displayed one day earlier than the actual date.
@@ -3664,8 +3601,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0116
-  current_block_id: 26_3_update_logical_block_0117
+  previous_block_id: 26_3_update_logical_block_0114
+  current_block_id: 26_3_update_logical_block_0115
   previous page: 9
   current page: 9
   previous text: Siebel Apps - Clinical Trials Management System 35982623 Site Management Addresses an issue where users not assigned to a site visit could access visit details via alternate navigation paths
@@ -3695,8 +3632,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0117
-  current_block_id: 26_3_update_logical_block_0118
+  previous_block_id: 26_3_update_logical_block_0115
+  current_block_id: 26_3_update_logical_block_0116
   previous page: 9
   current page: 10
   previous text: Siebel Apps - Clinical Trials Management System 38152283 Site Management Addresses issue where fields on the Visit Plan business component did not properly enforce record-level read-only behavior, allowing fields to appear editable and resulting in update errors.
@@ -3726,8 +3663,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0118
-  current_block_id: 26_3_update_logical_block_0119
+  previous_block_id: 26_3_update_logical_block_0116
+  current_block_id: 26_3_update_logical_block_0117
   previous page: 10
   current page: 10
   previous text: Siebel Apps - Clinical Trials Management System 38390917 Site Management Addresses an issue where parentheses were not supported on creation of dynamic Visits
@@ -3757,8 +3694,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0119
-  current_block_id: 26_3_update_logical_block_0120
+  previous_block_id: 26_3_update_logical_block_0117
+  current_block_id: 26_3_update_logical_block_0118
   previous page: 10
   current page: 10
   previous text: Siebel Apps - Clinical Trials Management System 38208060 Site Management Enhances notification capabilities by extending SVT integration email alerts to include Protocol team members, ensuring broader awareness when SVT versions are received from Clinical One into CTMS.
@@ -3788,8 +3725,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0120
-  current_block_id: 26_3_update_logical_block_0121
+  previous_block_id: 26_3_update_logical_block_0118
+  current_block_id: 26_3_update_logical_block_0119
   previous page: 10
   current page: 10
   previous text: Siebel Apps - Clinical Trials Management System 38419875 Site Management Addresses an enhancement to ensure Site Visit records become read-only after a Visit Report is submitted for review.
@@ -3819,8 +3756,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0121
-  current_block_id: 26_3_update_logical_block_0122
+  previous_block_id: 26_3_update_logical_block_0119
+  current_block_id: 26_3_update_logical_block_0120
   previous page: 10
   current page: 10
   previous text: Siebel Apps - Clinical Trials Management System 38390240 Site Management Addresses scenario where the SDV API loads the CRF record for the incorrect repeat number for unschedulable dynamic visits
@@ -3850,8 +3787,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0122
-  current_block_id: 26_3_update_logical_block_0123
+  previous_block_id: 26_3_update_logical_block_0120
+  current_block_id: 26_3_update_logical_block_0121
   previous page: 10
   current page: 10
   previous text: Siebel Apps - Customer Order Management 38612771 Product Administration After deleting old versions of customizable product using business service "SWI Cfg Object Broker" method "RemoveOldReleasedVersions", product administrator can copy the product successfully without getting SBL-DAT-00215 error.
@@ -3881,8 +3818,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0123
-  current_block_id: 26_3_update_logical_block_0124
+  previous_block_id: 26_3_update_logical_block_0121
+  current_block_id: 26_3_update_logical_block_0122
   previous page: 10
   current page: 10
   previous text: Siebel CRM Deployment 38089901 Application Interface Siebel uses only serverAuth EKU for SSL connections
@@ -3912,8 +3849,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0124
-  current_block_id: 26_3_update_logical_block_0125
+  previous_block_id: 26_3_update_logical_block_0122
+  current_block_id: 26_3_update_logical_block_0123
   previous page: 10
   current page: 10
   previous text: Siebel CRM Deployment 37167823 Database Upgrade This bug fix ensures that the obsolete column types LONG (Oracle) and (N)TEXT (MSSQL) are converted to the supported CLOB and (N)VARCHAR(max) data types during Upgrades as appropriate for that databaseplatform.
@@ -3943,8 +3880,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0125
-  current_block_id: 26_3_update_logical_block_0126
+  previous_block_id: 26_3_update_logical_block_0123
+  current_block_id: 26_3_update_logical_block_0124
   previous page: 10
   current page: 10
   previous text: Siebel CRM Deployment 31589382 Database Upgrade This fix changes the way that schema modifications are applied to allow for tables and indexes to remain in use during the application of the changes during, for example, Migration. This change applies to Oracle and MSSQL database platforms only.
@@ -3974,8 +3911,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0126
-  current_block_id: 26_3_update_logical_block_0127
+  previous_block_id: 26_3_update_logical_block_0124
+  current_block_id: 26_3_update_logical_block_0125
   previous page: 10
   current page: 10
   previous text: Siebel CRM Deployment 38772851 Installation Addressed IBMJCE Migration Issue related to decryption Error. (Part 2)
@@ -4005,8 +3942,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0127
-  current_block_id: 26_3_update_logical_block_0128
+  previous_block_id: 26_3_update_logical_block_0125
+  current_block_id: 26_3_update_logical_block_0126
   previous page: 10
   current page: 11
   previous text: Siebel CRM Deployment 38729891 Installation Add Support erverAuth using EKU In Siebel Certificates
@@ -4036,8 +3973,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0128
-  current_block_id: 26_3_update_logical_block_0129
+  previous_block_id: 26_3_update_logical_block_0126
+  current_block_id: 26_3_update_logical_block_0127
   previous page: 11
   current page: 11
   previous text: Siebel CRM Deployment 38633633 Installation Improved the ability to use default ports during Install.
@@ -4067,8 +4004,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0129
-  current_block_id: 26_3_update_logical_block_0130
+  previous_block_id: 26_3_update_logical_block_0127
+  current_block_id: 26_3_update_logical_block_0128
   previous page: 11
   current page: 11
   previous text: Siebel CRM Deployment 38571707 Installation Addressed IBMJCE Migration Issue related to decryption Error.
@@ -4098,8 +4035,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0130
-  current_block_id: 26_3_update_logical_block_0131
+  previous_block_id: 26_3_update_logical_block_0128
+  current_block_id: 26_3_update_logical_block_0129
   previous page: 11
   current page: 11
   previous text: Siebel CRM Deployment 38721251 Installation Improved ODBCSQL Connection Support for AIX 7.3
@@ -4129,8 +4066,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0131
-  current_block_id: 26_3_update_logical_block_0132
+  previous_block_id: 26_3_update_logical_block_0129
+  current_block_id: 26_3_update_logical_block_0130
   previous page: 11
   current page: 11
   previous text: Siebel CRM Deployment 38883351 Installation Consolidated Outlook_addin Installation to be delivered as part of WebClient installation.
@@ -4160,8 +4097,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0132
-  current_block_id: 26_3_update_logical_block_0133
+  previous_block_id: 26_3_update_logical_block_0130
+  current_block_id: 26_3_update_logical_block_0131
   previous page: 11
   current page: 11
   previous text: Siebel CRM Deployment 38876681 Migration Restores the Application Data Migration service for Migration. Note that this allows its use during Migration, but does not restore the administrative views. Application Data Migration with Transformation is not restored nor are there any plans to do so.
@@ -4191,8 +4128,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0133
-  current_block_id: 26_3_update_logical_block_0134
+  previous_block_id: 26_3_update_logical_block_0131
+  current_block_id: 26_3_update_logical_block_0132
   previous page: 11
   current page: 11
   previous text: Siebel CRM Deployment 30501821 Repository Utilities Eliminates a problem where tables are not regranted permissions when Migration is run, reducing the time required to run Migration.
@@ -4222,8 +4159,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0134
-  current_block_id: 26_3_update_logical_block_0135
+  previous_block_id: 26_3_update_logical_block_0132
+  current_block_id: 26_3_update_logical_block_0133
   previous page: 11
   current page: 11
   previous text: Siebel CRM Development 38698788 Workflow When purging Workflow Process instance records, those with no End Date specified can still be purged where previously they were not. In addition, a new method has been introduced to remove orphaned records from the purge process. _* This fixed bug was previously_ _documented as a Known Issue *_
@@ -4253,8 +4190,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0135
-  current_block_id: 26_3_update_logical_block_0136
+  previous_block_id: 26_3_update_logical_block_0133
+  current_block_id: 26_3_update_logical_block_0134
   previous page: 11
   current page: 11
   previous text: Siebel CRM Development 38663266 Workflow When creating or updating database triggers, the Generate Triggers component will now be able to create ANSI-compliant triggers.
@@ -4284,8 +4221,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0136
-  current_block_id: 26_3_update_logical_block_0137
+  previous_block_id: 26_3_update_logical_block_0134
+  current_block_id: 26_3_update_logical_block_0135
   previous page: 11
   current page: 11
   previous text: Siebel CRM Development 38142176 Workflow The Purge button on the Workflow Process Instance Admin View will correctly purge instances of Workflow Processes that have completed.
@@ -4315,8 +4252,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0137
-  current_block_id: 26_3_update_logical_block_0138
+  previous_block_id: 26_3_update_logical_block_0135
+  current_block_id: 26_3_update_logical_block_0136
   previous page: 11
   current page: 12
   previous text: Siebel CRM Development 38755215 Workspaces There was a missing parameter in Siebel Bookshelf for the command to start the Coherence Console. This will be fixed in the System Administration Guide in an upcoming release.
@@ -4346,8 +4283,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0138
-  current_block_id: 26_3_update_logical_block_0139
+  previous_block_id: 26_3_update_logical_block_0136
+  current_block_id: 26_3_update_logical_block_0137
   previous page: 12
   current page: 12
   previous text: Siebel CRM Documentation 27507784 Configuring Siebel Open UI Documented the Generation/Deployment of Browser Script on Dedicated Client.
@@ -4377,8 +4314,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0139
-  current_block_id: 26_3_update_logical_block_0140
+  previous_block_id: 26_3_update_logical_block_0137
+  current_block_id: 26_3_update_logical_block_0138
   previous page: 12
   current page: 12
   previous text: Siebel CRM Documentation 38584584 Object Interfaces Reference This documentation update gives the correct syntax for specifying an ADODB connect stringin script.
@@ -4408,8 +4345,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0140
-  current_block_id: 26_3_update_logical_block_0141
+  previous_block_id: 26_3_update_logical_block_0138
+  current_block_id: 26_3_update_logical_block_0139
   previous page: 12
   current page: 12
   previous text: Siebel CRM Documentation 38944807 System Admin Gd The System Administration Guide, which covers the Siebel CRM Event Pub/Sub feature for Siebel–Kafka integration, has been updated to provide: a) clearer descriptions of parameter KafkaPassword, and b) revised guidance on certificate handling aligned with the new paradigm of separate client and server authorization during Kafka message exchange simulation using Kafka’s sample producer and consumer applications.
@@ -4439,8 +4376,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0141
-  current_block_id: 26_3_update_logical_block_0142
+  previous_block_id: 26_3_update_logical_block_0139
+  current_block_id: 26_3_update_logical_block_0140
   previous page: 12
   current page: 12
   previous text: Siebel CRM Documentation 38301898 Transp/Interface: EAI Documentation on TLS mutual authentication has been updated.
@@ -4470,8 +4407,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0142
-  current_block_id: 26_3_update_logical_block_0143
+  previous_block_id: 26_3_update_logical_block_0140
+  current_block_id: 26_3_update_logical_block_0141
   previous page: 12
   current page: 12
   previous text: Siebel CRM End User 38444710 User Interface TinyMCE improvement to support Style Tag in the Head Tag of an Email Template.
@@ -4501,8 +4438,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0143
-  current_block_id: 26_3_update_logical_block_0144
+  previous_block_id: 26_3_update_logical_block_0141
+  current_block_id: 26_3_update_logical_block_0142
   previous page: 12
   current page: 12
   previous text: Siebel CRM End User 38556974 User Interface Fixed Toggle applets to display data corectly
@@ -4532,8 +4469,8 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0144
-  current_block_id: 26_3_update_logical_block_0145
+  previous_block_id: 26_3_update_logical_block_0142
+  current_block_id: 26_3_update_logical_block_0143
   previous page: 12
   current page: 12
   previous text: Siebel CRM End User 38588428 User Interface LEFT AND RIGHT Arrows are added in screenbars for Synergy Theme
@@ -4563,14 +4500,14 @@ Continuation Decision:
   Reason: Both blocks are structured records; table rows stay independent.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0145
-  current_block_id: 26_3_update_logical_block_0146
+  previous_block_id: 26_3_update_logical_block_0143
+  current_block_id: 26_3_update_logical_block_0144
   previous page: 12
   current page: 12
   previous text: Siebel CRM Integration 38684263 EAI Outbound REST requests that send negative numbers using Integration Components that point to columns of type DTYPE_INTEGER or DTYPE_NUMBER are now correctly handled.
-  current text: New Features and Bug Fixes in Siebel CRM Monthly Update 26.2 New Features in Siebel CRM 26.2 There are no new features in 26.2.
+  current text: New Features and Bug Fixes in Siebel CRM Monthly Update 26.2
   continuation_score: 0.22
-  new_boundary_score: 0.48
+  new_boundary_score: 0.44
   Continuation evidence:
     sentence_continuation_score: 0.00
     lexical_continuation_score: 0.00
@@ -4588,17 +4525,79 @@ Continuation Decision:
     spacing_break: 0.68
     reading_region_change: 0.00
     table_boundary: 1.00
-    role_change: 0.55
+    role_change: 0.20
   Decision: KEEP_SEPARATE
   Confidence: 0.95
   Reason: Structured record adjacent to non-record content.
+
+Continuation Decision:
+  previous_block_id: 26_3_update_logical_block_0144
+  current_block_id: 26_3_update_logical_block_0145
+  previous page: 12
+  current page: 12
+  previous text: New Features and Bug Fixes in Siebel CRM Monthly Update 26.2
+  current text: New Features in Siebel CRM 26.2
+  continuation_score: 0.60
+  new_boundary_score: 0.16
+  Continuation evidence:
+    sentence_continuation_score: 0.55
+    lexical_continuation_score: 0.00
+    capitalization_score: 0.25
+    punctuation_score: 0.70
+    spatial_proximity_score: 0.84
+    alignment_score: 0.85
+    typography_score: 0.68
+    reading_order_score: 1.00
+    page_continuation_score: 0.85
+    role_compatibility_score: 0.50
+  New boundary evidence:
+    heading_change: 0.00
+    structural_change: 0.45
+    spacing_break: 0.16
+    reading_region_change: 0.00
+    table_boundary: 0.00
+    role_change: 0.55
+  Decision: KEEP_SEPARATE
+  Confidence: 0.95
+  Reason: Adjacent title-like units stay separate for hierarchy.
+
+Continuation Decision:
+  previous_block_id: 26_3_update_logical_block_0145
+  current_block_id: 26_3_update_logical_block_0146
+  previous page: 12
+  current page: 12
+  previous text: New Features in Siebel CRM 26.2
+  current text: There are no new features in 26.2.
+  continuation_score: 0.62
+  new_boundary_score: 0.04
+  Continuation evidence:
+    sentence_continuation_score: 0.55
+    lexical_continuation_score: 0.00
+    capitalization_score: 0.25
+    punctuation_score: 0.70
+    spatial_proximity_score: 0.79
+    alignment_score: 0.98
+    typography_score: 0.71
+    reading_order_score: 1.00
+    page_continuation_score: 0.85
+    role_compatibility_score: 0.60
+  New boundary evidence:
+    heading_change: 0.00
+    structural_change: 0.00
+    spacing_break: 0.21
+    reading_region_change: 0.00
+    table_boundary: 0.00
+    role_change: 0.00
+  Decision: KEEP_SEPARATE
+  Confidence: 0.51
+  Reason: New-boundary evidence dominates continuation evidence.
 
 Continuation Decision:
   previous_block_id: 26_3_update_logical_block_0146
   current_block_id: 26_3_update_logical_block_0147
   previous page: 12
   current page: 12
-  previous text: New Features and Bug Fixes in Siebel CRM Monthly Update 26.2 New Features in Siebel CRM 26.2 There are no new features in 26.2.
+  previous text: There are no new features in 26.2.
   current text: Fixes in Siebel CRM 26.2
   continuation_score: 0.22
   new_boundary_score: 0.23
@@ -5869,9 +5868,9 @@ Continuation Decision:
   previous page: 15
   current page: 15
   previous text: 4. Modify the Type attribute to “Data”.
-  current text: New Features and Bug Fixes in Siebel CRM Monthly Update 26.1 New Features in Siebel CRM 26.1
+  current text: New Features and Bug Fixes in Siebel CRM Monthly Update 26.1
   continuation_score: 0.22
-  new_boundary_score: 0.23
+  new_boundary_score: 0.30
   Continuation evidence:
     sentence_continuation_score: 0.00
     lexical_continuation_score: 0.00
@@ -5889,9 +5888,9 @@ Continuation Decision:
     spacing_break: 0.68
     reading_region_change: 0.00
     table_boundary: 0.00
-    role_change: 0.00
+    role_change: 0.55
   Decision: KEEP_SEPARATE
-  Confidence: 0.55
+  Confidence: 0.60
   Reason: Significant spatial boundary.
   Reason: Structural pattern changed.
   Reason: Previous block does not look incomplete.
@@ -5901,17 +5900,48 @@ Continuation Decision:
   current_block_id: 26_3_update_logical_block_0188
   previous page: 15
   current page: 15
-  previous text: New Features and Bug Fixes in Siebel CRM Monthly Update 26.1 New Features in Siebel CRM 26.1
+  previous text: New Features and Bug Fixes in Siebel CRM Monthly Update 26.1
+  current text: New Features in Siebel CRM 26.1
+  continuation_score: 0.60
+  new_boundary_score: 0.16
+  Continuation evidence:
+    sentence_continuation_score: 0.55
+    lexical_continuation_score: 0.00
+    capitalization_score: 0.25
+    punctuation_score: 0.70
+    spatial_proximity_score: 0.84
+    alignment_score: 0.85
+    typography_score: 0.68
+    reading_order_score: 1.00
+    page_continuation_score: 0.85
+    role_compatibility_score: 0.50
+  New boundary evidence:
+    heading_change: 0.00
+    structural_change: 0.45
+    spacing_break: 0.16
+    reading_region_change: 0.00
+    table_boundary: 0.00
+    role_change: 0.55
+  Decision: KEEP_SEPARATE
+  Confidence: 0.95
+  Reason: Adjacent title-like units stay separate for hierarchy.
+
+Continuation Decision:
+  previous_block_id: 26_3_update_logical_block_0188
+  current_block_id: 26_3_update_logical_block_0189
+  previous page: 15
+  current page: 15
+  previous text: New Features in Siebel CRM 26.1
   current text: Feature Name Description Documentation Repository Update Required?
-  continuation_score: 0.56
-  new_boundary_score: 0.59
+  continuation_score: 0.55
+  new_boundary_score: 0.68
   Continuation evidence:
     sentence_continuation_score: 0.55
     lexical_continuation_score: 0.00
     capitalization_score: 0.25
     punctuation_score: 0.70
     spatial_proximity_score: 0.86
-    alignment_score: 0.88
+    alignment_score: 0.79
     typography_score: 0.37
     reading_order_score: 1.00
     page_continuation_score: 0.85
@@ -5920,7 +5950,7 @@ Continuation Decision:
     heading_change: 0.85
     structural_change: 0.80
     spacing_break: 0.14
-    reading_region_change: 0.00
+    reading_region_change: 0.68
     table_boundary: 1.00
     role_change: 0.55
   Decision: KEEP_SEPARATE
@@ -5928,8 +5958,8 @@ Continuation Decision:
   Reason: Structured record adjacent to non-record content.
 
 Continuation Decision:
-  previous_block_id: 26_3_update_logical_block_0188
-  current_block_id: 26_3_update_logical_block_0189
+  previous_block_id: 26_3_update_logical_block_0189
+  current_block_id: 26_3_update_logical_block_0190
   previous page: 15
   current page: 15
   previous text: Feature Name Description Documentation Repository Update Required?

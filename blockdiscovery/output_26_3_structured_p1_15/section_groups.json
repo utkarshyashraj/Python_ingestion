@@ -6,12 +6,13 @@
     "heading_text": "Siebel CRM Update Guide and Known Issues",
     "page_start": 1,
     "page_end": 1,
-    "item_count": 1,
-    "member_logical_block_ids": [
-      "26_3_update_logical_block_0002"
-    ],
-    "member_source_block_ids": [
-      "26_3_update_block_0002"
+    "item_count": 0,
+    "member_logical_block_ids": [],
+    "member_source_block_ids": [],
+    "depth": 0,
+    "parent_section_id": null,
+    "child_section_ids": [
+      "26_3_update_section_002"
     ],
     "inferred_label": null,
     "label_confidence": 0.0,
@@ -19,23 +20,65 @@
       "signals": {
         "heading_prominence": 0.0,
         "heading_size_ratio": 1.0,
-        "member_count": 1.0,
-        "page_span": 1.0
+        "member_count": 0.0,
+        "page_span": 1.0,
+        "depth": 0.0,
+        "hierarchy_score": 100.0
       },
       "weights": {
-        "heading_prominence": 0.4,
+        "heading_prominence": 0.35,
         "heading_size_ratio": 0.2,
-        "member_count": 0.3,
-        "page_span": 0.1
+        "member_count": 0.25,
+        "page_span": 0.1,
+        "depth": 0.1
       },
-      "confidence": 0.5,
+      "confidence": 0.6,
       "notes": [
-        "section opened by relative prominence / size elevation"
+        "section opened by relative prominence / hierarchy score",
+        "depth=0"
       ]
     }
   },
   {
     "id": "26_3_update_section_002",
+    "document_id": "26_3_update",
+    "heading_block_id": "26_3_update_logical_block_0002",
+    "heading_text": "Siebel CRM 26.3 Update March 2026",
+    "page_start": 1,
+    "page_end": 1,
+    "item_count": 0,
+    "member_logical_block_ids": [],
+    "member_source_block_ids": [],
+    "depth": 1,
+    "parent_section_id": "26_3_update_section_001",
+    "child_section_ids": [],
+    "inferred_label": null,
+    "label_confidence": 0.0,
+    "evidence": {
+      "signals": {
+        "heading_prominence": 0.0,
+        "heading_size_ratio": 1.0,
+        "member_count": 0.0,
+        "page_span": 1.0,
+        "depth": 1.0,
+        "hierarchy_score": 55.0
+      },
+      "weights": {
+        "heading_prominence": 0.35,
+        "heading_size_ratio": 0.2,
+        "member_count": 0.25,
+        "page_span": 0.1,
+        "depth": 0.1
+      },
+      "confidence": 0.55,
+      "notes": [
+        "section opened by relative prominence / hierarchy score",
+        "depth=1"
+      ]
+    }
+  },
+  {
+    "id": "26_3_update_section_003",
     "document_id": "26_3_update",
     "heading_block_id": "26_3_update_logical_block_0003",
     "heading_text": "Required Patches",
@@ -56,6 +99,9 @@
       "26_3_update_block_0007",
       "26_3_update_block_0008"
     ],
+    "depth": 0,
+    "parent_section_id": null,
+    "child_section_ids": [],
     "inferred_label": null,
     "label_confidence": 0.0,
     "evidence": {
@@ -63,22 +109,26 @@
         "heading_prominence": 0.0,
         "heading_size_ratio": 1.0,
         "member_count": 5.0,
-        "page_span": 1.0
+        "page_span": 1.0,
+        "depth": 0.0,
+        "hierarchy_score": 100.0
       },
       "weights": {
-        "heading_prominence": 0.4,
+        "heading_prominence": 0.35,
         "heading_size_ratio": 0.2,
-        "member_count": 0.3,
-        "page_span": 0.1
+        "member_count": 0.25,
+        "page_span": 0.1,
+        "depth": 0.1
       },
-      "confidence": 0.7,
+      "confidence": 0.6,
       "notes": [
-        "section opened by relative prominence / size elevation"
+        "section opened by relative prominence / hierarchy score",
+        "depth=0"
       ]
     }
   },
   {
-    "id": "26_3_update_section_003",
+    "id": "26_3_update_section_004",
     "document_id": "26_3_update",
     "heading_block_id": "26_3_update_logical_block_0009",
     "heading_text": "Effect of Encryption Upgrade in 25.10 and Later",
@@ -107,6 +157,9 @@
       "26_3_update_block_0017",
       "26_3_update_block_0018"
     ],
+    "depth": 0,
+    "parent_section_id": null,
+    "child_section_ids": [],
     "inferred_label": null,
     "label_confidence": 0.0,
     "evidence": {
@@ -114,28 +167,32 @@
         "heading_prominence": 0.0,
         "heading_size_ratio": 1.0,
         "member_count": 9.0,
-        "page_span": 1.0
+        "page_span": 1.0,
+        "depth": 0.0,
+        "hierarchy_score": 100.0
       },
       "weights": {
-        "heading_prominence": 0.4,
+        "heading_prominence": 0.35,
         "heading_size_ratio": 0.2,
-        "member_count": 0.3,
-        "page_span": 0.1
+        "member_count": 0.25,
+        "page_span": 0.1,
+        "depth": 0.1
       },
-      "confidence": 0.9,
+      "confidence": 0.6,
       "notes": [
-        "section opened by relative prominence / size elevation"
+        "section opened by relative prominence / hierarchy score",
+        "depth=0"
       ]
     }
   },
   {
-    "id": "26_3_update_section_004",
+    "id": "26_3_update_section_005",
     "document_id": "26_3_update",
     "heading_block_id": "26_3_update_logical_block_0019",
     "heading_text": "Required Downloads",
     "page_start": 1,
     "page_end": 3,
-    "item_count": 39,
+    "item_count": 13,
     "member_logical_block_ids": [
       "26_3_update_logical_block_0020",
       "26_3_update_logical_block_0021",
@@ -149,33 +206,7 @@
       "26_3_update_logical_block_0029",
       "26_3_update_logical_block_0030",
       "26_3_update_logical_block_0031",
-      "26_3_update_logical_block_0032",
-      "26_3_update_logical_block_0033",
-      "26_3_update_logical_block_0034",
-      "26_3_update_logical_block_0035",
-      "26_3_update_logical_block_0036",
-      "26_3_update_logical_block_0037",
-      "26_3_update_logical_block_0038",
-      "26_3_update_logical_block_0039",
-      "26_3_update_logical_block_0040",
-      "26_3_update_logical_block_0041",
-      "26_3_update_logical_block_0042",
-      "26_3_update_logical_block_0043",
-      "26_3_update_logical_block_0044",
-      "26_3_update_logical_block_0045",
-      "26_3_update_logical_block_0046",
-      "26_3_update_logical_block_0047",
-      "26_3_update_logical_block_0048",
-      "26_3_update_logical_block_0049",
-      "26_3_update_logical_block_0050",
-      "26_3_update_logical_block_0051",
-      "26_3_update_logical_block_0052",
-      "26_3_update_logical_block_0053",
-      "26_3_update_logical_block_0054",
-      "26_3_update_logical_block_0055",
-      "26_3_update_logical_block_0056",
-      "26_3_update_logical_block_0057",
-      "26_3_update_logical_block_0058"
+      "26_3_update_logical_block_0032"
     ],
     "member_source_block_ids": [
       "26_3_update_block_0020",
@@ -192,8 +223,63 @@
       "26_3_update_block_0031",
       "26_3_update_block_0032",
       "26_3_update_block_0033",
-      "26_3_update_block_0034",
-      "26_3_update_block_0035",
+      "26_3_update_block_0034"
+    ],
+    "depth": 0,
+    "parent_section_id": null,
+    "child_section_ids": [
+      "26_3_update_section_006",
+      "26_3_update_section_007"
+    ],
+    "inferred_label": null,
+    "label_confidence": 0.0,
+    "evidence": {
+      "signals": {
+        "heading_prominence": 0.0,
+        "heading_size_ratio": 1.0,
+        "member_count": 13.0,
+        "page_span": 3.0,
+        "depth": 0.0,
+        "hierarchy_score": 100.0
+      },
+      "weights": {
+        "heading_prominence": 0.35,
+        "heading_size_ratio": 0.2,
+        "member_count": 0.25,
+        "page_span": 0.1,
+        "depth": 0.1
+      },
+      "confidence": 0.6,
+      "notes": [
+        "section opened by relative prominence / hierarchy score",
+        "depth=0"
+      ]
+    }
+  },
+  {
+    "id": "26_3_update_section_006",
+    "document_id": "26_3_update",
+    "heading_block_id": "26_3_update_logical_block_0033",
+    "heading_text": "Windows Archive Files",
+    "page_start": 2,
+    "page_end": 2,
+    "item_count": 13,
+    "member_logical_block_ids": [
+      "26_3_update_logical_block_0034",
+      "26_3_update_logical_block_0035",
+      "26_3_update_logical_block_0036",
+      "26_3_update_logical_block_0037",
+      "26_3_update_logical_block_0038",
+      "26_3_update_logical_block_0039",
+      "26_3_update_logical_block_0040",
+      "26_3_update_logical_block_0041",
+      "26_3_update_logical_block_0042",
+      "26_3_update_logical_block_0043",
+      "26_3_update_logical_block_0044",
+      "26_3_update_logical_block_0045",
+      "26_3_update_logical_block_0046"
+    ],
+    "member_source_block_ids": [
       "26_3_update_block_0036",
       "26_3_update_block_0037",
       "26_3_update_block_0038",
@@ -206,8 +292,56 @@
       "26_3_update_block_0045",
       "26_3_update_block_0046",
       "26_3_update_block_0047",
-      "26_3_update_block_0048",
-      "26_3_update_block_0049",
+      "26_3_update_block_0048"
+    ],
+    "depth": 1,
+    "parent_section_id": "26_3_update_section_005",
+    "child_section_ids": [],
+    "inferred_label": null,
+    "label_confidence": 0.0,
+    "evidence": {
+      "signals": {
+        "heading_prominence": 0.0,
+        "heading_size_ratio": 1.0,
+        "member_count": 13.0,
+        "page_span": 1.0,
+        "depth": 1.0,
+        "hierarchy_score": 25.0
+      },
+      "weights": {
+        "heading_prominence": 0.35,
+        "heading_size_ratio": 0.2,
+        "member_count": 0.25,
+        "page_span": 0.1,
+        "depth": 0.1
+      },
+      "confidence": 0.55,
+      "notes": [
+        "section opened by relative prominence / hierarchy score",
+        "depth=1"
+      ]
+    }
+  },
+  {
+    "id": "26_3_update_section_007",
+    "document_id": "26_3_update",
+    "heading_block_id": "26_3_update_logical_block_0047",
+    "heading_text": "Linux/Unix Archive Files",
+    "page_start": 2,
+    "page_end": 3,
+    "item_count": 9,
+    "member_logical_block_ids": [
+      "26_3_update_logical_block_0048",
+      "26_3_update_logical_block_0049",
+      "26_3_update_logical_block_0050",
+      "26_3_update_logical_block_0051",
+      "26_3_update_logical_block_0052",
+      "26_3_update_logical_block_0053",
+      "26_3_update_logical_block_0054",
+      "26_3_update_logical_block_0055",
+      "26_3_update_logical_block_0056"
+    ],
+    "member_source_block_ids": [
       "26_3_update_block_0050",
       "26_3_update_block_0051",
       "26_3_update_block_0052",
@@ -218,42 +352,49 @@
       "26_3_update_block_0057",
       "26_3_update_block_0058"
     ],
+    "depth": 1,
+    "parent_section_id": "26_3_update_section_005",
+    "child_section_ids": [],
     "inferred_label": null,
     "label_confidence": 0.0,
     "evidence": {
       "signals": {
         "heading_prominence": 0.0,
         "heading_size_ratio": 1.0,
-        "member_count": 39.0,
-        "page_span": 3.0
+        "member_count": 9.0,
+        "page_span": 2.0,
+        "depth": 1.0,
+        "hierarchy_score": 25.0
       },
       "weights": {
-        "heading_prominence": 0.4,
+        "heading_prominence": 0.35,
         "heading_size_ratio": 0.2,
-        "member_count": 0.3,
-        "page_span": 0.1
+        "member_count": 0.25,
+        "page_span": 0.1,
+        "depth": 0.1
       },
-      "confidence": 0.95,
+      "confidence": 0.55,
       "notes": [
-        "section opened by relative prominence / size elevation"
+        "section opened by relative prominence / hierarchy score",
+        "depth=1"
       ]
     }
   },
   {
-    "id": "26_3_update_section_005",
+    "id": "26_3_update_section_008",
     "document_id": "26_3_update",
-    "heading_block_id": "26_3_update_logical_block_0059",
+    "heading_block_id": "26_3_update_logical_block_0057",
     "heading_text": "Update Basics",
     "page_start": 3,
     "page_end": 3,
     "item_count": 6,
     "member_logical_block_ids": [
+      "26_3_update_logical_block_0058",
+      "26_3_update_logical_block_0059",
       "26_3_update_logical_block_0060",
       "26_3_update_logical_block_0061",
       "26_3_update_logical_block_0062",
-      "26_3_update_logical_block_0063",
-      "26_3_update_logical_block_0064",
-      "26_3_update_logical_block_0065"
+      "26_3_update_logical_block_0063"
     ],
     "member_source_block_ids": [
       "26_3_update_block_0060",
@@ -263,6 +404,9 @@
       "26_3_update_block_0064",
       "26_3_update_block_0065"
     ],
+    "depth": 0,
+    "parent_section_id": null,
+    "child_section_ids": [],
     "inferred_label": null,
     "label_confidence": 0.0,
     "evidence": {
@@ -270,38 +414,45 @@
         "heading_prominence": 0.0,
         "heading_size_ratio": 1.0,
         "member_count": 6.0,
-        "page_span": 1.0
+        "page_span": 1.0,
+        "depth": 0.0,
+        "hierarchy_score": 100.0
       },
       "weights": {
-        "heading_prominence": 0.4,
+        "heading_prominence": 0.35,
         "heading_size_ratio": 0.2,
-        "member_count": 0.3,
-        "page_span": 0.1
+        "member_count": 0.25,
+        "page_span": 0.1,
+        "depth": 0.1
       },
-      "confidence": 0.75,
+      "confidence": 0.6,
       "notes": [
-        "section opened by relative prominence / size elevation"
+        "section opened by relative prominence / hierarchy score",
+        "depth=0"
       ]
     }
   },
   {
-    "id": "26_3_update_section_006",
+    "id": "26_3_update_section_009",
     "document_id": "26_3_update",
-    "heading_block_id": "26_3_update_logical_block_0066",
+    "heading_block_id": "26_3_update_logical_block_0064",
     "heading_text": "Repository Updates",
     "page_start": 3,
     "page_end": 3,
     "item_count": 3,
     "member_logical_block_ids": [
-      "26_3_update_logical_block_0067",
-      "26_3_update_logical_block_0068",
-      "26_3_update_logical_block_0069"
+      "26_3_update_logical_block_0065",
+      "26_3_update_logical_block_0066",
+      "26_3_update_logical_block_0067"
     ],
     "member_source_block_ids": [
       "26_3_update_block_0067",
       "26_3_update_block_0068",
       "26_3_update_block_0069"
     ],
+    "depth": 0,
+    "parent_section_id": null,
+    "child_section_ids": [],
     "inferred_label": null,
     "label_confidence": 0.0,
     "evidence": {
@@ -309,37 +460,126 @@
         "heading_prominence": 0.0,
         "heading_size_ratio": 1.0,
         "member_count": 3.0,
-        "page_span": 1.0
+        "page_span": 1.0,
+        "depth": 0.0,
+        "hierarchy_score": 100.0
       },
       "weights": {
-        "heading_prominence": 0.4,
+        "heading_prominence": 0.35,
         "heading_size_ratio": 0.2,
-        "member_count": 0.3,
-        "page_span": 0.1
+        "member_count": 0.25,
+        "page_span": 0.1,
+        "depth": 0.1
       },
       "confidence": 0.6,
       "notes": [
-        "section opened by relative prominence / size elevation"
+        "section opened by relative prominence / hierarchy score",
+        "depth=0"
       ]
     }
   },
   {
-    "id": "26_3_update_section_007",
+    "id": "26_3_update_section_010",
     "document_id": "26_3_update",
-    "heading_block_id": "26_3_update_logical_block_0070",
+    "heading_block_id": "26_3_update_logical_block_0068",
     "heading_text": "Features and Bug Fixes by Release",
     "page_start": 3,
     "page_end": 15,
-    "item_count": 100,
+    "item_count": 1,
     "member_logical_block_ids": [
-      "26_3_update_logical_block_0071",
-      "26_3_update_logical_block_0072",
-      "26_3_update_logical_block_0073",
+      "26_3_update_logical_block_0069"
+    ],
+    "member_source_block_ids": [
+      "26_3_update_block_0071"
+    ],
+    "depth": 0,
+    "parent_section_id": null,
+    "child_section_ids": [
+      "26_3_update_section_011",
+      "26_3_update_section_014"
+    ],
+    "inferred_label": null,
+    "label_confidence": 0.0,
+    "evidence": {
+      "signals": {
+        "heading_prominence": 0.0,
+        "heading_size_ratio": 1.0,
+        "member_count": 1.0,
+        "page_span": 13.0,
+        "depth": 0.0,
+        "hierarchy_score": 100.0
+      },
+      "weights": {
+        "heading_prominence": 0.35,
+        "heading_size_ratio": 0.2,
+        "member_count": 0.25,
+        "page_span": 0.1,
+        "depth": 0.1
+      },
+      "confidence": 0.6,
+      "notes": [
+        "section opened by relative prominence / hierarchy score",
+        "depth=0"
+      ]
+    }
+  },
+  {
+    "id": "26_3_update_section_011",
+    "document_id": "26_3_update",
+    "heading_block_id": "26_3_update_logical_block_0070",
+    "heading_text": "New Features and Bug Fixes in Siebel CRM Monthly Update 26.3",
+    "page_start": 4,
+    "page_end": 12,
+    "item_count": 0,
+    "member_logical_block_ids": [],
+    "member_source_block_ids": [],
+    "depth": 1,
+    "parent_section_id": "26_3_update_section_010",
+    "child_section_ids": [
+      "26_3_update_section_012",
+      "26_3_update_section_013"
+    ],
+    "inferred_label": null,
+    "label_confidence": 0.0,
+    "evidence": {
+      "signals": {
+        "heading_prominence": 0.0,
+        "heading_size_ratio": 1.0,
+        "member_count": 0.0,
+        "page_span": 9.0,
+        "depth": 1.0,
+        "hierarchy_score": 65.0
+      },
+      "weights": {
+        "heading_prominence": 0.35,
+        "heading_size_ratio": 0.2,
+        "member_count": 0.25,
+        "page_span": 0.1,
+        "depth": 0.1
+      },
+      "confidence": 0.55,
+      "notes": [
+        "section opened by relative prominence / hierarchy score",
+        "depth=1"
+      ]
+    }
+  },
+  {
+    "id": "26_3_update_section_012",
+    "document_id": "26_3_update",
+    "heading_block_id": "26_3_update_logical_block_0071",
+    "heading_text": "New Features in Siebel CRM 26.3",
+    "page_start": 4,
+    "page_end": 8,
+    "item_count": 17,
+    "member_logical_block_ids": [
       "26_3_update_consolidated_block_0001",
       "26_3_update_consolidated_block_0002",
-      "26_3_update_logical_block_0079",
+      "26_3_update_logical_block_0077",
       "26_3_update_consolidated_block_0003",
       "26_3_update_consolidated_block_0004",
+      "26_3_update_logical_block_0084",
+      "26_3_update_logical_block_0085",
       "26_3_update_logical_block_0086",
       "26_3_update_logical_block_0087",
       "26_3_update_logical_block_0088",
@@ -347,10 +587,74 @@
       "26_3_update_logical_block_0090",
       "26_3_update_logical_block_0091",
       "26_3_update_logical_block_0092",
-      "26_3_update_logical_block_0093",
-      "26_3_update_logical_block_0094",
       "26_3_update_consolidated_block_0005",
-      "26_3_update_logical_block_0097",
+      "26_3_update_logical_block_0095",
+      "26_3_update_logical_block_0096"
+    ],
+    "member_source_block_ids": [
+      "26_3_update_block_0074",
+      "26_3_update_block_0075",
+      "26_3_update_block_0076",
+      "26_3_update_block_0077",
+      "26_3_update_block_0078",
+      "26_3_update_block_0079",
+      "26_3_update_block_0080",
+      "26_3_update_block_0081",
+      "26_3_update_block_0082",
+      "26_3_update_block_0083",
+      "26_3_update_block_0084",
+      "26_3_update_block_0085",
+      "26_3_update_block_0086",
+      "26_3_update_block_0087",
+      "26_3_update_block_0088",
+      "26_3_update_block_0089",
+      "26_3_update_block_0090",
+      "26_3_update_block_0091",
+      "26_3_update_block_0092",
+      "26_3_update_block_0093",
+      "26_3_update_block_0094",
+      "26_3_update_block_0095",
+      "26_3_update_block_0096",
+      "26_3_update_block_0097",
+      "26_3_update_block_0098"
+    ],
+    "depth": 2,
+    "parent_section_id": "26_3_update_section_011",
+    "child_section_ids": [],
+    "inferred_label": null,
+    "label_confidence": 0.0,
+    "evidence": {
+      "signals": {
+        "heading_prominence": 0.0,
+        "heading_size_ratio": 1.0,
+        "member_count": 17.0,
+        "page_span": 5.0,
+        "depth": 2.0,
+        "hierarchy_score": 25.0
+      },
+      "weights": {
+        "heading_prominence": 0.35,
+        "heading_size_ratio": 0.2,
+        "member_count": 0.25,
+        "page_span": 0.1,
+        "depth": 0.1
+      },
+      "confidence": 0.5,
+      "notes": [
+        "section opened by relative prominence / hierarchy score",
+        "depth=2"
+      ]
+    }
+  },
+  {
+    "id": "26_3_update_section_013",
+    "document_id": "26_3_update",
+    "heading_block_id": "26_3_update_logical_block_0097",
+    "heading_text": "Fixes in Siebel CRM 26.3",
+    "page_start": 8,
+    "page_end": 12,
+    "item_count": 46,
+    "member_logical_block_ids": [
       "26_3_update_logical_block_0098",
       "26_3_update_logical_block_0099",
       "26_3_update_logical_block_0100",
@@ -396,73 +700,9 @@
       "26_3_update_logical_block_0140",
       "26_3_update_logical_block_0141",
       "26_3_update_logical_block_0142",
-      "26_3_update_logical_block_0143",
-      "26_3_update_logical_block_0144",
-      "26_3_update_logical_block_0145",
-      "26_3_update_logical_block_0146",
-      "26_3_update_logical_block_0147",
-      "26_3_update_logical_block_0148",
-      "26_3_update_logical_block_0149",
-      "26_3_update_logical_block_0150",
-      "26_3_update_logical_block_0151",
-      "26_3_update_logical_block_0152",
-      "26_3_update_logical_block_0153",
-      "26_3_update_logical_block_0154",
-      "26_3_update_logical_block_0155",
-      "26_3_update_logical_block_0156",
-      "26_3_update_logical_block_0157",
-      "26_3_update_logical_block_0158",
-      "26_3_update_logical_block_0159",
-      "26_3_update_logical_block_0160",
-      "26_3_update_logical_block_0161",
-      "26_3_update_logical_block_0162",
-      "26_3_update_logical_block_0163",
-      "26_3_update_logical_block_0164",
-      "26_3_update_logical_block_0165",
-      "26_3_update_logical_block_0166",
-      "26_3_update_logical_block_0167",
-      "26_3_update_logical_block_0168",
-      "26_3_update_logical_block_0169",
-      "26_3_update_consolidated_block_0006",
-      "26_3_update_logical_block_0172",
-      "26_3_update_logical_block_0173",
-      "26_3_update_logical_block_0174",
-      "26_3_update_consolidated_block_0007",
-      "26_3_update_logical_block_0177",
-      "26_3_update_logical_block_0178",
-      "26_3_update_logical_block_0179",
-      "26_3_update_logical_block_0180"
+      "26_3_update_logical_block_0143"
     ],
     "member_source_block_ids": [
-      "26_3_update_block_0071",
-      "26_3_update_block_0072",
-      "26_3_update_block_0073",
-      "26_3_update_block_0074",
-      "26_3_update_block_0075",
-      "26_3_update_block_0076",
-      "26_3_update_block_0077",
-      "26_3_update_block_0078",
-      "26_3_update_block_0079",
-      "26_3_update_block_0080",
-      "26_3_update_block_0081",
-      "26_3_update_block_0082",
-      "26_3_update_block_0083",
-      "26_3_update_block_0084",
-      "26_3_update_block_0085",
-      "26_3_update_block_0086",
-      "26_3_update_block_0087",
-      "26_3_update_block_0088",
-      "26_3_update_block_0089",
-      "26_3_update_block_0090",
-      "26_3_update_block_0091",
-      "26_3_update_block_0092",
-      "26_3_update_block_0093",
-      "26_3_update_block_0094",
-      "26_3_update_block_0095",
-      "26_3_update_block_0096",
-      "26_3_update_block_0097",
-      "26_3_update_block_0098",
-      "26_3_update_block_0099",
       "26_3_update_block_0100",
       "26_3_update_block_0101",
       "26_3_update_block_0102",
@@ -508,11 +748,161 @@
       "26_3_update_block_0142",
       "26_3_update_block_0143",
       "26_3_update_block_0144",
-      "26_3_update_block_0145",
-      "26_3_update_block_0146",
-      "26_3_update_block_0147",
-      "26_3_update_block_0148",
-      "26_3_update_block_0149",
+      "26_3_update_block_0145"
+    ],
+    "depth": 2,
+    "parent_section_id": "26_3_update_section_011",
+    "child_section_ids": [],
+    "inferred_label": null,
+    "label_confidence": 0.0,
+    "evidence": {
+      "signals": {
+        "heading_prominence": 0.0,
+        "heading_size_ratio": 1.0,
+        "member_count": 46.0,
+        "page_span": 5.0,
+        "depth": 2.0,
+        "hierarchy_score": 25.0
+      },
+      "weights": {
+        "heading_prominence": 0.35,
+        "heading_size_ratio": 0.2,
+        "member_count": 0.25,
+        "page_span": 0.1,
+        "depth": 0.1
+      },
+      "confidence": 0.5,
+      "notes": [
+        "section opened by relative prominence / hierarchy score",
+        "depth=2"
+      ]
+    }
+  },
+  {
+    "id": "26_3_update_section_014",
+    "document_id": "26_3_update",
+    "heading_block_id": "26_3_update_logical_block_0144",
+    "heading_text": "New Features and Bug Fixes in Siebel CRM Monthly Update 26.2",
+    "page_start": 12,
+    "page_end": 15,
+    "item_count": 0,
+    "member_logical_block_ids": [],
+    "member_source_block_ids": [],
+    "depth": 1,
+    "parent_section_id": "26_3_update_section_010",
+    "child_section_ids": [
+      "26_3_update_section_015",
+      "26_3_update_section_016"
+    ],
+    "inferred_label": null,
+    "label_confidence": 0.0,
+    "evidence": {
+      "signals": {
+        "heading_prominence": 0.0,
+        "heading_size_ratio": 1.0,
+        "member_count": 0.0,
+        "page_span": 4.0,
+        "depth": 1.0,
+        "hierarchy_score": 65.0
+      },
+      "weights": {
+        "heading_prominence": 0.35,
+        "heading_size_ratio": 0.2,
+        "member_count": 0.25,
+        "page_span": 0.1,
+        "depth": 0.1
+      },
+      "confidence": 0.55,
+      "notes": [
+        "section opened by relative prominence / hierarchy score",
+        "depth=1"
+      ]
+    }
+  },
+  {
+    "id": "26_3_update_section_015",
+    "document_id": "26_3_update",
+    "heading_block_id": "26_3_update_logical_block_0145",
+    "heading_text": "New Features in Siebel CRM 26.2",
+    "page_start": 12,
+    "page_end": 12,
+    "item_count": 1,
+    "member_logical_block_ids": [
+      "26_3_update_logical_block_0146"
+    ],
+    "member_source_block_ids": [
+      "26_3_update_block_0148"
+    ],
+    "depth": 2,
+    "parent_section_id": "26_3_update_section_014",
+    "child_section_ids": [],
+    "inferred_label": null,
+    "label_confidence": 0.0,
+    "evidence": {
+      "signals": {
+        "heading_prominence": 0.0,
+        "heading_size_ratio": 1.0,
+        "member_count": 1.0,
+        "page_span": 1.0,
+        "depth": 2.0,
+        "hierarchy_score": 25.0
+      },
+      "weights": {
+        "heading_prominence": 0.35,
+        "heading_size_ratio": 0.2,
+        "member_count": 0.25,
+        "page_span": 0.1,
+        "depth": 0.1
+      },
+      "confidence": 0.5,
+      "notes": [
+        "section opened by relative prominence / hierarchy score",
+        "depth=2"
+      ]
+    }
+  },
+  {
+    "id": "26_3_update_section_016",
+    "document_id": "26_3_update",
+    "heading_block_id": "26_3_update_logical_block_0147",
+    "heading_text": "Fixes in Siebel CRM 26.2",
+    "page_start": 12,
+    "page_end": 15,
+    "item_count": 31,
+    "member_logical_block_ids": [
+      "26_3_update_logical_block_0148",
+      "26_3_update_logical_block_0149",
+      "26_3_update_logical_block_0150",
+      "26_3_update_logical_block_0151",
+      "26_3_update_logical_block_0152",
+      "26_3_update_logical_block_0153",
+      "26_3_update_logical_block_0154",
+      "26_3_update_logical_block_0155",
+      "26_3_update_logical_block_0156",
+      "26_3_update_logical_block_0157",
+      "26_3_update_logical_block_0158",
+      "26_3_update_logical_block_0159",
+      "26_3_update_logical_block_0160",
+      "26_3_update_logical_block_0161",
+      "26_3_update_logical_block_0162",
+      "26_3_update_logical_block_0163",
+      "26_3_update_logical_block_0164",
+      "26_3_update_logical_block_0165",
+      "26_3_update_logical_block_0166",
+      "26_3_update_logical_block_0167",
+      "26_3_update_logical_block_0168",
+      "26_3_update_logical_block_0169",
+      "26_3_update_consolidated_block_0006",
+      "26_3_update_logical_block_0172",
+      "26_3_update_logical_block_0173",
+      "26_3_update_logical_block_0174",
+      "26_3_update_consolidated_block_0007",
+      "26_3_update_logical_block_0177",
+      "26_3_update_logical_block_0178",
+      "26_3_update_logical_block_0179",
+      "26_3_update_logical_block_0180"
+    ],
+    "member_source_block_ids": [
       "26_3_update_block_0150",
       "26_3_update_block_0151",
       "26_3_update_block_0152",
@@ -549,55 +939,60 @@
       "26_3_update_block_0183",
       "26_3_update_block_0184"
     ],
+    "depth": 2,
+    "parent_section_id": "26_3_update_section_014",
+    "child_section_ids": [],
     "inferred_label": null,
     "label_confidence": 0.0,
     "evidence": {
       "signals": {
         "heading_prominence": 0.0,
         "heading_size_ratio": 1.0,
-        "member_count": 100.0,
-        "page_span": 13.0
+        "member_count": 31.0,
+        "page_span": 4.0,
+        "depth": 2.0,
+        "hierarchy_score": 25.0
       },
       "weights": {
-        "heading_prominence": 0.4,
+        "heading_prominence": 0.35,
         "heading_size_ratio": 0.2,
-        "member_count": 0.3,
-        "page_span": 0.1
+        "member_count": 0.25,
+        "page_span": 0.1,
+        "depth": 0.1
       },
-      "confidence": 0.95,
+      "confidence": 0.5,
       "notes": [
-        "section opened by relative prominence / size elevation"
+        "section opened by relative prominence / hierarchy score",
+        "depth=2"
       ]
     }
   },
   {
-    "id": "26_3_update_section_008",
+    "id": "26_3_update_section_017",
     "document_id": "26_3_update",
     "heading_block_id": "26_3_update_logical_block_0181",
     "heading_text": "Repository Changes",
     "page_start": 15,
     "page_end": 15,
-    "item_count": 8,
+    "item_count": 5,
     "member_logical_block_ids": [
       "26_3_update_logical_block_0182",
       "26_3_update_logical_block_0183",
       "26_3_update_logical_block_0184",
       "26_3_update_logical_block_0185",
-      "26_3_update_logical_block_0186",
-      "26_3_update_logical_block_0187",
-      "26_3_update_logical_block_0188",
-      "26_3_update_logical_block_0189"
+      "26_3_update_logical_block_0186"
     ],
     "member_source_block_ids": [
       "26_3_update_block_0186",
       "26_3_update_block_0187",
       "26_3_update_block_0188",
       "26_3_update_block_0189",
-      "26_3_update_block_0190",
-      "26_3_update_block_0191",
-      "26_3_update_block_0192",
-      "26_3_update_block_0193",
-      "26_3_update_block_0194"
+      "26_3_update_block_0190"
+    ],
+    "depth": 0,
+    "parent_section_id": null,
+    "child_section_ids": [
+      "26_3_update_section_018"
     ],
     "inferred_label": null,
     "label_confidence": 0.0,
@@ -605,18 +1000,106 @@
       "signals": {
         "heading_prominence": 0.0,
         "heading_size_ratio": 1.0,
-        "member_count": 8.0,
-        "page_span": 1.0
+        "member_count": 5.0,
+        "page_span": 1.0,
+        "depth": 0.0,
+        "hierarchy_score": 100.0
       },
       "weights": {
-        "heading_prominence": 0.4,
+        "heading_prominence": 0.35,
         "heading_size_ratio": 0.2,
-        "member_count": 0.3,
-        "page_span": 0.1
+        "member_count": 0.25,
+        "page_span": 0.1,
+        "depth": 0.1
       },
-      "confidence": 0.85,
+      "confidence": 0.6,
       "notes": [
-        "section opened by relative prominence / size elevation"
+        "section opened by relative prominence / hierarchy score",
+        "depth=0"
+      ]
+    }
+  },
+  {
+    "id": "26_3_update_section_018",
+    "document_id": "26_3_update",
+    "heading_block_id": "26_3_update_logical_block_0187",
+    "heading_text": "New Features and Bug Fixes in Siebel CRM Monthly Update 26.1",
+    "page_start": 15,
+    "page_end": 15,
+    "item_count": 0,
+    "member_logical_block_ids": [],
+    "member_source_block_ids": [],
+    "depth": 1,
+    "parent_section_id": "26_3_update_section_017",
+    "child_section_ids": [
+      "26_3_update_section_019"
+    ],
+    "inferred_label": null,
+    "label_confidence": 0.0,
+    "evidence": {
+      "signals": {
+        "heading_prominence": 0.0,
+        "heading_size_ratio": 1.0,
+        "member_count": 0.0,
+        "page_span": 1.0,
+        "depth": 1.0,
+        "hierarchy_score": 65.0
+      },
+      "weights": {
+        "heading_prominence": 0.35,
+        "heading_size_ratio": 0.2,
+        "member_count": 0.25,
+        "page_span": 0.1,
+        "depth": 0.1
+      },
+      "confidence": 0.55,
+      "notes": [
+        "section opened by relative prominence / hierarchy score",
+        "depth=1"
+      ]
+    }
+  },
+  {
+    "id": "26_3_update_section_019",
+    "document_id": "26_3_update",
+    "heading_block_id": "26_3_update_logical_block_0188",
+    "heading_text": "New Features in Siebel CRM 26.1",
+    "page_start": 15,
+    "page_end": 15,
+    "item_count": 2,
+    "member_logical_block_ids": [
+      "26_3_update_logical_block_0189",
+      "26_3_update_logical_block_0190"
+    ],
+    "member_source_block_ids": [
+      "26_3_update_block_0193",
+      "26_3_update_block_0194"
+    ],
+    "depth": 2,
+    "parent_section_id": "26_3_update_section_018",
+    "child_section_ids": [],
+    "inferred_label": null,
+    "label_confidence": 0.0,
+    "evidence": {
+      "signals": {
+        "heading_prominence": 0.0,
+        "heading_size_ratio": 1.0,
+        "member_count": 2.0,
+        "page_span": 1.0,
+        "depth": 2.0,
+        "hierarchy_score": 25.0
+      },
+      "weights": {
+        "heading_prominence": 0.35,
+        "heading_size_ratio": 0.2,
+        "member_count": 0.25,
+        "page_span": 0.1,
+        "depth": 0.1
+      },
+      "confidence": 0.5,
+      "notes": [
+        "section opened by relative prominence / hierarchy score",
+        "depth=2"
       ]
     }
   }

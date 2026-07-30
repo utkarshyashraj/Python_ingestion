@@ -81,7 +81,7 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_010",
+    "group_id": "logical_group_008",
     "section_group_id": "26_3_update_section_001",
     "doc_position": 0.0052
   },
@@ -167,8 +167,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_010",
-    "section_group_id": "26_3_update_section_001",
+    "group_id": "logical_group_008",
+    "section_group_id": "26_3_update_section_002",
     "doc_position": 0.0103
   },
   {
@@ -253,8 +253,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_019",
-    "section_group_id": "26_3_update_section_002",
+    "group_id": "logical_group_021",
+    "section_group_id": "26_3_update_section_003",
     "doc_position": 0.0155
   },
   {
@@ -339,8 +339,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_013",
-    "section_group_id": "26_3_update_section_002",
+    "group_id": "logical_group_014",
+    "section_group_id": "26_3_update_section_003",
     "doc_position": 0.0206
   },
   {
@@ -425,8 +425,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_019",
-    "section_group_id": "26_3_update_section_002",
+    "group_id": "logical_group_021",
+    "section_group_id": "26_3_update_section_003",
     "doc_position": 0.0258
   },
   {
@@ -514,8 +514,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_019",
-    "section_group_id": "26_3_update_section_002",
+    "group_id": "logical_group_021",
+    "section_group_id": "26_3_update_section_003",
     "doc_position": 0.0309,
     "structured_fields": [
       {
@@ -615,8 +615,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_029",
-    "section_group_id": "26_3_update_section_002",
+    "group_id": "logical_group_028",
+    "section_group_id": "26_3_update_section_003",
     "doc_position": 0.0361,
     "structured_fields": [
       {
@@ -716,8 +716,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_029",
-    "section_group_id": "26_3_update_section_002",
+    "group_id": "logical_group_028",
+    "section_group_id": "26_3_update_section_003",
     "doc_position": 0.0412,
     "structured_fields": [
       {
@@ -815,8 +815,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_033",
-    "section_group_id": "26_3_update_section_003",
+    "group_id": "logical_group_035",
+    "section_group_id": "26_3_update_section_004",
     "doc_position": 0.0464
   },
   {
@@ -901,8 +901,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_013",
-    "section_group_id": "26_3_update_section_003",
+    "group_id": "logical_group_014",
+    "section_group_id": "26_3_update_section_004",
     "doc_position": 0.0515
   },
   {
@@ -987,8 +987,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_010",
-    "section_group_id": "26_3_update_section_003",
+    "group_id": "logical_group_008",
+    "section_group_id": "26_3_update_section_004",
     "doc_position": 0.0567
   },
   {
@@ -1073,8 +1073,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_020",
-    "section_group_id": "26_3_update_section_003",
+    "group_id": "logical_group_022",
+    "section_group_id": "26_3_update_section_004",
     "doc_position": 0.0619
   },
   {
@@ -1159,8 +1159,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_010",
-    "section_group_id": "26_3_update_section_003",
+    "group_id": "logical_group_008",
+    "section_group_id": "26_3_update_section_004",
     "doc_position": 0.067
   },
   {
@@ -1245,8 +1245,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_004",
-    "section_group_id": "26_3_update_section_003",
+    "group_id": "logical_group_003",
+    "section_group_id": "26_3_update_section_004",
     "doc_position": 0.0722
   },
   {
@@ -1332,7 +1332,7 @@
       ]
     },
     "group_id": "logical_group_006",
-    "section_group_id": "26_3_update_section_003",
+    "section_group_id": "26_3_update_section_004",
     "doc_position": 0.0773
   },
   {
@@ -1417,8 +1417,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_034",
-    "section_group_id": "26_3_update_section_003",
+    "group_id": "logical_group_036",
+    "section_group_id": "26_3_update_section_004",
     "doc_position": 0.0825
   },
   {
@@ -1503,8 +1503,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_021",
-    "section_group_id": "26_3_update_section_003",
+    "group_id": "logical_group_023",
+    "section_group_id": "26_3_update_section_004",
     "doc_position": 0.0876
   },
   {
@@ -1589,8 +1589,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_022",
-    "section_group_id": "26_3_update_section_003",
+    "group_id": "logical_group_024",
+    "section_group_id": "26_3_update_section_004",
     "doc_position": 0.0928
   },
   {
@@ -1675,8 +1675,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_020",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_022",
+    "section_group_id": "26_3_update_section_005",
     "doc_position": 0.0979
   },
   {
@@ -1761,8 +1761,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_021",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_023",
+    "section_group_id": "26_3_update_section_005",
     "doc_position": 0.1031
   },
   {
@@ -1847,8 +1847,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_021",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_023",
+    "section_group_id": "26_3_update_section_005",
     "doc_position": 0.1082
   },
   {
@@ -1933,8 +1933,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_013",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_014",
+    "section_group_id": "26_3_update_section_005",
     "doc_position": 0.1134
   },
   {
@@ -2019,8 +2019,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_013",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_014",
+    "section_group_id": "26_3_update_section_005",
     "doc_position": 0.1186
   },
   {
@@ -2105,8 +2105,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_014",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_015",
+    "section_group_id": "26_3_update_section_005",
     "doc_position": 0.1237
   },
   {
@@ -2193,8 +2193,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_014",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_015",
+    "section_group_id": "26_3_update_section_005",
     "doc_position": 0.1289,
     "structured_fields": [
       {
@@ -2294,8 +2294,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_023",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_029",
+    "section_group_id": "26_3_update_section_005",
     "doc_position": 0.134,
     "structured_fields": [
       {
@@ -2395,8 +2395,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_023",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_029",
+    "section_group_id": "26_3_update_section_005",
     "doc_position": 0.1392,
     "structured_fields": [
       {
@@ -2496,8 +2496,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_035",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_037",
+    "section_group_id": "26_3_update_section_005",
     "doc_position": 0.1443,
     "structured_fields": [
       {
@@ -2595,8 +2595,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_036",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_038",
+    "section_group_id": "26_3_update_section_005",
     "doc_position": 0.1495
   },
   {
@@ -2681,8 +2681,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_037",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_030",
+    "section_group_id": "26_3_update_section_005",
     "doc_position": 0.1546
   },
   {
@@ -2693,9 +2693,11 @@
     "source_page": 2,
     "page_end": 2,
     "source_block_ids": [
-      "26_3_update_block_0031"
+      "26_3_update_block_0031",
+      "26_3_update_block_0032",
+      "26_3_update_block_0033"
     ],
-    "text": "An example representing ZIP file 5 of 14 for Windows, Siebel Monthly Update 24.12 would be:",
+    "text": "An example representing ZIP file 5 of 14 for Windows, Siebel Monthly Update 24.12 would be:\n``` p37386170_2412_MSWIN-x86-64_5of14.zip ```\nThe ZIP files for Windows versus the other supported platforms are different, as some components (such as DISA) only run on Windows platforms. Expand the link below that is relevant to your environment.",
     "block_type": "content",
     "structural_features": {
       "rel_x0": 0.0588,
@@ -2723,229 +2725,69 @@
       "prominence": 0.1545,
       "repetition_count": 3.0,
       "is_repeated_shape": 1.0,
-      "block_count": 1.0,
-      "candidate_count": 1.0
+      "block_count": 3.0,
+      "candidate_count": 3.0
     },
     "structural_fingerprint": {
-      "block_count": 1.0,
+      "block_count": 3.0,
       "role_prominent": 0.0,
-      "role_body": 1.0,
+      "role_body": 3.0,
       "cell_count": 0.0,
       "mean_rel_x0": 0.0588,
-      "mean_rel_width": 0.7533,
-      "mean_line_height_ratio": 0.4615,
-      "mean_digit_ratio": 0.0769,
-      "mean_upper_ratio": 0.0879,
-      "content_density": 0.182,
+      "mean_rel_width": 0.6552,
+      "mean_line_height_ratio": 0.5256,
+      "mean_digit_ratio": 0.1664,
+      "mean_upper_ratio": 0.0845,
+      "content_density": 0.2253,
       "marker_depth": 0.0,
       "in_grid": 0.0,
-      "repetition": 3.0,
+      "repetition": 1.667,
       "local_position": 0.1333
     },
     "discovered_pattern": "pattern_002",
     "role_sequence": [
+      "BODY",
+      "BODY",
       "BODY"
     ],
-    "structural_signature": "P0B1M0",
-    "confidence": 0.675,
+    "structural_signature": "P0B3M0",
+    "confidence": 0.7254,
     "evidence": {
       "signals": {
-        "structural_self_support": 0.512,
-        "boundary_isolation": 1.0,
-        "repetition_support": 0.375,
-        "content_density": 0.228
+        "spatial_proximity": 1.0,
+        "alignment_relationship": 1.0,
+        "typography_relationship": 0.51,
+        "spacing_relationship": 1.0,
+        "reading_order_relationship": 1.0,
+        "structural_similarity": 0.383,
+        "container_relationship": 0.0,
+        "semantic_similarity": 0.101,
+        "form_discount_total": 0.0
       },
       "weights": {
-        "structural_self_support": 0.25,
-        "boundary_isolation": 0.25,
-        "repetition_support": 0.25,
-        "content_density": 0.25
+        "spatial_proximity": 0.1111,
+        "alignment_relationship": 0.1111,
+        "typography_relationship": 0.1111,
+        "spacing_relationship": 0.1111,
+        "reading_order_relationship": 0.1111,
+        "structural_similarity": 0.1111,
+        "container_relationship": 0.1111,
+        "semantic_similarity": 0.1111,
+        "form_discount_total": 0.1111
       },
-      "confidence": 0.675,
+      "confidence": 0.7254,
       "notes": [
-        "refinement:PRESERVE",
-        "Boundaries on both sides; the candidate stands alone as one unit."
+        "refinement:MERGE",
+        "Relationship evidence exceeded boundary evidence across the run."
       ]
     },
-    "group_id": "logical_group_024",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_030",
+    "section_group_id": "26_3_update_section_005",
     "doc_position": 0.1598
   },
   {
     "id": "26_3_update_logical_block_0032",
     "content_unit_id": "26_3_update_unit_0032",
-    "document_id": "26_3_update",
-    "source_document": "26_3_update",
-    "source_page": 2,
-    "page_end": 2,
-    "source_block_ids": [
-      "26_3_update_block_0032"
-    ],
-    "text": "``` p37386170_2412_MSWIN-x86-64_5of14.zip ```",
-    "block_type": "content",
-    "structural_features": {
-      "rel_x0": 0.0588,
-      "rel_x1": 0.3954,
-      "rel_width": 0.3366,
-      "rel_y0": 0.279,
-      "rel_height": 0.0114,
-      "line_height_ratio": 0.1154,
-      "gap_above_ratio": 0.8182,
-      "char_count": 45.0,
-      "token_count": 3.0,
-      "line_count": 3.0,
-      "cell_count": 0.0,
-      "marker_depth": 0.0,
-      "in_grid": 0.0,
-      "page_fraction": 0.1333,
-      "terminal_punctuation": 0.0,
-      "layout_section_header": 0.0,
-      "layout_page_header": 0.0,
-      "layout_list_item": 0.0,
-      "digit_ratio": 0.4222,
-      "upper_ratio": 0.1111,
-      "punct_ratio": 0.2667,
-      "space_ratio": 0.0444,
-      "prominence": 0.1775,
-      "repetition_count": 1.0,
-      "is_repeated_shape": 0.0,
-      "block_count": 1.0,
-      "candidate_count": 1.0
-    },
-    "structural_fingerprint": {
-      "block_count": 1.0,
-      "role_prominent": 0.0,
-      "role_body": 1.0,
-      "cell_count": 0.0,
-      "mean_rel_x0": 0.0588,
-      "mean_rel_width": 0.3366,
-      "mean_line_height_ratio": 0.1154,
-      "mean_digit_ratio": 0.4222,
-      "mean_upper_ratio": 0.1111,
-      "content_density": 0.09,
-      "marker_depth": 0.0,
-      "in_grid": 0.0,
-      "repetition": 1.0,
-      "local_position": 0.1333
-    },
-    "discovered_pattern": "pattern_002",
-    "role_sequence": [
-      "BODY"
-    ],
-    "structural_signature": "P0B1M0",
-    "confidence": 0.6257,
-    "evidence": {
-      "signals": {
-        "structural_self_support": 0.438,
-        "boundary_isolation": 1.0,
-        "repetition_support": 0.125,
-        "content_density": 0.113
-      },
-      "weights": {
-        "structural_self_support": 0.25,
-        "boundary_isolation": 0.25,
-        "repetition_support": 0.25,
-        "content_density": 0.25
-      },
-      "confidence": 0.6257,
-      "notes": [
-        "refinement:PRESERVE",
-        "Boundaries on both sides; the candidate stands alone as one unit."
-      ]
-    },
-    "group_id": "logical_group_023",
-    "section_group_id": "26_3_update_section_004",
-    "doc_position": 0.1649
-  },
-  {
-    "id": "26_3_update_logical_block_0033",
-    "content_unit_id": "26_3_update_unit_0033",
-    "document_id": "26_3_update",
-    "source_document": "26_3_update",
-    "source_page": 2,
-    "page_end": 2,
-    "source_block_ids": [
-      "26_3_update_block_0033"
-    ],
-    "text": "The ZIP files for Windows versus the other supported platforms are different, as some components (such as DISA) only run on Windows platforms. Expand the link below that is relevant to your environment.",
-    "block_type": "content",
-    "structural_features": {
-      "rel_x0": 0.0588,
-      "rel_x1": 0.9346,
-      "rel_width": 0.8758,
-      "rel_y0": 0.3043,
-      "rel_height": 0.0328,
-      "line_height_ratio": 1.0,
-      "gap_above_ratio": 1.0,
-      "char_count": 202.0,
-      "token_count": 33.0,
-      "line_count": 1.0,
-      "cell_count": 0.0,
-      "marker_depth": 0.0,
-      "in_grid": 0.0,
-      "page_fraction": 0.1333,
-      "terminal_punctuation": 1.0,
-      "layout_section_header": 0.0,
-      "layout_page_header": 0.0,
-      "layout_list_item": 0.0,
-      "digit_ratio": 0.0,
-      "upper_ratio": 0.0545,
-      "punct_ratio": 0.0248,
-      "space_ratio": 0.1584,
-      "prominence": 0.1615,
-      "repetition_count": 1.0,
-      "is_repeated_shape": 0.0,
-      "block_count": 1.0,
-      "candidate_count": 1.0
-    },
-    "structural_fingerprint": {
-      "block_count": 1.0,
-      "role_prominent": 0.0,
-      "role_body": 1.0,
-      "cell_count": 0.0,
-      "mean_rel_x0": 0.0588,
-      "mean_rel_width": 0.8758,
-      "mean_line_height_ratio": 1.0,
-      "mean_digit_ratio": 0.0,
-      "mean_upper_ratio": 0.0545,
-      "content_density": 0.404,
-      "marker_depth": 0.0,
-      "in_grid": 0.0,
-      "repetition": 1.0,
-      "local_position": 0.1333
-    },
-    "discovered_pattern": "pattern_002",
-    "role_sequence": [
-      "BODY"
-    ],
-    "structural_signature": "P0B1M0",
-    "confidence": 0.7041,
-    "evidence": {
-      "signals": {
-        "structural_self_support": 0.438,
-        "boundary_isolation": 1.0,
-        "repetition_support": 0.125,
-        "content_density": 0.505
-      },
-      "weights": {
-        "structural_self_support": 0.25,
-        "boundary_isolation": 0.25,
-        "repetition_support": 0.25,
-        "content_density": 0.25
-      },
-      "confidence": 0.7041,
-      "notes": [
-        "refinement:PRESERVE",
-        "Boundaries on both sides; the candidate stands alone as one unit."
-      ]
-    },
-    "group_id": "logical_group_014",
-    "section_group_id": "26_3_update_section_004",
-    "doc_position": 0.1701
-  },
-  {
-    "id": "26_3_update_logical_block_0034",
-    "content_unit_id": "26_3_update_unit_0034",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 2,
@@ -3025,13 +2867,13 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_020",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_022",
+    "section_group_id": "26_3_update_section_005",
     "doc_position": 0.1753
   },
   {
-    "id": "26_3_update_logical_block_0035",
-    "content_unit_id": "26_3_update_unit_0035",
+    "id": "26_3_update_logical_block_0033",
+    "content_unit_id": "26_3_update_unit_0033",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 2,
@@ -3111,13 +2953,13 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_024",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_016",
+    "section_group_id": "26_3_update_section_006",
     "doc_position": 0.1804
   },
   {
-    "id": "26_3_update_logical_block_0036",
-    "content_unit_id": "26_3_update_unit_0036",
+    "id": "26_3_update_logical_block_0034",
+    "content_unit_id": "26_3_update_unit_0034",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 2,
@@ -3199,8 +3041,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_008",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_015",
+    "section_group_id": "26_3_update_section_006",
     "doc_position": 0.1856,
     "structured_fields": [
       {
@@ -3222,8 +3064,8 @@
     "source_table_id": "26_3_update_grid_003"
   },
   {
-    "id": "26_3_update_logical_block_0037",
-    "content_unit_id": "26_3_update_unit_0037",
+    "id": "26_3_update_logical_block_0035",
+    "content_unit_id": "26_3_update_unit_0035",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 2,
@@ -3305,8 +3147,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_003",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_016",
+    "section_group_id": "26_3_update_section_006",
     "doc_position": 0.1907,
     "structured_fields": [
       {
@@ -3328,8 +3170,8 @@
     "source_table_id": "26_3_update_grid_003"
   },
   {
-    "id": "26_3_update_logical_block_0038",
-    "content_unit_id": "26_3_update_unit_0038",
+    "id": "26_3_update_logical_block_0036",
+    "content_unit_id": "26_3_update_unit_0036",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 2,
@@ -3411,8 +3253,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_009",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_007",
+    "section_group_id": "26_3_update_section_006",
     "doc_position": 0.1959,
     "structured_fields": [
       {
@@ -3483,8 +3325,8 @@
     "source_table_id": "26_3_update_grid_003"
   },
   {
-    "id": "26_3_update_logical_block_0039",
-    "content_unit_id": "26_3_update_unit_0039",
+    "id": "26_3_update_logical_block_0037",
+    "content_unit_id": "26_3_update_unit_0037",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 2,
@@ -3566,8 +3408,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_009",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_007",
+    "section_group_id": "26_3_update_section_006",
     "doc_position": 0.201,
     "structured_fields": [
       {
@@ -3589,8 +3431,8 @@
     "source_table_id": "26_3_update_grid_003"
   },
   {
-    "id": "26_3_update_logical_block_0040",
-    "content_unit_id": "26_3_update_unit_0040",
+    "id": "26_3_update_logical_block_0038",
+    "content_unit_id": "26_3_update_unit_0038",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 2,
@@ -3672,8 +3514,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_004",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_003",
+    "section_group_id": "26_3_update_section_006",
     "doc_position": 0.2062,
     "structured_fields": [
       {
@@ -3695,8 +3537,8 @@
     "source_table_id": "26_3_update_grid_003"
   },
   {
-    "id": "26_3_update_logical_block_0041",
-    "content_unit_id": "26_3_update_unit_0041",
+    "id": "26_3_update_logical_block_0039",
+    "content_unit_id": "26_3_update_unit_0039",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 2,
@@ -3778,8 +3620,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_003",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_004",
+    "section_group_id": "26_3_update_section_006",
     "doc_position": 0.2113,
     "structured_fields": [
       {
@@ -3801,8 +3643,8 @@
     "source_table_id": "26_3_update_grid_003"
   },
   {
-    "id": "26_3_update_logical_block_0042",
-    "content_unit_id": "26_3_update_unit_0042",
+    "id": "26_3_update_logical_block_0040",
+    "content_unit_id": "26_3_update_unit_0040",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 2,
@@ -3884,8 +3726,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_003",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_004",
+    "section_group_id": "26_3_update_section_006",
     "doc_position": 0.2165,
     "structured_fields": [
       {
@@ -3907,8 +3749,8 @@
     "source_table_id": "26_3_update_grid_003"
   },
   {
-    "id": "26_3_update_logical_block_0043",
-    "content_unit_id": "26_3_update_unit_0043",
+    "id": "26_3_update_logical_block_0041",
+    "content_unit_id": "26_3_update_unit_0041",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 2,
@@ -3990,8 +3832,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_003",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_004",
+    "section_group_id": "26_3_update_section_006",
     "doc_position": 0.2216,
     "structured_fields": [
       {
@@ -4013,8 +3855,8 @@
     "source_table_id": "26_3_update_grid_003"
   },
   {
-    "id": "26_3_update_logical_block_0044",
-    "content_unit_id": "26_3_update_unit_0044",
+    "id": "26_3_update_logical_block_0042",
+    "content_unit_id": "26_3_update_unit_0042",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 2,
@@ -4096,8 +3938,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_003",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_004",
+    "section_group_id": "26_3_update_section_006",
     "doc_position": 0.2268,
     "structured_fields": [
       {
@@ -4119,8 +3961,8 @@
     "source_table_id": "26_3_update_grid_003"
   },
   {
-    "id": "26_3_update_logical_block_0045",
-    "content_unit_id": "26_3_update_unit_0045",
+    "id": "26_3_update_logical_block_0043",
+    "content_unit_id": "26_3_update_unit_0043",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 2,
@@ -4202,8 +4044,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_003",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_004",
+    "section_group_id": "26_3_update_section_006",
     "doc_position": 0.232,
     "structured_fields": [
       {
@@ -4225,8 +4067,8 @@
     "source_table_id": "26_3_update_grid_003"
   },
   {
-    "id": "26_3_update_logical_block_0046",
-    "content_unit_id": "26_3_update_unit_0046",
+    "id": "26_3_update_logical_block_0044",
+    "content_unit_id": "26_3_update_unit_0044",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 2,
@@ -4308,8 +4150,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_003",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_004",
+    "section_group_id": "26_3_update_section_006",
     "doc_position": 0.2371,
     "structured_fields": [
       {
@@ -4331,8 +4173,8 @@
     "source_table_id": "26_3_update_grid_003"
   },
   {
-    "id": "26_3_update_logical_block_0047",
-    "content_unit_id": "26_3_update_unit_0047",
+    "id": "26_3_update_logical_block_0045",
+    "content_unit_id": "26_3_update_unit_0045",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 2,
@@ -4414,8 +4256,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_009",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_007",
+    "section_group_id": "26_3_update_section_006",
     "doc_position": 0.2423,
     "structured_fields": [
       {
@@ -4437,8 +4279,8 @@
     "source_table_id": "26_3_update_grid_003"
   },
   {
-    "id": "26_3_update_logical_block_0048",
-    "content_unit_id": "26_3_update_unit_0048",
+    "id": "26_3_update_logical_block_0046",
+    "content_unit_id": "26_3_update_unit_0046",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 2,
@@ -4520,8 +4362,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_004",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_003",
+    "section_group_id": "26_3_update_section_006",
     "doc_position": 0.2474,
     "structured_fields": [
       {
@@ -4543,8 +4385,8 @@
     "source_table_id": "26_3_update_grid_003"
   },
   {
-    "id": "26_3_update_logical_block_0049",
-    "content_unit_id": "26_3_update_unit_0049",
+    "id": "26_3_update_logical_block_0047",
+    "content_unit_id": "26_3_update_unit_0047",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 2,
@@ -4624,13 +4466,13 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_024",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_016",
+    "section_group_id": "26_3_update_section_007",
     "doc_position": 0.2526
   },
   {
-    "id": "26_3_update_logical_block_0050",
-    "content_unit_id": "26_3_update_unit_0050",
+    "id": "26_3_update_logical_block_0048",
+    "content_unit_id": "26_3_update_unit_0048",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 2,
@@ -4712,8 +4554,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_008",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_015",
+    "section_group_id": "26_3_update_section_007",
     "doc_position": 0.2577,
     "structured_fields": [
       {
@@ -4740,8 +4582,8 @@
     "source_table_id": "26_3_update_grid_004"
   },
   {
-    "id": "26_3_update_logical_block_0051",
-    "content_unit_id": "26_3_update_unit_0051",
+    "id": "26_3_update_logical_block_0049",
+    "content_unit_id": "26_3_update_unit_0049",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 2,
@@ -4823,8 +4665,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_003",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_016",
+    "section_group_id": "26_3_update_section_007",
     "doc_position": 0.2629,
     "structured_fields": [
       {
@@ -4851,8 +4693,8 @@
     "source_table_id": "26_3_update_grid_004"
   },
   {
-    "id": "26_3_update_logical_block_0052",
-    "content_unit_id": "26_3_update_unit_0052",
+    "id": "26_3_update_logical_block_0050",
+    "content_unit_id": "26_3_update_unit_0050",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 3,
@@ -4934,8 +4776,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_009",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_007",
+    "section_group_id": "26_3_update_section_007",
     "doc_position": 0.268,
     "structured_fields": [
       {
@@ -5000,8 +4842,8 @@
     "source_table_id": "26_3_update_grid_005"
   },
   {
-    "id": "26_3_update_logical_block_0053",
-    "content_unit_id": "26_3_update_unit_0053",
+    "id": "26_3_update_logical_block_0051",
+    "content_unit_id": "26_3_update_unit_0051",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 3,
@@ -5083,8 +4925,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_009",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_007",
+    "section_group_id": "26_3_update_section_007",
     "doc_position": 0.2732,
     "structured_fields": [
       {
@@ -5106,8 +4948,8 @@
     "source_table_id": "26_3_update_grid_005"
   },
   {
-    "id": "26_3_update_logical_block_0054",
-    "content_unit_id": "26_3_update_unit_0054",
+    "id": "26_3_update_logical_block_0052",
+    "content_unit_id": "26_3_update_unit_0052",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 3,
@@ -5189,8 +5031,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_004",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_003",
+    "section_group_id": "26_3_update_section_007",
     "doc_position": 0.2784,
     "structured_fields": [
       {
@@ -5212,8 +5054,8 @@
     "source_table_id": "26_3_update_grid_005"
   },
   {
-    "id": "26_3_update_logical_block_0055",
-    "content_unit_id": "26_3_update_unit_0055",
+    "id": "26_3_update_logical_block_0053",
+    "content_unit_id": "26_3_update_unit_0053",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 3,
@@ -5295,8 +5137,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_003",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_004",
+    "section_group_id": "26_3_update_section_007",
     "doc_position": 0.2835,
     "structured_fields": [
       {
@@ -5318,8 +5160,8 @@
     "source_table_id": "26_3_update_grid_005"
   },
   {
-    "id": "26_3_update_logical_block_0056",
-    "content_unit_id": "26_3_update_unit_0056",
+    "id": "26_3_update_logical_block_0054",
+    "content_unit_id": "26_3_update_unit_0054",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 3,
@@ -5401,8 +5243,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_003",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_004",
+    "section_group_id": "26_3_update_section_007",
     "doc_position": 0.2887,
     "structured_fields": [
       {
@@ -5424,8 +5266,8 @@
     "source_table_id": "26_3_update_grid_005"
   },
   {
-    "id": "26_3_update_logical_block_0057",
-    "content_unit_id": "26_3_update_unit_0057",
+    "id": "26_3_update_logical_block_0055",
+    "content_unit_id": "26_3_update_unit_0055",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 3,
@@ -5507,8 +5349,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_003",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_004",
+    "section_group_id": "26_3_update_section_007",
     "doc_position": 0.2938,
     "structured_fields": [
       {
@@ -5530,8 +5372,8 @@
     "source_table_id": "26_3_update_grid_005"
   },
   {
-    "id": "26_3_update_logical_block_0058",
-    "content_unit_id": "26_3_update_unit_0058",
+    "id": "26_3_update_logical_block_0056",
+    "content_unit_id": "26_3_update_unit_0056",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 3,
@@ -5613,8 +5455,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_004",
-    "section_group_id": "26_3_update_section_004",
+    "group_id": "logical_group_003",
+    "section_group_id": "26_3_update_section_007",
     "doc_position": 0.299,
     "structured_fields": [
       {
@@ -5636,8 +5478,8 @@
     "source_table_id": "26_3_update_grid_005"
   },
   {
-    "id": "26_3_update_logical_block_0059",
-    "content_unit_id": "26_3_update_unit_0059",
+    "id": "26_3_update_logical_block_0057",
+    "content_unit_id": "26_3_update_unit_0057",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 3,
@@ -5717,13 +5559,13 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_010",
-    "section_group_id": "26_3_update_section_005",
+    "group_id": "logical_group_008",
+    "section_group_id": "26_3_update_section_008",
     "doc_position": 0.3041
   },
   {
-    "id": "26_3_update_logical_block_0060",
-    "content_unit_id": "26_3_update_unit_0060",
+    "id": "26_3_update_logical_block_0058",
+    "content_unit_id": "26_3_update_unit_0058",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 3,
@@ -5804,12 +5646,12 @@
       ]
     },
     "group_id": "logical_group_006",
-    "section_group_id": "26_3_update_section_005",
+    "section_group_id": "26_3_update_section_008",
     "doc_position": 0.3093
   },
   {
-    "id": "26_3_update_logical_block_0061",
-    "content_unit_id": "26_3_update_unit_0061",
+    "id": "26_3_update_logical_block_0059",
+    "content_unit_id": "26_3_update_unit_0059",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 3,
@@ -5889,13 +5731,13 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_015",
-    "section_group_id": "26_3_update_section_005",
+    "group_id": "logical_group_017",
+    "section_group_id": "26_3_update_section_008",
     "doc_position": 0.3144
   },
   {
-    "id": "26_3_update_logical_block_0062",
-    "content_unit_id": "26_3_update_unit_0062",
+    "id": "26_3_update_logical_block_0060",
+    "content_unit_id": "26_3_update_unit_0060",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 3,
@@ -5975,13 +5817,13 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_022",
-    "section_group_id": "26_3_update_section_005",
+    "group_id": "logical_group_024",
+    "section_group_id": "26_3_update_section_008",
     "doc_position": 0.3196
   },
   {
-    "id": "26_3_update_logical_block_0063",
-    "content_unit_id": "26_3_update_unit_0063",
+    "id": "26_3_update_logical_block_0061",
+    "content_unit_id": "26_3_update_unit_0061",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 3,
@@ -6061,13 +5903,13 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_030",
-    "section_group_id": "26_3_update_section_005",
+    "group_id": "logical_group_031",
+    "section_group_id": "26_3_update_section_008",
     "doc_position": 0.3247
   },
   {
-    "id": "26_3_update_logical_block_0064",
-    "content_unit_id": "26_3_update_unit_0064",
+    "id": "26_3_update_logical_block_0062",
+    "content_unit_id": "26_3_update_unit_0062",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 3,
@@ -6147,13 +5989,13 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_022",
-    "section_group_id": "26_3_update_section_005",
+    "group_id": "logical_group_024",
+    "section_group_id": "26_3_update_section_008",
     "doc_position": 0.3299
   },
   {
-    "id": "26_3_update_logical_block_0065",
-    "content_unit_id": "26_3_update_unit_0065",
+    "id": "26_3_update_logical_block_0063",
+    "content_unit_id": "26_3_update_unit_0063",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 3,
@@ -6233,13 +6075,13 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_016",
-    "section_group_id": "26_3_update_section_005",
+    "group_id": "logical_group_018",
+    "section_group_id": "26_3_update_section_008",
     "doc_position": 0.3351
   },
   {
-    "id": "26_3_update_logical_block_0066",
-    "content_unit_id": "26_3_update_unit_0066",
+    "id": "26_3_update_logical_block_0064",
+    "content_unit_id": "26_3_update_unit_0064",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 3,
@@ -6319,13 +6161,13 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_004",
-    "section_group_id": "26_3_update_section_006",
+    "group_id": "logical_group_003",
+    "section_group_id": "26_3_update_section_009",
     "doc_position": 0.3402
   },
   {
-    "id": "26_3_update_logical_block_0067",
-    "content_unit_id": "26_3_update_unit_0067",
+    "id": "26_3_update_logical_block_0065",
+    "content_unit_id": "26_3_update_unit_0065",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 3,
@@ -6405,13 +6247,13 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_015",
-    "section_group_id": "26_3_update_section_006",
+    "group_id": "logical_group_017",
+    "section_group_id": "26_3_update_section_009",
     "doc_position": 0.3454
   },
   {
-    "id": "26_3_update_logical_block_0068",
-    "content_unit_id": "26_3_update_unit_0068",
+    "id": "26_3_update_logical_block_0066",
+    "content_unit_id": "26_3_update_unit_0066",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 3,
@@ -6491,13 +6333,13 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_004",
-    "section_group_id": "26_3_update_section_006",
+    "group_id": "logical_group_003",
+    "section_group_id": "26_3_update_section_009",
     "doc_position": 0.3505
   },
   {
-    "id": "26_3_update_logical_block_0069",
-    "content_unit_id": "26_3_update_unit_0069",
+    "id": "26_3_update_logical_block_0067",
+    "content_unit_id": "26_3_update_unit_0067",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 3,
@@ -6577,13 +6419,13 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_016",
-    "section_group_id": "26_3_update_section_006",
+    "group_id": "logical_group_018",
+    "section_group_id": "26_3_update_section_009",
     "doc_position": 0.3557
   },
   {
-    "id": "26_3_update_logical_block_0070",
-    "content_unit_id": "26_3_update_unit_0070",
+    "id": "26_3_update_logical_block_0068",
+    "content_unit_id": "26_3_update_unit_0068",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 3,
@@ -6664,12 +6506,12 @@
       ]
     },
     "group_id": "logical_group_006",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_010",
     "doc_position": 0.3608
   },
   {
-    "id": "26_3_update_logical_block_0071",
-    "content_unit_id": "26_3_update_unit_0071",
+    "id": "26_3_update_logical_block_0069",
+    "content_unit_id": "26_3_update_unit_0069",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 3,
@@ -6749,13 +6591,13 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_015",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_017",
+    "section_group_id": "26_3_update_section_010",
     "doc_position": 0.366
   },
   {
-    "id": "26_3_update_logical_block_0072",
-    "content_unit_id": "26_3_update_unit_0072",
+    "id": "26_3_update_logical_block_0070",
+    "content_unit_id": "26_3_update_unit_0070",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 4,
@@ -6836,12 +6678,12 @@
       ]
     },
     "group_id": "logical_group_006",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_011",
     "doc_position": 0.3711
   },
   {
-    "id": "26_3_update_logical_block_0073",
-    "content_unit_id": "26_3_update_unit_0073",
+    "id": "26_3_update_logical_block_0071",
+    "content_unit_id": "26_3_update_unit_0071",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 4,
@@ -6922,12 +6764,12 @@
       ]
     },
     "group_id": "logical_group_006",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_012",
     "doc_position": 0.3763
   },
   {
     "id": "26_3_update_consolidated_block_0001",
-    "content_unit_id": "26_3_update_unit_0074",
+    "content_unit_id": "26_3_update_unit_0072",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 4,
@@ -7024,11 +6866,11 @@
         "Compatible horizontal alignment.",
         "Compatible typography.",
         "Compatible across page boundary.",
-        "merged_from:26_3_update_logical_block_0074,26_3_update_logical_block_0075"
+        "merged_from:26_3_update_logical_block_0072,26_3_update_logical_block_0073"
       ]
     },
-    "group_id": "logical_group_008",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_003",
+    "section_group_id": "26_3_update_section_012",
     "doc_position": 0.3814,
     "structured_fields": [
       {
@@ -7054,12 +6896,12 @@
     ],
     "source_table_id": "26_3_update_grid_006",
     "source_logical_block_ids": [
-      "26_3_update_logical_block_0074",
-      "26_3_update_logical_block_0075"
+      "26_3_update_logical_block_0072",
+      "26_3_update_logical_block_0073"
     ],
     "source_content_unit_ids": [
-      "26_3_update_unit_0074",
-      "26_3_update_unit_0075"
+      "26_3_update_unit_0072",
+      "26_3_update_unit_0073"
     ],
     "consolidation_evidence": {
       "signals": {
@@ -7073,13 +6915,13 @@
       },
       "confidence": 0.8022,
       "notes": [
-        "chain:26_3_update_logical_block_0074 → 26_3_update_logical_block_0075"
+        "chain:26_3_update_logical_block_0072 → 26_3_update_logical_block_0073"
       ]
     }
   },
   {
     "id": "26_3_update_consolidated_block_0002",
-    "content_unit_id": "26_3_update_unit_0076",
+    "content_unit_id": "26_3_update_unit_0074",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 4,
@@ -7182,11 +7024,11 @@
         "Compatible horizontal alignment.",
         "Compatible typography.",
         "Compatible across page boundary.",
-        "merged_from:26_3_update_logical_block_0076,26_3_update_logical_block_0077,26_3_update_logical_block_0078"
+        "merged_from:26_3_update_logical_block_0074,26_3_update_logical_block_0075,26_3_update_logical_block_0076"
       ]
     },
     "group_id": "logical_group_005",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_012",
     "doc_position": 0.3918,
     "structured_fields": [
       {
@@ -7212,14 +7054,14 @@
     ],
     "source_table_id": "26_3_update_grid_006",
     "source_logical_block_ids": [
-      "26_3_update_logical_block_0076",
-      "26_3_update_logical_block_0077",
-      "26_3_update_logical_block_0078"
+      "26_3_update_logical_block_0074",
+      "26_3_update_logical_block_0075",
+      "26_3_update_logical_block_0076"
     ],
     "source_content_unit_ids": [
-      "26_3_update_unit_0076",
-      "26_3_update_unit_0077",
-      "26_3_update_unit_0078"
+      "26_3_update_unit_0074",
+      "26_3_update_unit_0075",
+      "26_3_update_unit_0076"
     ],
     "consolidation_evidence": {
       "signals": {
@@ -7233,13 +7075,13 @@
       },
       "confidence": 0.842,
       "notes": [
-        "chain:26_3_update_logical_block_0076 → 26_3_update_logical_block_0077 → 26_3_update_logical_block_0078"
+        "chain:26_3_update_logical_block_0074 → 26_3_update_logical_block_0075 → 26_3_update_logical_block_0076"
       ]
     }
   },
   {
-    "id": "26_3_update_logical_block_0079",
-    "content_unit_id": "26_3_update_unit_0079",
+    "id": "26_3_update_logical_block_0077",
+    "content_unit_id": "26_3_update_unit_0077",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 4,
@@ -7321,8 +7163,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_025",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_019",
+    "section_group_id": "26_3_update_section_012",
     "doc_position": 0.4072,
     "structured_fields": [
       {
@@ -7350,7 +7192,7 @@
   },
   {
     "id": "26_3_update_consolidated_block_0003",
-    "content_unit_id": "26_3_update_unit_0080",
+    "content_unit_id": "26_3_update_unit_0078",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 4,
@@ -7457,11 +7299,11 @@
         "Compatible horizontal alignment.",
         "Compatible typography.",
         "Compatible across page boundary.",
-        "merged_from:26_3_update_logical_block_0080,26_3_update_logical_block_0081,26_3_update_logical_block_0082"
+        "merged_from:26_3_update_logical_block_0078,26_3_update_logical_block_0079,26_3_update_logical_block_0080"
       ]
     },
-    "group_id": "logical_group_025",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_019",
+    "section_group_id": "26_3_update_section_012",
     "doc_position": 0.4124,
     "structured_fields": [
       {
@@ -7487,14 +7329,14 @@
     ],
     "source_table_id": "26_3_update_grid_006",
     "source_logical_block_ids": [
-      "26_3_update_logical_block_0080",
-      "26_3_update_logical_block_0081",
-      "26_3_update_logical_block_0082"
+      "26_3_update_logical_block_0078",
+      "26_3_update_logical_block_0079",
+      "26_3_update_logical_block_0080"
     ],
     "source_content_unit_ids": [
-      "26_3_update_unit_0080",
-      "26_3_update_unit_0081",
-      "26_3_update_unit_0082"
+      "26_3_update_unit_0078",
+      "26_3_update_unit_0079",
+      "26_3_update_unit_0080"
     ],
     "consolidation_evidence": {
       "signals": {
@@ -7508,13 +7350,13 @@
       },
       "confidence": 0.8857,
       "notes": [
-        "chain:26_3_update_logical_block_0080 → 26_3_update_logical_block_0081 → 26_3_update_logical_block_0082"
+        "chain:26_3_update_logical_block_0078 → 26_3_update_logical_block_0079 → 26_3_update_logical_block_0080"
       ]
     }
   },
   {
     "id": "26_3_update_consolidated_block_0004",
-    "content_unit_id": "26_3_update_unit_0083",
+    "content_unit_id": "26_3_update_unit_0081",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 5,
@@ -7617,11 +7459,11 @@
         "Compatible horizontal alignment.",
         "Compatible typography.",
         "Compatible across page boundary.",
-        "merged_from:26_3_update_logical_block_0083,26_3_update_logical_block_0084,26_3_update_logical_block_0085"
+        "merged_from:26_3_update_logical_block_0081,26_3_update_logical_block_0082,26_3_update_logical_block_0083"
       ]
     },
     "group_id": "logical_group_005",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_012",
     "doc_position": 0.4278,
     "structured_fields": [
       {
@@ -7647,14 +7489,14 @@
     ],
     "source_table_id": "26_3_update_grid_007",
     "source_logical_block_ids": [
-      "26_3_update_logical_block_0083",
-      "26_3_update_logical_block_0084",
-      "26_3_update_logical_block_0085"
+      "26_3_update_logical_block_0081",
+      "26_3_update_logical_block_0082",
+      "26_3_update_logical_block_0083"
     ],
     "source_content_unit_ids": [
-      "26_3_update_unit_0083",
-      "26_3_update_unit_0084",
-      "26_3_update_unit_0085"
+      "26_3_update_unit_0081",
+      "26_3_update_unit_0082",
+      "26_3_update_unit_0083"
     ],
     "consolidation_evidence": {
       "signals": {
@@ -7668,13 +7510,13 @@
       },
       "confidence": 0.844,
       "notes": [
-        "chain:26_3_update_logical_block_0083 → 26_3_update_logical_block_0084 → 26_3_update_logical_block_0085"
+        "chain:26_3_update_logical_block_0081 → 26_3_update_logical_block_0082 → 26_3_update_logical_block_0083"
       ]
     }
   },
   {
-    "id": "26_3_update_logical_block_0086",
-    "content_unit_id": "26_3_update_unit_0086",
+    "id": "26_3_update_logical_block_0084",
+    "content_unit_id": "26_3_update_unit_0084",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 6,
@@ -7755,12 +7597,12 @@
       ]
     },
     "group_id": "logical_group_005",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_012",
     "doc_position": 0.4433
   },
   {
-    "id": "26_3_update_logical_block_0087",
-    "content_unit_id": "26_3_update_unit_0087",
+    "id": "26_3_update_logical_block_0085",
+    "content_unit_id": "26_3_update_unit_0085",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 6,
@@ -7840,13 +7682,13 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_031",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_032",
+    "section_group_id": "26_3_update_section_012",
     "doc_position": 0.4485
   },
   {
-    "id": "26_3_update_logical_block_0088",
-    "content_unit_id": "26_3_update_unit_0088",
+    "id": "26_3_update_logical_block_0086",
+    "content_unit_id": "26_3_update_unit_0086",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 6,
@@ -7927,12 +7769,12 @@
       ]
     },
     "group_id": "logical_group_005",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_012",
     "doc_position": 0.4536
   },
   {
-    "id": "26_3_update_logical_block_0089",
-    "content_unit_id": "26_3_update_unit_0089",
+    "id": "26_3_update_logical_block_0087",
+    "content_unit_id": "26_3_update_unit_0087",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 6,
@@ -8013,12 +7855,12 @@
       ]
     },
     "group_id": "logical_group_005",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_012",
     "doc_position": 0.4588
   },
   {
-    "id": "26_3_update_logical_block_0090",
-    "content_unit_id": "26_3_update_unit_0090",
+    "id": "26_3_update_logical_block_0088",
+    "content_unit_id": "26_3_update_unit_0088",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 6,
@@ -8099,12 +7941,12 @@
       ]
     },
     "group_id": "logical_group_005",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_012",
     "doc_position": 0.4639
   },
   {
-    "id": "26_3_update_logical_block_0091",
-    "content_unit_id": "26_3_update_unit_0091",
+    "id": "26_3_update_logical_block_0089",
+    "content_unit_id": "26_3_update_unit_0089",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 6,
@@ -8184,13 +8026,13 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_031",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_032",
+    "section_group_id": "26_3_update_section_012",
     "doc_position": 0.4691
   },
   {
-    "id": "26_3_update_logical_block_0092",
-    "content_unit_id": "26_3_update_unit_0092",
+    "id": "26_3_update_logical_block_0090",
+    "content_unit_id": "26_3_update_unit_0090",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 6,
@@ -8270,13 +8112,13 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_014",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_039",
+    "section_group_id": "26_3_update_section_012",
     "doc_position": 0.4742
   },
   {
-    "id": "26_3_update_logical_block_0093",
-    "content_unit_id": "26_3_update_unit_0093",
+    "id": "26_3_update_logical_block_0091",
+    "content_unit_id": "26_3_update_unit_0091",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 6,
@@ -8359,7 +8201,7 @@
       ]
     },
     "group_id": "logical_group_005",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_012",
     "doc_position": 0.4794,
     "structured_fields": [
       {
@@ -8405,8 +8247,8 @@
     "source_table_id": "26_3_update_grid_008"
   },
   {
-    "id": "26_3_update_logical_block_0094",
-    "content_unit_id": "26_3_update_unit_0094",
+    "id": "26_3_update_logical_block_0092",
+    "content_unit_id": "26_3_update_unit_0092",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 7,
@@ -8490,7 +8332,7 @@
       ]
     },
     "group_id": "logical_group_005",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_012",
     "doc_position": 0.4845,
     "structured_fields": [
       {
@@ -8518,7 +8360,7 @@
   },
   {
     "id": "26_3_update_consolidated_block_0005",
-    "content_unit_id": "26_3_update_unit_0095",
+    "content_unit_id": "26_3_update_unit_0093",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 7,
@@ -8615,11 +8457,11 @@
         "Compatible horizontal alignment.",
         "Compatible typography.",
         "Compatible across page boundary.",
-        "merged_from:26_3_update_logical_block_0095,26_3_update_logical_block_0096"
+        "merged_from:26_3_update_logical_block_0093,26_3_update_logical_block_0094"
       ]
     },
     "group_id": "logical_group_005",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_012",
     "doc_position": 0.4897,
     "structured_fields": [
       {
@@ -8645,12 +8487,12 @@
     ],
     "source_table_id": "26_3_update_grid_009",
     "source_logical_block_ids": [
-      "26_3_update_logical_block_0095",
-      "26_3_update_logical_block_0096"
+      "26_3_update_logical_block_0093",
+      "26_3_update_logical_block_0094"
     ],
     "source_content_unit_ids": [
-      "26_3_update_unit_0095",
-      "26_3_update_unit_0096"
+      "26_3_update_unit_0093",
+      "26_3_update_unit_0094"
     ],
     "consolidation_evidence": {
       "signals": {
@@ -8664,13 +8506,13 @@
       },
       "confidence": 0.8658,
       "notes": [
-        "chain:26_3_update_logical_block_0095 → 26_3_update_logical_block_0096"
+        "chain:26_3_update_logical_block_0093 → 26_3_update_logical_block_0094"
       ]
     }
   },
   {
-    "id": "26_3_update_logical_block_0097",
-    "content_unit_id": "26_3_update_unit_0097",
+    "id": "26_3_update_logical_block_0095",
+    "content_unit_id": "26_3_update_unit_0095",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 7,
@@ -8753,7 +8595,7 @@
       ]
     },
     "group_id": "logical_group_001",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_012",
     "doc_position": 0.5,
     "structured_fields": [
       {
@@ -8780,8 +8622,8 @@
     "source_table_id": "26_3_update_grid_009"
   },
   {
-    "id": "26_3_update_logical_block_0098",
-    "content_unit_id": "26_3_update_unit_0098",
+    "id": "26_3_update_logical_block_0096",
+    "content_unit_id": "26_3_update_unit_0096",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 8,
@@ -8861,13 +8703,13 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_030",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_031",
+    "section_group_id": "26_3_update_section_012",
     "doc_position": 0.5052
   },
   {
-    "id": "26_3_update_logical_block_0099",
-    "content_unit_id": "26_3_update_unit_0099",
+    "id": "26_3_update_logical_block_0097",
+    "content_unit_id": "26_3_update_unit_0097",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 8,
@@ -8947,13 +8789,13 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_032",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_009",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.5103
   },
   {
-    "id": "26_3_update_logical_block_0100",
-    "content_unit_id": "26_3_update_unit_0100",
+    "id": "26_3_update_logical_block_0098",
+    "content_unit_id": "26_3_update_unit_0098",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 8,
@@ -9035,8 +8877,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_008",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_010",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.5155,
     "structured_fields": [
       {
@@ -9068,8 +8910,8 @@
     "source_table_id": "26_3_update_grid_010"
   },
   {
-    "id": "26_3_update_logical_block_0101",
-    "content_unit_id": "26_3_update_unit_0101",
+    "id": "26_3_update_logical_block_0099",
+    "content_unit_id": "26_3_update_unit_0099",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 8,
@@ -9152,7 +8994,7 @@
       ]
     },
     "group_id": "logical_group_001",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.5206,
     "structured_fields": [
       {
@@ -9184,8 +9026,8 @@
     "source_table_id": "26_3_update_grid_010"
   },
   {
-    "id": "26_3_update_logical_block_0102",
-    "content_unit_id": "26_3_update_unit_0102",
+    "id": "26_3_update_logical_block_0100",
+    "content_unit_id": "26_3_update_unit_0100",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 8,
@@ -9268,7 +9110,7 @@
       ]
     },
     "group_id": "logical_group_001",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.5258,
     "structured_fields": [
       {
@@ -9300,8 +9142,8 @@
     "source_table_id": "26_3_update_grid_010"
   },
   {
-    "id": "26_3_update_logical_block_0103",
-    "content_unit_id": "26_3_update_unit_0103",
+    "id": "26_3_update_logical_block_0101",
+    "content_unit_id": "26_3_update_unit_0101",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 8,
@@ -9384,7 +9226,7 @@
       ]
     },
     "group_id": "logical_group_001",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.5309,
     "structured_fields": [
       {
@@ -9416,8 +9258,8 @@
     "source_table_id": "26_3_update_grid_010"
   },
   {
-    "id": "26_3_update_logical_block_0104",
-    "content_unit_id": "26_3_update_unit_0104",
+    "id": "26_3_update_logical_block_0102",
+    "content_unit_id": "26_3_update_unit_0102",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 8,
@@ -9500,7 +9342,7 @@
       ]
     },
     "group_id": "logical_group_001",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.5361,
     "structured_fields": [
       {
@@ -9532,8 +9374,8 @@
     "source_table_id": "26_3_update_grid_010"
   },
   {
-    "id": "26_3_update_logical_block_0105",
-    "content_unit_id": "26_3_update_unit_0105",
+    "id": "26_3_update_logical_block_0103",
+    "content_unit_id": "26_3_update_unit_0103",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 8,
@@ -9616,7 +9458,7 @@
       ]
     },
     "group_id": "logical_group_001",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.5412,
     "structured_fields": [
       {
@@ -9648,8 +9490,8 @@
     "source_table_id": "26_3_update_grid_010"
   },
   {
-    "id": "26_3_update_logical_block_0106",
-    "content_unit_id": "26_3_update_unit_0106",
+    "id": "26_3_update_logical_block_0104",
+    "content_unit_id": "26_3_update_unit_0104",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 8,
@@ -9732,7 +9574,7 @@
       ]
     },
     "group_id": "logical_group_001",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.5464,
     "structured_fields": [
       {
@@ -9764,8 +9606,8 @@
     "source_table_id": "26_3_update_grid_010"
   },
   {
-    "id": "26_3_update_logical_block_0107",
-    "content_unit_id": "26_3_update_unit_0107",
+    "id": "26_3_update_logical_block_0105",
+    "content_unit_id": "26_3_update_unit_0105",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 8,
@@ -9848,7 +9690,7 @@
       ]
     },
     "group_id": "logical_group_001",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.5515,
     "structured_fields": [
       {
@@ -9880,8 +9722,8 @@
     "source_table_id": "26_3_update_grid_010"
   },
   {
-    "id": "26_3_update_logical_block_0108",
-    "content_unit_id": "26_3_update_unit_0108",
+    "id": "26_3_update_logical_block_0106",
+    "content_unit_id": "26_3_update_unit_0106",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 8,
@@ -9964,7 +9806,7 @@
       ]
     },
     "group_id": "logical_group_001",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.5567,
     "structured_fields": [
       {
@@ -9996,8 +9838,8 @@
     "source_table_id": "26_3_update_grid_010"
   },
   {
-    "id": "26_3_update_logical_block_0109",
-    "content_unit_id": "26_3_update_unit_0109",
+    "id": "26_3_update_logical_block_0107",
+    "content_unit_id": "26_3_update_unit_0107",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 9,
@@ -10080,7 +9922,7 @@
       ]
     },
     "group_id": "logical_group_001",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.5619,
     "structured_fields": [
       {
@@ -10107,8 +9949,8 @@
     "source_table_id": "26_3_update_grid_011"
   },
   {
-    "id": "26_3_update_logical_block_0110",
-    "content_unit_id": "26_3_update_unit_0110",
+    "id": "26_3_update_logical_block_0108",
+    "content_unit_id": "26_3_update_unit_0108",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 9,
@@ -10191,7 +10033,7 @@
       ]
     },
     "group_id": "logical_group_001",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.567,
     "structured_fields": [
       {
@@ -10218,8 +10060,8 @@
     "source_table_id": "26_3_update_grid_011"
   },
   {
-    "id": "26_3_update_logical_block_0111",
-    "content_unit_id": "26_3_update_unit_0111",
+    "id": "26_3_update_logical_block_0109",
+    "content_unit_id": "26_3_update_unit_0109",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 9,
@@ -10302,7 +10144,7 @@
       ]
     },
     "group_id": "logical_group_001",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.5722,
     "structured_fields": [
       {
@@ -10329,8 +10171,8 @@
     "source_table_id": "26_3_update_grid_011"
   },
   {
-    "id": "26_3_update_logical_block_0112",
-    "content_unit_id": "26_3_update_unit_0112",
+    "id": "26_3_update_logical_block_0110",
+    "content_unit_id": "26_3_update_unit_0110",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 9,
@@ -10413,7 +10255,7 @@
       ]
     },
     "group_id": "logical_group_001",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.5773,
     "structured_fields": [
       {
@@ -10440,8 +10282,8 @@
     "source_table_id": "26_3_update_grid_011"
   },
   {
-    "id": "26_3_update_logical_block_0113",
-    "content_unit_id": "26_3_update_unit_0113",
+    "id": "26_3_update_logical_block_0111",
+    "content_unit_id": "26_3_update_unit_0111",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 9,
@@ -10524,7 +10366,7 @@
       ]
     },
     "group_id": "logical_group_001",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.5825,
     "structured_fields": [
       {
@@ -10551,8 +10393,8 @@
     "source_table_id": "26_3_update_grid_011"
   },
   {
-    "id": "26_3_update_logical_block_0114",
-    "content_unit_id": "26_3_update_unit_0114",
+    "id": "26_3_update_logical_block_0112",
+    "content_unit_id": "26_3_update_unit_0112",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 9,
@@ -10635,7 +10477,7 @@
       ]
     },
     "group_id": "logical_group_001",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.5876,
     "structured_fields": [
       {
@@ -10662,8 +10504,8 @@
     "source_table_id": "26_3_update_grid_011"
   },
   {
-    "id": "26_3_update_logical_block_0115",
-    "content_unit_id": "26_3_update_unit_0115",
+    "id": "26_3_update_logical_block_0113",
+    "content_unit_id": "26_3_update_unit_0113",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 9,
@@ -10746,7 +10588,7 @@
       ]
     },
     "group_id": "logical_group_001",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.5928,
     "structured_fields": [
       {
@@ -10773,8 +10615,8 @@
     "source_table_id": "26_3_update_grid_011"
   },
   {
-    "id": "26_3_update_logical_block_0116",
-    "content_unit_id": "26_3_update_unit_0116",
+    "id": "26_3_update_logical_block_0114",
+    "content_unit_id": "26_3_update_unit_0114",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 9,
@@ -10857,7 +10699,7 @@
       ]
     },
     "group_id": "logical_group_001",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.5979,
     "structured_fields": [
       {
@@ -10884,8 +10726,8 @@
     "source_table_id": "26_3_update_grid_011"
   },
   {
-    "id": "26_3_update_logical_block_0117",
-    "content_unit_id": "26_3_update_unit_0117",
+    "id": "26_3_update_logical_block_0115",
+    "content_unit_id": "26_3_update_unit_0115",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 9,
@@ -10968,7 +10810,7 @@
       ]
     },
     "group_id": "logical_group_001",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.6031,
     "structured_fields": [
       {
@@ -10995,8 +10837,8 @@
     "source_table_id": "26_3_update_grid_011"
   },
   {
-    "id": "26_3_update_logical_block_0118",
-    "content_unit_id": "26_3_update_unit_0118",
+    "id": "26_3_update_logical_block_0116",
+    "content_unit_id": "26_3_update_unit_0116",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 10,
@@ -11079,7 +10921,7 @@
       ]
     },
     "group_id": "logical_group_001",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.6082,
     "structured_fields": [
       {
@@ -11106,8 +10948,8 @@
     "source_table_id": "26_3_update_grid_012"
   },
   {
-    "id": "26_3_update_logical_block_0119",
-    "content_unit_id": "26_3_update_unit_0119",
+    "id": "26_3_update_logical_block_0117",
+    "content_unit_id": "26_3_update_unit_0117",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 10,
@@ -11190,7 +11032,7 @@
       ]
     },
     "group_id": "logical_group_001",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.6134,
     "structured_fields": [
       {
@@ -11217,8 +11059,8 @@
     "source_table_id": "26_3_update_grid_012"
   },
   {
-    "id": "26_3_update_logical_block_0120",
-    "content_unit_id": "26_3_update_unit_0120",
+    "id": "26_3_update_logical_block_0118",
+    "content_unit_id": "26_3_update_unit_0118",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 10,
@@ -11301,7 +11143,7 @@
       ]
     },
     "group_id": "logical_group_001",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.6186,
     "structured_fields": [
       {
@@ -11328,8 +11170,8 @@
     "source_table_id": "26_3_update_grid_012"
   },
   {
-    "id": "26_3_update_logical_block_0121",
-    "content_unit_id": "26_3_update_unit_0121",
+    "id": "26_3_update_logical_block_0119",
+    "content_unit_id": "26_3_update_unit_0119",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 10,
@@ -11412,7 +11254,7 @@
       ]
     },
     "group_id": "logical_group_001",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.6237,
     "structured_fields": [
       {
@@ -11439,8 +11281,8 @@
     "source_table_id": "26_3_update_grid_012"
   },
   {
-    "id": "26_3_update_logical_block_0122",
-    "content_unit_id": "26_3_update_unit_0122",
+    "id": "26_3_update_logical_block_0120",
+    "content_unit_id": "26_3_update_unit_0120",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 10,
@@ -11522,8 +11364,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_025",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_019",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.6289,
     "structured_fields": [
       {
@@ -11550,8 +11392,8 @@
     "source_table_id": "26_3_update_grid_012"
   },
   {
-    "id": "26_3_update_logical_block_0123",
-    "content_unit_id": "26_3_update_unit_0123",
+    "id": "26_3_update_logical_block_0121",
+    "content_unit_id": "26_3_update_unit_0121",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 10,
@@ -11633,8 +11475,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_009",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.634,
     "structured_fields": [
       {
@@ -11661,8 +11503,8 @@
     "source_table_id": "26_3_update_grid_012"
   },
   {
-    "id": "26_3_update_logical_block_0124",
-    "content_unit_id": "26_3_update_unit_0124",
+    "id": "26_3_update_logical_block_0122",
+    "content_unit_id": "26_3_update_unit_0122",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 10,
@@ -11745,7 +11587,7 @@
       ]
     },
     "group_id": "logical_group_002",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.6392,
     "structured_fields": [
       {
@@ -11772,8 +11614,8 @@
     "source_table_id": "26_3_update_grid_012"
   },
   {
-    "id": "26_3_update_logical_block_0125",
-    "content_unit_id": "26_3_update_unit_0125",
+    "id": "26_3_update_logical_block_0123",
+    "content_unit_id": "26_3_update_unit_0123",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 10,
@@ -11856,7 +11698,7 @@
       ]
     },
     "group_id": "logical_group_002",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.6443,
     "structured_fields": [
       {
@@ -11883,8 +11725,8 @@
     "source_table_id": "26_3_update_grid_012"
   },
   {
-    "id": "26_3_update_logical_block_0126",
-    "content_unit_id": "26_3_update_unit_0126",
+    "id": "26_3_update_logical_block_0124",
+    "content_unit_id": "26_3_update_unit_0124",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 10,
@@ -11967,7 +11809,7 @@
       ]
     },
     "group_id": "logical_group_002",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.6495,
     "structured_fields": [
       {
@@ -11994,8 +11836,8 @@
     "source_table_id": "26_3_update_grid_012"
   },
   {
-    "id": "26_3_update_logical_block_0127",
-    "content_unit_id": "26_3_update_unit_0127",
+    "id": "26_3_update_logical_block_0125",
+    "content_unit_id": "26_3_update_unit_0125",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 10,
@@ -12078,7 +11920,7 @@
       ]
     },
     "group_id": "logical_group_002",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.6546,
     "structured_fields": [
       {
@@ -12105,8 +11947,8 @@
     "source_table_id": "26_3_update_grid_012"
   },
   {
-    "id": "26_3_update_logical_block_0128",
-    "content_unit_id": "26_3_update_unit_0128",
+    "id": "26_3_update_logical_block_0126",
+    "content_unit_id": "26_3_update_unit_0126",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 11,
@@ -12189,7 +12031,7 @@
       ]
     },
     "group_id": "logical_group_002",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.6598,
     "structured_fields": [
       {
@@ -12216,8 +12058,8 @@
     "source_table_id": "26_3_update_grid_013"
   },
   {
-    "id": "26_3_update_logical_block_0129",
-    "content_unit_id": "26_3_update_unit_0129",
+    "id": "26_3_update_logical_block_0127",
+    "content_unit_id": "26_3_update_unit_0127",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 11,
@@ -12300,7 +12142,7 @@
       ]
     },
     "group_id": "logical_group_002",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.6649,
     "structured_fields": [
       {
@@ -12327,8 +12169,8 @@
     "source_table_id": "26_3_update_grid_013"
   },
   {
-    "id": "26_3_update_logical_block_0130",
-    "content_unit_id": "26_3_update_unit_0130",
+    "id": "26_3_update_logical_block_0128",
+    "content_unit_id": "26_3_update_unit_0128",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 11,
@@ -12411,7 +12253,7 @@
       ]
     },
     "group_id": "logical_group_002",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.6701,
     "structured_fields": [
       {
@@ -12438,8 +12280,8 @@
     "source_table_id": "26_3_update_grid_013"
   },
   {
-    "id": "26_3_update_logical_block_0131",
-    "content_unit_id": "26_3_update_unit_0131",
+    "id": "26_3_update_logical_block_0129",
+    "content_unit_id": "26_3_update_unit_0129",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 11,
@@ -12522,7 +12364,7 @@
       ]
     },
     "group_id": "logical_group_002",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.6753,
     "structured_fields": [
       {
@@ -12549,8 +12391,8 @@
     "source_table_id": "26_3_update_grid_013"
   },
   {
-    "id": "26_3_update_logical_block_0132",
-    "content_unit_id": "26_3_update_unit_0132",
+    "id": "26_3_update_logical_block_0130",
+    "content_unit_id": "26_3_update_unit_0130",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 11,
@@ -12633,7 +12475,7 @@
       ]
     },
     "group_id": "logical_group_002",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.6804,
     "structured_fields": [
       {
@@ -12660,8 +12502,8 @@
     "source_table_id": "26_3_update_grid_013"
   },
   {
-    "id": "26_3_update_logical_block_0133",
-    "content_unit_id": "26_3_update_unit_0133",
+    "id": "26_3_update_logical_block_0131",
+    "content_unit_id": "26_3_update_unit_0131",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 11,
@@ -12744,7 +12586,7 @@
       ]
     },
     "group_id": "logical_group_002",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.6856,
     "structured_fields": [
       {
@@ -12771,8 +12613,8 @@
     "source_table_id": "26_3_update_grid_013"
   },
   {
-    "id": "26_3_update_logical_block_0134",
-    "content_unit_id": "26_3_update_unit_0134",
+    "id": "26_3_update_logical_block_0132",
+    "content_unit_id": "26_3_update_unit_0132",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 11,
@@ -12854,8 +12696,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_017",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_011",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.6907,
     "structured_fields": [
       {
@@ -12882,8 +12724,8 @@
     "source_table_id": "26_3_update_grid_013"
   },
   {
-    "id": "26_3_update_logical_block_0135",
-    "content_unit_id": "26_3_update_unit_0135",
+    "id": "26_3_update_logical_block_0133",
+    "content_unit_id": "26_3_update_unit_0133",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 11,
@@ -12965,8 +12807,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_011",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_012",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.6959,
     "structured_fields": [
       {
@@ -12993,8 +12835,8 @@
     "source_table_id": "26_3_update_grid_013"
   },
   {
-    "id": "26_3_update_logical_block_0136",
-    "content_unit_id": "26_3_update_unit_0136",
+    "id": "26_3_update_logical_block_0134",
+    "content_unit_id": "26_3_update_unit_0134",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 11,
@@ -13076,8 +12918,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_017",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_011",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.701,
     "structured_fields": [
       {
@@ -13104,8 +12946,8 @@
     "source_table_id": "26_3_update_grid_013"
   },
   {
-    "id": "26_3_update_logical_block_0137",
-    "content_unit_id": "26_3_update_unit_0137",
+    "id": "26_3_update_logical_block_0135",
+    "content_unit_id": "26_3_update_unit_0135",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 11,
@@ -13187,8 +13029,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_017",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_011",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.7062,
     "structured_fields": [
       {
@@ -13215,8 +13057,8 @@
     "source_table_id": "26_3_update_grid_013"
   },
   {
-    "id": "26_3_update_logical_block_0138",
-    "content_unit_id": "26_3_update_unit_0138",
+    "id": "26_3_update_logical_block_0136",
+    "content_unit_id": "26_3_update_unit_0136",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 12,
@@ -13299,7 +13141,7 @@
       ]
     },
     "group_id": "logical_group_002",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.7113,
     "structured_fields": [
       {
@@ -13326,8 +13168,8 @@
     "source_table_id": "26_3_update_grid_014"
   },
   {
-    "id": "26_3_update_logical_block_0139",
-    "content_unit_id": "26_3_update_unit_0139",
+    "id": "26_3_update_logical_block_0137",
+    "content_unit_id": "26_3_update_unit_0137",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 12,
@@ -13409,8 +13251,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_026",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_020",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.7165,
     "structured_fields": [
       {
@@ -13437,8 +13279,8 @@
     "source_table_id": "26_3_update_grid_014"
   },
   {
-    "id": "26_3_update_logical_block_0140",
-    "content_unit_id": "26_3_update_unit_0140",
+    "id": "26_3_update_logical_block_0138",
+    "content_unit_id": "26_3_update_unit_0138",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 12,
@@ -13520,8 +13362,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_026",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_020",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.7216,
     "structured_fields": [
       {
@@ -13548,8 +13390,8 @@
     "source_table_id": "26_3_update_grid_014"
   },
   {
-    "id": "26_3_update_logical_block_0141",
-    "content_unit_id": "26_3_update_unit_0141",
+    "id": "26_3_update_logical_block_0139",
+    "content_unit_id": "26_3_update_unit_0139",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 12,
@@ -13631,8 +13473,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_026",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_020",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.7268,
     "structured_fields": [
       {
@@ -13659,8 +13501,8 @@
     "source_table_id": "26_3_update_grid_014"
   },
   {
-    "id": "26_3_update_logical_block_0142",
-    "content_unit_id": "26_3_update_unit_0142",
+    "id": "26_3_update_logical_block_0140",
+    "content_unit_id": "26_3_update_unit_0140",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 12,
@@ -13742,8 +13584,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_011",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_012",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.732,
     "structured_fields": [
       {
@@ -13770,8 +13612,8 @@
     "source_table_id": "26_3_update_grid_014"
   },
   {
-    "id": "26_3_update_logical_block_0143",
-    "content_unit_id": "26_3_update_unit_0143",
+    "id": "26_3_update_logical_block_0141",
+    "content_unit_id": "26_3_update_unit_0141",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 12,
@@ -13853,8 +13695,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_011",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_012",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.7371,
     "structured_fields": [
       {
@@ -13881,8 +13723,8 @@
     "source_table_id": "26_3_update_grid_014"
   },
   {
-    "id": "26_3_update_logical_block_0144",
-    "content_unit_id": "26_3_update_unit_0144",
+    "id": "26_3_update_logical_block_0142",
+    "content_unit_id": "26_3_update_unit_0142",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 12,
@@ -13964,8 +13806,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_011",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_012",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.7423,
     "structured_fields": [
       {
@@ -13992,8 +13834,8 @@
     "source_table_id": "26_3_update_grid_014"
   },
   {
-    "id": "26_3_update_logical_block_0145",
-    "content_unit_id": "26_3_update_unit_0145",
+    "id": "26_3_update_logical_block_0143",
+    "content_unit_id": "26_3_update_unit_0143",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 12,
@@ -14075,8 +13917,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_018",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_025",
+    "section_group_id": "26_3_update_section_013",
     "doc_position": 0.7474,
     "structured_fields": [
       {
@@ -14103,18 +13945,16 @@
     "source_table_id": "26_3_update_grid_014"
   },
   {
-    "id": "26_3_update_logical_block_0146",
-    "content_unit_id": "26_3_update_unit_0146",
+    "id": "26_3_update_logical_block_0144",
+    "content_unit_id": "26_3_update_unit_0144",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 12,
     "page_end": 12,
     "source_block_ids": [
-      "26_3_update_block_0146",
-      "26_3_update_block_0147",
-      "26_3_update_block_0148"
+      "26_3_update_block_0146"
     ],
-    "text": "New Features and Bug Fixes in Siebel CRM Monthly Update 26.2\nNew Features in Siebel CRM 26.2\nThere are no new features in 26.2.",
+    "text": "New Features and Bug Fixes in Siebel CRM Monthly Update 26.2",
     "block_type": "content",
     "structural_features": {
       "rel_x0": 0.0588,
@@ -14142,65 +13982,225 @@
       "prominence": 0.17,
       "repetition_count": 2.0,
       "is_repeated_shape": 0.0,
-      "block_count": 3.0,
-      "candidate_count": 3.0
+      "block_count": 1.0,
+      "candidate_count": 1.0
     },
     "structural_fingerprint": {
-      "block_count": 3.0,
+      "block_count": 1.0,
       "role_prominent": 0.0,
-      "role_body": 3.0,
+      "role_body": 1.0,
       "cell_count": 0.0,
       "mean_rel_x0": 0.0588,
-      "mean_rel_width": 0.3557,
-      "mean_line_height_ratio": 0.3974,
-      "mean_digit_ratio": 0.0783,
-      "mean_upper_ratio": 0.1299,
-      "content_density": 0.0833,
+      "mean_rel_width": 0.5229,
+      "mean_line_height_ratio": 0.4615,
+      "mean_digit_ratio": 0.05,
+      "mean_upper_ratio": 0.1667,
+      "content_density": 0.12,
       "marker_depth": 0.0,
       "in_grid": 0.0,
-      "repetition": 3.333,
+      "repetition": 2.0,
       "local_position": 0.8
     },
     "discovered_pattern": "pattern_002",
     "role_sequence": [
-      "BODY",
-      "META",
-      "META"
+      "BODY"
     ],
-    "structural_signature": "P0B1M2",
-    "confidence": 0.7259,
+    "structural_signature": "P0B1M0",
+    "confidence": 0.6462,
     "evidence": {
       "signals": {
-        "spatial_proximity": 0.923,
-        "alignment_relationship": 1.0,
-        "typography_relationship": 0.92,
-        "spacing_relationship": 0.97,
-        "reading_order_relationship": 1.0,
-        "structural_similarity": 0.695,
-        "container_relationship": 0.0,
-        "semantic_similarity": 0.546,
-        "form_discount_total": 0.303
+        "structural_self_support": 0.475,
+        "boundary_isolation": 1.0,
+        "repetition_support": 0.25,
+        "content_density": 0.15
       },
       "weights": {
-        "spatial_proximity": 0.1111,
-        "alignment_relationship": 0.1111,
-        "typography_relationship": 0.1111,
-        "spacing_relationship": 0.1111,
-        "reading_order_relationship": 0.1111,
-        "structural_similarity": 0.1111,
-        "container_relationship": 0.1111,
-        "semantic_similarity": 0.1111,
-        "form_discount_total": 0.1111
+        "structural_self_support": 0.25,
+        "boundary_isolation": 0.25,
+        "repetition_support": 0.25,
+        "content_density": 0.25
       },
-      "confidence": 0.7259,
+      "confidence": 0.6462,
       "notes": [
-        "refinement:MERGE",
-        "Relationship evidence exceeded boundary evidence across the run."
+        "refinement:PRESERVE",
+        "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
     "group_id": "logical_group_006",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_014",
     "doc_position": 0.7526
+  },
+  {
+    "id": "26_3_update_logical_block_0145",
+    "content_unit_id": "26_3_update_unit_0145",
+    "document_id": "26_3_update",
+    "source_document": "26_3_update",
+    "source_page": 12,
+    "page_end": 12,
+    "source_block_ids": [
+      "26_3_update_block_0147"
+    ],
+    "text": "New Features in Siebel CRM 26.2",
+    "block_type": "content",
+    "structural_features": {
+      "rel_x0": 0.0588,
+      "rel_x1": 0.3235,
+      "rel_width": 0.2647,
+      "rel_y0": 0.7689,
+      "rel_height": 0.0126,
+      "line_height_ratio": 0.3846,
+      "gap_above_ratio": 0.9091,
+      "char_count": 31.0,
+      "token_count": 6.0,
+      "line_count": 1.0,
+      "cell_count": 0.0,
+      "marker_depth": 0.0,
+      "in_grid": 0.0,
+      "page_fraction": 0.8,
+      "terminal_punctuation": 0.0,
+      "layout_section_header": 0.0,
+      "layout_page_header": 0.0,
+      "layout_list_item": 0.0,
+      "digit_ratio": 0.0968,
+      "upper_ratio": 0.1935,
+      "punct_ratio": 0.0323,
+      "space_ratio": 0.1613,
+      "prominence": 0.1845,
+      "repetition_count": 4.0,
+      "is_repeated_shape": 1.0,
+      "block_count": 1.0,
+      "candidate_count": 1.0
+    },
+    "structural_fingerprint": {
+      "block_count": 1.0,
+      "role_prominent": 0.0,
+      "role_body": 1.0,
+      "cell_count": 0.0,
+      "mean_rel_x0": 0.0588,
+      "mean_rel_width": 0.2647,
+      "mean_line_height_ratio": 0.3846,
+      "mean_digit_ratio": 0.0968,
+      "mean_upper_ratio": 0.1935,
+      "content_density": 0.062,
+      "marker_depth": 0.0,
+      "in_grid": 0.0,
+      "repetition": 4.0,
+      "local_position": 0.8
+    },
+    "discovered_pattern": "pattern_002",
+    "role_sequence": [
+      "META"
+    ],
+    "structural_signature": "P0B0M1",
+    "confidence": 0.6579,
+    "evidence": {
+      "signals": {
+        "structural_self_support": 0.55,
+        "boundary_isolation": 1.0,
+        "repetition_support": 0.5,
+        "content_density": 0.077
+      },
+      "weights": {
+        "structural_self_support": 0.25,
+        "boundary_isolation": 0.25,
+        "repetition_support": 0.25,
+        "content_density": 0.25
+      },
+      "confidence": 0.6579,
+      "notes": [
+        "refinement:PRESERVE",
+        "Boundaries on both sides; the candidate stands alone as one unit."
+      ]
+    },
+    "group_id": "logical_group_009",
+    "section_group_id": "26_3_update_section_015",
+    "doc_position": 0.7577
+  },
+  {
+    "id": "26_3_update_logical_block_0146",
+    "content_unit_id": "26_3_update_unit_0146",
+    "document_id": "26_3_update",
+    "source_document": "26_3_update",
+    "source_page": 12,
+    "page_end": 12,
+    "source_block_ids": [
+      "26_3_update_block_0148"
+    ],
+    "text": "There are no new features in 26.2.",
+    "block_type": "content",
+    "structural_features": {
+      "rel_x0": 0.0588,
+      "rel_x1": 0.3382,
+      "rel_width": 0.2794,
+      "rel_y0": 0.798,
+      "rel_height": 0.0114,
+      "line_height_ratio": 0.3462,
+      "gap_above_ratio": 1.1818,
+      "char_count": 34.0,
+      "token_count": 7.0,
+      "line_count": 1.0,
+      "cell_count": 0.0,
+      "marker_depth": 0.0,
+      "in_grid": 0.0,
+      "page_fraction": 0.8,
+      "terminal_punctuation": 1.0,
+      "layout_section_header": 0.0,
+      "layout_page_header": 0.0,
+      "layout_list_item": 0.0,
+      "digit_ratio": 0.0882,
+      "upper_ratio": 0.0294,
+      "punct_ratio": 0.0588,
+      "space_ratio": 0.1765,
+      "prominence": 0.183,
+      "repetition_count": 4.0,
+      "is_repeated_shape": 1.0,
+      "block_count": 1.0,
+      "candidate_count": 1.0
+    },
+    "structural_fingerprint": {
+      "block_count": 1.0,
+      "role_prominent": 0.0,
+      "role_body": 1.0,
+      "cell_count": 0.0,
+      "mean_rel_x0": 0.0588,
+      "mean_rel_width": 0.2794,
+      "mean_line_height_ratio": 0.3462,
+      "mean_digit_ratio": 0.0882,
+      "mean_upper_ratio": 0.0294,
+      "content_density": 0.068,
+      "marker_depth": 0.0,
+      "in_grid": 0.0,
+      "repetition": 4.0,
+      "local_position": 0.8
+    },
+    "discovered_pattern": "pattern_002",
+    "role_sequence": [
+      "META"
+    ],
+    "structural_signature": "P0B0M1",
+    "confidence": 0.6595,
+    "evidence": {
+      "signals": {
+        "structural_self_support": 0.55,
+        "boundary_isolation": 1.0,
+        "repetition_support": 0.5,
+        "content_density": 0.085
+      },
+      "weights": {
+        "structural_self_support": 0.25,
+        "boundary_isolation": 0.25,
+        "repetition_support": 0.25,
+        "content_density": 0.25
+      },
+      "confidence": 0.6595,
+      "notes": [
+        "refinement:PRESERVE",
+        "Boundaries on both sides; the candidate stands alone as one unit."
+      ]
+    },
+    "group_id": "logical_group_006",
+    "section_group_id": "26_3_update_section_015",
+    "doc_position": 0.7629
   },
   {
     "id": "26_3_update_logical_block_0147",
@@ -14284,8 +14284,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_032",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_009",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.768
   },
   {
@@ -14372,8 +14372,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_008",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_010",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.7732,
     "structured_fields": [
       {
@@ -14488,8 +14488,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_007",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_010",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.7784,
     "structured_fields": [
       {
@@ -14604,8 +14604,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_007",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_019",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.7835,
     "structured_fields": [
       {
@@ -14720,8 +14720,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_038",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_033",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.7887,
     "structured_fields": [
       {
@@ -14836,8 +14836,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_007",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_011",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.7938,
     "structured_fields": [
       {
@@ -14953,7 +14953,7 @@
       ]
     },
     "group_id": "logical_group_002",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.799,
     "structured_fields": [
       {
@@ -15069,7 +15069,7 @@
       ]
     },
     "group_id": "logical_group_002",
-    "section_group_id": "26_3_update_section_007",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.8041,
     "structured_fields": [
       {
@@ -15184,8 +15184,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_039",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_040",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.8093,
     "structured_fields": [
       {
@@ -15300,8 +15300,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_017",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_011",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.8144,
     "structured_fields": [
       {
@@ -15416,8 +15416,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_015",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_017",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.8196,
     "structured_fields": [
       {
@@ -15532,8 +15532,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_011",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_012",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.8247,
     "structured_fields": [
       {
@@ -15648,8 +15648,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_018",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_025",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.8299,
     "structured_fields": [
       {
@@ -15764,8 +15764,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_018",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_010",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.8351,
     "structured_fields": [
       {
@@ -15880,8 +15880,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_018",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_025",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.8402,
     "structured_fields": [
       {
@@ -16006,8 +16006,8 @@
         "Relationship evidence exceeded boundary evidence across the run."
       ]
     },
-    "group_id": "logical_group_007",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_033",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.8454
   },
   {
@@ -16092,8 +16092,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_016",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_018",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.8557
   },
   {
@@ -16190,8 +16190,8 @@
         "Relationship evidence exceeded boundary evidence across the run."
       ]
     },
-    "group_id": "logical_group_007",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_026",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.8608
   },
   {
@@ -16276,8 +16276,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_004",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_003",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.8711
   },
   {
@@ -16362,8 +16362,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_007",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_026",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.8763
   },
   {
@@ -16448,8 +16448,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_012",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_013",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.8814
   },
   {
@@ -16534,8 +16534,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_012",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_013",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.8866
   },
   {
@@ -16622,8 +16622,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_012",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_013",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.8918,
     "structured_fields": [
       {
@@ -16741,8 +16741,8 @@
         "merged_from:26_3_update_logical_block_0170,26_3_update_logical_block_0171"
       ]
     },
-    "group_id": "logical_group_012",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_013",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.8969,
     "structured_fields": [
       {
@@ -16865,8 +16865,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_007",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_026",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.9072,
     "structured_fields": [
       {
@@ -16966,8 +16966,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_040",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_041",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.9124,
     "structured_fields": [
       {
@@ -17065,8 +17065,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_012",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_013",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.9175
   },
   {
@@ -17172,8 +17172,8 @@
         "merged_from:26_3_update_logical_block_0175,26_3_update_logical_block_0176"
       ]
     },
-    "group_id": "logical_group_041",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_042",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.9227,
     "source_logical_block_ids": [
       "26_3_update_logical_block_0175",
@@ -17281,8 +17281,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_027",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_010",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.933
   },
   {
@@ -17367,8 +17367,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_016",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_018",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.9381
   },
   {
@@ -17453,8 +17453,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_027",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_020",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.9433
   },
   {
@@ -17539,8 +17539,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_042",
-    "section_group_id": "26_3_update_section_007",
+    "group_id": "logical_group_043",
+    "section_group_id": "26_3_update_section_016",
     "doc_position": 0.9485
   },
   {
@@ -17625,8 +17625,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_004",
-    "section_group_id": "26_3_update_section_008",
+    "group_id": "logical_group_003",
+    "section_group_id": "26_3_update_section_017",
     "doc_position": 0.9536
   },
   {
@@ -17711,8 +17711,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_027",
-    "section_group_id": "26_3_update_section_008",
+    "group_id": "logical_group_034",
+    "section_group_id": "26_3_update_section_017",
     "doc_position": 0.9588
   },
   {
@@ -17797,8 +17797,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_028",
-    "section_group_id": "26_3_update_section_008",
+    "group_id": "logical_group_027",
+    "section_group_id": "26_3_update_section_017",
     "doc_position": 0.9639
   },
   {
@@ -17883,8 +17883,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_028",
-    "section_group_id": "26_3_update_section_008",
+    "group_id": "logical_group_027",
+    "section_group_id": "26_3_update_section_017",
     "doc_position": 0.9691
   },
   {
@@ -17969,8 +17969,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_028",
-    "section_group_id": "26_3_update_section_008",
+    "group_id": "logical_group_027",
+    "section_group_id": "26_3_update_section_017",
     "doc_position": 0.9742
   },
   {
@@ -18055,8 +18055,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_043",
-    "section_group_id": "26_3_update_section_008",
+    "group_id": "logical_group_034",
+    "section_group_id": "26_3_update_section_017",
     "doc_position": 0.9794
   },
   {
@@ -18067,10 +18067,9 @@
     "source_page": 15,
     "page_end": 15,
     "source_block_ids": [
-      "26_3_update_block_0191",
-      "26_3_update_block_0192"
+      "26_3_update_block_0191"
     ],
-    "text": "New Features and Bug Fixes in Siebel CRM Monthly Update 26.1\nNew Features in Siebel CRM 26.1",
+    "text": "New Features and Bug Fixes in Siebel CRM Monthly Update 26.1",
     "block_type": "content",
     "structural_features": {
       "rel_x0": 0.0588,
@@ -18098,68 +18097,143 @@
       "prominence": 0.17,
       "repetition_count": 2.0,
       "is_repeated_shape": 0.0,
-      "block_count": 2.0,
-      "candidate_count": 2.0
+      "block_count": 1.0,
+      "candidate_count": 1.0
     },
     "structural_fingerprint": {
-      "block_count": 2.0,
+      "block_count": 1.0,
       "role_prominent": 0.0,
-      "role_body": 2.0,
+      "role_body": 1.0,
       "cell_count": 0.0,
       "mean_rel_x0": 0.0588,
-      "mean_rel_width": 0.3938,
-      "mean_line_height_ratio": 0.4231,
-      "mean_digit_ratio": 0.0734,
-      "mean_upper_ratio": 0.1801,
-      "content_density": 0.091,
+      "mean_rel_width": 0.5212,
+      "mean_line_height_ratio": 0.4615,
+      "mean_digit_ratio": 0.05,
+      "mean_upper_ratio": 0.1667,
+      "content_density": 0.12,
       "marker_depth": 0.0,
       "in_grid": 0.0,
-      "repetition": 3.0,
+      "repetition": 2.0,
       "local_position": 1.0
     },
     "discovered_pattern": "pattern_002",
     "role_sequence": [
-      "BODY",
-      "META"
+      "BODY"
     ],
-    "structural_signature": "P0B1M1",
-    "confidence": 0.8287,
+    "structural_signature": "P0B1M0",
+    "confidence": 0.6462,
     "evidence": {
       "signals": {
-        "spatial_proximity": 1.0,
-        "alignment_relationship": 1.0,
-        "typography_relationship": 0.9,
-        "spacing_relationship": 1.0,
-        "reading_order_relationship": 1.0,
-        "structural_similarity": 0.402,
-        "container_relationship": 0.0,
-        "semantic_similarity": 0.611,
-        "form_discount_total": 0.0
+        "structural_self_support": 0.475,
+        "boundary_isolation": 1.0,
+        "repetition_support": 0.25,
+        "content_density": 0.15
       },
       "weights": {
-        "spatial_proximity": 0.1111,
-        "alignment_relationship": 0.1111,
-        "typography_relationship": 0.1111,
-        "spacing_relationship": 0.1111,
-        "reading_order_relationship": 0.1111,
-        "structural_similarity": 0.1111,
-        "container_relationship": 0.1111,
-        "semantic_similarity": 0.1111,
-        "form_discount_total": 0.1111
+        "structural_self_support": 0.25,
+        "boundary_isolation": 0.25,
+        "repetition_support": 0.25,
+        "content_density": 0.25
       },
-      "confidence": 0.8287,
+      "confidence": 0.6462,
       "notes": [
-        "refinement:MERGE",
-        "Relationship evidence exceeded boundary evidence across the run."
+        "refinement:PRESERVE",
+        "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_006",
-    "section_group_id": "26_3_update_section_008",
+    "group_id": "logical_group_009",
+    "section_group_id": "26_3_update_section_018",
     "doc_position": 0.9845
   },
   {
     "id": "26_3_update_logical_block_0188",
     "content_unit_id": "26_3_update_unit_0188",
+    "document_id": "26_3_update",
+    "source_document": "26_3_update",
+    "source_page": 15,
+    "page_end": 15,
+    "source_block_ids": [
+      "26_3_update_block_0192"
+    ],
+    "text": "New Features in Siebel CRM 26.1",
+    "block_type": "content",
+    "structural_features": {
+      "rel_x0": 0.0588,
+      "rel_x1": 0.3252,
+      "rel_width": 0.2663,
+      "rel_y0": 0.3801,
+      "rel_height": 0.0126,
+      "line_height_ratio": 0.3846,
+      "gap_above_ratio": 0.9091,
+      "char_count": 31.0,
+      "token_count": 6.0,
+      "line_count": 1.0,
+      "cell_count": 0.0,
+      "marker_depth": 0.0,
+      "in_grid": 0.0,
+      "page_fraction": 1.0,
+      "terminal_punctuation": 0.0,
+      "layout_section_header": 0.0,
+      "layout_page_header": 0.0,
+      "layout_list_item": 0.0,
+      "digit_ratio": 0.0968,
+      "upper_ratio": 0.1935,
+      "punct_ratio": 0.0323,
+      "space_ratio": 0.1613,
+      "prominence": 0.1845,
+      "repetition_count": 4.0,
+      "is_repeated_shape": 1.0,
+      "block_count": 1.0,
+      "candidate_count": 1.0
+    },
+    "structural_fingerprint": {
+      "block_count": 1.0,
+      "role_prominent": 0.0,
+      "role_body": 1.0,
+      "cell_count": 0.0,
+      "mean_rel_x0": 0.0588,
+      "mean_rel_width": 0.2663,
+      "mean_line_height_ratio": 0.3846,
+      "mean_digit_ratio": 0.0968,
+      "mean_upper_ratio": 0.1935,
+      "content_density": 0.062,
+      "marker_depth": 0.0,
+      "in_grid": 0.0,
+      "repetition": 4.0,
+      "local_position": 1.0
+    },
+    "discovered_pattern": "pattern_002",
+    "role_sequence": [
+      "META"
+    ],
+    "structural_signature": "P0B0M1",
+    "confidence": 0.6579,
+    "evidence": {
+      "signals": {
+        "structural_self_support": 0.55,
+        "boundary_isolation": 1.0,
+        "repetition_support": 0.5,
+        "content_density": 0.077
+      },
+      "weights": {
+        "structural_self_support": 0.25,
+        "boundary_isolation": 0.25,
+        "repetition_support": 0.25,
+        "content_density": 0.25
+      },
+      "confidence": 0.6579,
+      "notes": [
+        "refinement:PRESERVE",
+        "Boundaries on both sides; the candidate stands alone as one unit."
+      ]
+    },
+    "group_id": "logical_group_009",
+    "section_group_id": "26_3_update_section_019",
+    "doc_position": 0.9897
+  },
+  {
+    "id": "26_3_update_logical_block_0189",
+    "content_unit_id": "26_3_update_unit_0189",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 15,
@@ -18241,8 +18315,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_008",
-    "section_group_id": "26_3_update_section_008",
+    "group_id": "logical_group_003",
+    "section_group_id": "26_3_update_section_019",
     "doc_position": 0.9948,
     "structured_fields": [
       {
@@ -18269,8 +18343,8 @@
     "source_table_id": "26_3_update_grid_018"
   },
   {
-    "id": "26_3_update_logical_block_0189",
-    "content_unit_id": "26_3_update_unit_0189",
+    "id": "26_3_update_logical_block_0190",
+    "content_unit_id": "26_3_update_unit_0190",
     "document_id": "26_3_update",
     "source_document": "26_3_update",
     "source_page": 15,
@@ -18352,8 +18426,8 @@
         "Boundaries on both sides; the candidate stands alone as one unit."
       ]
     },
-    "group_id": "logical_group_004",
-    "section_group_id": "26_3_update_section_008",
+    "group_id": "logical_group_003",
+    "section_group_id": "26_3_update_section_019",
     "doc_position": 1.0,
     "structured_fields": [
       {

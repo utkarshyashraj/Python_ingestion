@@ -1713,10 +1713,10 @@ Relationship:
   form_discount_container_change : 0.00
 
 Decision:
-  START_NEW_LOGICAL_BLOCK
+  CONTINUE_LOGICAL_BLOCK
 
 Confidence: 1.00
-Reason: Intro/label line followed by a distinct unit.
+Reason: Relationship evidence dominates; strongest signal 'spatial_proximity'=1.00 against boundary score 0.22.
 Scores: relationship=0.721 boundary=0.216 net=0.505 adaptive_cut=0.1002
 
 Boundary:
@@ -1750,10 +1750,10 @@ Relationship:
   form_discount_container_change : 0.00
 
 Decision:
-  START_NEW_LOGICAL_BLOCK
+  CONTINUE_LOGICAL_BLOCK
 
 Confidence: 1.00
-Reason: Code/example fence boundary.
+Reason: Relationship evidence dominates; strongest signal 'spatial_proximity'=1.00 against boundary score 0.22.
 Scores: relationship=0.699 boundary=0.224 net=0.474 adaptive_cut=0.1002
 
 Boundary:
@@ -5968,10 +5968,10 @@ Relationship:
   form_discount_container_change : 0.00
 
 Decision:
-  CONTINUE_LOGICAL_BLOCK
+  START_NEW_LOGICAL_BLOCK
 
 Confidence: 1.00
-Reason: Relationship evidence dominates; strongest signal 'spatial_proximity'=1.00 against boundary score 0.15.
+Reason: Adjacent title-like units stay atomic.
 Scores: relationship=0.854 boundary=0.146 net=0.707 adaptive_cut=0.1002
 
 Boundary:
@@ -6005,10 +6005,10 @@ Relationship:
   form_discount_container_change : 0.00
 
 Decision:
-  CONTINUE_LOGICAL_BLOCK
+  START_NEW_LOGICAL_BLOCK
 
-Confidence: 0.78
-Reason: Relationship evidence dominates; strongest signal 'alignment_relationship'=1.00 against boundary score 0.20.
+Confidence: 0.85
+Reason: Adjacent title-like units stay atomic.
 Scores: relationship=0.441 boundary=0.203 net=0.238 adaptive_cut=0.1002
 
 Boundary:
@@ -7633,10 +7633,10 @@ Relationship:
   form_discount_container_change : 0.00
 
 Decision:
-  CONTINUE_LOGICAL_BLOCK
+  START_NEW_LOGICAL_BLOCK
 
 Confidence: 1.00
-Reason: Relationship evidence dominates; strongest signal 'spatial_proximity'=1.00 against boundary score 0.15.
+Reason: Adjacent title-like units stay atomic.
 Scores: relationship=0.856 boundary=0.145 net=0.710 adaptive_cut=0.1002
 
 Boundary:
@@ -8108,43 +8108,22 @@ Reason:
   Boundaries on both sides; the candidate stands alone as one unit.
 
 Candidate:
-  26_3_update_candidate_0031
+  26_3_update_candidate_0031, 26_3_update_candidate_0032, 26_3_update_candidate_0033
 Decision:
-  PRESERVE
+  MERGE
 Evidence:
-  structural_self_support : 0.51
-  boundary_isolation      : 1.00
-  repetition_support      : 0.38
-  content_density         : 0.23
-Confidence: 0.68
+  spatial_proximity          : 1.00
+  alignment_relationship     : 1.00
+  typography_relationship    : 0.51
+  spacing_relationship       : 1.00
+  reading_order_relationship : 1.00
+  structural_similarity      : 0.38
+  container_relationship     : 0.00
+  semantic_similarity        : 0.10
+  form_discount_total        : 0.00
+Confidence: 0.73
 Reason:
-  Boundaries on both sides; the candidate stands alone as one unit.
-
-Candidate:
-  26_3_update_candidate_0032
-Decision:
-  PRESERVE
-Evidence:
-  structural_self_support : 0.44
-  boundary_isolation      : 1.00
-  repetition_support      : 0.12
-  content_density         : 0.11
-Confidence: 0.63
-Reason:
-  Boundaries on both sides; the candidate stands alone as one unit.
-
-Candidate:
-  26_3_update_candidate_0033
-Decision:
-  PRESERVE
-Evidence:
-  structural_self_support : 0.44
-  boundary_isolation      : 1.00
-  repetition_support      : 0.12
-  content_density         : 0.51
-Confidence: 0.70
-Reason:
-  Boundaries on both sides; the candidate stands alone as one unit.
+  Relationship evidence exceeded boundary evidence across the run.
 
 Candidate:
   26_3_update_candidate_0034
@@ -9603,22 +9582,43 @@ Reason:
   Boundaries on both sides; the candidate stands alone as one unit.
 
 Candidate:
-  26_3_update_candidate_0146, 26_3_update_candidate_0147, 26_3_update_candidate_0148
+  26_3_update_candidate_0146
 Decision:
-  MERGE
+  PRESERVE
 Evidence:
-  spatial_proximity          : 0.92
-  alignment_relationship     : 1.00
-  typography_relationship    : 0.92
-  spacing_relationship       : 0.97
-  reading_order_relationship : 1.00
-  structural_similarity      : 0.69
-  container_relationship     : 0.00
-  semantic_similarity        : 0.55
-  form_discount_total        : 0.30
-Confidence: 0.73
+  structural_self_support : 0.47
+  boundary_isolation      : 1.00
+  repetition_support      : 0.25
+  content_density         : 0.15
+Confidence: 0.65
 Reason:
-  Relationship evidence exceeded boundary evidence across the run.
+  Boundaries on both sides; the candidate stands alone as one unit.
+
+Candidate:
+  26_3_update_candidate_0147
+Decision:
+  PRESERVE
+Evidence:
+  structural_self_support : 0.55
+  boundary_isolation      : 1.00
+  repetition_support      : 0.50
+  content_density         : 0.08
+Confidence: 0.66
+Reason:
+  Boundaries on both sides; the candidate stands alone as one unit.
+
+Candidate:
+  26_3_update_candidate_0148
+Decision:
+  PRESERVE
+Evidence:
+  structural_self_support : 0.55
+  boundary_isolation      : 1.00
+  repetition_support      : 0.50
+  content_density         : 0.09
+Confidence: 0.66
+Reason:
+  Boundaries on both sides; the candidate stands alone as one unit.
 
 Candidate:
   26_3_update_candidate_0149
@@ -10151,22 +10151,30 @@ Reason:
   Boundaries on both sides; the candidate stands alone as one unit.
 
 Candidate:
-  26_3_update_candidate_0191, 26_3_update_candidate_0192
+  26_3_update_candidate_0191
 Decision:
-  MERGE
+  PRESERVE
 Evidence:
-  spatial_proximity          : 1.00
-  alignment_relationship     : 1.00
-  typography_relationship    : 0.90
-  spacing_relationship       : 1.00
-  reading_order_relationship : 1.00
-  structural_similarity      : 0.40
-  container_relationship     : 0.00
-  semantic_similarity        : 0.61
-  form_discount_total        : 0.00
-Confidence: 0.83
+  structural_self_support : 0.47
+  boundary_isolation      : 1.00
+  repetition_support      : 0.25
+  content_density         : 0.15
+Confidence: 0.65
 Reason:
-  Relationship evidence exceeded boundary evidence across the run.
+  Boundaries on both sides; the candidate stands alone as one unit.
+
+Candidate:
+  26_3_update_candidate_0192
+Decision:
+  PRESERVE
+Evidence:
+  structural_self_support : 0.55
+  boundary_isolation      : 1.00
+  repetition_support      : 0.50
+  content_density         : 0.08
+Confidence: 0.66
+Reason:
+  Boundaries on both sides; the candidate stands alone as one unit.
 
 Candidate:
   26_3_update_candidate_0193
@@ -11123,96 +11131,41 @@ Logical Block 26_3_update_logical_block_0031:
   Type          : content
   Pages         : 2-2
   Content unit  : 26_3_update_unit_0031
-  Source Units  : 26_3_update_block_0031
+  Source Units  : 26_3_update_block_0031, 26_3_update_block_0032, 26_3_update_block_0033
   Structural Fingerprint:
-    block_count            : 1.00
+    block_count            : 3.00
     role_prominent         : 0.00
-    role_body              : 1.00
+    role_body              : 3.00
     cell_count             : 0.00
     mean_rel_x0            : 0.06
-    mean_rel_width         : 0.75
-    mean_line_height_ratio : 0.46
-    mean_digit_ratio       : 0.08
-    mean_upper_ratio       : 0.09
-    content_density        : 0.18
+    mean_rel_width         : 0.66
+    mean_line_height_ratio : 0.53
+    mean_digit_ratio       : 0.17
+    mean_upper_ratio       : 0.08
+    content_density        : 0.23
     marker_depth           : 0.00
     in_grid                : 0.00
-    repetition             : 3.00
+    repetition             : 1.67
     local_position         : 0.13
   Semantic Representation: dim=512
   Pattern       : pattern_002
-  Confidence    : 0.67
+  Confidence    : 0.73
   Evidence:
-    structural_self_support : 0.51
-    boundary_isolation      : 1.00
-    repetition_support      : 0.38
-    content_density         : 0.23
-  Text          : An example representing ZIP file 5 of 14 for Windows, Siebel Monthly Update 24.12 would be:
+    spatial_proximity          : 1.00
+    alignment_relationship     : 1.00
+    typography_relationship    : 0.51
+    spacing_relationship       : 1.00
+    reading_order_relationship : 1.00
+    structural_similarity      : 0.38
+    container_relationship     : 0.00
+    semantic_similarity        : 0.10
+    form_discount_total        : 0.00
+  Text          : An example representing ZIP file 5 of 14 for Windows, Siebel Monthly Update 24.12 would be: ``` p37386170_2412_MSWIN-x86-64_5of14.zip ``` The ZIP files for Windows versus the other supported platforms are different, as some components (such as DISA) only run on Windows platforms. Expand the link below that is relevant to your environment.
 
 Logical Block 26_3_update_logical_block_0032:
   Type          : content
   Pages         : 2-2
   Content unit  : 26_3_update_unit_0032
-  Source Units  : 26_3_update_block_0032
-  Structural Fingerprint:
-    block_count            : 1.00
-    role_prominent         : 0.00
-    role_body              : 1.00
-    cell_count             : 0.00
-    mean_rel_x0            : 0.06
-    mean_rel_width         : 0.34
-    mean_line_height_ratio : 0.12
-    mean_digit_ratio       : 0.42
-    mean_upper_ratio       : 0.11
-    content_density        : 0.09
-    marker_depth           : 0.00
-    in_grid                : 0.00
-    repetition             : 1.00
-    local_position         : 0.13
-  Semantic Representation: dim=512
-  Pattern       : pattern_002
-  Confidence    : 0.63
-  Evidence:
-    structural_self_support : 0.44
-    boundary_isolation      : 1.00
-    repetition_support      : 0.12
-    content_density         : 0.11
-  Text          : ``` p37386170_2412_MSWIN-x86-64_5of14.zip ```
-
-Logical Block 26_3_update_logical_block_0033:
-  Type          : content
-  Pages         : 2-2
-  Content unit  : 26_3_update_unit_0033
-  Source Units  : 26_3_update_block_0033
-  Structural Fingerprint:
-    block_count            : 1.00
-    role_prominent         : 0.00
-    role_body              : 1.00
-    cell_count             : 0.00
-    mean_rel_x0            : 0.06
-    mean_rel_width         : 0.88
-    mean_line_height_ratio : 1.00
-    mean_digit_ratio       : 0.00
-    mean_upper_ratio       : 0.05
-    content_density        : 0.40
-    marker_depth           : 0.00
-    in_grid                : 0.00
-    repetition             : 1.00
-    local_position         : 0.13
-  Semantic Representation: dim=512
-  Pattern       : pattern_002
-  Confidence    : 0.70
-  Evidence:
-    structural_self_support : 0.44
-    boundary_isolation      : 1.00
-    repetition_support      : 0.12
-    content_density         : 0.51
-  Text          : The ZIP files for Windows versus the other supported platforms are different, as some components (such as DISA) only run on Windows platforms. Expand the link below that is relevant to your environment.
-
-Logical Block 26_3_update_logical_block_0034:
-  Type          : content
-  Pages         : 2-2
-  Content unit  : 26_3_update_unit_0034
   Source Units  : 26_3_update_block_0034
   Structural Fingerprint:
     block_count            : 1.00
@@ -11239,10 +11192,10 @@ Logical Block 26_3_update_logical_block_0034:
     content_density         : 0.34
   Text          : NOTE: You do not need to download everything—for example, if you are not using DISA, there is no requirement to download that ZIP file.
 
-Logical Block 26_3_update_logical_block_0035:
+Logical Block 26_3_update_logical_block_0033:
   Type          : content
   Pages         : 2-2
-  Content unit  : 26_3_update_unit_0035
+  Content unit  : 26_3_update_unit_0033
   Source Units  : 26_3_update_block_0035
   Structural Fingerprint:
     block_count            : 1.00
@@ -11269,10 +11222,10 @@ Logical Block 26_3_update_logical_block_0035:
     content_density         : 0.05
   Text          : Windows Archive Files
 
-Logical Block 26_3_update_logical_block_0036:
+Logical Block 26_3_update_logical_block_0034:
   Type          : structured_record
   Pages         : 2-2
-  Content unit  : 26_3_update_unit_0036
+  Content unit  : 26_3_update_unit_0034
   Source Units  : 26_3_update_block_0036
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Archive Number
@@ -11303,10 +11256,10 @@ Logical Block 26_3_update_logical_block_0036:
     content_density         : 0.11
   Text          : Archive Number Content Description Required?
 
-Logical Block 26_3_update_logical_block_0037:
+Logical Block 26_3_update_logical_block_0035:
   Type          : structured_record
   Pages         : 2-2
-  Content unit  : 26_3_update_unit_0037
+  Content unit  : 26_3_update_unit_0035
   Source Units  : 26_3_update_block_0037
   Fields (positional, discovered from cell geometry):
     [0] pos0|len0|d4|u0 : 1
@@ -11337,10 +11290,10 @@ Logical Block 26_3_update_logical_block_0037:
     content_density         : 0.06
   Text          : 1 ReadMe File Optional
 
-Logical Block 26_3_update_logical_block_0038:
+Logical Block 26_3_update_logical_block_0036:
   Type          : structured_record
   Pages         : 2-2
-  Content unit  : 26_3_update_unit_0038
+  Content unit  : 26_3_update_unit_0036
   Source Units  : 26_3_update_block_0038
   Fields (positional, discovered from cell geometry):
     [0] pos0|len0|d4|u0 : 2
@@ -11379,10 +11332,10 @@ Logical Block 26_3_update_logical_block_0038:
     content_density         : 0.59
   Text          : 2 • Installer • Siebel Binaries and Shared Files • Enterprise Components • Application Interface • Mobile Web Client • Siebel Tools • Siebel Mobile • Siebel Outlook Add-in for SSSE • Oracle Database Connectivity Required for each release
 
-Logical Block 26_3_update_logical_block_0039:
+Logical Block 26_3_update_logical_block_0037:
   Type          : structured_record
   Pages         : 2-2
-  Content unit  : 26_3_update_unit_0039
+  Content unit  : 26_3_update_unit_0037
   Source Units  : 26_3_update_block_0039
   Fields (positional, discovered from cell geometry):
     [0] pos0|len0|d4|u0 : 3
@@ -11413,10 +11366,10 @@ Logical Block 26_3_update_logical_block_0039:
     content_density         : 0.20
   Text          : 3 Siebel Non-English (US) Safeboot Required for non-English (US) deployments only
 
-Logical Block 26_3_update_logical_block_0040:
+Logical Block 26_3_update_logical_block_0038:
   Type          : structured_record
   Pages         : 2-2
-  Content unit  : 26_3_update_unit_0040
+  Content unit  : 26_3_update_unit_0038
   Source Units  : 26_3_update_block_0040
   Fields (positional, discovered from cell geometry):
     [0] pos0|len0|d4|u0 : 4
@@ -11447,10 +11400,10 @@ Logical Block 26_3_update_logical_block_0040:
     content_density         : 0.14
   Text          : 4 Siebel Standard Repository Required for new deployments
 
-Logical Block 26_3_update_logical_block_0041:
+Logical Block 26_3_update_logical_block_0039:
   Type          : structured_record
   Pages         : 2-2
-  Content unit  : 26_3_update_unit_0041
+  Content unit  : 26_3_update_unit_0039
   Source Units  : 26_3_update_block_0041
   Fields (positional, discovered from cell geometry):
     [0] pos0|len0|d4|u0 : 5
@@ -11481,10 +11434,10 @@ Logical Block 26_3_update_logical_block_0041:
     content_density         : 0.09
   Text          : 5 Siebel Approval Manager Optional
 
-Logical Block 26_3_update_logical_block_0042:
+Logical Block 26_3_update_logical_block_0040:
   Type          : structured_record
   Pages         : 2-2
-  Content unit  : 26_3_update_unit_0042
+  Content unit  : 26_3_update_unit_0040
   Source Units  : 26_3_update_block_0042
   Fields (positional, discovered from cell geometry):
     [0] pos0|len0|d4|u0 : 6
@@ -11515,10 +11468,10 @@ Logical Block 26_3_update_logical_block_0042:
     content_density         : 0.11
   Text          : 6 Siebel Desktop Integration (DISA) Optional
 
-Logical Block 26_3_update_logical_block_0043:
+Logical Block 26_3_update_logical_block_0041:
   Type          : structured_record
   Pages         : 2-2
-  Content unit  : 26_3_update_unit_0043
+  Content unit  : 26_3_update_unit_0041
   Source Units  : 26_3_update_block_0043
   Fields (positional, discovered from cell geometry):
     [0] pos0|len0|d4|u0 : 7
@@ -11549,10 +11502,10 @@ Logical Block 26_3_update_logical_block_0043:
     content_density         : 0.09
   Text          : 7 Siebel IAA XML Connector Optional
 
-Logical Block 26_3_update_logical_block_0044:
+Logical Block 26_3_update_logical_block_0042:
   Type          : structured_record
   Pages         : 2-2
-  Content unit  : 26_3_update_unit_0044
+  Content unit  : 26_3_update_unit_0042
   Source Units  : 26_3_update_block_0044
   Fields (positional, discovered from cell geometry):
     [0] pos0|len0|d4|u0 : 8
@@ -11583,10 +11536,10 @@ Logical Block 26_3_update_logical_block_0044:
     content_density         : 0.10
   Text          : 8 Siebel Email Marketing Server Optional
 
-Logical Block 26_3_update_logical_block_0045:
+Logical Block 26_3_update_logical_block_0043:
   Type          : structured_record
   Pages         : 2-2
-  Content unit  : 26_3_update_unit_0045
+  Content unit  : 26_3_update_unit_0043
   Source Units  : 26_3_update_block_0045
   Fields (positional, discovered from cell geometry):
     [0] pos0|len0|d4|u0 : 9
@@ -11617,10 +11570,10 @@ Logical Block 26_3_update_logical_block_0045:
     content_density         : 0.09
   Text          : 9 Siebel Open Integration Optional
 
-Logical Block 26_3_update_logical_block_0046:
+Logical Block 26_3_update_logical_block_0044:
   Type          : structured_record
   Pages         : 2-2
-  Content unit  : 26_3_update_unit_0046
+  Content unit  : 26_3_update_unit_0044
   Source Units  : 26_3_update_block_0046
   Fields (positional, discovered from cell geometry):
     [0] pos0|len0|d4|u0 : 10
@@ -11651,10 +11604,10 @@ Logical Block 26_3_update_logical_block_0046:
     content_density         : 0.08
   Text          : 10 Siebel Smart Answer Optional
 
-Logical Block 26_3_update_logical_block_0047:
+Logical Block 26_3_update_logical_block_0045:
   Type          : structured_record
   Pages         : 2-2
-  Content unit  : 26_3_update_unit_0047
+  Content unit  : 26_3_update_unit_0045
   Source Units  : 26_3_update_block_0047
   Fields (positional, discovered from cell geometry):
     [0] pos0|len0|d4|u0 : 11
@@ -11685,10 +11638,10 @@ Logical Block 26_3_update_logical_block_0047:
     content_density         : 0.21
   Text          : 11 Oracle Database SE2 Required for new installations of the Siebel Mobile Web Client
 
-Logical Block 26_3_update_logical_block_0048:
+Logical Block 26_3_update_logical_block_0046:
   Type          : structured_record
   Pages         : 2-2
-  Content unit  : 26_3_update_unit_0048
+  Content unit  : 26_3_update_unit_0046
   Source Units  : 26_3_update_block_0048
   Fields (positional, discovered from cell geometry):
     [0] pos0|len0|d4|u0 : 12
@@ -11719,10 +11672,10 @@ Logical Block 26_3_update_logical_block_0048:
     content_density         : 0.17
   Text          : 12 Siebel Ancestor Repositories Required for Upgrades from pre-IP2017
 
-Logical Block 26_3_update_logical_block_0049:
+Logical Block 26_3_update_logical_block_0047:
   Type          : content
   Pages         : 2-2
-  Content unit  : 26_3_update_unit_0049
+  Content unit  : 26_3_update_unit_0047
   Source Units  : 26_3_update_block_0049
   Structural Fingerprint:
     block_count            : 1.00
@@ -11749,10 +11702,10 @@ Logical Block 26_3_update_logical_block_0049:
     content_density         : 0.06
   Text          : Linux/Unix Archive Files
 
-Logical Block 26_3_update_logical_block_0050:
+Logical Block 26_3_update_logical_block_0048:
   Type          : structured_record
   Pages         : 2-2
-  Content unit  : 26_3_update_unit_0050
+  Content unit  : 26_3_update_unit_0048
   Source Units  : 26_3_update_block_0050
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Archive Number
@@ -11784,10 +11737,10 @@ Logical Block 26_3_update_logical_block_0050:
     content_density         : 0.11
   Text          : Archive Number Content Description Required?
 
-Logical Block 26_3_update_logical_block_0051:
+Logical Block 26_3_update_logical_block_0049:
   Type          : structured_record
   Pages         : 2-2
-  Content unit  : 26_3_update_unit_0051
+  Content unit  : 26_3_update_unit_0049
   Source Units  : 26_3_update_block_0051
   Fields (positional, discovered from cell geometry):
     [0] pos0|len0|d4|u0 : 1
@@ -11819,10 +11772,10 @@ Logical Block 26_3_update_logical_block_0051:
     content_density         : 0.06
   Text          : 1 ReadMe File Optional
 
-Logical Block 26_3_update_logical_block_0052:
+Logical Block 26_3_update_logical_block_0050:
   Type          : structured_record
   Pages         : 3-3
-  Content unit  : 26_3_update_unit_0052
+  Content unit  : 26_3_update_unit_0050
   Source Units  : 26_3_update_block_0052
   Fields (positional, discovered from cell geometry):
     [0] pos0|len0|d4|u0 : 2
@@ -11860,10 +11813,10 @@ Logical Block 26_3_update_logical_block_0052:
     content_density         : 0.51
   Text          : 2 • Installer • Siebel Binaries and Shared Files • Enterprise Components • Application Interface • Mobile Web Client • Siebel Tools • Siebel Mobile • Oracle Database Connectivity Required for each release
 
-Logical Block 26_3_update_logical_block_0053:
+Logical Block 26_3_update_logical_block_0051:
   Type          : structured_record
   Pages         : 3-3
-  Content unit  : 26_3_update_unit_0053
+  Content unit  : 26_3_update_unit_0051
   Source Units  : 26_3_update_block_0053
   Fields (positional, discovered from cell geometry):
     [0] pos0|len0|d4|u0 : 3
@@ -11894,10 +11847,10 @@ Logical Block 26_3_update_logical_block_0053:
     content_density         : 0.20
   Text          : 3 Siebel Non-English (US) Safeboot Required for non-English (US) deployments only
 
-Logical Block 26_3_update_logical_block_0054:
+Logical Block 26_3_update_logical_block_0052:
   Type          : structured_record
   Pages         : 3-3
-  Content unit  : 26_3_update_unit_0054
+  Content unit  : 26_3_update_unit_0052
   Source Units  : 26_3_update_block_0054
   Fields (positional, discovered from cell geometry):
     [0] pos0|len0|d4|u0 : 4
@@ -11928,10 +11881,10 @@ Logical Block 26_3_update_logical_block_0054:
     content_density         : 0.14
   Text          : 4 Siebel Standard Repository Required for new deployments
 
-Logical Block 26_3_update_logical_block_0055:
+Logical Block 26_3_update_logical_block_0053:
   Type          : structured_record
   Pages         : 3-3
-  Content unit  : 26_3_update_unit_0055
+  Content unit  : 26_3_update_unit_0053
   Source Units  : 26_3_update_block_0055
   Fields (positional, discovered from cell geometry):
     [0] pos0|len0|d4|u0 : 5
@@ -11962,10 +11915,10 @@ Logical Block 26_3_update_logical_block_0055:
     content_density         : 0.09
   Text          : 5 Siebel Approval Manager Optional
 
-Logical Block 26_3_update_logical_block_0056:
+Logical Block 26_3_update_logical_block_0054:
   Type          : structured_record
   Pages         : 3-3
-  Content unit  : 26_3_update_unit_0056
+  Content unit  : 26_3_update_unit_0054
   Source Units  : 26_3_update_block_0056
   Fields (positional, discovered from cell geometry):
     [0] pos0|len0|d4|u0 : 6
@@ -11996,10 +11949,10 @@ Logical Block 26_3_update_logical_block_0056:
     content_density         : 0.10
   Text          : 6 Siebel Email Marketing Server Optional
 
-Logical Block 26_3_update_logical_block_0057:
+Logical Block 26_3_update_logical_block_0055:
   Type          : structured_record
   Pages         : 3-3
-  Content unit  : 26_3_update_unit_0057
+  Content unit  : 26_3_update_unit_0055
   Source Units  : 26_3_update_block_0057
   Fields (positional, discovered from cell geometry):
     [0] pos0|len0|d4|u0 : 7
@@ -12030,10 +11983,10 @@ Logical Block 26_3_update_logical_block_0057:
     content_density         : 0.09
   Text          : 7 Siebel Open Integration Optional
 
-Logical Block 26_3_update_logical_block_0058:
+Logical Block 26_3_update_logical_block_0056:
   Type          : structured_record
   Pages         : 3-3
-  Content unit  : 26_3_update_unit_0058
+  Content unit  : 26_3_update_unit_0056
   Source Units  : 26_3_update_block_0058
   Fields (positional, discovered from cell geometry):
     [0] pos0|len0|d4|u0 : 8
@@ -12064,10 +12017,10 @@ Logical Block 26_3_update_logical_block_0058:
     content_density         : 0.17
   Text          : 8 Siebel Ancestor Repositories Required for Upgrades from pre-IP2017
 
-Logical Block 26_3_update_logical_block_0059:
+Logical Block 26_3_update_logical_block_0057:
   Type          : content
   Pages         : 3-3
-  Content unit  : 26_3_update_unit_0059
+  Content unit  : 26_3_update_unit_0057
   Source Units  : 26_3_update_block_0059
   Structural Fingerprint:
     block_count            : 1.00
@@ -12094,10 +12047,10 @@ Logical Block 26_3_update_logical_block_0059:
     content_density         : 0.03
   Text          : Update Basics
 
-Logical Block 26_3_update_logical_block_0060:
+Logical Block 26_3_update_logical_block_0058:
   Type          : content
   Pages         : 3-3
-  Content unit  : 26_3_update_unit_0060
+  Content unit  : 26_3_update_unit_0058
   Source Units  : 26_3_update_block_0060
   Structural Fingerprint:
     block_count            : 1.00
@@ -12124,10 +12077,10 @@ Logical Block 26_3_update_logical_block_0060:
     content_density         : 0.31
   Text          : A Monthly Update provides new product features and available fixes. Beyond this document, please review these related items:
 
-Logical Block 26_3_update_logical_block_0061:
+Logical Block 26_3_update_logical_block_0059:
   Type          : content
   Pages         : 3-3
-  Content unit  : 26_3_update_unit_0061
+  Content unit  : 26_3_update_unit_0059
   Source Units  : 26_3_update_block_0061
   Structural Fingerprint:
     block_count            : 1.00
@@ -12154,10 +12107,10 @@ Logical Block 26_3_update_logical_block_0061:
     content_density         : 0.67
   Text          : - Installation instructions: For more about this Siebel CRM Update, including instructions for preparing the product media and for installing Siebel CRM, see the latest version of the _Installation Guide_ in _Siebel Bookshelf_ from the Siebel CRM Documentation site.
 
-Logical Block 26_3_update_logical_block_0062:
+Logical Block 26_3_update_logical_block_0060:
   Type          : content
   Pages         : 3-3
-  Content unit  : 26_3_update_unit_0062
+  Content unit  : 26_3_update_unit_0060
   Source Units  : 26_3_update_block_0062
   Structural Fingerprint:
     block_count            : 1.00
@@ -12184,10 +12137,10 @@ Logical Block 26_3_update_logical_block_0062:
     content_density         : 0.44
   Text          : - Third-Party Certifications: For a list of Third-Party Certifications, please visit My Oracle Support and search for “Siebel Industry Applications” on the _Certifications_ tab.
 
-Logical Block 26_3_update_logical_block_0063:
+Logical Block 26_3_update_logical_block_0061:
   Type          : content
   Pages         : 3-3
-  Content unit  : 26_3_update_unit_0063
+  Content unit  : 26_3_update_unit_0061
   Source Units  : 26_3_update_block_0063
   Structural Fingerprint:
     block_count            : 1.00
@@ -12214,10 +12167,10 @@ Logical Block 26_3_update_logical_block_0063:
     content_density         : 0.17
   Text          : - FAQ: The Siebel CRM Continuous Release Model (Doc ID 2378034.1).
 
-Logical Block 26_3_update_logical_block_0064:
+Logical Block 26_3_update_logical_block_0062:
   Type          : content
   Pages         : 3-3
-  Content unit  : 26_3_update_unit_0064
+  Content unit  : 26_3_update_unit_0062
   Source Units  : 26_3_update_block_0064
   Structural Fingerprint:
     block_count            : 1.00
@@ -12244,10 +12197,10 @@ Logical Block 26_3_update_logical_block_0064:
     content_density         : 0.57
   Text          : NOTE: This document contains two years (24 months) of rolling content. For bug fixes and known issues in versions released before the scope of this document, please download earlier versions from Oracle Support (DOC ID 2382435.1).
 
-Logical Block 26_3_update_logical_block_0065:
+Logical Block 26_3_update_logical_block_0063:
   Type          : content
   Pages         : 3-3
-  Content unit  : 26_3_update_unit_0065
+  Content unit  : 26_3_update_unit_0063
   Source Units  : 26_3_update_block_0065
   Structural Fingerprint:
     block_count            : 1.00
@@ -12274,10 +12227,10 @@ Logical Block 26_3_update_logical_block_0065:
     content_density         : 0.03
   Text          : Back to top
 
-Logical Block 26_3_update_logical_block_0066:
+Logical Block 26_3_update_logical_block_0064:
   Type          : content
   Pages         : 3-3
-  Content unit  : 26_3_update_unit_0066
+  Content unit  : 26_3_update_unit_0064
   Source Units  : 26_3_update_block_0066
   Structural Fingerprint:
     block_count            : 1.00
@@ -12304,10 +12257,10 @@ Logical Block 26_3_update_logical_block_0066:
     content_density         : 0.04
   Text          : Repository Updates
 
-Logical Block 26_3_update_logical_block_0067:
+Logical Block 26_3_update_logical_block_0065:
   Type          : content
   Pages         : 3-3
-  Content unit  : 26_3_update_unit_0067
+  Content unit  : 26_3_update_unit_0065
   Source Units  : 26_3_update_block_0067
   Structural Fingerprint:
     block_count            : 1.00
@@ -12334,10 +12287,10 @@ Logical Block 26_3_update_logical_block_0067:
     content_density         : 0.78
   Text          : Some features require Repository, Seed, or Manifest changes in order to take advantage of the feature. These changes must be imported through execution of the _RepositoryUpdate_ utility in the Development environment. Please refer to the _Database Upgrade Guide_ for information on how to use RepositoryUpdate.
 
-Logical Block 26_3_update_logical_block_0068:
+Logical Block 26_3_update_logical_block_0066:
   Type          : content
   Pages         : 3-3
-  Content unit  : 26_3_update_unit_0068
+  Content unit  : 26_3_update_unit_0066
   Source Units  : 26_3_update_block_0068
   Structural Fingerprint:
     block_count            : 1.00
@@ -12364,10 +12317,10 @@ Logical Block 26_3_update_logical_block_0068:
     content_density         : 0.48
   Text          : NOTE: Not all features require Repository changes. Examine the “Repository Update Required” column in the New Features tables below to see if such changes are required for a particular feature.
 
-Logical Block 26_3_update_logical_block_0069:
+Logical Block 26_3_update_logical_block_0067:
   Type          : content
   Pages         : 3-3
-  Content unit  : 26_3_update_unit_0069
+  Content unit  : 26_3_update_unit_0067
   Source Units  : 26_3_update_block_0069
   Structural Fingerprint:
     block_count            : 1.00
@@ -12394,10 +12347,10 @@ Logical Block 26_3_update_logical_block_0069:
     content_density         : 0.03
   Text          : Back to top
 
-Logical Block 26_3_update_logical_block_0070:
+Logical Block 26_3_update_logical_block_0068:
   Type          : content
   Pages         : 3-3
-  Content unit  : 26_3_update_unit_0070
+  Content unit  : 26_3_update_unit_0068
   Source Units  : 26_3_update_block_0070
   Structural Fingerprint:
     block_count            : 1.00
@@ -12424,10 +12377,10 @@ Logical Block 26_3_update_logical_block_0070:
     content_density         : 0.08
   Text          : Features and Bug Fixes by Release
 
-Logical Block 26_3_update_logical_block_0071:
+Logical Block 26_3_update_logical_block_0069:
   Type          : content
   Pages         : 3-3
-  Content unit  : 26_3_update_unit_0071
+  Content unit  : 26_3_update_unit_0069
   Source Units  : 26_3_update_block_0071
   Structural Fingerprint:
     block_count            : 1.00
@@ -12454,10 +12407,10 @@ Logical Block 26_3_update_logical_block_0071:
     content_density         : 0.68
   Text          : In addition to the documentation provided in the listed guides from Siebel Bookshelf, please visit the Siebel CRM Learning Subscription site where authorized partners and customers can find free courses and transfer of information (TOI) videos on some Siebel CRM features.
 
-Logical Block 26_3_update_logical_block_0072:
+Logical Block 26_3_update_logical_block_0070:
   Type          : content
   Pages         : 4-4
-  Content unit  : 26_3_update_unit_0072
+  Content unit  : 26_3_update_unit_0070
   Source Units  : 26_3_update_block_0072
   Structural Fingerprint:
     block_count            : 1.00
@@ -12484,10 +12437,10 @@ Logical Block 26_3_update_logical_block_0072:
     content_density         : 0.15
   Text          : New Features and Bug Fixes in Siebel CRM Monthly Update 26.3
 
-Logical Block 26_3_update_logical_block_0073:
+Logical Block 26_3_update_logical_block_0071:
   Type          : content
   Pages         : 4-4
-  Content unit  : 26_3_update_unit_0073
+  Content unit  : 26_3_update_unit_0071
   Source Units  : 26_3_update_block_0073
   Structural Fingerprint:
     block_count            : 1.00
@@ -12517,7 +12470,7 @@ Logical Block 26_3_update_logical_block_0073:
 Logical Block 26_3_update_consolidated_block_0001:
   Type          : structured_record
   Pages         : 4-4
-  Content unit  : 26_3_update_unit_0074
+  Content unit  : 26_3_update_unit_0072
   Source Units  : 26_3_update_block_0074, 26_3_update_block_0075
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Feature Name
@@ -12558,7 +12511,7 @@ Logical Block 26_3_update_consolidated_block_0001:
 Logical Block 26_3_update_consolidated_block_0002:
   Type          : structured_record
   Pages         : 4-4
-  Content unit  : 26_3_update_unit_0076
+  Content unit  : 26_3_update_unit_0074
   Source Units  : 26_3_update_block_0076, 26_3_update_block_0077, 26_3_update_block_0078
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Developer Experience: Enterprise Cache Operational Enhancements
@@ -12596,10 +12549,10 @@ Logical Block 26_3_update_consolidated_block_0002:
     role_compatibility_score    : 0.60
   Text          : Developer Experience: This enhancement provides the following operational benefits: • System Administration No Enterprise Cache Operational Enhancements • When deploying the Enterprise Cache Client Profile for your deployed Siebel servers, you can deploy the Client Profile once and it will automatically deploy to all your Siebel Servers. This will make your deployment of the Client Profiles much faster and less error prone. • When deploying the Enterprise Cache Client Profile, SSH tunnels are established automatically from each Siebel Server deployed to each Coherence Server that is deployed. • Improvements to the notification of Coherence cache status if the Coherence cache becomes unavailable and when it regains its footing. There are two areas where you can see the status of the Coherence cache accurately. • Help→Technical Support menu in the Siebel CRM Application • Siebel Management Console (SMC) Cache Status tab. Guide Training on this feature is available onOracle University.
 
-Logical Block 26_3_update_logical_block_0079:
+Logical Block 26_3_update_logical_block_0077:
   Type          : structured_record
   Pages         : 4-4
-  Content unit  : 26_3_update_unit_0079
+  Content unit  : 26_3_update_unit_0077
   Source Units  : 26_3_update_block_0079
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Customer Order Management – Improved Promotions UX
@@ -12634,7 +12587,7 @@ Logical Block 26_3_update_logical_block_0079:
 Logical Block 26_3_update_consolidated_block_0003:
   Type          : structured_record
   Pages         : 4-5
-  Content unit  : 26_3_update_unit_0080
+  Content unit  : 26_3_update_unit_0078
   Source Units  : 26_3_update_block_0080, 26_3_update_block_0081, 26_3_update_block_0082
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Siebel UCM: Publish in Hybrid Mode
@@ -12675,7 +12628,7 @@ Logical Block 26_3_update_consolidated_block_0003:
 Logical Block 26_3_update_consolidated_block_0004:
   Type          : structured_record
   Pages         : 5-5
-  Content unit  : 26_3_update_unit_0083
+  Content unit  : 26_3_update_unit_0081
   Source Units  : 26_3_update_block_0083, 26_3_update_block_0084, 26_3_update_block_0085
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Schema Changes without Downtime for Updates and Migration
@@ -12713,10 +12666,10 @@ Logical Block 26_3_update_consolidated_block_0004:
     role_compatibility_score    : 0.60
   Text          : Schema Changes without Downtime for Updates and Migration This feature leverages capabilities available in the Oracle and Microsoft SQL Server database engines that allow for online modifications to schema objects. Benefits Downtime is avoided during schema changes, ensuring that all employees, partners, customers, and integration points have access to user data in the Siebel CRM database, even when the schema structure is being modified. • Database Upgrade Guide No Examples include: • During the application of a Siebel Monthly Update's "PostInstallDBSetup" or "RepositoryUpdate" processes, which can make changes to the physical schema. • Performing a migration from a Development environment to any downstream environment, including Production. NOTE: Full Runtime Repository Migration will leverage this feature to avoid changes required to modify schema objects, but there will still be downtime required to rename the Repositories. Additional Background Changes to database schema objects is performed using "Data Definition Language" (DDL). When DDL is provided upon an existing object (such as a change to a column definition) or to create certain kinds of new objects (such as indexes), the traditional approach that the
 
-Logical Block 26_3_update_logical_block_0086:
+Logical Block 26_3_update_logical_block_0084:
   Type          : content
   Pages         : 6-6
-  Content unit  : 26_3_update_unit_0086
+  Content unit  : 26_3_update_unit_0084
   Source Units  : 26_3_update_block_0086
   Structural Fingerprint:
     block_count            : 1.00
@@ -12743,10 +12696,10 @@ Logical Block 26_3_update_logical_block_0086:
     content_density         : 0.83
   Text          : various Siebel CRM utilities have used could introduce "table locks" or other conditions that would block end users from being able to use the application while the DDL was executing. When this occurred, downtime could occur during the application of Siebel Updates (PostInstallDBSetup or RepositoryUpgrade) and Migration operations.
 
-Logical Block 26_3_update_logical_block_0087:
+Logical Block 26_3_update_logical_block_0085:
   Type          : content
   Pages         : 6-6
-  Content unit  : 26_3_update_unit_0087
+  Content unit  : 26_3_update_unit_0085
   Source Units  : 26_3_update_block_0087
   Structural Fingerprint:
     block_count            : 1.00
@@ -12773,10 +12726,10 @@ Logical Block 26_3_update_logical_block_0087:
     content_density         : 0.07
   Text          : Basic Technical Information
 
-Logical Block 26_3_update_logical_block_0088:
+Logical Block 26_3_update_logical_block_0086:
   Type          : content
   Pages         : 6-6
-  Content unit  : 26_3_update_unit_0088
+  Content unit  : 26_3_update_unit_0086
   Source Units  : 26_3_update_block_0088
   Structural Fingerprint:
     block_count            : 1.00
@@ -12803,10 +12756,10 @@ Logical Block 26_3_update_logical_block_0088:
     content_density         : 0.57
   Text          : By modifying our existing utilities to leverage built-in capabilities of modern versions of the Oracle and Microsoft SQL Server database platforms, we can execute DDL that accomplishes the same end result without forcing downtime.
 
-Logical Block 26_3_update_logical_block_0089:
+Logical Block 26_3_update_logical_block_0087:
   Type          : content
   Pages         : 6-6
-  Content unit  : 26_3_update_unit_0089
+  Content unit  : 26_3_update_unit_0087
   Source Units  : 26_3_update_block_0089
   Structural Fingerprint:
     block_count            : 1.00
@@ -12833,10 +12786,10 @@ Logical Block 26_3_update_logical_block_0089:
     content_density         : 0.34
   Text          : - For Oracle platforms, we leverage the DBMS_REDEFINITION package to make changes to objects without making any schema objects offline.
 
-Logical Block 26_3_update_logical_block_0090:
+Logical Block 26_3_update_logical_block_0088:
   Type          : content
   Pages         : 6-6
-  Content unit  : 26_3_update_unit_0090
+  Content unit  : 26_3_update_unit_0088
   Source Units  : 26_3_update_block_0090
   Structural Fingerprint:
     block_count            : 1.00
@@ -12863,10 +12816,10 @@ Logical Block 26_3_update_logical_block_0090:
     content_density         : 0.33
   Text          : - For Microsoft SQL Server platforms, we leverage the "ONLINE" keyword to modify objects without bringing any schema objects offline.
 
-Logical Block 26_3_update_logical_block_0091:
+Logical Block 26_3_update_logical_block_0089:
   Type          : content
   Pages         : 6-6
-  Content unit  : 26_3_update_unit_0091
+  Content unit  : 26_3_update_unit_0089
   Source Units  : 26_3_update_block_0091
   Structural Fingerprint:
     block_count            : 1.00
@@ -12893,10 +12846,10 @@ Logical Block 26_3_update_logical_block_0091:
     content_density         : 0.38
   Text          : For more information on the technical details of these database-level capabilities, please refer to the Oracle or Microsoft documentation as appropriate.
 
-Logical Block 26_3_update_logical_block_0092:
+Logical Block 26_3_update_logical_block_0090:
   Type          : content
   Pages         : 6-6
-  Content unit  : 26_3_update_unit_0092
+  Content unit  : 26_3_update_unit_0090
   Source Units  : 26_3_update_block_0092
   Structural Fingerprint:
     block_count            : 1.00
@@ -12923,10 +12876,10 @@ Logical Block 26_3_update_logical_block_0092:
     content_density         : 0.17
   Text          : NOTE: This change is not applicable to either DB2 database platform.
 
-Logical Block 26_3_update_logical_block_0093:
+Logical Block 26_3_update_logical_block_0091:
   Type          : structured_record
   Pages         : 6-6
-  Content unit  : 26_3_update_unit_0093
+  Content unit  : 26_3_update_unit_0091
   Source Units  : 26_3_update_block_0093
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Replacement of Obsolete Data Types from Oracle and MSSQL Databases
@@ -12961,10 +12914,10 @@ Logical Block 26_3_update_logical_block_0093:
     content_density         : 1.00
   Text          : Replacement of Obsolete Data Types from Oracle and MSSQL Databases Training on this feature is available onOracle University. This feature provides a utility to convert obsolete Column types, such as Oracle's LONG and Microsoft SQL Server's TEXT/NTEXT to their modern equivalents: CLOBs and VARCHAR(max)/NVARCHAR(max). The driver behind this is that the respective database vendors deprecated these data types a number of years ago and modern database engines are no longer being optimized for these older types. Replacing them with their modern equivalents will take advantage of their inherent benefits, such as greater data storage space, as well as future-proofing should either vendor ever elect to completely end support for these. • Database Upgrade Guide • Business Process Framework: Workfow Guide • Confguring Siebel Business Applications • Integration Platform Technologies: Siebel Enterprise Application Integration Guide No
 
-Logical Block 26_3_update_logical_block_0094:
+Logical Block 26_3_update_logical_block_0092:
   Type          : structured_record
   Pages         : 7-7
-  Content unit  : 26_3_update_unit_0094
+  Content unit  : 26_3_update_unit_0092
   Source Units  : 26_3_update_block_0094
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Developer Experience: Web Tools Applet Method Menu Wizard
@@ -12999,7 +12952,7 @@ Logical Block 26_3_update_logical_block_0094:
 Logical Block 26_3_update_consolidated_block_0005:
   Type          : structured_record
   Pages         : 7-7
-  Content unit  : 26_3_update_unit_0095
+  Content unit  : 26_3_update_unit_0093
   Source Units  : 26_3_update_block_0095, 26_3_update_block_0096
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Developer Experience: REST APIs for Workspaces
@@ -13037,10 +12990,10 @@ Logical Block 26_3_update_consolidated_block_0005:
     role_compatibility_score    : 0.60
   Text          : Developer Experience: REST APIs for Workspaces REST APIs allow Workspaces to be called independently without the need for the Web Tools or Siebel Tools user interface allowing automation and diverse use-cases. The REST APIs will extend Developer automation capabilities and save time. • REST API Guide No • Create Workspace • Checkpoint Workspace • Revert Version • Delete Workspace • Submit for Delivery • UndoSubmit for Delivery • Deliver Workspace • Rebase Workspace • Cancel Rebase • Finish Rebase Training on this feature is available onOracle University.
 
-Logical Block 26_3_update_logical_block_0097:
+Logical Block 26_3_update_logical_block_0095:
   Type          : structured_record
   Pages         : 7-7
-  Content unit  : 26_3_update_unit_0097
+  Content unit  : 26_3_update_unit_0095
   Source Units  : 26_3_update_block_0097
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Siebel Cloud Manager - Smarter Ingress Routing
@@ -13072,10 +13025,10 @@ Logical Block 26_3_update_logical_block_0097:
     content_density         : 1.00
   Text          : Siebel Cloud Manager - Smarter Ingress Routing Siebel Cloud Manager introduces support for Traefik as part of a Kubernetes deployment, to ensure continued security, support, and modern ingress traffic management. Support for Traefik is necessary as NGINX Ingress reaches end-of- life (March 2026). Traefik provides automatic SSL management, dynamic service discovery, and faster routing updates, reducing operational complexity. Its cloud-native design improves observability, scalability, and maintainability, and provides for the easy adoption of the Kubernetes Gateway API (a flexible, multi-protocol way to manage traffic routing). This enhancement ensures Siebel CRM deployments on Kubernetes remain secure, • Siebel Cloud Manager
 
-Logical Block 26_3_update_logical_block_0098:
+Logical Block 26_3_update_logical_block_0096:
   Type          : content
   Pages         : 8-8
-  Content unit  : 26_3_update_unit_0098
+  Content unit  : 26_3_update_unit_0096
   Source Units  : 26_3_update_block_0098
   Structural Fingerprint:
     block_count            : 1.00
@@ -13102,10 +13055,10 @@ Logical Block 26_3_update_logical_block_0098:
     content_density         : 0.13
   Text          : reliable, and aligned with CNCF guiding principles.
 
-Logical Block 26_3_update_logical_block_0099:
+Logical Block 26_3_update_logical_block_0097:
   Type          : content
   Pages         : 8-8
-  Content unit  : 26_3_update_unit_0099
+  Content unit  : 26_3_update_unit_0097
   Source Units  : 26_3_update_block_0099
   Structural Fingerprint:
     block_count            : 1.00
@@ -13132,10 +13085,10 @@ Logical Block 26_3_update_logical_block_0099:
     content_density         : 0.06
   Text          : Fixes in Siebel CRM 26.3
 
-Logical Block 26_3_update_logical_block_0100:
+Logical Block 26_3_update_logical_block_0098:
   Type          : structured_record
   Pages         : 8-8
-  Content unit  : 26_3_update_unit_0100
+  Content unit  : 26_3_update_unit_0098
   Source Units  : 26_3_update_block_0100
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Product Name
@@ -13168,10 +13121,10 @@ Logical Block 26_3_update_logical_block_0100:
     content_density         : 0.17
   Text          : Product Name Reference Category Description Configuration Instructions
 
-Logical Block 26_3_update_logical_block_0101:
+Logical Block 26_3_update_logical_block_0099:
   Type          : structured_record
   Pages         : 8-8
-  Content unit  : 26_3_update_unit_0101
+  Content unit  : 26_3_update_unit_0099
   Source Units  : 26_3_update_block_0101
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Siebel Apps - Clinical Trials Management System
@@ -13204,10 +13157,10 @@ Logical Block 26_3_update_logical_block_0101:
     content_density         : 0.54
   Text          : Siebel Apps - Clinical Trials Management System 38357102 Contact Enhances usability by splitting “Apply SVT” into “Apply SVT to Selected” and “Apply SVT to All,” reducing confusion and aligning with existing actions
 
-Logical Block 26_3_update_logical_block_0102:
+Logical Block 26_3_update_logical_block_0100:
   Type          : structured_record
   Pages         : 8-8
-  Content unit  : 26_3_update_unit_0102
+  Content unit  : 26_3_update_unit_0100
   Source Units  : 26_3_update_block_0102
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Siebel Apps - Clinical Trials Management System
@@ -13240,10 +13193,10 @@ Logical Block 26_3_update_logical_block_0102:
     content_density         : 0.65
   Text          : Siebel Apps - Clinical Trials Management System 38091478 Site Management Enhances Clinical One-CTMS integration by ensuring Site Account email addresses are captured and retained, preventing unintended overwrites and improving data consistency across systems
 
-Logical Block 26_3_update_logical_block_0103:
+Logical Block 26_3_update_logical_block_0101:
   Type          : structured_record
   Pages         : 8-8
-  Content unit  : 26_3_update_unit_0103
+  Content unit  : 26_3_update_unit_0101
   Source Units  : 26_3_update_block_0103
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Siebel Apps - Clinical Trials Management System
@@ -13276,10 +13229,10 @@ Logical Block 26_3_update_logical_block_0103:
     content_density         : 0.72
   Text          : Siebel Apps - Clinical Trials Management System 38104111 Site Management Enhances usability of the Clinical Protocol Site Subjects List Applet by adding tooltips and confirmation dialogs to clarify the behavior of “Apply Version to Selected,” “Apply Version to All,” and “Apply SVT” actions
 
-Logical Block 26_3_update_logical_block_0104:
+Logical Block 26_3_update_logical_block_0102:
   Type          : structured_record
   Pages         : 8-8
-  Content unit  : 26_3_update_unit_0104
+  Content unit  : 26_3_update_unit_0102
   Source Units  : 26_3_update_block_0104
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Siebel Apps - Clinical Trials Management System
@@ -13312,10 +13265,10 @@ Logical Block 26_3_update_logical_block_0104:
     content_density         : 0.54
   Text          : Siebel Apps - Clinical Trials Management System 38721778 Site Management Addresses an issue where the CRA Primary field on the Site Management screen did not display the correct primary user assigned to the site team.
 
-Logical Block 26_3_update_logical_block_0105:
+Logical Block 26_3_update_logical_block_0103:
   Type          : structured_record
   Pages         : 8-8
-  Content unit  : 26_3_update_unit_0105
+  Content unit  : 26_3_update_unit_0103
   Source Units  : 26_3_update_block_0105
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Siebel Apps - Clinical Trials Management System
@@ -13348,10 +13301,10 @@ Logical Block 26_3_update_logical_block_0105:
     content_density         : 0.56
   Text          : Siebel Apps - Clinical Trials Management System 38376840 Site Management Addresses issue where the SDV API incorrectly interprets visit names containing parentheses as dynamic visits because it does not check the Repeat Flag
 
-Logical Block 26_3_update_logical_block_0106:
+Logical Block 26_3_update_logical_block_0104:
   Type          : structured_record
   Pages         : 8-8
-  Content unit  : 26_3_update_unit_0106
+  Content unit  : 26_3_update_unit_0104
   Source Units  : 26_3_update_block_0106
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Siebel Apps - Clinical Trials Management System
@@ -13384,10 +13337,10 @@ Logical Block 26_3_update_logical_block_0106:
     content_density         : 0.62
   Text          : Siebel Apps - Clinical Trials Management System 38472842 Site Management Addresses an issue where a Completed Date was automatically populated after syncing from offline to online mode in Checklist Activities, even when no date was entered offline.
 
-Logical Block 26_3_update_logical_block_0107:
+Logical Block 26_3_update_logical_block_0105:
   Type          : structured_record
   Pages         : 8-8
-  Content unit  : 26_3_update_unit_0107
+  Content unit  : 26_3_update_unit_0105
   Source Units  : 26_3_update_block_0107
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Siebel Apps - Clinical Trials Management System
@@ -13420,10 +13373,10 @@ Logical Block 26_3_update_logical_block_0107:
     content_density         : 0.43
   Text          : Siebel Apps - Clinical Trials Management System 38907876 Site Management Addresses an issue where dynamic visit repeat numbers were incorrectly displayed as “0” in Activities
 
-Logical Block 26_3_update_logical_block_0108:
+Logical Block 26_3_update_logical_block_0106:
   Type          : structured_record
   Pages         : 8-8
-  Content unit  : 26_3_update_unit_0108
+  Content unit  : 26_3_update_unit_0106
   Source Units  : 26_3_update_block_0108
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Siebel Apps - Clinical Trials
@@ -13456,10 +13409,10 @@ Logical Block 26_3_update_logical_block_0108:
     content_density         : 0.40
   Text          : Siebel Apps - Clinical Trials 38105978 Site Management Enhances security and governance by restricting “Change SVT Version at Site” and “Apply SVT” actions to
 
-Logical Block 26_3_update_logical_block_0109:
+Logical Block 26_3_update_logical_block_0107:
   Type          : structured_record
   Pages         : 9-9
-  Content unit  : 26_3_update_unit_0109
+  Content unit  : 26_3_update_unit_0107
   Source Units  : 26_3_update_block_0109
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Management System Siebel Apps - Clinical Trials Management System
@@ -13491,10 +13444,10 @@ Logical Block 26_3_update_logical_block_0109:
     content_density         : 0.84
   Text          : Management System Siebel Apps - Clinical Trials Management System 38472853 Site Management users with designated responsibility, ensuring only authorized users can perform these operations Addresses an issue in Mobile app where the Completed Date field in Checklist Activities was editable in offline mode but read-only in online mode.
 
-Logical Block 26_3_update_logical_block_0110:
+Logical Block 26_3_update_logical_block_0108:
   Type          : structured_record
   Pages         : 9-9
-  Content unit  : 26_3_update_unit_0110
+  Content unit  : 26_3_update_unit_0108
   Source Units  : 26_3_update_block_0110
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Siebel Apps - Clinical Trials Management System
@@ -13526,10 +13479,10 @@ Logical Block 26_3_update_logical_block_0110:
     content_density         : 0.54
   Text          : Siebel Apps - Clinical Trials Management System 37919326 Site Management Addresses an issue where Responsibility and Position fields in certain Clinical MVG applets could be edited, bypassing authorization controls.
 
-Logical Block 26_3_update_logical_block_0111:
+Logical Block 26_3_update_logical_block_0109:
   Type          : structured_record
   Pages         : 9-9
-  Content unit  : 26_3_update_unit_0111
+  Content unit  : 26_3_update_unit_0109
   Source Units  : 26_3_update_block_0111
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Siebel Apps - Clinical Trials Management System
@@ -13561,10 +13514,10 @@ Logical Block 26_3_update_logical_block_0111:
     content_density         : 0.74
   Text          : Siebel Apps - Clinical Trials Management System 38088625 Site Management Addresses an issue where changes to SVT version at the site level were not automatically propagated to associated subjects in Clinical One to CTMS integration, requiring manual user action and risking version inconsistencies
 
-Logical Block 26_3_update_logical_block_0112:
+Logical Block 26_3_update_logical_block_0110:
   Type          : structured_record
   Pages         : 9-9
-  Content unit  : 26_3_update_unit_0112
+  Content unit  : 26_3_update_unit_0110
   Source Units  : 26_3_update_block_0112
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Siebel Apps - Clinical Trials Management System
@@ -13596,10 +13549,10 @@ Logical Block 26_3_update_logical_block_0112:
     content_density         : 0.31
   Text          : Siebel Apps - Clinical Trials Management System 38104008 Site Management HANDLE ORPHANED SUBJECTS W.R.T. CTMS-C1 INTEGRATION
 
-Logical Block 26_3_update_logical_block_0113:
+Logical Block 26_3_update_logical_block_0111:
   Type          : structured_record
   Pages         : 9-9
-  Content unit  : 26_3_update_unit_0113
+  Content unit  : 26_3_update_unit_0111
   Source Units  : 26_3_update_block_0113
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Siebel Apps - Clinical Trials Management System
@@ -13631,10 +13584,10 @@ Logical Block 26_3_update_logical_block_0113:
     content_density         : 0.66
   Text          : Siebel Apps - Clinical Trials Management System 38375441 Site Management Addresses issue where the LS Clinical Subject Visit Plan API incorrectly handles parentheses in visit names as dynamic visits without checking the Visit Repeat Flag, causing parsing errors.
 
-Logical Block 26_3_update_logical_block_0114:
+Logical Block 26_3_update_logical_block_0112:
   Type          : structured_record
   Pages         : 9-9
-  Content unit  : 26_3_update_unit_0114
+  Content unit  : 26_3_update_unit_0112
   Source Units  : 26_3_update_block_0114
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Siebel Apps - Clinical Trials Management System
@@ -13666,10 +13619,10 @@ Logical Block 26_3_update_logical_block_0114:
     content_density         : 0.49
   Text          : Siebel Apps - Clinical Trials Management System 38141228 Site Management Addresses an issue with Mobile SmartScripts displaying question numbers inconsistently in Clinical TripReport SmartScripts.
 
-Logical Block 26_3_update_logical_block_0115:
+Logical Block 26_3_update_logical_block_0113:
   Type          : structured_record
   Pages         : 9-9
-  Content unit  : 26_3_update_unit_0115
+  Content unit  : 26_3_update_unit_0113
   Source Units  : 26_3_update_block_0115
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Siebel Apps - Clinical Trials Management System
@@ -13701,10 +13654,10 @@ Logical Block 26_3_update_logical_block_0115:
     content_density         : 0.50
   Text          : Siebel Apps - Clinical Trials Management System 38907819 Site Management Addresses an issue where the subject status date in the Protocol Subject tab was displayed one day earlier than the actual date.
 
-Logical Block 26_3_update_logical_block_0116:
+Logical Block 26_3_update_logical_block_0114:
   Type          : structured_record
   Pages         : 9-9
-  Content unit  : 26_3_update_unit_0116
+  Content unit  : 26_3_update_unit_0114
   Source Units  : 26_3_update_block_0116
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Siebel Apps - Clinical Trials Management System
@@ -13736,10 +13689,10 @@ Logical Block 26_3_update_logical_block_0116:
     content_density         : 0.47
   Text          : Siebel Apps - Clinical Trials Management System 35982623 Site Management Addresses an issue where users not assigned to a site visit could access visit details via alternate navigation paths
 
-Logical Block 26_3_update_logical_block_0117:
+Logical Block 26_3_update_logical_block_0115:
   Type          : structured_record
   Pages         : 9-9
-  Content unit  : 26_3_update_unit_0117
+  Content unit  : 26_3_update_unit_0115
   Source Units  : 26_3_update_block_0117
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Siebel Apps - Clinical Trials Management System
@@ -13771,10 +13724,10 @@ Logical Block 26_3_update_logical_block_0117:
     content_density         : 0.66
   Text          : Siebel Apps - Clinical Trials Management System 38152283 Site Management Addresses issue where fields on the Visit Plan business component did not properly enforce record-level read-only behavior, allowing fields to appear editable and resulting in update errors.
 
-Logical Block 26_3_update_logical_block_0118:
+Logical Block 26_3_update_logical_block_0116:
   Type          : structured_record
   Pages         : 10-10
-  Content unit  : 26_3_update_unit_0118
+  Content unit  : 26_3_update_unit_0116
   Source Units  : 26_3_update_block_0118
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Siebel Apps - Clinical Trials Management System
@@ -13806,10 +13759,10 @@ Logical Block 26_3_update_logical_block_0118:
     content_density         : 0.40
   Text          : Siebel Apps - Clinical Trials Management System 38390917 Site Management Addresses an issue where parentheses were not supported on creation of dynamic Visits
 
-Logical Block 26_3_update_logical_block_0119:
+Logical Block 26_3_update_logical_block_0117:
   Type          : structured_record
   Pages         : 10-10
-  Content unit  : 26_3_update_unit_0119
+  Content unit  : 26_3_update_unit_0117
   Source Units  : 26_3_update_block_0119
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Siebel Apps - Clinical Trials Management System
@@ -13841,10 +13794,10 @@ Logical Block 26_3_update_logical_block_0119:
     content_density         : 0.68
   Text          : Siebel Apps - Clinical Trials Management System 38208060 Site Management Enhances notification capabilities by extending SVT integration email alerts to include Protocol team members, ensuring broader awareness when SVT versions are received from Clinical One into CTMS.
 
-Logical Block 26_3_update_logical_block_0120:
+Logical Block 26_3_update_logical_block_0118:
   Type          : structured_record
   Pages         : 10-10
-  Content unit  : 26_3_update_unit_0120
+  Content unit  : 26_3_update_unit_0118
   Source Units  : 26_3_update_block_0120
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Siebel Apps - Clinical Trials Management System
@@ -13876,10 +13829,10 @@ Logical Block 26_3_update_logical_block_0120:
     content_density         : 0.47
   Text          : Siebel Apps - Clinical Trials Management System 38419875 Site Management Addresses an enhancement to ensure Site Visit records become read-only after a Visit Report is submitted for review.
 
-Logical Block 26_3_update_logical_block_0121:
+Logical Block 26_3_update_logical_block_0119:
   Type          : structured_record
   Pages         : 10-10
-  Content unit  : 26_3_update_unit_0121
+  Content unit  : 26_3_update_unit_0119
   Source Units  : 26_3_update_block_0121
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Siebel Apps - Clinical Trials Management System
@@ -13911,10 +13864,10 @@ Logical Block 26_3_update_logical_block_0121:
     content_density         : 0.49
   Text          : Siebel Apps - Clinical Trials Management System 38390240 Site Management Addresses scenario where the SDV API loads the CRF record for the incorrect repeat number for unschedulable dynamic visits
 
-Logical Block 26_3_update_logical_block_0122:
+Logical Block 26_3_update_logical_block_0120:
   Type          : structured_record
   Pages         : 10-10
-  Content unit  : 26_3_update_unit_0122
+  Content unit  : 26_3_update_unit_0120
   Source Units  : 26_3_update_block_0122
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Siebel Apps - Customer Order Management
@@ -13946,10 +13899,10 @@ Logical Block 26_3_update_logical_block_0122:
     content_density         : 0.75
   Text          : Siebel Apps - Customer Order Management 38612771 Product Administration After deleting old versions of customizable product using business service "SWI Cfg Object Broker" method "RemoveOldReleasedVersions", product administrator can copy the product successfully without getting SBL-DAT-00215 error.
 
-Logical Block 26_3_update_logical_block_0123:
+Logical Block 26_3_update_logical_block_0121:
   Type          : structured_record
   Pages         : 10-10
-  Content unit  : 26_3_update_unit_0123
+  Content unit  : 26_3_update_unit_0121
   Source Units  : 26_3_update_block_0123
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Siebel CRM Deployment
@@ -13981,10 +13934,10 @@ Logical Block 26_3_update_logical_block_0123:
     content_density         : 0.26
   Text          : Siebel CRM Deployment 38089901 Application Interface Siebel uses only serverAuth EKU for SSL connections
 
-Logical Block 26_3_update_logical_block_0124:
+Logical Block 26_3_update_logical_block_0122:
   Type          : structured_record
   Pages         : 10-10
-  Content unit  : 26_3_update_unit_0124
+  Content unit  : 26_3_update_unit_0122
   Source Units  : 26_3_update_block_0124
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Siebel CRM Deployment
@@ -14016,10 +13969,10 @@ Logical Block 26_3_update_logical_block_0124:
     content_density         : 0.65
   Text          : Siebel CRM Deployment 37167823 Database Upgrade This bug fix ensures that the obsolete column types LONG (Oracle) and (N)TEXT (MSSQL) are converted to the supported CLOB and (N)VARCHAR(max) data types during Upgrades as appropriate for that databaseplatform.
 
-Logical Block 26_3_update_logical_block_0125:
+Logical Block 26_3_update_logical_block_0123:
   Type          : structured_record
   Pages         : 10-10
-  Content unit  : 26_3_update_unit_0125
+  Content unit  : 26_3_update_unit_0123
   Source Units  : 26_3_update_block_0125
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Siebel CRM Deployment
@@ -14051,10 +14004,10 @@ Logical Block 26_3_update_logical_block_0125:
     content_density         : 0.73
   Text          : Siebel CRM Deployment 31589382 Database Upgrade This fix changes the way that schema modifications are applied to allow for tables and indexes to remain in use during the application of the changes during, for example, Migration. This change applies to Oracle and MSSQL database platforms only.
 
-Logical Block 26_3_update_logical_block_0126:
+Logical Block 26_3_update_logical_block_0124:
   Type          : structured_record
   Pages         : 10-10
-  Content unit  : 26_3_update_unit_0126
+  Content unit  : 26_3_update_unit_0124
   Source Units  : 26_3_update_block_0126
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Siebel CRM Deployment
@@ -14086,10 +14039,10 @@ Logical Block 26_3_update_logical_block_0126:
     content_density         : 0.28
   Text          : Siebel CRM Deployment 38772851 Installation Addressed IBMJCE Migration Issue related to decryption Error. (Part 2)
 
-Logical Block 26_3_update_logical_block_0127:
+Logical Block 26_3_update_logical_block_0125:
   Type          : structured_record
   Pages         : 10-10
-  Content unit  : 26_3_update_unit_0127
+  Content unit  : 26_3_update_unit_0125
   Source Units  : 26_3_update_block_0127
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Siebel CRM Deployment
@@ -14121,10 +14074,10 @@ Logical Block 26_3_update_logical_block_0127:
     content_density         : 0.24
   Text          : Siebel CRM Deployment 38729891 Installation Add Support erverAuth using EKU In Siebel Certificates
 
-Logical Block 26_3_update_logical_block_0128:
+Logical Block 26_3_update_logical_block_0126:
   Type          : structured_record
   Pages         : 11-11
-  Content unit  : 26_3_update_unit_0128
+  Content unit  : 26_3_update_unit_0126
   Source Units  : 26_3_update_block_0128
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Siebel CRM Deployment
@@ -14156,10 +14109,10 @@ Logical Block 26_3_update_logical_block_0128:
     content_density         : 0.25
   Text          : Siebel CRM Deployment 38633633 Installation Improved the ability to use default ports during Install.
 
-Logical Block 26_3_update_logical_block_0129:
+Logical Block 26_3_update_logical_block_0127:
   Type          : structured_record
   Pages         : 11-11
-  Content unit  : 26_3_update_unit_0129
+  Content unit  : 26_3_update_unit_0127
   Source Units  : 26_3_update_block_0129
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Siebel CRM Deployment
@@ -14191,10 +14144,10 @@ Logical Block 26_3_update_logical_block_0129:
     content_density         : 0.26
   Text          : Siebel CRM Deployment 38571707 Installation Addressed IBMJCE Migration Issue related to decryption Error.
 
-Logical Block 26_3_update_logical_block_0130:
+Logical Block 26_3_update_logical_block_0128:
   Type          : structured_record
   Pages         : 11-11
-  Content unit  : 26_3_update_unit_0130
+  Content unit  : 26_3_update_unit_0128
   Source Units  : 26_3_update_block_0130
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Siebel CRM Deployment
@@ -14226,10 +14179,10 @@ Logical Block 26_3_update_logical_block_0130:
     content_density         : 0.23
   Text          : Siebel CRM Deployment 38721251 Installation Improved ODBCSQL Connection Support for AIX 7.3
 
-Logical Block 26_3_update_logical_block_0131:
+Logical Block 26_3_update_logical_block_0129:
   Type          : structured_record
   Pages         : 11-11
-  Content unit  : 26_3_update_unit_0131
+  Content unit  : 26_3_update_unit_0129
   Source Units  : 26_3_update_block_0131
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Siebel CRM Deployment
@@ -14261,10 +14214,10 @@ Logical Block 26_3_update_logical_block_0131:
     content_density         : 0.34
   Text          : Siebel CRM Deployment 38883351 Installation Consolidated Outlook_addin Installation to be delivered as part of WebClient installation.
 
-Logical Block 26_3_update_logical_block_0132:
+Logical Block 26_3_update_logical_block_0130:
   Type          : structured_record
   Pages         : 11-11
-  Content unit  : 26_3_update_unit_0132
+  Content unit  : 26_3_update_unit_0130
   Source Units  : 26_3_update_block_0132
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Siebel CRM Deployment
@@ -14296,10 +14249,10 @@ Logical Block 26_3_update_logical_block_0132:
     content_density         : 0.74
   Text          : Siebel CRM Deployment 38876681 Migration Restores the Application Data Migration service for Migration. Note that this allows its use during Migration, but does not restore the administrative views. Application Data Migration with Transformation is not restored nor are there any plans to do so.
 
-Logical Block 26_3_update_logical_block_0133:
+Logical Block 26_3_update_logical_block_0131:
   Type          : structured_record
   Pages         : 11-11
-  Content unit  : 26_3_update_unit_0133
+  Content unit  : 26_3_update_unit_0131
   Source Units  : 26_3_update_block_0133
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Siebel CRM Deployment
@@ -14331,10 +14284,10 @@ Logical Block 26_3_update_logical_block_0133:
     content_density         : 0.46
   Text          : Siebel CRM Deployment 30501821 Repository Utilities Eliminates a problem where tables are not regranted permissions when Migration is run, reducing the time required to run Migration.
 
-Logical Block 26_3_update_logical_block_0134:
+Logical Block 26_3_update_logical_block_0132:
   Type          : structured_record
   Pages         : 11-11
-  Content unit  : 26_3_update_unit_0134
+  Content unit  : 26_3_update_unit_0132
   Source Units  : 26_3_update_block_0134
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Siebel CRM Development
@@ -14366,10 +14319,10 @@ Logical Block 26_3_update_logical_block_0134:
     content_density         : 0.84
   Text          : Siebel CRM Development 38698788 Workflow When purging Workflow Process instance records, those with no End Date specified can still be purged where previously they were not. In addition, a new method has been introduced to remove orphaned records from the purge process. _* This fixed bug was previously_ _documented as a Known Issue *_
 
-Logical Block 26_3_update_logical_block_0135:
+Logical Block 26_3_update_logical_block_0133:
   Type          : structured_record
   Pages         : 11-11
-  Content unit  : 26_3_update_unit_0135
+  Content unit  : 26_3_update_unit_0133
   Source Units  : 26_3_update_block_0135
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Siebel CRM Development
@@ -14401,10 +14354,10 @@ Logical Block 26_3_update_logical_block_0135:
     content_density         : 0.42
   Text          : Siebel CRM Development 38663266 Workflow When creating or updating database triggers, the Generate Triggers component will now be able to create ANSI-compliant triggers.
 
-Logical Block 26_3_update_logical_block_0136:
+Logical Block 26_3_update_logical_block_0134:
   Type          : structured_record
   Pages         : 11-11
-  Content unit  : 26_3_update_unit_0136
+  Content unit  : 26_3_update_unit_0134
   Source Units  : 26_3_update_block_0136
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Siebel CRM Development
@@ -14436,10 +14389,10 @@ Logical Block 26_3_update_logical_block_0136:
     content_density         : 0.44
   Text          : Siebel CRM Development 38142176 Workflow The Purge button on the Workflow Process Instance Admin View will correctly purge instances of Workflow Processes that have completed.
 
-Logical Block 26_3_update_logical_block_0137:
+Logical Block 26_3_update_logical_block_0135:
   Type          : structured_record
   Pages         : 11-11
-  Content unit  : 26_3_update_unit_0137
+  Content unit  : 26_3_update_unit_0135
   Source Units  : 26_3_update_block_0137
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Siebel CRM Development
@@ -14471,10 +14424,10 @@ Logical Block 26_3_update_logical_block_0137:
     content_density         : 0.55
   Text          : Siebel CRM Development 38755215 Workspaces There was a missing parameter in Siebel Bookshelf for the command to start the Coherence Console. This will be fixed in the System Administration Guide in an upcoming release.
 
-Logical Block 26_3_update_logical_block_0138:
+Logical Block 26_3_update_logical_block_0136:
   Type          : structured_record
   Pages         : 12-12
-  Content unit  : 26_3_update_unit_0138
+  Content unit  : 26_3_update_unit_0136
   Source Units  : 26_3_update_block_0138
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Siebel CRM Documentation
@@ -14506,10 +14459,10 @@ Logical Block 26_3_update_logical_block_0138:
     content_density         : 0.34
   Text          : Siebel CRM Documentation 27507784 Configuring Siebel Open UI Documented the Generation/Deployment of Browser Script on Dedicated Client.
 
-Logical Block 26_3_update_logical_block_0139:
+Logical Block 26_3_update_logical_block_0137:
   Type          : structured_record
   Pages         : 12-12
-  Content unit  : 26_3_update_unit_0139
+  Content unit  : 26_3_update_unit_0137
   Source Units  : 26_3_update_block_0139
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Siebel CRM Documentation
@@ -14541,10 +14494,10 @@ Logical Block 26_3_update_logical_block_0139:
     content_density         : 0.40
   Text          : Siebel CRM Documentation 38584584 Object Interfaces Reference This documentation update gives the correct syntax for specifying an ADODB connect stringin script.
 
-Logical Block 26_3_update_logical_block_0140:
+Logical Block 26_3_update_logical_block_0138:
   Type          : structured_record
   Pages         : 12-12
-  Content unit  : 26_3_update_unit_0140
+  Content unit  : 26_3_update_unit_0138
   Source Units  : 26_3_update_block_0140
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Siebel CRM Documentation
@@ -14576,10 +14529,10 @@ Logical Block 26_3_update_logical_block_0140:
     content_density         : 1.00
   Text          : Siebel CRM Documentation 38944807 System Admin Gd The System Administration Guide, which covers the Siebel CRM Event Pub/Sub feature for Siebel–Kafka integration, has been updated to provide: a) clearer descriptions of parameter KafkaPassword, and b) revised guidance on certificate handling aligned with the new paradigm of separate client and server authorization during Kafka message exchange simulation using Kafka’s sample producer and consumer applications.
 
-Logical Block 26_3_update_logical_block_0141:
+Logical Block 26_3_update_logical_block_0139:
   Type          : structured_record
   Pages         : 12-12
-  Content unit  : 26_3_update_unit_0141
+  Content unit  : 26_3_update_unit_0139
   Source Units  : 26_3_update_block_0141
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Siebel CRM Documentation
@@ -14611,10 +14564,10 @@ Logical Block 26_3_update_logical_block_0141:
     content_density         : 0.29
   Text          : Siebel CRM Documentation 38301898 Transp/Interface: EAI Documentation on TLS mutual authentication has been updated.
 
-Logical Block 26_3_update_logical_block_0142:
+Logical Block 26_3_update_logical_block_0140:
   Type          : structured_record
   Pages         : 12-12
-  Content unit  : 26_3_update_unit_0142
+  Content unit  : 26_3_update_unit_0140
   Source Units  : 26_3_update_block_0142
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u1 : Siebel CRM End User
@@ -14646,10 +14599,10 @@ Logical Block 26_3_update_logical_block_0142:
     content_density         : 0.30
   Text          : Siebel CRM End User 38444710 User Interface TinyMCE improvement to support Style Tag in the Head Tag of an Email Template.
 
-Logical Block 26_3_update_logical_block_0143:
+Logical Block 26_3_update_logical_block_0141:
   Type          : structured_record
   Pages         : 12-12
-  Content unit  : 26_3_update_unit_0143
+  Content unit  : 26_3_update_unit_0141
   Source Units  : 26_3_update_block_0143
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u1 : Siebel CRM End User
@@ -14681,10 +14634,10 @@ Logical Block 26_3_update_logical_block_0143:
     content_density         : 0.22
   Text          : Siebel CRM End User 38556974 User Interface Fixed Toggle applets to display data corectly
 
-Logical Block 26_3_update_logical_block_0144:
+Logical Block 26_3_update_logical_block_0142:
   Type          : structured_record
   Pages         : 12-12
-  Content unit  : 26_3_update_unit_0144
+  Content unit  : 26_3_update_unit_0142
   Source Units  : 26_3_update_block_0144
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u1 : Siebel CRM End User
@@ -14716,10 +14669,10 @@ Logical Block 26_3_update_logical_block_0144:
     content_density         : 0.27
   Text          : Siebel CRM End User 38588428 User Interface LEFT AND RIGHT Arrows are added in screenbars for Synergy Theme
 
-Logical Block 26_3_update_logical_block_0145:
+Logical Block 26_3_update_logical_block_0143:
   Type          : structured_record
   Pages         : 12-12
-  Content unit  : 26_3_update_unit_0145
+  Content unit  : 26_3_update_unit_0143
   Source Units  : 26_3_update_block_0145
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Siebel CRM Integration
@@ -14751,40 +14704,95 @@ Logical Block 26_3_update_logical_block_0145:
     content_density         : 0.50
   Text          : Siebel CRM Integration 38684263 EAI Outbound REST requests that send negative numbers using Integration Components that point to columns of type DTYPE_INTEGER or DTYPE_NUMBER are now correctly handled.
 
+Logical Block 26_3_update_logical_block_0144:
+  Type          : content
+  Pages         : 12-12
+  Content unit  : 26_3_update_unit_0144
+  Source Units  : 26_3_update_block_0146
+  Structural Fingerprint:
+    block_count            : 1.00
+    role_prominent         : 0.00
+    role_body              : 1.00
+    cell_count             : 0.00
+    mean_rel_x0            : 0.06
+    mean_rel_width         : 0.52
+    mean_line_height_ratio : 0.46
+    mean_digit_ratio       : 0.05
+    mean_upper_ratio       : 0.17
+    content_density        : 0.12
+    marker_depth           : 0.00
+    in_grid                : 0.00
+    repetition             : 2.00
+    local_position         : 0.80
+  Semantic Representation: dim=512
+  Pattern       : pattern_002
+  Confidence    : 0.65
+  Evidence:
+    structural_self_support : 0.47
+    boundary_isolation      : 1.00
+    repetition_support      : 0.25
+    content_density         : 0.15
+  Text          : New Features and Bug Fixes in Siebel CRM Monthly Update 26.2
+
+Logical Block 26_3_update_logical_block_0145:
+  Type          : content
+  Pages         : 12-12
+  Content unit  : 26_3_update_unit_0145
+  Source Units  : 26_3_update_block_0147
+  Structural Fingerprint:
+    block_count            : 1.00
+    role_prominent         : 0.00
+    role_body              : 1.00
+    cell_count             : 0.00
+    mean_rel_x0            : 0.06
+    mean_rel_width         : 0.26
+    mean_line_height_ratio : 0.38
+    mean_digit_ratio       : 0.10
+    mean_upper_ratio       : 0.19
+    content_density        : 0.06
+    marker_depth           : 0.00
+    in_grid                : 0.00
+    repetition             : 4.00
+    local_position         : 0.80
+  Semantic Representation: dim=512
+  Pattern       : pattern_002
+  Confidence    : 0.66
+  Evidence:
+    structural_self_support : 0.55
+    boundary_isolation      : 1.00
+    repetition_support      : 0.50
+    content_density         : 0.08
+  Text          : New Features in Siebel CRM 26.2
+
 Logical Block 26_3_update_logical_block_0146:
   Type          : content
   Pages         : 12-12
   Content unit  : 26_3_update_unit_0146
-  Source Units  : 26_3_update_block_0146, 26_3_update_block_0147, 26_3_update_block_0148
+  Source Units  : 26_3_update_block_0148
   Structural Fingerprint:
-    block_count            : 3.00
+    block_count            : 1.00
     role_prominent         : 0.00
-    role_body              : 3.00
+    role_body              : 1.00
     cell_count             : 0.00
     mean_rel_x0            : 0.06
-    mean_rel_width         : 0.36
-    mean_line_height_ratio : 0.40
-    mean_digit_ratio       : 0.08
-    mean_upper_ratio       : 0.13
-    content_density        : 0.08
+    mean_rel_width         : 0.28
+    mean_line_height_ratio : 0.35
+    mean_digit_ratio       : 0.09
+    mean_upper_ratio       : 0.03
+    content_density        : 0.07
     marker_depth           : 0.00
     in_grid                : 0.00
-    repetition             : 3.33
+    repetition             : 4.00
     local_position         : 0.80
   Semantic Representation: dim=512
   Pattern       : pattern_002
-  Confidence    : 0.73
+  Confidence    : 0.66
   Evidence:
-    spatial_proximity          : 0.92
-    alignment_relationship     : 1.00
-    typography_relationship    : 0.92
-    spacing_relationship       : 0.97
-    reading_order_relationship : 1.00
-    structural_similarity      : 0.69
-    container_relationship     : 0.00
-    semantic_similarity        : 0.55
-    form_discount_total        : 0.30
-  Text          : New Features and Bug Fixes in Siebel CRM Monthly Update 26.2 New Features in Siebel CRM 26.2 There are no new features in 26.2.
+    structural_self_support : 0.55
+    boundary_isolation      : 1.00
+    repetition_support      : 0.50
+    content_density         : 0.09
+  Text          : There are no new features in 26.2.
 
 Logical Block 26_3_update_logical_block_0147:
   Type          : content
@@ -16048,41 +16056,66 @@ Logical Block 26_3_update_logical_block_0187:
   Type          : content
   Pages         : 15-15
   Content unit  : 26_3_update_unit_0187
-  Source Units  : 26_3_update_block_0191, 26_3_update_block_0192
+  Source Units  : 26_3_update_block_0191
   Structural Fingerprint:
-    block_count            : 2.00
+    block_count            : 1.00
     role_prominent         : 0.00
-    role_body              : 2.00
+    role_body              : 1.00
     cell_count             : 0.00
     mean_rel_x0            : 0.06
-    mean_rel_width         : 0.39
-    mean_line_height_ratio : 0.42
-    mean_digit_ratio       : 0.07
-    mean_upper_ratio       : 0.18
-    content_density        : 0.09
+    mean_rel_width         : 0.52
+    mean_line_height_ratio : 0.46
+    mean_digit_ratio       : 0.05
+    mean_upper_ratio       : 0.17
+    content_density        : 0.12
     marker_depth           : 0.00
     in_grid                : 0.00
-    repetition             : 3.00
+    repetition             : 2.00
     local_position         : 1.00
   Semantic Representation: dim=512
   Pattern       : pattern_002
-  Confidence    : 0.83
+  Confidence    : 0.65
   Evidence:
-    spatial_proximity          : 1.00
-    alignment_relationship     : 1.00
-    typography_relationship    : 0.90
-    spacing_relationship       : 1.00
-    reading_order_relationship : 1.00
-    structural_similarity      : 0.40
-    container_relationship     : 0.00
-    semantic_similarity        : 0.61
-    form_discount_total        : 0.00
-  Text          : New Features and Bug Fixes in Siebel CRM Monthly Update 26.1 New Features in Siebel CRM 26.1
+    structural_self_support : 0.47
+    boundary_isolation      : 1.00
+    repetition_support      : 0.25
+    content_density         : 0.15
+  Text          : New Features and Bug Fixes in Siebel CRM Monthly Update 26.1
 
 Logical Block 26_3_update_logical_block_0188:
-  Type          : structured_record
+  Type          : content
   Pages         : 15-15
   Content unit  : 26_3_update_unit_0188
+  Source Units  : 26_3_update_block_0192
+  Structural Fingerprint:
+    block_count            : 1.00
+    role_prominent         : 0.00
+    role_body              : 1.00
+    cell_count             : 0.00
+    mean_rel_x0            : 0.06
+    mean_rel_width         : 0.27
+    mean_line_height_ratio : 0.38
+    mean_digit_ratio       : 0.10
+    mean_upper_ratio       : 0.19
+    content_density        : 0.06
+    marker_depth           : 0.00
+    in_grid                : 0.00
+    repetition             : 4.00
+    local_position         : 1.00
+  Semantic Representation: dim=512
+  Pattern       : pattern_002
+  Confidence    : 0.66
+  Evidence:
+    structural_self_support : 0.55
+    boundary_isolation      : 1.00
+    repetition_support      : 0.50
+    content_density         : 0.08
+  Text          : New Features in Siebel CRM 26.1
+
+Logical Block 26_3_update_logical_block_0189:
+  Type          : structured_record
+  Pages         : 15-15
+  Content unit  : 26_3_update_unit_0189
   Source Units  : 26_3_update_block_0193
   Fields (positional, discovered from cell geometry):
     [0] pos0|len2|d0|u0 : Feature Name
@@ -16114,10 +16147,10 @@ Logical Block 26_3_update_logical_block_0188:
     content_density         : 0.17
   Text          : Feature Name Description Documentation Repository Update Required?
 
-Logical Block 26_3_update_logical_block_0189:
+Logical Block 26_3_update_logical_block_0190:
   Type          : structured_record
   Pages         : 15-15
-  Content unit  : 26_3_update_unit_0189
+  Content unit  : 26_3_update_unit_0190
   Source Units  : 26_3_update_block_0194
   Fields (positional, discovered from cell geometry):
     [0] pos0|len3|d0|u0 : Preserve Customer Configuration Changes During Monthly Updates
@@ -16169,15 +16202,30 @@ SECTION / CONTEXT DISCOVERY
 Context 26_3_update_section_001:
   Heading evidence : Siebel CRM Update Guide and Known Issues
   Pages            : 1-1
-  Member count     : 1
+  Member count     : 0
   Structural evidence:
     heading_prominence : 0.00
     heading_size_ratio : 1.00
-    member_count       : 1.00
+    member_count       : 0.00
     page_span          : 1.00
-  Confidence       : 0.50
+    depth              : 0.00
+    hierarchy_score    : 100.00
+  Confidence       : 0.60
 
 Context 26_3_update_section_002:
+  Heading evidence : Siebel CRM 26.3 Update March 2026
+  Pages            : 1-1
+  Member count     : 0
+  Structural evidence:
+    heading_prominence : 0.00
+    heading_size_ratio : 1.00
+    member_count       : 0.00
+    page_span          : 1.00
+    depth              : 1.00
+    hierarchy_score    : 55.00
+  Confidence       : 0.55
+
+Context 26_3_update_section_003:
   Heading evidence : Required Patches
   Pages            : 1-1
   Member count     : 5
@@ -16186,9 +16234,11 @@ Context 26_3_update_section_002:
     heading_size_ratio : 1.00
     member_count       : 5.00
     page_span          : 1.00
-  Confidence       : 0.70
+    depth              : 0.00
+    hierarchy_score    : 100.00
+  Confidence       : 0.60
 
-Context 26_3_update_section_003:
+Context 26_3_update_section_004:
   Heading evidence : Effect of Encryption Upgrade in 25.10 and Later
   Pages            : 1-1
   Member count     : 9
@@ -16197,20 +16247,50 @@ Context 26_3_update_section_003:
     heading_size_ratio : 1.00
     member_count       : 9.00
     page_span          : 1.00
-  Confidence       : 0.90
+    depth              : 0.00
+    hierarchy_score    : 100.00
+  Confidence       : 0.60
 
-Context 26_3_update_section_004:
+Context 26_3_update_section_005:
   Heading evidence : Required Downloads
   Pages            : 1-3
-  Member count     : 39
+  Member count     : 13
   Structural evidence:
     heading_prominence : 0.00
     heading_size_ratio : 1.00
-    member_count       : 39.00
+    member_count       : 13.00
     page_span          : 3.00
-  Confidence       : 0.95
+    depth              : 0.00
+    hierarchy_score    : 100.00
+  Confidence       : 0.60
 
-Context 26_3_update_section_005:
+Context 26_3_update_section_006:
+  Heading evidence : Windows Archive Files
+  Pages            : 2-2
+  Member count     : 13
+  Structural evidence:
+    heading_prominence : 0.00
+    heading_size_ratio : 1.00
+    member_count       : 13.00
+    page_span          : 1.00
+    depth              : 1.00
+    hierarchy_score    : 25.00
+  Confidence       : 0.55
+
+Context 26_3_update_section_007:
+  Heading evidence : Linux/Unix Archive Files
+  Pages            : 2-3
+  Member count     : 9
+  Structural evidence:
+    heading_prominence : 0.00
+    heading_size_ratio : 1.00
+    member_count       : 9.00
+    page_span          : 2.00
+    depth              : 1.00
+    hierarchy_score    : 25.00
+  Confidence       : 0.55
+
+Context 26_3_update_section_008:
   Heading evidence : Update Basics
   Pages            : 3-3
   Member count     : 6
@@ -16219,9 +16299,11 @@ Context 26_3_update_section_005:
     heading_size_ratio : 1.00
     member_count       : 6.00
     page_span          : 1.00
-  Confidence       : 0.75
+    depth              : 0.00
+    hierarchy_score    : 100.00
+  Confidence       : 0.60
 
-Context 26_3_update_section_006:
+Context 26_3_update_section_009:
   Heading evidence : Repository Updates
   Pages            : 3-3
   Member count     : 3
@@ -16230,35 +16312,145 @@ Context 26_3_update_section_006:
     heading_size_ratio : 1.00
     member_count       : 3.00
     page_span          : 1.00
+    depth              : 0.00
+    hierarchy_score    : 100.00
   Confidence       : 0.60
 
-Context 26_3_update_section_007:
+Context 26_3_update_section_010:
   Heading evidence : Features and Bug Fixes by Release
   Pages            : 3-15
-  Member count     : 100
+  Member count     : 1
   Structural evidence:
     heading_prominence : 0.00
     heading_size_ratio : 1.00
-    member_count       : 100.00
+    member_count       : 1.00
     page_span          : 13.00
-  Confidence       : 0.95
+    depth              : 0.00
+    hierarchy_score    : 100.00
+  Confidence       : 0.60
 
-Context 26_3_update_section_008:
+Context 26_3_update_section_011:
+  Heading evidence : New Features and Bug Fixes in Siebel CRM Monthly Update 26.3
+  Pages            : 4-12
+  Member count     : 0
+  Structural evidence:
+    heading_prominence : 0.00
+    heading_size_ratio : 1.00
+    member_count       : 0.00
+    page_span          : 9.00
+    depth              : 1.00
+    hierarchy_score    : 65.00
+  Confidence       : 0.55
+
+Context 26_3_update_section_012:
+  Heading evidence : New Features in Siebel CRM 26.3
+  Pages            : 4-8
+  Member count     : 17
+  Structural evidence:
+    heading_prominence : 0.00
+    heading_size_ratio : 1.00
+    member_count       : 17.00
+    page_span          : 5.00
+    depth              : 2.00
+    hierarchy_score    : 25.00
+  Confidence       : 0.50
+
+Context 26_3_update_section_013:
+  Heading evidence : Fixes in Siebel CRM 26.3
+  Pages            : 8-12
+  Member count     : 46
+  Structural evidence:
+    heading_prominence : 0.00
+    heading_size_ratio : 1.00
+    member_count       : 46.00
+    page_span          : 5.00
+    depth              : 2.00
+    hierarchy_score    : 25.00
+  Confidence       : 0.50
+
+Context 26_3_update_section_014:
+  Heading evidence : New Features and Bug Fixes in Siebel CRM Monthly Update 26.2
+  Pages            : 12-15
+  Member count     : 0
+  Structural evidence:
+    heading_prominence : 0.00
+    heading_size_ratio : 1.00
+    member_count       : 0.00
+    page_span          : 4.00
+    depth              : 1.00
+    hierarchy_score    : 65.00
+  Confidence       : 0.55
+
+Context 26_3_update_section_015:
+  Heading evidence : New Features in Siebel CRM 26.2
+  Pages            : 12-12
+  Member count     : 1
+  Structural evidence:
+    heading_prominence : 0.00
+    heading_size_ratio : 1.00
+    member_count       : 1.00
+    page_span          : 1.00
+    depth              : 2.00
+    hierarchy_score    : 25.00
+  Confidence       : 0.50
+
+Context 26_3_update_section_016:
+  Heading evidence : Fixes in Siebel CRM 26.2
+  Pages            : 12-15
+  Member count     : 31
+  Structural evidence:
+    heading_prominence : 0.00
+    heading_size_ratio : 1.00
+    member_count       : 31.00
+    page_span          : 4.00
+    depth              : 2.00
+    hierarchy_score    : 25.00
+  Confidence       : 0.50
+
+Context 26_3_update_section_017:
   Heading evidence : Repository Changes
   Pages            : 15-15
-  Member count     : 8
+  Member count     : 5
   Structural evidence:
     heading_prominence : 0.00
     heading_size_ratio : 1.00
-    member_count       : 8.00
+    member_count       : 5.00
     page_span          : 1.00
-  Confidence       : 0.85
+    depth              : 0.00
+    hierarchy_score    : 100.00
+  Confidence       : 0.60
+
+Context 26_3_update_section_018:
+  Heading evidence : New Features and Bug Fixes in Siebel CRM Monthly Update 26.1
+  Pages            : 15-15
+  Member count     : 0
+  Structural evidence:
+    heading_prominence : 0.00
+    heading_size_ratio : 1.00
+    member_count       : 0.00
+    page_span          : 1.00
+    depth              : 1.00
+    hierarchy_score    : 65.00
+  Confidence       : 0.55
+
+Context 26_3_update_section_019:
+  Heading evidence : New Features in Siebel CRM 26.1
+  Pages            : 15-15
+  Member count     : 2
+  Structural evidence:
+    heading_prominence : 0.00
+    heading_size_ratio : 1.00
+    member_count       : 2.00
+    page_span          : 1.00
+    depth              : 2.00
+    hierarchy_score    : 25.00
+  Confidence       : 0.50
 
 Heading-like units that did NOT become contexts (no meaningful members):
 
-  26_3_update_logical_block_0065 p3: Back to top
+  26_3_update_logical_block_0063 p3: Back to top
       reason: Heading-like evidence with no meaningful descendants.
-  26_3_update_logical_block_0069 p3: Back to top
+  26_3_update_logical_block_0067 p3: Back to top
       reason: Heading-like evidence with no meaningful descendants.
   26_3_update_logical_block_0180 p15: _Steps_
       reason: Heading-like evidence with no meaningful descendants.
@@ -16277,13 +16469,13 @@ Pattern pattern_001:
   Semantic Similarity   : 0.64
 
 Pattern pattern_002:
-  Instances            : 49
+  Instances            : 50
   Structural Signature : P0B1M0
   Role template        : META
   Common Characteristics:
-    member_count     : 49.00
-    signature_purity : 0.65
-  Semantic Similarity   : 0.65
+    member_count     : 50.00
+    signature_purity : 0.62
+  Semantic Similarity   : 0.62
 
 Pattern pattern_003:
   Instances            : 19
@@ -16340,19 +16532,19 @@ Group logical_group_002:
 Group logical_group_003:
   Dominant pattern    : pattern_001
   Document membership : 26_3_update
-  Blocks              : 11
+  Blocks              : 12
   Similarity evidence :
-    avg_pairwise_similarity : 0.79
-    member_count            : 11.00
+    avg_pairwise_similarity : 0.77
+    member_count            : 12.00
     document_spread         : 1.00
 
 Group logical_group_004:
   Dominant pattern    : pattern_001
   Document membership : 26_3_update
-  Blocks              : 10
+  Blocks              : 9
   Similarity evidence :
-    avg_pairwise_similarity : 0.79
-    member_count            : 10.00
+    avg_pairwise_similarity : 0.82
+    member_count            : 9.00
     document_spread         : 1.00
 
 Group logical_group_005:
@@ -16369,29 +16561,11 @@ Group logical_group_006:
   Document membership : 26_3_update
   Blocks              : 7
   Similarity evidence :
-    avg_pairwise_similarity : 0.87
+    avg_pairwise_similarity : 0.84
     member_count            : 7.00
     document_spread         : 1.00
 
 Group logical_group_007:
-  Dominant pattern    : pattern_001
-  Document membership : 26_3_update
-  Blocks              : 7
-  Similarity evidence :
-    avg_pairwise_similarity : 0.76
-    member_count            : 7.00
-    document_spread         : 1.00
-
-Group logical_group_008:
-  Dominant pattern    : pattern_001
-  Document membership : 26_3_update
-  Blocks              : 6
-  Similarity evidence :
-    avg_pairwise_similarity : 0.82
-    member_count            : 6.00
-    document_spread         : 1.00
-
-Group logical_group_009:
   Dominant pattern    : pattern_001
   Document membership : 26_3_update
   Blocks              : 6
@@ -16400,12 +16574,30 @@ Group logical_group_009:
     member_count            : 6.00
     document_spread         : 1.00
 
-Group logical_group_010:
+Group logical_group_008:
   Dominant pattern    : pattern_002
   Document membership : 26_3_update
   Blocks              : 5
   Similarity evidence :
     avg_pairwise_similarity : 0.70
+    member_count            : 5.00
+    document_spread         : 1.00
+
+Group logical_group_009:
+  Dominant pattern    : pattern_002
+  Document membership : 26_3_update
+  Blocks              : 5
+  Similarity evidence :
+    avg_pairwise_similarity : 0.92
+    member_count            : 5.00
+    document_spread         : 1.00
+
+Group logical_group_010:
+  Dominant pattern    : pattern_001
+  Document membership : 26_3_update
+  Blocks              : 5
+  Similarity evidence :
+    avg_pairwise_similarity : 0.82
     member_count            : 5.00
     document_spread         : 1.00
 
@@ -16414,11 +16606,20 @@ Group logical_group_011:
   Document membership : 26_3_update
   Blocks              : 5
   Similarity evidence :
-    avg_pairwise_similarity : 0.71
+    avg_pairwise_similarity : 0.73
     member_count            : 5.00
     document_spread         : 1.00
 
 Group logical_group_012:
+  Dominant pattern    : pattern_001
+  Document membership : 26_3_update
+  Blocks              : 5
+  Similarity evidence :
+    avg_pairwise_similarity : 0.71
+    member_count            : 5.00
+    document_spread         : 1.00
+
+Group logical_group_013:
   Dominant pattern    : pattern_002
   Document membership : 26_3_update
   Blocks              : 5
@@ -16427,7 +16628,7 @@ Group logical_group_012:
     member_count            : 5.00
     document_spread         : 1.00
 
-Group logical_group_013:
+Group logical_group_014:
   Dominant pattern    : pattern_002
   Document membership : 26_3_update
   Blocks              : 4
@@ -16436,16 +16637,25 @@ Group logical_group_013:
     member_count            : 4.00
     document_spread         : 1.00
 
-Group logical_group_014:
+Group logical_group_015:
+  Dominant pattern    : pattern_001
+  Document membership : 26_3_update
+  Blocks              : 4
+  Similarity evidence :
+    avg_pairwise_similarity : 0.78
+    member_count            : 4.00
+    document_spread         : 1.00
+
+Group logical_group_016:
   Dominant pattern    : pattern_002
   Document membership : 26_3_update
   Blocks              : 4
   Similarity evidence :
-    avg_pairwise_similarity : 0.73
+    avg_pairwise_similarity : 0.74
     member_count            : 4.00
     document_spread         : 1.00
 
-Group logical_group_015:
+Group logical_group_017:
   Dominant pattern    : pattern_003
   Document membership : 26_3_update
   Blocks              : 4
@@ -16454,7 +16664,7 @@ Group logical_group_015:
     member_count            : 4.00
     document_spread         : 1.00
 
-Group logical_group_016:
+Group logical_group_018:
   Dominant pattern    : pattern_004
   Document membership : 26_3_update
   Blocks              : 4
@@ -16463,25 +16673,25 @@ Group logical_group_016:
     member_count            : 4.00
     document_spread         : 1.00
 
-Group logical_group_017:
-  Dominant pattern    : pattern_001
-  Document membership : 26_3_update
-  Blocks              : 4
-  Similarity evidence :
-    avg_pairwise_similarity : 0.79
-    member_count            : 4.00
-    document_spread         : 1.00
-
-Group logical_group_018:
-  Dominant pattern    : pattern_001
-  Document membership : 26_3_update
-  Blocks              : 4
-  Similarity evidence :
-    avg_pairwise_similarity : 0.75
-    member_count            : 4.00
-    document_spread         : 1.00
-
 Group logical_group_019:
+  Dominant pattern    : pattern_001
+  Document membership : 26_3_update
+  Blocks              : 4
+  Similarity evidence :
+    avg_pairwise_similarity : 0.67
+    member_count            : 4.00
+    document_spread         : 1.00
+
+Group logical_group_020:
+  Dominant pattern    : pattern_001
+  Document membership : 26_3_update
+  Blocks              : 4
+  Similarity evidence :
+    avg_pairwise_similarity : 0.73
+    member_count            : 4.00
+    document_spread         : 1.00
+
+Group logical_group_021:
   Dominant pattern    : pattern_004
   Document membership : 26_3_update
   Blocks              : 3
@@ -16490,7 +16700,7 @@ Group logical_group_019:
     member_count            : 3.00
     document_spread         : 1.00
 
-Group logical_group_020:
+Group logical_group_022:
   Dominant pattern    : pattern_002
   Document membership : 26_3_update
   Blocks              : 3
@@ -16499,7 +16709,7 @@ Group logical_group_020:
     member_count            : 3.00
     document_spread         : 1.00
 
-Group logical_group_021:
+Group logical_group_023:
   Dominant pattern    : pattern_002
   Document membership : 26_3_update
   Blocks              : 3
@@ -16508,7 +16718,7 @@ Group logical_group_021:
     member_count            : 3.00
     document_spread         : 1.00
 
-Group logical_group_022:
+Group logical_group_024:
   Dominant pattern    : pattern_002
   Document membership : 26_3_update
   Blocks              : 3
@@ -16517,30 +16727,12 @@ Group logical_group_022:
     member_count            : 3.00
     document_spread         : 1.00
 
-Group logical_group_023:
-  Dominant pattern    : pattern_001
-  Document membership : 26_3_update
-  Blocks              : 3
-  Similarity evidence :
-    avg_pairwise_similarity : 0.72
-    member_count            : 3.00
-    document_spread         : 1.00
-
-Group logical_group_024:
-  Dominant pattern    : pattern_002
-  Document membership : 26_3_update
-  Blocks              : 3
-  Similarity evidence :
-    avg_pairwise_similarity : 0.63
-    member_count            : 3.00
-    document_spread         : 1.00
-
 Group logical_group_025:
   Dominant pattern    : pattern_001
   Document membership : 26_3_update
   Blocks              : 3
   Similarity evidence :
-    avg_pairwise_similarity : 0.66
+    avg_pairwise_similarity : 0.73
     member_count            : 3.00
     document_spread         : 1.00
 
@@ -16578,25 +16770,25 @@ Raw extraction units     : 194
 Candidate units          : 194
 Candidates rejected      : 0
 Boundaries evaluated     : 193
-  START_NEW_LOGICAL_BLOCK: 188
-  CONTINUE_LOGICAL_BLOCK : 5
-Refinement MERGE         : 4
+  START_NEW_LOGICAL_BLOCK: 189
+  CONTINUE_LOGICAL_BLOCK : 4
+Refinement MERGE         : 3
 Refinement SPLIT         : 0
-Refinement PRESERVE      : 185
-Content units            : 189
-Logical blocks           : 179
+Refinement PRESERVE      : 187
+Content units            : 190
+Logical blocks           : 180
   structured records     : 104
-  content blocks         : 75
+  content blocks         : 76
 Discovered structures    : 18
 Patterns                 : 4
-Contexts                 : 8
+Contexts                 : 19
 Heading evidence w/o context: 3
 Recurring multi-document structures: 0
 Topical groups           : 43
 Over-grouping warnings   : 64
   resolved by splitting  : 64
 Low-confidence blocks    : 0
-Average confidence       : 0.778
+Average confidence       : 0.776
 
 ============================================================
 PROCESSING COMPLETE

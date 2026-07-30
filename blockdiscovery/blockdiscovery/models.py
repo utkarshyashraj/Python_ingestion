@@ -494,6 +494,10 @@ class SectionGroup:
     the following content items until the next comparable heading. Sections are
     identified generically (e.g. ``…_section_003``). Optional human labels may be
     attached later and are never required for discovery.
+
+    Nesting is evidence-driven: ``depth`` / ``parent_section_id`` /
+    ``child_section_ids`` form a tree (e.g. umbrella → monthly band →
+    features/fixes leaf) without vocabulary hardcoding.
     """
 
     id: str
@@ -504,6 +508,9 @@ class SectionGroup:
     page_end: int
     member_logical_block_ids: List[str] = field(default_factory=list)
     member_source_block_ids: List[str] = field(default_factory=list)
+    depth: int = 0
+    parent_section_id: Optional[str] = None
+    child_section_ids: List[str] = field(default_factory=list)
     inferred_label: Optional[str] = None  # optional; unused by default
     label_confidence: float = 0.0
     evidence: Evidence = field(default_factory=Evidence)
@@ -523,6 +530,9 @@ class SectionGroup:
             "item_count": self.item_count,
             "member_logical_block_ids": list(self.member_logical_block_ids),
             "member_source_block_ids": list(self.member_source_block_ids),
+            "depth": self.depth,
+            "parent_section_id": self.parent_section_id,
+            "child_section_ids": list(self.child_section_ids),
             "inferred_label": self.inferred_label,
             "label_confidence": round(self.label_confidence, 4),
             "evidence": self.evidence.to_dict(),

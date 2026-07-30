@@ -3,7 +3,9 @@
     "id": "logical_group_001",
     "size": 22,
     "member_block_ids": [
-      "26_3_update_logical_block_0097",
+      "26_3_update_logical_block_0095",
+      "26_3_update_logical_block_0099",
+      "26_3_update_logical_block_0100",
       "26_3_update_logical_block_0101",
       "26_3_update_logical_block_0102",
       "26_3_update_logical_block_0103",
@@ -22,9 +24,7 @@
       "26_3_update_logical_block_0116",
       "26_3_update_logical_block_0117",
       "26_3_update_logical_block_0118",
-      "26_3_update_logical_block_0119",
-      "26_3_update_logical_block_0120",
-      "26_3_update_logical_block_0121"
+      "26_3_update_logical_block_0119"
     ],
     "document_ids": [
       "26_3_update"
@@ -48,6 +48,8 @@
     "id": "logical_group_002",
     "size": 13,
     "member_block_ids": [
+      "26_3_update_logical_block_0122",
+      "26_3_update_logical_block_0123",
       "26_3_update_logical_block_0124",
       "26_3_update_logical_block_0125",
       "26_3_update_logical_block_0126",
@@ -56,9 +58,7 @@
       "26_3_update_logical_block_0129",
       "26_3_update_logical_block_0130",
       "26_3_update_logical_block_0131",
-      "26_3_update_logical_block_0132",
-      "26_3_update_logical_block_0133",
-      "26_3_update_logical_block_0138",
+      "26_3_update_logical_block_0136",
       "26_3_update_logical_block_0153",
       "26_3_update_logical_block_0154"
     ],
@@ -82,19 +82,20 @@
   },
   {
     "id": "logical_group_003",
-    "size": 11,
+    "size": 12,
     "member_block_ids": [
-      "26_3_update_logical_block_0037",
-      "26_3_update_logical_block_0041",
-      "26_3_update_logical_block_0042",
-      "26_3_update_logical_block_0043",
-      "26_3_update_logical_block_0044",
-      "26_3_update_logical_block_0045",
+      "26_3_update_logical_block_0014",
+      "26_3_update_logical_block_0038",
       "26_3_update_logical_block_0046",
-      "26_3_update_logical_block_0051",
-      "26_3_update_logical_block_0055",
+      "26_3_update_logical_block_0052",
       "26_3_update_logical_block_0056",
-      "26_3_update_logical_block_0057"
+      "26_3_update_logical_block_0064",
+      "26_3_update_logical_block_0066",
+      "26_3_update_consolidated_block_0001",
+      "26_3_update_logical_block_0165",
+      "26_3_update_logical_block_0181",
+      "26_3_update_logical_block_0189",
+      "26_3_update_logical_block_0190"
     ],
     "document_ids": [
       "26_3_update"
@@ -103,31 +104,30 @@
     "inferred_label": null,
     "evidence": {
       "signals": {
-        "avg_pairwise_similarity": 0.7885,
-        "member_count": 11.0,
+        "avg_pairwise_similarity": 0.77,
+        "member_count": 12.0,
         "document_spread": 1.0
       },
       "weights": {
         "avg_pairwise_similarity": 1.0
       },
-      "confidence": 0.7885,
+      "confidence": 0.77,
       "notes": []
     }
   },
   {
     "id": "logical_group_004",
-    "size": 10,
+    "size": 9,
     "member_block_ids": [
-      "26_3_update_logical_block_0014",
+      "26_3_update_logical_block_0039",
       "26_3_update_logical_block_0040",
-      "26_3_update_logical_block_0048",
+      "26_3_update_logical_block_0041",
+      "26_3_update_logical_block_0042",
+      "26_3_update_logical_block_0043",
+      "26_3_update_logical_block_0044",
+      "26_3_update_logical_block_0053",
       "26_3_update_logical_block_0054",
-      "26_3_update_logical_block_0058",
-      "26_3_update_logical_block_0066",
-      "26_3_update_logical_block_0068",
-      "26_3_update_logical_block_0165",
-      "26_3_update_logical_block_0181",
-      "26_3_update_logical_block_0189"
+      "26_3_update_logical_block_0055"
     ],
     "document_ids": [
       "26_3_update"
@@ -136,14 +136,14 @@
     "inferred_label": null,
     "evidence": {
       "signals": {
-        "avg_pairwise_similarity": 0.786,
-        "member_count": 10.0,
+        "avg_pairwise_similarity": 0.8173,
+        "member_count": 9.0,
         "document_spread": 1.0
       },
       "weights": {
         "avg_pairwise_similarity": 1.0
       },
-      "confidence": 0.786,
+      "confidence": 0.8173,
       "notes": []
     }
   },
@@ -153,12 +153,12 @@
     "member_block_ids": [
       "26_3_update_consolidated_block_0002",
       "26_3_update_consolidated_block_0004",
+      "26_3_update_logical_block_0084",
       "26_3_update_logical_block_0086",
+      "26_3_update_logical_block_0087",
       "26_3_update_logical_block_0088",
-      "26_3_update_logical_block_0089",
-      "26_3_update_logical_block_0090",
-      "26_3_update_logical_block_0093",
-      "26_3_update_logical_block_0094",
+      "26_3_update_logical_block_0091",
+      "26_3_update_logical_block_0092",
       "26_3_update_consolidated_block_0005"
     ],
     "document_ids": [
@@ -184,12 +184,12 @@
     "size": 7,
     "member_block_ids": [
       "26_3_update_logical_block_0015",
-      "26_3_update_logical_block_0060",
+      "26_3_update_logical_block_0058",
+      "26_3_update_logical_block_0068",
       "26_3_update_logical_block_0070",
-      "26_3_update_logical_block_0072",
-      "26_3_update_logical_block_0073",
-      "26_3_update_logical_block_0146",
-      "26_3_update_logical_block_0187"
+      "26_3_update_logical_block_0071",
+      "26_3_update_logical_block_0144",
+      "26_3_update_logical_block_0146"
     ],
     "document_ids": [
       "26_3_update"
@@ -198,86 +198,27 @@
     "inferred_label": null,
     "evidence": {
       "signals": {
-        "avg_pairwise_similarity": 0.87,
+        "avg_pairwise_similarity": 0.8375,
         "member_count": 7.0,
         "document_spread": 1.0
       },
       "weights": {
         "avg_pairwise_similarity": 1.0
       },
-      "confidence": 0.87,
+      "confidence": 0.8375,
       "notes": []
     }
   },
   {
     "id": "logical_group_007",
-    "size": 7,
-    "member_block_ids": [
-      "26_3_update_logical_block_0149",
-      "26_3_update_logical_block_0150",
-      "26_3_update_logical_block_0152",
-      "26_3_update_logical_block_0162",
-      "26_3_update_logical_block_0164",
-      "26_3_update_logical_block_0166",
-      "26_3_update_logical_block_0172"
-    ],
-    "document_ids": [
-      "26_3_update"
-    ],
-    "dominant_pattern": "pattern_001",
-    "inferred_label": null,
-    "evidence": {
-      "signals": {
-        "avg_pairwise_similarity": 0.7602,
-        "member_count": 7.0,
-        "document_spread": 1.0
-      },
-      "weights": {
-        "avg_pairwise_similarity": 1.0
-      },
-      "confidence": 0.7602,
-      "notes": []
-    }
-  },
-  {
-    "id": "logical_group_008",
     "size": 6,
     "member_block_ids": [
       "26_3_update_logical_block_0036",
+      "26_3_update_logical_block_0037",
+      "26_3_update_logical_block_0045",
       "26_3_update_logical_block_0050",
-      "26_3_update_consolidated_block_0001",
-      "26_3_update_logical_block_0100",
-      "26_3_update_logical_block_0148",
-      "26_3_update_logical_block_0188"
-    ],
-    "document_ids": [
-      "26_3_update"
-    ],
-    "dominant_pattern": "pattern_001",
-    "inferred_label": null,
-    "evidence": {
-      "signals": {
-        "avg_pairwise_similarity": 0.8193,
-        "member_count": 6.0,
-        "document_spread": 1.0
-      },
-      "weights": {
-        "avg_pairwise_similarity": 1.0
-      },
-      "confidence": 0.8193,
-      "notes": []
-    }
-  },
-  {
-    "id": "logical_group_009",
-    "size": 6,
-    "member_block_ids": [
-      "26_3_update_logical_block_0038",
-      "26_3_update_logical_block_0039",
-      "26_3_update_logical_block_0047",
-      "26_3_update_logical_block_0052",
-      "26_3_update_logical_block_0053",
-      "26_3_update_logical_block_0123"
+      "26_3_update_logical_block_0051",
+      "26_3_update_logical_block_0121"
     ],
     "document_ids": [
       "26_3_update"
@@ -298,14 +239,14 @@
     }
   },
   {
-    "id": "logical_group_010",
+    "id": "logical_group_008",
     "size": 5,
     "member_block_ids": [
       "26_3_update_logical_block_0001",
       "26_3_update_logical_block_0002",
       "26_3_update_logical_block_0011",
       "26_3_update_logical_block_0013",
-      "26_3_update_logical_block_0059"
+      "26_3_update_logical_block_0057"
     ],
     "document_ids": [
       "26_3_update"
@@ -326,13 +267,97 @@
     }
   },
   {
+    "id": "logical_group_009",
+    "size": 5,
+    "member_block_ids": [
+      "26_3_update_logical_block_0097",
+      "26_3_update_logical_block_0145",
+      "26_3_update_logical_block_0147",
+      "26_3_update_logical_block_0187",
+      "26_3_update_logical_block_0188"
+    ],
+    "document_ids": [
+      "26_3_update"
+    ],
+    "dominant_pattern": "pattern_002",
+    "inferred_label": null,
+    "evidence": {
+      "signals": {
+        "avg_pairwise_similarity": 0.9193,
+        "member_count": 5.0,
+        "document_spread": 1.0
+      },
+      "weights": {
+        "avg_pairwise_similarity": 1.0
+      },
+      "confidence": 0.9193,
+      "notes": []
+    }
+  },
+  {
+    "id": "logical_group_010",
+    "size": 5,
+    "member_block_ids": [
+      "26_3_update_logical_block_0098",
+      "26_3_update_logical_block_0148",
+      "26_3_update_logical_block_0149",
+      "26_3_update_logical_block_0160",
+      "26_3_update_logical_block_0177"
+    ],
+    "document_ids": [
+      "26_3_update"
+    ],
+    "dominant_pattern": "pattern_001",
+    "inferred_label": null,
+    "evidence": {
+      "signals": {
+        "avg_pairwise_similarity": 0.8181,
+        "member_count": 5.0,
+        "document_spread": 1.0
+      },
+      "weights": {
+        "avg_pairwise_similarity": 1.0
+      },
+      "confidence": 0.8181,
+      "notes": []
+    }
+  },
+  {
     "id": "logical_group_011",
     "size": 5,
     "member_block_ids": [
+      "26_3_update_logical_block_0132",
+      "26_3_update_logical_block_0134",
       "26_3_update_logical_block_0135",
+      "26_3_update_logical_block_0152",
+      "26_3_update_logical_block_0156"
+    ],
+    "document_ids": [
+      "26_3_update"
+    ],
+    "dominant_pattern": "pattern_001",
+    "inferred_label": null,
+    "evidence": {
+      "signals": {
+        "avg_pairwise_similarity": 0.7335,
+        "member_count": 5.0,
+        "document_spread": 1.0
+      },
+      "weights": {
+        "avg_pairwise_similarity": 1.0
+      },
+      "confidence": 0.7335,
+      "notes": []
+    }
+  },
+  {
+    "id": "logical_group_012",
+    "size": 5,
+    "member_block_ids": [
+      "26_3_update_logical_block_0133",
+      "26_3_update_logical_block_0140",
+      "26_3_update_logical_block_0141",
       "26_3_update_logical_block_0142",
-      "26_3_update_logical_block_0143",
-      "26_3_update_logical_block_0144",
       "26_3_update_logical_block_0158"
     ],
     "document_ids": [
@@ -354,7 +379,7 @@
     }
   },
   {
-    "id": "logical_group_012",
+    "id": "logical_group_013",
     "size": 5,
     "member_block_ids": [
       "26_3_update_logical_block_0167",
@@ -382,7 +407,7 @@
     }
   },
   {
-    "id": "logical_group_013",
+    "id": "logical_group_014",
     "size": 4,
     "member_block_ids": [
       "26_3_update_logical_block_0004",
@@ -409,13 +434,40 @@
     }
   },
   {
-    "id": "logical_group_014",
+    "id": "logical_group_015",
     "size": 4,
     "member_block_ids": [
       "26_3_update_logical_block_0024",
       "26_3_update_logical_block_0025",
+      "26_3_update_logical_block_0034",
+      "26_3_update_logical_block_0048"
+    ],
+    "document_ids": [
+      "26_3_update"
+    ],
+    "dominant_pattern": "pattern_001",
+    "inferred_label": null,
+    "evidence": {
+      "signals": {
+        "avg_pairwise_similarity": 0.7847,
+        "member_count": 4.0,
+        "document_spread": 1.0
+      },
+      "weights": {
+        "avg_pairwise_similarity": 1.0
+      },
+      "confidence": 0.7847,
+      "notes": []
+    }
+  },
+  {
+    "id": "logical_group_016",
+    "size": 4,
+    "member_block_ids": [
       "26_3_update_logical_block_0033",
-      "26_3_update_logical_block_0092"
+      "26_3_update_logical_block_0035",
+      "26_3_update_logical_block_0047",
+      "26_3_update_logical_block_0049"
     ],
     "document_ids": [
       "26_3_update"
@@ -424,24 +476,24 @@
     "inferred_label": null,
     "evidence": {
       "signals": {
-        "avg_pairwise_similarity": 0.7311,
+        "avg_pairwise_similarity": 0.7432,
         "member_count": 4.0,
         "document_spread": 1.0
       },
       "weights": {
         "avg_pairwise_similarity": 1.0
       },
-      "confidence": 0.7311,
+      "confidence": 0.7432,
       "notes": []
     }
   },
   {
-    "id": "logical_group_015",
+    "id": "logical_group_017",
     "size": 4,
     "member_block_ids": [
-      "26_3_update_logical_block_0061",
-      "26_3_update_logical_block_0067",
-      "26_3_update_logical_block_0071",
+      "26_3_update_logical_block_0059",
+      "26_3_update_logical_block_0065",
+      "26_3_update_logical_block_0069",
       "26_3_update_logical_block_0157"
     ],
     "document_ids": [
@@ -463,11 +515,11 @@
     }
   },
   {
-    "id": "logical_group_016",
+    "id": "logical_group_018",
     "size": 4,
     "member_block_ids": [
-      "26_3_update_logical_block_0065",
-      "26_3_update_logical_block_0069",
+      "26_3_update_logical_block_0063",
+      "26_3_update_logical_block_0067",
       "26_3_update_logical_block_0163",
       "26_3_update_logical_block_0178"
     ],
@@ -490,61 +542,61 @@
     }
   },
   {
-    "id": "logical_group_017",
-    "size": 4,
-    "member_block_ids": [
-      "26_3_update_logical_block_0134",
-      "26_3_update_logical_block_0136",
-      "26_3_update_logical_block_0137",
-      "26_3_update_logical_block_0156"
-    ],
-    "document_ids": [
-      "26_3_update"
-    ],
-    "dominant_pattern": "pattern_001",
-    "inferred_label": null,
-    "evidence": {
-      "signals": {
-        "avg_pairwise_similarity": 0.7856,
-        "member_count": 4.0,
-        "document_spread": 1.0
-      },
-      "weights": {
-        "avg_pairwise_similarity": 1.0
-      },
-      "confidence": 0.7856,
-      "notes": []
-    }
-  },
-  {
-    "id": "logical_group_018",
-    "size": 4,
-    "member_block_ids": [
-      "26_3_update_logical_block_0145",
-      "26_3_update_logical_block_0159",
-      "26_3_update_logical_block_0160",
-      "26_3_update_logical_block_0161"
-    ],
-    "document_ids": [
-      "26_3_update"
-    ],
-    "dominant_pattern": "pattern_001",
-    "inferred_label": null,
-    "evidence": {
-      "signals": {
-        "avg_pairwise_similarity": 0.7529,
-        "member_count": 4.0,
-        "document_spread": 1.0
-      },
-      "weights": {
-        "avg_pairwise_similarity": 1.0
-      },
-      "confidence": 0.7529,
-      "notes": []
-    }
-  },
-  {
     "id": "logical_group_019",
+    "size": 4,
+    "member_block_ids": [
+      "26_3_update_logical_block_0077",
+      "26_3_update_consolidated_block_0003",
+      "26_3_update_logical_block_0120",
+      "26_3_update_logical_block_0150"
+    ],
+    "document_ids": [
+      "26_3_update"
+    ],
+    "dominant_pattern": "pattern_001",
+    "inferred_label": null,
+    "evidence": {
+      "signals": {
+        "avg_pairwise_similarity": 0.665,
+        "member_count": 4.0,
+        "document_spread": 1.0
+      },
+      "weights": {
+        "avg_pairwise_similarity": 1.0
+      },
+      "confidence": 0.665,
+      "notes": []
+    }
+  },
+  {
+    "id": "logical_group_020",
+    "size": 4,
+    "member_block_ids": [
+      "26_3_update_logical_block_0137",
+      "26_3_update_logical_block_0138",
+      "26_3_update_logical_block_0139",
+      "26_3_update_logical_block_0179"
+    ],
+    "document_ids": [
+      "26_3_update"
+    ],
+    "dominant_pattern": "pattern_001",
+    "inferred_label": null,
+    "evidence": {
+      "signals": {
+        "avg_pairwise_similarity": 0.7346,
+        "member_count": 4.0,
+        "document_spread": 1.0
+      },
+      "weights": {
+        "avg_pairwise_similarity": 1.0
+      },
+      "confidence": 0.7346,
+      "notes": []
+    }
+  },
+  {
+    "id": "logical_group_021",
     "size": 3,
     "member_block_ids": [
       "26_3_update_logical_block_0003",
@@ -570,12 +622,12 @@
     }
   },
   {
-    "id": "logical_group_020",
+    "id": "logical_group_022",
     "size": 3,
     "member_block_ids": [
       "26_3_update_logical_block_0012",
       "26_3_update_logical_block_0019",
-      "26_3_update_logical_block_0034"
+      "26_3_update_logical_block_0032"
     ],
     "document_ids": [
       "26_3_update"
@@ -596,7 +648,7 @@
     }
   },
   {
-    "id": "logical_group_021",
+    "id": "logical_group_023",
     "size": 3,
     "member_block_ids": [
       "26_3_update_logical_block_0017",
@@ -622,12 +674,12 @@
     }
   },
   {
-    "id": "logical_group_022",
+    "id": "logical_group_024",
     "size": 3,
     "member_block_ids": [
       "26_3_update_logical_block_0018",
-      "26_3_update_logical_block_0062",
-      "26_3_update_logical_block_0064"
+      "26_3_update_logical_block_0060",
+      "26_3_update_logical_block_0062"
     ],
     "document_ids": [
       "26_3_update"
@@ -648,64 +700,12 @@
     }
   },
   {
-    "id": "logical_group_023",
-    "size": 3,
-    "member_block_ids": [
-      "26_3_update_logical_block_0026",
-      "26_3_update_logical_block_0027",
-      "26_3_update_logical_block_0032"
-    ],
-    "document_ids": [
-      "26_3_update"
-    ],
-    "dominant_pattern": "pattern_001",
-    "inferred_label": null,
-    "evidence": {
-      "signals": {
-        "avg_pairwise_similarity": 0.7224,
-        "member_count": 3.0,
-        "document_spread": 1.0
-      },
-      "weights": {
-        "avg_pairwise_similarity": 1.0
-      },
-      "confidence": 0.7224,
-      "notes": []
-    }
-  },
-  {
-    "id": "logical_group_024",
-    "size": 3,
-    "member_block_ids": [
-      "26_3_update_logical_block_0031",
-      "26_3_update_logical_block_0035",
-      "26_3_update_logical_block_0049"
-    ],
-    "document_ids": [
-      "26_3_update"
-    ],
-    "dominant_pattern": "pattern_002",
-    "inferred_label": null,
-    "evidence": {
-      "signals": {
-        "avg_pairwise_similarity": 0.6297,
-        "member_count": 3.0,
-        "document_spread": 1.0
-      },
-      "weights": {
-        "avg_pairwise_similarity": 1.0
-      },
-      "confidence": 0.6297,
-      "notes": []
-    }
-  },
-  {
     "id": "logical_group_025",
     "size": 3,
     "member_block_ids": [
-      "26_3_update_logical_block_0079",
-      "26_3_update_consolidated_block_0003",
-      "26_3_update_logical_block_0122"
+      "26_3_update_logical_block_0143",
+      "26_3_update_logical_block_0159",
+      "26_3_update_logical_block_0161"
     ],
     "document_ids": [
       "26_3_update"
@@ -714,14 +714,14 @@
     "inferred_label": null,
     "evidence": {
       "signals": {
-        "avg_pairwise_similarity": 0.6572,
+        "avg_pairwise_similarity": 0.7331,
         "member_count": 3.0,
         "document_spread": 1.0
       },
       "weights": {
         "avg_pairwise_similarity": 1.0
       },
-      "confidence": 0.6572,
+      "confidence": 0.7331,
       "notes": []
     }
   },
@@ -729,35 +729,9 @@
     "id": "logical_group_026",
     "size": 3,
     "member_block_ids": [
-      "26_3_update_logical_block_0139",
-      "26_3_update_logical_block_0140",
-      "26_3_update_logical_block_0141"
-    ],
-    "document_ids": [
-      "26_3_update"
-    ],
-    "dominant_pattern": "pattern_001",
-    "inferred_label": null,
-    "evidence": {
-      "signals": {
-        "avg_pairwise_similarity": 0.8678,
-        "member_count": 3.0,
-        "document_spread": 1.0
-      },
-      "weights": {
-        "avg_pairwise_similarity": 1.0
-      },
-      "confidence": 0.8678,
-      "notes": []
-    }
-  },
-  {
-    "id": "logical_group_027",
-    "size": 3,
-    "member_block_ids": [
-      "26_3_update_logical_block_0177",
-      "26_3_update_logical_block_0179",
-      "26_3_update_logical_block_0182"
+      "26_3_update_logical_block_0164",
+      "26_3_update_logical_block_0166",
+      "26_3_update_logical_block_0172"
     ],
     "document_ids": [
       "26_3_update"
@@ -766,19 +740,19 @@
     "inferred_label": null,
     "evidence": {
       "signals": {
-        "avg_pairwise_similarity": 0.6895,
+        "avg_pairwise_similarity": 0.866,
         "member_count": 3.0,
         "document_spread": 1.0
       },
       "weights": {
         "avg_pairwise_similarity": 1.0
       },
-      "confidence": 0.6895,
+      "confidence": 0.866,
       "notes": []
     }
   },
   {
-    "id": "logical_group_028",
+    "id": "logical_group_027",
     "size": 3,
     "member_block_ids": [
       "26_3_update_logical_block_0183",
@@ -804,7 +778,7 @@
     }
   },
   {
-    "id": "logical_group_029",
+    "id": "logical_group_028",
     "size": 2,
     "member_block_ids": [
       "26_3_update_logical_block_0007",
@@ -829,11 +803,61 @@
     }
   },
   {
+    "id": "logical_group_029",
+    "size": 2,
+    "member_block_ids": [
+      "26_3_update_logical_block_0026",
+      "26_3_update_logical_block_0027"
+    ],
+    "document_ids": [
+      "26_3_update"
+    ],
+    "dominant_pattern": "pattern_001",
+    "inferred_label": null,
+    "evidence": {
+      "signals": {
+        "avg_pairwise_similarity": 0.6721,
+        "member_count": 2.0,
+        "document_spread": 1.0
+      },
+      "weights": {
+        "avg_pairwise_similarity": 1.0
+      },
+      "confidence": 0.6721,
+      "notes": []
+    }
+  },
+  {
     "id": "logical_group_030",
     "size": 2,
     "member_block_ids": [
-      "26_3_update_logical_block_0063",
-      "26_3_update_logical_block_0098"
+      "26_3_update_logical_block_0030",
+      "26_3_update_logical_block_0031"
+    ],
+    "document_ids": [
+      "26_3_update"
+    ],
+    "dominant_pattern": "pattern_002",
+    "inferred_label": null,
+    "evidence": {
+      "signals": {
+        "avg_pairwise_similarity": 0.6759,
+        "member_count": 2.0,
+        "document_spread": 1.0
+      },
+      "weights": {
+        "avg_pairwise_similarity": 1.0
+      },
+      "confidence": 0.6759,
+      "notes": []
+    }
+  },
+  {
+    "id": "logical_group_031",
+    "size": 2,
+    "member_block_ids": [
+      "26_3_update_logical_block_0061",
+      "26_3_update_logical_block_0096"
     ],
     "document_ids": [
       "26_3_update"
@@ -854,11 +878,11 @@
     }
   },
   {
-    "id": "logical_group_031",
+    "id": "logical_group_032",
     "size": 2,
     "member_block_ids": [
-      "26_3_update_logical_block_0087",
-      "26_3_update_logical_block_0091"
+      "26_3_update_logical_block_0085",
+      "26_3_update_logical_block_0089"
     ],
     "document_ids": [
       "26_3_update"
@@ -879,32 +903,57 @@
     }
   },
   {
-    "id": "logical_group_032",
+    "id": "logical_group_033",
     "size": 2,
     "member_block_ids": [
-      "26_3_update_logical_block_0099",
-      "26_3_update_logical_block_0147"
+      "26_3_update_logical_block_0151",
+      "26_3_update_logical_block_0162"
     ],
     "document_ids": [
       "26_3_update"
     ],
-    "dominant_pattern": "pattern_004",
+    "dominant_pattern": "pattern_001",
     "inferred_label": null,
     "evidence": {
       "signals": {
-        "avg_pairwise_similarity": 0.8386,
+        "avg_pairwise_similarity": 0.9374,
         "member_count": 2.0,
         "document_spread": 1.0
       },
       "weights": {
         "avg_pairwise_similarity": 1.0
       },
-      "confidence": 0.8386,
+      "confidence": 0.9374,
       "notes": []
     }
   },
   {
-    "id": "logical_group_033",
+    "id": "logical_group_034",
+    "size": 2,
+    "member_block_ids": [
+      "26_3_update_logical_block_0182",
+      "26_3_update_logical_block_0186"
+    ],
+    "document_ids": [
+      "26_3_update"
+    ],
+    "dominant_pattern": "pattern_002",
+    "inferred_label": null,
+    "evidence": {
+      "signals": {
+        "avg_pairwise_similarity": 0.6617,
+        "member_count": 2.0,
+        "document_spread": 1.0
+      },
+      "weights": {
+        "avg_pairwise_similarity": 1.0
+      },
+      "confidence": 0.6617,
+      "notes": []
+    }
+  },
+  {
+    "id": "logical_group_035",
     "size": 1,
     "member_block_ids": [
       "26_3_update_logical_block_0009"
@@ -928,7 +977,7 @@
     }
   },
   {
-    "id": "logical_group_034",
+    "id": "logical_group_036",
     "size": 1,
     "member_block_ids": [
       "26_3_update_logical_block_0016"
@@ -952,7 +1001,7 @@
     }
   },
   {
-    "id": "logical_group_035",
+    "id": "logical_group_037",
     "size": 1,
     "member_block_ids": [
       "26_3_update_logical_block_0028"
@@ -976,7 +1025,7 @@
     }
   },
   {
-    "id": "logical_group_036",
+    "id": "logical_group_038",
     "size": 1,
     "member_block_ids": [
       "26_3_update_logical_block_0029"
@@ -1000,10 +1049,10 @@
     }
   },
   {
-    "id": "logical_group_037",
+    "id": "logical_group_039",
     "size": 1,
     "member_block_ids": [
-      "26_3_update_logical_block_0030"
+      "26_3_update_logical_block_0090"
     ],
     "document_ids": [
       "26_3_update"
@@ -1024,31 +1073,7 @@
     }
   },
   {
-    "id": "logical_group_038",
-    "size": 1,
-    "member_block_ids": [
-      "26_3_update_logical_block_0151"
-    ],
-    "document_ids": [
-      "26_3_update"
-    ],
-    "dominant_pattern": "pattern_001",
-    "inferred_label": null,
-    "evidence": {
-      "signals": {
-        "avg_pairwise_similarity": 1.0,
-        "member_count": 1.0,
-        "document_spread": 1.0
-      },
-      "weights": {
-        "avg_pairwise_similarity": 1.0
-      },
-      "confidence": 1.0,
-      "notes": []
-    }
-  },
-  {
-    "id": "logical_group_039",
+    "id": "logical_group_040",
     "size": 1,
     "member_block_ids": [
       "26_3_update_logical_block_0155"
@@ -1072,7 +1097,7 @@
     }
   },
   {
-    "id": "logical_group_040",
+    "id": "logical_group_041",
     "size": 1,
     "member_block_ids": [
       "26_3_update_logical_block_0173"
@@ -1096,7 +1121,7 @@
     }
   },
   {
-    "id": "logical_group_041",
+    "id": "logical_group_042",
     "size": 1,
     "member_block_ids": [
       "26_3_update_consolidated_block_0007"
@@ -1120,7 +1145,7 @@
     }
   },
   {
-    "id": "logical_group_042",
+    "id": "logical_group_043",
     "size": 1,
     "member_block_ids": [
       "26_3_update_logical_block_0180"
@@ -1129,30 +1154,6 @@
       "26_3_update"
     ],
     "dominant_pattern": "pattern_004",
-    "inferred_label": null,
-    "evidence": {
-      "signals": {
-        "avg_pairwise_similarity": 1.0,
-        "member_count": 1.0,
-        "document_spread": 1.0
-      },
-      "weights": {
-        "avg_pairwise_similarity": 1.0
-      },
-      "confidence": 1.0,
-      "notes": []
-    }
-  },
-  {
-    "id": "logical_group_043",
-    "size": 1,
-    "member_block_ids": [
-      "26_3_update_logical_block_0186"
-    ],
-    "document_ids": [
-      "26_3_update"
-    ],
-    "dominant_pattern": "pattern_002",
     "inferred_label": null,
     "evidence": {
       "signals": {

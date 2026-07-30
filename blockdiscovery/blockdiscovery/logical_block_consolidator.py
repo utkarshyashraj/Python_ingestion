@@ -758,6 +758,8 @@ class LogicalBlockConsolidator:
         # Structured table rows are excluded — their "prominence" is geometric.
         prev_text = previous.text or ""
         prev_words = len(prev_text.split())
+        cur_text = current.text or ""
+        cur_words = len(cur_text.split())
         if (
             previous.block_type != "structured_record"
             and prev_role == "PROMINENT"
@@ -767,6 +769,23 @@ class LogicalBlockConsolidator:
             and not (bool(_first_alpha(current.text or "")) and _first_alpha(current.text).islower())
         ):
             return "Short prominent heading stays separate from following content."
+
+        # Adjacent compact title-like units (any role) stay separate so nested
+        # section hierarchy can open each heading independently.
+        if (
+            previous.block_type != "structured_record"
+            and current.block_type != "structured_record"
+            and prev_words <= 14
+            and cur_words <= 14
+            and len(prev_text) <= 120
+            and len(cur_text) <= 120
+            and not _ends_with_terminal(prev_text)
+            and not _ends_with_terminal(cur_text)
+            and not _ends_open(prev_text)
+            and bool(_first_alpha(cur_text))
+            and _first_alpha(cur_text).isupper()
+        ):
+            return "Adjacent title-like units stay separate for hierarchy."
 
         # A new prominent head after body content is a classic new-block cue,
         # unless the previous text is clearly unfinished (handled without veto).

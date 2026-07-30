@@ -17,7 +17,7 @@ default and is not part of discovery.
 from __future__ import annotations
 
 from collections import Counter
-from typing import List, Optional
+from typing import Dict, List, Optional
 
 import numpy as np
 
@@ -43,12 +43,15 @@ def _is_section_heading(block: LogicalBlock, prom_threshold: float) -> bool:
     text = (block.text or "").strip()
     words = len(text.split())
     marker_depth = f.get("marker_depth", 0.0)
-    layout_header = (
-        f.get("layout_section_header", 0.0) >= 1.0
-        or f.get("layout_page_header", 0.0) >= 1.0
-    )
-    # Running page titles are items under the open section, never new groups.
-    if f.get("layout_page_header", 0.0) >= 1.0:
+    layout_section = f.get("layout_section_header", 0.0) >= 1.0
+    layout_page = f.get("layout_page_header", 0.0) >= 1.0
+    layout_header = layout_section or layout_page
+    # Repeated running chrome (true page headers) never opens a section.
+    # Unique page-header-styled titles still may (extractor often marks release
+    # band titles this way).
+    if layout_page and (
+        f.get("repetition_count", 1.0) >= 2.0 or f.get("is_repeated_shape", 0.0) >= 1.0
+    ):
         return False
 
     # Structured table rows / list items are never section openers.
@@ -115,7 +118,7 @@ def _is_section_heading(block: LogicalBlock, prom_threshold: float) -> bool:
     )
     # Prose / warning sentences (even if bold / section-header styled) must not
     # open a section — they remain items under the previous heading.
-    looks_like_sentence = text.endswith((".", "?", "!")) and words >= 8
+    looks_like_sentence = text.endswith((".", "?", "!")) and words >= 4
     # Intro / instruction lines that end with ':' introduce following items;
     # they are not section openers themselves.
     looks_like_intro = text.endswith(":") and words >= 4
@@ -178,22 +181,15 @@ class SectionGroupDiscovery:
             if micro_counts.get(key, 0) >= 2 and len(key.split()) <= 4:
                 heading_flags[i] = False
 
-        # Stacked titles: a non-layout heading immediately after another heading
-        # on the same page is metadata/subtitle — keep it as an item.
-        for i in range(1, len(ordered)):
-            if not (heading_flags[i] and heading_flags[i - 1]):
-                continue
-            if ordered[i].source_page != ordered[i - 1].source_page:
-                continue
-            later_layout = ordered[i].structural_features.get("layout_section_header", 0.0)
-            if later_layout < 1.0:
-                heading_flags[i] = False
+        # Stacked same-page titles stay as headings when both qualify — the
+        # hierarchy stack nests the later (usually narrower) title under the
+        # earlier container instead of flattening it to an item.
 
         # Hierarchy from extractor layout roles (generic, not vocabulary):
-        #   section-header → can open a group
-        #   page-header    → continuation / running title → item under open group
-        # Nested title-like units and headings embedded in a structured-record
-        # stream stay as items so one topical section keeps its table together.
+        #   page-header → never a section opener
+        #   mid-stream interrupters in a continuing multi-column table → items
+        # Nested titles / leaf table headings stay as headings so a score-based
+        # stack can nest them (umbrella → band → features/fixes leaf).
         def _field_width(block: LogicalBlock) -> int:
             fields = block.structured_fields or []
             if not fields:
@@ -201,14 +197,14 @@ class SectionGroupDiscovery:
             return 1 + max(int(f.get("field_position", 0)) for f in fields)
 
         def _nearby_structured(
-            idx: int, direction: int, limit: int = 8
+            idx: int, direction: int, limit: int = 8, respect_heads: bool = True
         ) -> Optional[LogicalBlock]:
             step = 1 if direction > 0 else -1
             j = idx + step
             seen = 0
             while 0 <= j < len(ordered) and seen < limit:
                 b = ordered[j]
-                if heading_flags[j]:
+                if respect_heads and heading_flags[j]:
                     break
                 if b.block_type == "structured_record" and _field_width(b) >= 2:
                     return b
@@ -220,32 +216,17 @@ class SectionGroupDiscovery:
             if not flag:
                 continue
             f = block.structural_features
-            if f.get("layout_page_header", 0.0) >= 1.0:
+            # Repeated page chrome only — unique page-header-styled titles stay.
+            if f.get("layout_page_header", 0.0) >= 1.0 and (
+                f.get("repetition_count", 1.0) >= 2.0
+                or f.get("is_repeated_shape", 0.0) >= 1.0
+            ):
                 heading_flags[i] = False
                 continue
-            # Table caption / nested title: not a section-header, next unit is a
-            # structured grid row, and a parent section-header is still the most
-            # recent opener — keep as an item under that parent group.
-            if (
-                f.get("layout_section_header", 0.0) < 1.0
-                and i + 1 < len(ordered)
-                and ordered[i + 1].block_type == "structured_record"
-            ):
-                for k in range(i - 1, -1, -1):
-                    if not heading_flags[k]:
-                        continue
-                    if (
-                        ordered[k].structural_features.get("layout_section_header", 0.0)
-                        >= 1.0
-                    ):
-                        heading_flags[i] = False
-                    break
-                if not heading_flags[i]:
-                    continue
             # Heading sitting inside a continuing multi-column record stream
             # (same column width before and after). Extractors often assign a
-            # new grid id across pages/fragments — width continuity alone is
-            # enough; table-id match is not required.
+            # new grid id across pages/fragments — keep as an item so a single
+            # leaf section owns the whole table.
             prev_s = _nearby_structured(i, -1)
             next_s = _nearby_structured(i, 1)
             if (
@@ -255,103 +236,145 @@ class SectionGroupDiscovery:
                 and _field_width(prev_s) >= 3
             ):
                 heading_flags[i] = False
-                continue
-            # Nested table subsection under an open parent section-header:
-            # parent already owns structured records, and this heading is
-            # *immediately* followed by another structured stream → keep as
-            # an item so Features + Fixes stay one topical group. Peer
-            # sections that open with prose/lists (table not adjacent) still
-            # start a new group — do not look far ahead or later tables
-            # incorrectly nest under an earlier umbrella.
-            next_immediate = _nearby_structured(i, 1, limit=2)
-            if (
-                f.get("layout_section_header", 0.0) >= 1.0
-                and next_immediate is not None
-            ):
-                parent_idx = None
-                for k in range(i - 1, -1, -1):
-                    if heading_flags[k]:
-                        parent_idx = k
-                        break
-                if parent_idx is not None and (
-                    ordered[parent_idx].structural_features.get(
-                        "layout_section_header", 0.0
-                    )
-                    >= 1.0
-                ):
-                    parent_has_structured = any(
-                        ordered[j].block_type == "structured_record"
-                        and _field_width(ordered[j]) >= 2
-                        for j in range(parent_idx + 1, i)
-                    )
-                    if parent_has_structured:
-                        heading_flags[i] = False
 
-        # Every validated heading opens its own group. Sibling subheads and
-        # body items stay as members until the next heading — that is how
-        # "Required Downloads" becomes a separate group with items inside.
+        # Relative hierarchy score among remaining headings. Higher = shallower
+        # (closer to the document root). Signals are layout/shape/adjacency only.
+        # Major section-header peers share one score tier so they stay siblings
+        # (not nested under the document title).
+        def _heading_score(idx: int) -> float:
+            block = ordered[idx]
+            f = block.structural_features
+            text = (block.text or "").strip()
+            words = len(text.split())
+            layout_sec = f.get("layout_section_header", 0.0) >= 1.0
+            layout_page = f.get("layout_page_header", 0.0) >= 1.0
+            next_head = idx + 1 < len(ordered) and heading_flags[idx + 1]
+            imm_table = _nearby_structured(idx, 1, limit=2) is not None
+            # Peer major sections: extractor section-header not opening onto a grid.
+            if layout_sec and not imm_table:
+                return 100.0
+            # Container band: next unit is another heading, or a unique
+            # page-header-styled title that wraps nested leaves.
+            if next_head or (layout_page and not imm_table and words >= 8):
+                return 55.0 + (10.0 if words >= 8 else 0.0)
+            # Leaf subsection: immediately above a table, or a compact title
+            # that does not wrap further headings (so empty-feature peers still
+            # sit beside Fixes rather than parenting them).
+            if imm_table or (not next_head and words <= 8):
+                return 25.0
+            # Soft subsection without an immediate table.
+            return 40.0 + (10.0 if words >= 8 else 0.0)
+
+        heading_scores: Dict[int, float] = {
+            i: _heading_score(i) for i, flag in enumerate(heading_flags) if flag
+        }
+
+        # Nested section stack: open sections until a same-or-higher score peer
+        # arrives; children attach via parent_section_id / child_section_ids.
         sections: List[SectionGroup] = []
-        open_heading: Optional[LogicalBlock] = None
-        open_members: List[LogicalBlock] = []
+        # stack entries: (score, SectionGroup being filled, member blocks)
+        stack: List[tuple] = []
         section_idx = 0
 
-        def _flush() -> None:
-            nonlocal section_idx, open_heading, open_members
-            if open_heading is None:
+        def _close_top() -> None:
+            nonlocal section_idx
+            if not stack:
                 return
-            section_idx += 1
-            members = [m for m in open_members if m.id != open_heading.id]
+            _score, sg, members = stack.pop()
+            body = [m for m in members if m.id != sg.heading_block_id]
             source_ids: List[str] = []
-            for m in members:
+            for m in body:
                 source_ids.extend(m.source_block_ids)
-            pages = [open_heading.source_page] + [m.source_page for m in members]
+            pages = [sg.page_start] + [m.source_page for m in body]
+            # Extend page_end for descendants already closed under this node.
+            page_end = max([sg.page_end] + pages)
+            for cid in sg.child_section_ids:
+                child = next((s for s in sections if s.id == cid), None)
+                if child is not None:
+                    page_end = max(page_end, child.page_end)
+            sg.page_end = page_end
+            sg.member_logical_block_ids = [m.id for m in body]
+            sg.member_source_block_ids = source_ids
+            sg.evidence.signals["member_count"] = float(len(body))
+            sg.evidence.signals["page_span"] = float(page_end - sg.page_start + 1)
+            sg.evidence.signals["depth"] = float(sg.depth)
+            sg.evidence.signals["hierarchy_score"] = float(_score)
+            for m in body:
+                m.section_group_id = sg.id
+            # Heading block is the opener — tag it too when present in ordered.
+            for b in ordered:
+                if b.id == sg.heading_block_id:
+                    b.section_group_id = sg.id
+                    break
+            sections.append(sg)
+
+        def _open_section(block: LogicalBlock, score: float) -> None:
+            nonlocal section_idx
+            while stack and stack[-1][0] <= score:
+                _close_top()
+            parent_id = stack[-1][1].id if stack else None
+            depth = (stack[-1][1].depth + 1) if stack else 0
+            section_idx += 1
             ev = Evidence(
                 signals={
-                    "heading_prominence": open_heading.structural_features.get(
-                        "head_prominence", open_heading.structural_features.get("mean_prominence", 0.0)
+                    "heading_prominence": block.structural_features.get(
+                        "head_prominence",
+                        block.structural_features.get("mean_prominence", 0.0),
                     ),
-                    "heading_size_ratio": open_heading.structural_features.get("head_size_ratio", 1.0),
-                    "member_count": float(len(members)),
-                    "page_span": float(max(pages) - min(pages) + 1),
+                    "heading_size_ratio": block.structural_features.get(
+                        "head_size_ratio", 1.0
+                    ),
+                    "member_count": 0.0,
+                    "page_span": 1.0,
+                    "depth": float(depth),
+                    "hierarchy_score": float(score),
                 },
                 weights={
-                    "heading_prominence": 0.4,
+                    "heading_prominence": 0.35,
                     "heading_size_ratio": 0.2,
-                    "member_count": 0.3,
+                    "member_count": 0.25,
                     "page_span": 0.1,
+                    "depth": 0.1,
                 },
                 confidence=min(
                     1.0,
                     0.45
-                    + 0.15 * min(1.0, open_heading.structural_features.get("head_size_ratio", 1.0) - 1.0)
-                    + 0.05 * min(10, len(members)),
+                    + 0.15
+                    * min(
+                        1.0,
+                        block.structural_features.get("head_size_ratio", 1.0) - 1.0,
+                    )
+                    + 0.05 * max(0, 3 - depth),
                 ),
-                notes=["section opened by relative prominence / size elevation"],
+                notes=[
+                    "section opened by relative prominence / hierarchy score",
+                    f"depth={depth}",
+                ],
             )
             sg = SectionGroup(
                 id=f"{document.id}_section_{section_idx:03d}",
                 document_id=document.id,
-                heading_block_id=open_heading.id,
-                heading_text=_full_text(open_heading.text),
-                page_start=min(pages),
-                page_end=max(pages),
-                member_logical_block_ids=[m.id for m in members],
-                member_source_block_ids=source_ids,
+                heading_block_id=block.id,
+                heading_text=_full_text(block.text),
+                page_start=block.source_page,
+                page_end=block.source_page,
+                depth=depth,
+                parent_section_id=parent_id,
                 evidence=ev,
             )
-            for m in members:
-                m.section_group_id = sg.id
-            open_heading.section_group_id = sg.id
-            sections.append(sg)
-            open_heading = None
-            open_members = []
+            if parent_id:
+                for _sc, parent_sg, _mem in stack:
+                    if parent_sg.id == parent_id:
+                        parent_sg.child_section_ids.append(sg.id)
+                        break
+            stack.append((score, sg, [block]))
 
         preamble: List[LogicalBlock] = []
-        for block, is_head in zip(ordered, heading_flags):
+        for i, (block, is_head) in enumerate(zip(ordered, heading_flags)):
             if is_head:
-                if open_heading is None and preamble:
+                if not stack and preamble:
                     # Materialise a preamble section for leading non-heading content.
-                    open_heading = LogicalBlock(
+                    synth = LogicalBlock(
                         id=f"{document.id}_preamble_heading",
                         content_unit_id="",
                         document_id=document.id,
@@ -359,28 +382,33 @@ class SectionGroupDiscovery:
                         source_page=preamble[0].source_page,
                         source_block_ids=[],
                         text="(document preamble — no section heading yet)",
-                        structural_features={"head_prominence": 0.0, "head_size_ratio": 1.0, "char_count": 0, "block_count": 0},
+                        structural_features={
+                            "head_prominence": 0.0,
+                            "head_size_ratio": 1.0,
+                            "char_count": 0,
+                            "block_count": 0,
+                        },
                         confidence=0.4,
-                        evidence=Evidence(confidence=0.4, notes=["synthetic preamble heading"]),
+                        evidence=Evidence(
+                            confidence=0.4, notes=["synthetic preamble heading"]
+                        ),
                     )
-                    open_members = list(preamble)
+                    _open_section(synth, score=1000.0)
+                    stack[-1][2].extend(preamble)
                     preamble = []
-                    _flush()
-                elif open_heading is not None:
-                    _flush()
-                open_heading = block
-                open_members = [block]
+                    _close_top()
+                _open_section(block, heading_scores.get(i, 0.0))
             else:
-                if open_heading is None:
+                if not stack:
                     preamble.append(block)
                 else:
-                    open_members.append(block)
+                    stack[-1][2].append(block)
 
-        if open_heading is not None:
-            _flush()
-        elif preamble:
+        while stack:
+            _close_top()
+        if preamble:
             # Entire slice had no strong headings — one catch-all section.
-            open_heading = LogicalBlock(
+            synth = LogicalBlock(
                 id=f"{document.id}_preamble_heading",
                 content_unit_id="",
                 document_id=document.id,
@@ -388,15 +416,47 @@ class SectionGroupDiscovery:
                 source_page=preamble[0].source_page,
                 source_block_ids=[],
                 text="(document content — no section heading detected)",
-                structural_features={"head_prominence": 0.0, "head_size_ratio": 1.0, "char_count": 0, "block_count": 0},
+                structural_features={
+                    "head_prominence": 0.0,
+                    "head_size_ratio": 1.0,
+                    "char_count": 0,
+                    "block_count": 0,
+                },
                 confidence=0.35,
                 evidence=Evidence(confidence=0.35),
             )
-            open_members = list(preamble)
-            _flush()
+            _open_section(synth, score=1000.0)
+            stack[-1][2].extend(preamble)
+            while stack:
+                _close_top()
+
+        # sections were appended in close-order (children before parents).
+        # Reorder to document / nesting order: parents before children.
+        by_id = {s.id: s for s in sections}
+        roots = [s for s in sections if not s.parent_section_id]
+        # Preserve discovery order among siblings via section id sort key.
+        roots.sort(key=lambda s: s.id)
+
+        ordered_sections: List[SectionGroup] = []
+
+        def _walk(node: SectionGroup) -> None:
+            ordered_sections.append(node)
+            for cid in node.child_section_ids:
+                child = by_id.get(cid)
+                if child is not None:
+                    _walk(child)
+
+        for root in roots:
+            _walk(root)
+        # Any orphans (should be none) append at end.
+        seen = {s.id for s in ordered_sections}
+        for s in sections:
+            if s.id not in seen:
+                ordered_sections.append(s)
+        sections = ordered_sections
 
         self._maybe_label(sections)
-        sections = self._collapse_empty_umbrellas(sections)
+        # Empty umbrellas with children are valid nested containers — do not collapse.
 
         if log:
             for sg in sections:
@@ -418,6 +478,9 @@ class SectionGroupDiscovery:
                 log.line(f"SectionGroup: {display}")
                 log.push()
                 log.kv("Heading", sg.heading_text)
+                log.kv("Depth", sg.depth)
+                log.kv("Parent", sg.parent_section_id or "-")
+                log.kv("Children", len(sg.child_section_ids))
                 log.kv("Pages", f"{sg.page_start}-{sg.page_end}")
                 log.kv("Items", sg.item_count)
                 log.kv("Source blocks", len(sg.member_source_block_ids))
@@ -506,17 +569,20 @@ def write_human_section_log(
     A(f"  Discovered section groups: {len(sections)}")
     A("")
 
-    # Document order only — never sort by business label.
-    sections_sorted = sorted(sections, key=lambda s: (s.page_start, s.id))
+    # Document / nesting order — parents before children.
+    sections_sorted = list(sections)
+    by_sid = {s.id: s for s in sections_sorted}
 
     A("[DISCOVERED SECTION SUMMARY]")
     for sg in sections_sorted:
-        # Generic display name derived from the discovered id, e.g. section_007 → DiscoveredSection_007
         generic = sg.id.split("_section_")[-1] if "_section_" in sg.id else sg.id
         display = f"DiscoveredSection_{generic}"
+        indent = "  " * (sg.depth + 1)
+        marker = "•" if sg.depth == 0 else ("◦" if sg.depth == 1 else "▪")
         A(
-            f"  • {display:28}  {sg.item_count:3d} items  "
-            f"pages {sg.page_start}-{sg.page_end}  | heading: {_full_text(sg.heading_text)}"
+            f"{indent}{marker} {display:28}  {sg.item_count:3d} items  "
+            f"depth={sg.depth}  pages {sg.page_start}-{sg.page_end}  "
+            f"| heading: {_full_text(sg.heading_text)}"
         )
     A("")
 
@@ -527,6 +593,16 @@ def write_human_section_log(
         A(f"[SECTION GROUP] {display}")
         A(f"  section_id : {sg.id}")
         A(f"  heading    : {sg.heading_text}")
+        A(f"  depth      : {sg.depth}")
+        A(f"  parent     : {sg.parent_section_id or '-'}")
+        if sg.child_section_ids:
+            child_heads = [
+                f"{cid} ({by_sid[cid].heading_text})" if cid in by_sid else cid
+                for cid in sg.child_section_ids
+            ]
+            A(f"  children   : {', '.join(child_heads)}")
+        else:
+            A("  children   : -")
         A(f"  pages      : {sg.page_start}-{sg.page_end}")
         A(f"  items      : {sg.item_count}")
         A(f"  source blocks in group: {len(sg.member_source_block_ids)}")
@@ -535,7 +611,9 @@ def write_human_section_log(
             A(f"    - {k}: {v:.2f}" if isinstance(v, float) else f"    - {k}: {v}")
         A("")
         if not sg.member_logical_block_ids:
-            A("  (no member items — heading only)")
+            A("  (no direct member items — nested children hold content)"
+              if sg.child_section_ids
+              else "  (no member items — heading only)")
             A("")
             continue
 
